@@ -18,3 +18,4 @@ Minimum Marketable Features
 
 *   Fix the footer button click glitch (have to click twice?)
 
+  +   have to unminify js...

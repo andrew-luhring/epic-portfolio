@@ -1,12 +1,11 @@
 /**
  * @author Andrew Luhring
- * bisforbounce.com
  */
-	var boxShadowDown = {boxShadow : '2 3 9 -1 #400339'};
-	var boxShadowUp = {boxShadow : '10 15 30 -5 #400339'};
-	var timeoutId;
-	var worktypes = [];
-	var paragraphs =[];
+	var boxShadowDown = {boxShadow : '2 3 9 -1 #400339'}
+	var boxShadowUp = {boxShadow : '10 15 30 -5 #400339'}
+	var timeoutId
+	var worktypes = []
+	var paragraphs =[]
 	// Big up @Jonathan Sampson over at s/o for this extension.
 jQuery.extend( jQuery.fn, {
     hasParent: function(p) {
@@ -135,7 +134,7 @@ jQuery(document).ready(function($) {
 
 
 					function autoExpand() {
-						$('galleryDiv, header h1, #portfolio, footer')
+						$('.galleryDiv, header h1, #portfolio, footer')
 								.show("slow").removeClass("hide");
 						$('#hint').hide();
 						resizeImg();
