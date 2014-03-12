@@ -1,0 +1,16 @@
+
+.noscript{
+	margin: auto;
+	width: 500px;
+	text-align: center;
+}
+
+.noscript-formChoice-header{
+	margin:20px auto;
+}
+.no-js.lte-ie9 .credentials label{
+	display: block;
+	position: relative;
+	color: $form-bg-light;
+	text-align:left;
+}

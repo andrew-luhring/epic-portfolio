@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Identifying Strategic Implications in Accounting </title>
+		<script type="text/javascript" src="js/modernizr.js"></script>
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+			google.load("jquery", "1");
+			google.load("jqueryui", "1");
+		</script>
+	</head>
+
+	<body>
+		<section id="wrapper">
+			<article class="slidesContainer">
+				<header id="lk-header"></header>
+				<article class="slide" id="slide1">
+					<div>
+						Lille Tissage
+					</div>
+
+					<div class="navButton next  ">
+						Begin
+					</div>
+				</article>
+				<article class="slide audio hideNext" id="slide2">
+					<div class="clipboard">
+
+						<p>
+							What variable cost should be used for the competitors?  Think about what you know about the competitors’ costs compared to Lille Tissages’ costs, and pick a variable cost for the competitors that you think might be reasonable (we will just use one variable cost for the competitors, regardless of volume). Only numbers between FF<span id="limitLow">6.80</span> and FF <span id="limitHigh">10.00</span> will be accepted.
+						</p>
+						<p>
+							Variable Cost for Competitors:
+						</p>
+						<p>
+							FF
+							<input type="text" name="varCostForComp" min="6.80" max="10.00" max="4"  placeholder="x" class="yes" required />
+							per meter
+						</p>
+					</div>
+					<div class="navButton back prevSlide">
+						Back
+					</div>
+					<div class="navButton next  ">
+						Next
+					</div>
+				</article>
+				<article class="slide audio" id="slide3">
+					<div class="clipboard">
+
+						<p>
+							Using the variable cost you have estimated, below are the competitors contributions per meter at prices of FF15 and FF20
+						</p>
+						<table>
+							<tbody>
+								<tr>
+									<td>Competitors' Price</td>
+									<td>FF <span class="eq1Var1">15.00</span></td>
+									<td>FF <span class="eq1Var2">20.00</span></td>
+								</tr>
+								<tr>
+									<td>Competitors' VC/meter</td>
+									<td><span class="eq1Var1a">.</span></td>
+									<td><span class="eq1Var2a">.</span></td>
+								</tr>
+								<tr>
+									<td>Contribution/meter</td>
+									<td><span class="eq1Output1">.</span><!--8.00--></td>
+									<td><span class="eq1Output2">.</span><!--13.00--></td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							Variable Cost for Competitors:
+						</p>
+						<p>
+							FF
+							<span class="inputVar1">.</span>
+							per meter
+						</p>
+					</div>
+					<div class="navButton back prevSlide">
+						Back
+					</div>
+					<div class="navButton next  ">
+						Next
+					</div>
+
+				</article>
+				<article class="slide audio hideNext" id="slide4">
+					<div class="clipboard">
+
+						<p>
+							What volume do you estimate for the competitiors if Lillie Tissages is at FF 20, and the competitors are at FF 15? Look back at what you thought was a reasonable volume for Lille Tissages in this situation, and the volume for the competitors will be the difference between Lille Tissages' volume and 700,000.
+						</p>
+						<p>
+							Volume for competitors (FF 20 v. FF 15):
+							<input type="text" name="inputVar2" min="-10000000" max="10000000" maxlength="20"  placeholder="x" class="yes" required />
+							meters
+						</p>
+
+						<p>
+							What volume do you estimate for the competitors if Lille Tissages is at FF 20, and the competitors are at FF 20? Again, look at your earlier assumptions for Lille Tissages' volume in this situation.
+						</p>
+						<p>
+							Volume for competitors (FF 20 v. FF 20):
+							<input type="text" name="inputVar3"  min="-10000000" max="10000000" maxlength="20"  placeholder="x" class="yes" required />
+							meters
+						
+						</p>
+					</div>
+					<div class="navButton back prevSlide">
+						Back
+					</div>
+					<div class="navButton next  ">
+						Next
+					</div>
+
+				</article>
+				<article class="slide audio" id="slide5">
+					<div class="clipboard">
+						<h1>Total contribution can be estimated as follows:</h1>
+						
+						<table id="tableDl">
+						<thead>
+							<tr>
+								<td>
+								</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</thead>
+							<tbody>
+								<tr>
+									<td>Competitors' Price</td>
+									<td>FF <span class="eq1Var1">15.00</span></td>
+									<td>FF <span class="eq1Var2">20.00</span></td>
+								</tr>
+								<tr>
+									<td>Competitors' VC/meter</td>
+									<td><span class="eq1Var1a">.</span></td>
+									<td><span class="eq1Var2a">.</span></td>
+								</tr>
+								<tr>
+									<td>Contribution/meter</td>
+									<td><span class="eq1Output1">.</span></td>
+									<td><span class="eq1Output2">.</span></td>
+								</tr>
+								<tr>
+									<td>Competitors' Volume</td>
+									<td><span class="inputVar2">.</span></td>
+									<td><span class="inputVar3">.</span></td>
+								</tr>
+								<tr>
+									<td>Total Contribution</td>
+									<td><span class="eq2Output1">.</span></td>
+									<td><span class="eq2Output2">.</span></td>
+								</tr>
+							</tbody>
+						</table>
+						<p>
+							Where do the competitors want to be? Where do they get a higher contribution, and, hence, higher profits?
+						</p>
+					</div>
+					
+					<div id="dl" class="navButton back ">
+						<a href="#" class="export">Download</a>
+					</div>
+					<div class="navButton next  ">
+						Finish
+					</div>
+
+				</article>
+				<footer id="lk-footer"></footer>
+			</article>
+			<div id="lk-preloader"><img src="skin/preloader.gif" width="32" height="32">
+			</div>
+			<div id="dialog"></div>
+		</section>
+		<script type="text/javascript" src="js/dataTables.js"></script>
+		<script type="text/javascript" src="js/jQuery.lilkev.js"></script>
+		<script type="text/javascript" src="js/jquery.jplayer.js"></script>
+		<script type="text/javascript" src="js/ACCT6273-w02-m02.js"></script>
+		
+	</body>
+</html>

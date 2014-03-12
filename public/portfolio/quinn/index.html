@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<!-- head -->
+<head>
+
+	<!--[if lt IE 9]>
+	<script src="../jsGlobal/html5shiv/html5shiv.js"></script>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+
+	<![endif]-->
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700italic,400,700,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Rosario:400,400italic,700,700italic|Droid+Serif:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+	<script type="text/javascript" src="scripts/jquery183.js" ></script>
+	<script type="text/javascript" src="scripts/jqueryui192.js" ></script>
+	<script type="text/javascript" src="scripts/modernizr.js" ></script>
+	<title>The Quinn Company | Human Resource Leadership | Chicago, IL</title>
+	<!--[if gte IE 9]>
+	<style type="text/css">
+	.gradient {
+	filter: none;
+	}
+	</style>
+	<![endif]-->
+
+	<!--[if lte IE 9]>
+	<style type="text/css">
+	section aside:first-of-type {
+	background-color: #545e5f;
+	}
+	section aside:first-of-type section{
+
+	color: #2a3633;
+	}
+	section aside a{
+	color:#316BB2;
+	font-weight:bold;
+	}
+	</style>
+	<![endif]-->
+
+</head>
+
+<body>
+	<div class="light">
+
+	</div>
+
+	<section>
+
+		<!-- header -->
+
+		<header>
+			<h1>Your Leader in Human Resource Solution</h1><!-- Wouldn't it make more sense to have this say "the Quinn Co. is ..." -->
+			<div itemprop="telephone">
+				773.706.5600
+			</div>
+		</header>
+
+		<article>
+			<img id="stock" alt="pensive human resource people." src="images/QHRWebConcept1a_03.png" />
+
+			<!-- border-right! -->
+			<div>
+				Welcome <!--this is not a header because the word 'welcome' has no real value in terms of content.-->
+			</div>
+
+			<div id="paragraphWrapper">
+
+				<p>
+					At The Quinn Company, where the impact of your people on your business is our greatest interest, we serve the small and mid-size organization in need of HR leadership, management or support.
+					Our objective is to serve our clients with the finest HR leadership to fit each organization's unique needs.
+					Our success is a function of our flexibility and ability to customize HR solutions to solve the widest range of HR issues.
+					Our technical expertise is exceptional.
+
+				</p>
+				<p>
+					Our solutions are cost-effective and targeted to your needs.
+				</p>
+			</div>
+		</article>
+
+		<!-- leftSidebar -->
+
+		<aside>
+			<!-- left sidebar -->
+			<div id="logo">
+				<a href="about-us.html"> <img id="logoImg" src="images/QuinnCo.png" /> </a>
+			</div>
+			<nav>
+				<ul>
+					<li>
+						<a href="about-us.html"> Capabilities </a>
+					</li>
+					<li>
+						<a href="about-us.html"> Pricing </a>
+					</li>
+					<li>
+						<a href="about-us">About Us</a>
+						<ul id="subNizzle">
+							<li class="subNav">
+								<a href="about-us.html">Diana Quinn</a>
+							</li>
+							<li class="subNav">
+								<a href="about-us.html">Susan Snow-Linda</a>
+							</li>
+							<li class="subNav">
+								<a href="about-us.html">Karen Nisenbaum</a>
+							</li>
+							<li class="subNav">
+								<a href="about-us.html">Marianne Charles</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="about-us.html"> Our Values </a>
+					</li>
+					<li>
+						<a href="about-us.html"> Positions </a>
+					</li>
+					<li>
+						<a href="about-us.html"> Events </a>
+					</li>
+					<li>
+						<a href="about-us.html"> Contact Us </a>
+					</li>
+				</ul>
+			</nav>
+			<section id="contactInfo" itemscope itemtype="http://data-vocabulary.org/Organization">
+				<div id="company" itemprop="name">
+					THE QUINN COMPANY
+					<div id="address" itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+						<div itemprop="street-address">
+							270 CENTER DRIVE,
+							<br />
+							<span id="suite"> SUITE 210 </span>
+						</div>
+						<div itemprop="locality">
+							VERNON HILLS, <span itemprop="region">IL </span><span itemprop="postal-code">60061</span>
+						</div>
+						<div id="phone" itemprop="telephone">
+							<span>p<a href="tel:+17737065600"> 773-706-5600 </a></span>
+						</div>
+						<div id="fax">
+							f <span>&nbsp;847-816-3079 </span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="left_continue"></div>
+		</aside>
+
+		<!-- contactUs -->
+
+		<aside id="contactUs">
+			<!-- social and contact form -->
+			<!-- Should i have an aside within a section? does that make sense in terms of content? -->
+			<ul id="social">
+				<span>reach out to us</span>
+				<li>
+					<a href="#"><img src="images/fb.png" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="images/li.png" /> </a>
+				</li>
+				<li>
+					<a href="#"><img src="images/tw.png" /> </a>
+				</li>
+			</ul>
+
+			<div id="formStyle">
+
+				<form id="contact-form" action="#" method="post">
+					<label for="name">Name</label>
+					<input id="name" name="name" data-validators="required">
+					<label for="email">Email</label>
+					<input id="email" name="email" data-validators="required">
+					<label for="message">Message</label>
+					<textarea id="message" name="message" rows="4" data-validators="required"></textarea>
+					<span>What does 6+2= </span>
+					<input id="captcha" name="captcha" data-validators="required">
+					<button type="submit" id="contact-submit" name="contact-submit" value="#">
+						Send
+					</button>
+				</form>
+
+			</div>
+
+		</aside>
+
+		<!-- footer -->
+
+		<footer>
+			<nav>
+				<ul>
+					<li>
+						<a href="about-us.html"> Home </a>
+					</li>
+
+					<li>
+						<a href="about-us.html"> Capabilities </a>
+					</li>
+
+					<li>
+						<a href="about-us.html"> Pricing </a>
+					</li>
+
+					<li>
+						<a href="about-us.html"> About Us </a>
+					</li>
+
+					<li>
+						<a href="about-us.html"> Our Values </a>
+					</li>
+
+					<li>
+						<a href="about-us.html"> Positions </a>
+					</li>
+
+					<li>
+						<a href="about-us.html"> Events </a>
+					</li>
+
+					<li>
+						<a href="about-us.html"> Contact Us </a>
+					</li>
+				</ul>
+			</nav>
+			<div id="legal">
+				Copyright &copy; 2013 The Quinn Co. All Rights Reserved. Web by
+				<a href="http://www.artisticdigital.com" target="_blank" > ADS. </a>
+			</div>
+		</footer>
+
+	</section>
+	<div id="light2" class="light">
+		.
+	</div>
+	<script type="text/javascript" src="scripts/script.js" ></script>
+
+</body>
+</html>

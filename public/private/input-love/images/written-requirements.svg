@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="467px" height="307px" viewBox="72 404 467 307"
+	 overflow="visible" enable-background="new 72 404 467 307" xml:space="preserve">
+<defs>
+</defs>
+<g display="none">
+	<defs>
+		<rect id="SVGID_4_" width="612" height="792"/>
+	</defs>
+	<clipPath id="SVGID_5_" display="inline">
+		<use xlink:href="#SVGID_4_"  display="none" overflow="visible"/>
+	</clipPath>
+	<rect clip-path="url(#SVGID_5_)" fill="#FFFFFF" width="612" height="792"/>
+	<rect clip-path="url(#SVGID_5_)" fill="#FFFFFF" width="612" height="792"/>
+	<g clip-path="url(#SVGID_5_)">
+		<text transform="matrix(1 0 0 1 72 83)" display="inline" font-family="'Helvetica'" font-size="12">Please write the HTML, CSS and JavaScript for the following login box:</text>
+	</g>
+</g>
+<g display="none">
+	<defs>
+		<rect id="SVGID_2_" x="72" width="468" height="792"/>
+	</defs>
+	<clipPath id="SVGID_6_" display="inline">
+		<use xlink:href="#SVGID_2_"  display="none" overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_6_)">
+		<defs>
+			<rect id="SVGID_3_" x="72" y="100" width="468" height="271"/>
+		</defs>
+		<clipPath id="SVGID_7_" display="inline">
+			<use xlink:href="#SVGID_3_"  display="none" overflow="visible"/>
+		</clipPath>
+		<g transform="matrix(1 0 0 1 7.629395e-06 0)" clip-path="url(#SVGID_7_)">
+			
+				<image display="inline" overflow="visible" width="500" height="290" xlink:href="data:image/jpeg;base64,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
+X14rCDoltvwJAUsjSzRic4BhabSG/wDVpf8AJNeOhwt9jfcu9HZHITd7F2ZeRq/8yTsRf6B0oD2t
+FjWOFoBJ5zzofReGRhrw0ltoaHuDtGzSHR7k+IO0adzWMIItLg0WGw281y0rWudpPP8A7GB7bHm3
+otHOPihAHWWADSsA6CD0NsCkYJWiOVznEaB0vm6QHaVnUg0dAFg9jfcu9HZHITd7F2ZeRq22/MKy
+Qke+wsjs/T2d9xLTaPrdI/tHITd7F2ZeRdJS1E1M6TXMMhjt/PRXE6zPfiuJ1me/FcTrM9+K4nWZ
+78VxOsz34ridZnvxXE6zPfiuJ1me/FcTrM9+K4nWZ78VxOsz34ridZnvxXE6zPfiuJ1me/FcTrM9
++K4nWZ78VxOsz34ridZnvxXE6zPfiuJ1me/FcTrM9+K4nWZ78VxOsz34ridZnvxXE6zPfiuJ1me/
+FcTrM9+K4nWZ78VxOsz34ridZnvxXE6zPfiuJ1me/FcTrM9+K4nWZ78VxOsz34ridZnvxXE6zPfi
+uJ1me/FcTrM9+K4nWZ78VxOsz34ridZnvxXE6zPfiuJ1me/FWH7lWEHpBnfijYSS42ucTaSfx5Cb
+vYuzL7fm72Lsy8jY5wB+BIC123ha7bwtdt4Wu28LXbeFrtvC123ha7bwtdt4Wu28LXbeFrtvC123
+ha7bwtdt4Wu28LXbeFrtvC123ha7bwtdt4Wu28LXbeFrtvC123ha7bwtdt4Wu28LXbeFrtvC123h
+a7bwtdt4Wu28LXbeFrtvC123ha7bwtdt4Wu28LXbeFrtvC123ha7bwtdt4VrSCPiOQm72Lsy8jV1
+dXTR1Ev7l0Q+q0SBrWtY7mDrR/MuHUuRHsrh1LkR7K4dS5EeyuHUuRHsrh1LkR7K4dS5EeyuHUuR
+Hsrh1LkR7K4dS5EeyuHUuRHsrh1LkR7K4dS5EeyuHUuRHsrh1LkR7K4dS5EeyuHUuRHsrh1LkR7K
+4dS5EeyuHUuRHsrh1LkR7K4dS5EeyuHUuRHsrh1LkR7K4dS5EeyuHUuRHsrh1LkR7K4dS5EeyuHU
+uRHsrh1LkR7K4dS5EeyuHUuRHsrh1LkR7K4dS5EeyuHUuRHsrh1LkR7K4dS5EeyuHUuRHsrh1LkR
+7K4dS5EeyuHUuRHsrh1LkR7K4dS5EeyuHUuRHsrh1LkR7KIP26l5/hDGP/FV1LTjRhilsY34AgHk
+Ju9i7MvI1f8AmSdiL2d9y70dkchN3sXZl5Gr/wAyTsRf6Qt+myX5JDoyGwdLOfVchGHljgHyaETQ
+Q0W83zSc2iFFK51kbhGXaAa4AvAtDwfmFtvNYnFzyTol7bAxzHNY4F2g5vPq83OpLDaRpzMFg3QB
+DBetBsumXNa7Tsba21wb7hZYfcpA6U2RvjaGkN+a0tNpsH6exvuXejsjkJu9i7MvI1f+ZJ2Iv9A6
+waQFgPvsKBkY15bqlwBs/K1Nd9NmkzmYdEWtA+Cc5sbWl+sQACfzVrWhtgDRYAPlHQPyRa2NrWk2
+kBoAJHvQc+NrnDocQCR7G+5d6OyOQm72Lsy8jV0lXUx08v7l0oErhGHNc1jRYXWD+VcRpc+PaXEa
+XPj2lxGlz49pcRpc+PaXEaXPj2lxGlz49pcRpc+PaXEaXPj2lxGlz49pcRpc+PaXEaXPj2lxGlz4
+9pcRpc+PaXEaXPj2lxGlz49pcRpc+PaXEaXPj2lxGlz49pcRpc+PaXEaXPj2lxGlz49pcRpc+PaX
+EaXPj2lxGlz49pcRpc+PaXEaXPj2lxGlz49pcRpc+PaXEaXPj2lxGlz49pcRpc+PaXEaXPj2lxGl
+z49pcRpc+PaXEaXPj2lxGlz49pcRpc+PaXEaXPj2lxGlz49pcRpc+PaXEaXPj2lxGlz49pcRpc+P
+aXEaXPj2lb/+jS83wmjP/kq6qpzpQyy2sd8QAByE3exdmXkbXNBPxIBWo24LUbcFqNuC1G3Bajbg
+tRtwWo24LUbcFqNuC1G3BajbgtRtwWo24LUbcFqNuC1G3BajbgtRtwWo24LUbcFqNuC1G3Bajbgt
+RtwWo24LUbcFqNuC1G3BajbgtRtwWo24LUbcFqNuC1G3BajbgtRtwWo24LUbcFqNuC1G3BajbgtR
+twWo24LUbcFqNuCsaAB8ByE3exdmX2/N3sXZl5Fsuk1oeLQDbbYfyW8Z14LeM68FvGdeC3jOvBbx
+nXgt4zrwW8Z14LeM68FvGdeC3jOvBbxnXgt4zrwW8Z14LeM68FvGdeC3jOvBbxnXgt4zrwW8Z14L
+eM68FvGdeC3jOvBbxnXgt4zrwW8Z14LeM68FvGdeC3jOvBbxnXgt4zrwW8Z14LeM68FvGdeC3jOv
+BbxnXgt4zrwW8Z14LeM68FvGdeC3jOvBbxnXgt4zrwW8Z14LeM68FvGdeCEclhtFoI6DyE3exdmX
+kYO7Z2R7Oh/tP68hN3sXZl5GDu2dkctHK4gtlBLQOkWfFF0cbntbrFoJARMcbnhusWgmxEljg5rg
+ws0XW6R93RYtKSJ7G22WuaQLfgnzsYTHH0nBfVMbhF/XYdG9Oe1pLG6zgOYW/FNaI3FzxawWG1w+
+ITo/pP02i1zbDaAPeU3Rie7SBLbAecDpsWg9ha/+kiw8/wCCH1Yns0tXSaRb+SAkjcwu1dIEW/kg
+JI3MLtUOBFv5JrXxPa5+qC0gn8kf/W75Tou5jzOPuP4oaULxadEWtI+b4L6czbCRaPgeWh/tP68h
+N3sXZl5GDu2dkctTNFRFG6MEObI6w85/BQMZVMh/buP1RaQHi221vxtTZIH/AEGCoJPMRphx5gLO
+lTNe8Nd+6Y6wmzmHSVWtdKHgyAxAm3mt/lVRCZhG42OaHEi0DpA/NPqP3DTA6LQbTfzB1lmqnUzt
+SoaWH8+kFVMYkEJLBFDKeYN0fx/FNhkna94gfE6f+Uud0fMqdonY4xRyAuB5tI9HSmOqJHNaXfNJ
+b8wH5qEOmbKI5rTY4vOiRzG1yifNVioZ9Qu0B8waD7y7pH5KJ81WKhn1C4MaNINBFmkSf0TGzVLa
+hxmEjXNNug0KUiojeZZ2SANPQ233quBmtBc0wjS+B/lQkZKJWOaLADbo/geWh/tP68hN3sXZl5GD
+u2dkf7AthkLGnpHMf1Rc42uPOSf+AuidouPNbYCf4E9CtP8AuIf7T+vITd7F2ZeRg7tnZHs6H+0/
+ryE3exdmXkQyOUtaOgcx/ULfm5uC35ubgt+bm4Lfm5uC35ubgt+bm4Lfm5uC35ubgt+bm4Lfm5uC
+35ubgt+bm4Lfm5uC35ubgt+bm4Lfm5uC35ubgt+bm4Lfm5uC35ubgt+bm4Lfm5uC35ubgt+bm4Lf
+m5uC35ubgt+bm4Lfm5uC35ubgt+bm4Lfm5uC35ubgt+bm4Lfm5uC35ubgt+bm4Lfm5uC35ubgt+b
+m4Lfm5uC35ubgt+bm4Lfm5uC35ubgt+bm4LTleXu+J5CbvYuzL7fm72Lsy+35u9i7Mvt+bvYuzL7
+fm72Lsyr0i9IvSL0i9IvSL0i9IvSL0i9IvSL0i9IvSL0i9IvSL0i9IvSL0i9IvSL0i9IvSL0i9Iv
+SL0i9IvSL0i9IvSL0i9IvSL0i9IvSL0i9IvSL0i9IvSL0i9IvSL0i9IvSL0i9IvSL0i9IvSL0i9I
+pfK7yP8ALVkX/9k=" transform="matrix(0.936 0 0 0.9345 72 100)">
+			</image>
+		</g>
+	</g>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="612" height="792"/>
+	</defs>
+	<clipPath id="SVGID_8_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 413)" font-family="'Helvetica-Bold'" font-size="12">Requirements:</text>
+	</g>
+	
+		<line clip-path="url(#SVGID_8_)" fill="none" stroke="#000000" stroke-width="0.5918" stroke-miterlimit="10" x1="72" y1="413.9443" x2="156.0176" y2="413.9443"/>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 427)" font-family="'Helvetica'" font-size="12">1.</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 85 427)" font-family="'Helvetica'" font-size="12">Build this as a UI Component that can be used in multiple locations in your site</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 441)" font-family="'Helvetica'" font-size="12">2.</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 85 441)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="12">T</tspan><tspan x="6.6821" y="0" font-family="'Helvetica'" font-size="12">wo instances of this component can exist on the same page</tspan></text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 455)" font-family="'Helvetica'" font-size="12">3.</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 85 455)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="12" letter-spacing="-1">Y</tspan><tspan x="6.9121" y="0" font-family="'Helvetica'" font-size="12">ou can use jQuer</tspan><tspan x="98.3008" y="0" font-family="'Helvetica'" font-size="12">y</tspan><tspan x="103.4248" y="0" font-family="'Helvetica'" font-size="12">, HTML5 and CSS3</tspan></text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 469)" font-family="'Helvetica'" font-size="12">4.</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 85 469)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="12" letter-spacing="-1">Y</tspan><tspan x="6.9121" y="0" font-family="'Helvetica'" font-size="12">our site supports IE9+ and current versions of Safari, Chrome, Firefox</tspan></text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 483)" font-family="'Helvetica'" font-size="12">5.</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 85 483)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="12" letter-spacing="-1">Y</tspan><tspan x="6.9121" y="0" font-family="'Helvetica'" font-size="12">our site supports iOS6</tspan></text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 525)" font-family="'Helvetica-Bold'" font-size="12">UI Speciﬁcations:</text>
+	</g>
+	
+		<line clip-path="url(#SVGID_8_)" fill="none" stroke="#000000" stroke-width="0.5918" stroke-miterlimit="10" x1="72" y1="525.9443" x2="172.6875" y2="525.9443"/>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 540)" font-family="'Helvetica'" font-size="12">•</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 81 539)" font-family="'Helvetica'" font-size="12">Component width: 500 pixels</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 554)" font-family="'Helvetica'" font-size="12">•</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 81 553)" font-family="'Helvetica'" font-size="12">Form ﬁeld width: 300 pixels</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 568)" font-family="'Helvetica'" font-size="12">•</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 81 567)" font-family="'Helvetica'" font-size="12">Rounded corner radius: 2 pixels</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 582)" font-family="'Helvetica'" font-size="12">•</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 81 581)" font-family="'Helvetica'" font-size="12">Dark color: #232323</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 596)" font-family="'Helvetica'" font-size="12">•</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 81 595)" font-family="'Helvetica'" font-size="12">Red color: #db4a39</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 610)" font-family="'Helvetica'" font-size="12">•</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 81 609)" font-family="'Helvetica'" font-size="12">Light color: #e8e8e8</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 624)" font-family="'Helvetica'" font-size="12">•</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 81 623)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="12">Font:</tspan><tspan x="27.3457" y="0" font-family="'Helvetica'" font-size="12"> </tspan><tspan x="30.0317" y="0" font-family="'Helvetica'" font-size="12">Arial, 12 pixels</tspan></text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 638)" font-family="'Helvetica'" font-size="12">•</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 81 637)"><tspan x="0" y="0" font-family="'Helvetica'" font-size="12">T</tspan><tspan x="6.8979" y="0" font-family="'Helvetica'" font-size="12">itle font size: 14 pixels</tspan></text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 652)" font-family="'Helvetica'" font-size="12">•</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 81 651)" font-family="'Helvetica'" font-size="12">Login form submits </text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 185.707 651)" font-family="'Helvetica-Bold'" font-size="12">username </text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 245.7363 651)" font-family="'Helvetica'" font-size="12">and </text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 269.0918 651)" font-family="'Helvetica-Bold'" font-size="12">password</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 325.1074 651)" font-family="'Helvetica'" font-size="12"> data using </text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 387.1523 651)" font-family="'Helvetica-Bold'" font-size="12">AJAX</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 419.1621 651)" font-family="'Helvetica'" font-size="12"> to: </text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 81 665)" fill="#000099" font-family="'Helvetica'" font-size="12">api.yoursite.com/login</text>
+	</g>
+	
+		<line clip-path="url(#SVGID_8_)" fill="none" stroke="#000099" stroke-width="0.5918" stroke-miterlimit="10" x1="81" y1="665.9443" x2="197.0566" y2="665.9443"/>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 680)" font-family="'Helvetica'" font-size="12">•</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 81 679)" font-family="'Helvetica'" font-size="12">Both form ﬁelds must be entered (not empty), otherwise display an alert message.</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 694)" font-family="'Helvetica'" font-size="12">•</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 81 693)" font-family="'Helvetica'" font-size="12">If login succeeds, display in the browser JS console the “succeeded” message.</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 708)" font-family="'Helvetica'" font-size="12">•</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 81 707)" font-family="'Helvetica'" font-size="12">If login fails, display in the browser JS console the “failed” message.</text>
+	</g>
+	<g clip-path="url(#SVGID_8_)">
+		<text transform="matrix(1 0 0 1 72 46)" fill="#676767" font-family="'Helvetica'" font-size="10">AOS UI Engineering Quiz</text>
+	</g>
+</g>
+<rect id="_x3C_Slice_x3E__1_" x="72" y="404" fill="none" width="467" height="307"/>
+</svg>

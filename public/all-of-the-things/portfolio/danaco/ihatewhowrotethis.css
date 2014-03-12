@@ -1,0 +1,17 @@
+@media all and (max-width: 768px) { 
+	body > div:nth-of-type(2){
+		top: 50px;
+	}	
+	#banner nav {
+		width: 100% !important;
+		float: none !important;
+		
+	} 
+	#banner nav ul{
+		min-width: 520px;
+	}
+	
+	#menu-primary-navigation > li > a{
+		padding:0px 0px 0px 0px;
+	}	
+}

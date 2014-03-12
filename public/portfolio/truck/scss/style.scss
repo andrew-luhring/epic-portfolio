@@ -1,0 +1,149 @@
+@import 'partials/base';
+
+
+figure{
+	position: relative;
+}
+figcaption{
+	display:none;
+}
+.page_headline{
+	border-top: 1px solid $border_clr;
+	border-bottom: 1px solid $border_clr;
+	padding:20px 0px;
+	margin:0 auto 20px;
+	h1{
+		color: $headline_clr;
+		font-weight: 300;
+		font-size: 40px;
+		text-align:center;
+		margin:0;
+		&.rem_ok{
+			font-size: 4rem;
+		}
+	}
+}
+.test{
+	figure{
+		figcaption{
+			display:inherit;
+			font-size: 1rem;
+			opacity: 0;
+			position: absolute;
+			transition: opacity, 1s;
+		}
+		&:hover{
+			figcaption{
+				background: white;
+				opacity: 1;
+				transition: opacity, 1s;
+			}
+		}
+	}
+}
+section.subsec{
+	font-size:16px;
+	&.rem_ok{
+		font-size:1.6rem;
+	}
+}
+.subsec_txt{
+	padding: 20px 0;
+}
+.dynamic{
+	height: auto;
+}
+footer{
+	@include cf;
+	font-size:12px;
+	margin: 0 auto 100px;
+	padding:30px 0;
+	width:660px;
+
+}
+.main.test{
+	border:1px solid black;
+}
+.main{
+	
+	max-width:660px;
+	margin:auto;
+	&.rem_ok{
+		max-width: 66rem;
+	}
+}
+.top{
+	margin: 0 auto 20px;
+	width: 100%;
+}
+.subsec_btn{
+	background: $green;
+	border-radius:8px;
+	color: $white;
+	font-size:20px;
+	margin:20px auto;
+	padding:8px 0;
+	display:block;
+	&.left, &.right{
+		margin:20px 0;
+	}
+}
+form[name='btn_align']{
+	display:flex;
+	fieldset{
+		flex:1;
+	}
+}
+.flexbox {
+	.subsec_btn{
+		&.center{
+			align-self: center;
+		}
+		&.left{
+			align-self: flex-start;
+		}
+		&.right{
+			align-self: flex-end;
+		}
+	}
+}
+.no-flexbox{
+	.main_txt, .main_img{
+		max-width: 49%;
+		padding: 0;
+	}
+	.bottom, .top{
+		@include cf;
+	}
+	.subsec_btn{
+		&.center{
+			margin: 20px auto 20px;
+		}
+		&.left{
+			float:left;
+		}
+		&.right{
+			float: right;
+		}
+
+
+	}
+}
+hr{
+	margin:100px 0;
+	border-color: red;
+}
+
+
+form[name='btn_align'] input{
+	display:block;
+	margin-bottom:40px;
+}
+@import 'partials/d7_v1';
+@import 'partials/d2_v1';
+#error{
+	position: relative;
+	display:none;
+}
+@import 'partials/error';
+

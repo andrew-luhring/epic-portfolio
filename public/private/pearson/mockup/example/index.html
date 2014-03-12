@@ -1,0 +1,910 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<link rel="stylesheet" href="skin/jplayer.custom.css" type="text/css" id="skinCSS">
+<link rel="stylesheet" href="PM512-w12-m01.css" id="styleCSS" type="text/css">
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+	google.load("jquery", "1");
+	google.load("jqueryui", "1");
+</script>
+</head>
+
+<body onload="hide_preloader();">
+<div id="lk-header">
+</div>
+<div class="slidesContainer" >
+	<div class="slide audio" id="slide1">
+		<div class="s1-list-container s1-1">
+			<h2 class="gradient shadow">Diagnostic Tests</h2>
+			<div class="box shadow">
+				<p>Used for persons in whom disease is suspected, due to symptoms, physical findings, or laboratory findings.</p>
+				<ul>
+					Diagnostic Tests can be:
+					<li>Invasive,</li>
+					<li>dangerous,</li>
+					<li>expensive,</li>
+					<li>not feasible on large groups of people,</li>
+					<li>time consuming</li>
+				</ul>
+			</div>
+		</div>
+		<div class="vs shadow">Versus</div>
+		<div class="s1-list-container s1-2">
+			<h2 class="gradient shadow">Screening Tests</h2>
+			<div class="box shadow">
+				<p>used for identifying early signs of a disease in people with no signs or symptoms of the disease.</p>
+				<ul>
+					usually separates an asymptomatic population into:
+					<li>those who almost certainly do not have the disease and</li>
+					<li>those who may have it.</li>
+				</ul>
+				<p>Follow screen with a diagnostic workup to determine whether those who screened positive in fact have the disease before treatment is started.</p>
+			</div>
+		</div>
+	</div>
+	<div class="hubContainer">
+		<div class="slide" id="slide2">
+			<a href="#" class="button hub-button hbtn-1" id="btn3">Validity<br>
+			Test</a>
+			<a href="#" class="button hub-button hbtn-2" id="btn12">Reliability<br>
+			Test</a>
+			<a href="#" class="button hub-button hbtn-3" id="btn15">Relation between Validity and Reliability</a>
+		</div>
+		<div class="slide" id="slide3" title="Validity">
+			<div class="validity-question-container">
+				<div class="validity-question box shadow" id="val-question-1">
+					<h5>Sensitivity</h5>
+					<p>Sensitivity is the proportion of persons with disease who test positive using the screening test. It determines the test's ability to correctly identify individuals who truly have the disease. In other words, it is the proportion or probability that a person will test positive if they truly have the disease.</p>
+					<p>Use this information to select the cells from the table that are used to calculate sensitivity: ____ / _____</p>
+					<p>Note: Select the numerator first and then the denominator.</p>
+				</div>
+				<div class="validity-question box shadow" id="val-question-2">
+					<h5>Specificity</h5>
+					<p>Specificity is the proportion of persons without the disease (true negatives) who test negative. It helps determine the test's ability to correctly identify individuals who truly do not have disease. It gives us the probability the test will be negative if a subject truly does not have the disease.</p>
+					<p>Use this information to select the cells of the table that are used to calculate specificity: ____ / _____</p>
+					<p>Note: Select the numerator first and then the denominator.</p>
+				</div>
+				<div class="validity-question box shadow" id="val-question-3">
+					<h5>Predictive Value Positive (PVP)</h5>
+					<p>Predictive value positive is the predictive value of a positive test. It gives us the proportion of persons testing positive who truly have the disease.  This is also described as the test 'yield.'  It is used to answer the question, "now that a person has tested positive, what is the probability that he or she truly has the disease?"</p>
+					<p>Use this information to select the elements on the chart that will make up the equation that will determine PVP: ____ / _____</p>
+					<p>Note: Select the numerator first and then the denominator.</p>
+				</div>
+				<div class="validity-question box shadow" id="val-question-4">
+					<h5>Predictive Value Negative (PVN)</h5>
+					<p>Predictive value negative is the predictive value of a negative test. It gives us the proportion of persons testing negative who truly do not have the disease.</p>
+					<p>Use this information to select the cells of the table that are used to calculate PVN: ____ / _____</p>
+					<p>Note: Select the numerator first and then the denominator.</p>
+				</div>
+			</div>
+			<div class="validity-feedback-container">
+				<div class="validity-feedback shadow correct feedback-val-question-1" > Well done. You've taken all the people who were accurately tested as positive (in other words, the true positives) and divided it by all the people who have the disease.<a href="#" class="button next-validity">Next Question</a>
+				</div>
+				<div class="validity-feedback shadow incorrect feedback-val-question-1" > Try again, your selection does not measure the sensitivity of the test. Remember to select your numerator first. </div>
+				<div class="validity-feedback shadow correct feedback-val-question-2" > Well done. You've taken all the people who were accurately tested negative and divided it by all the people who do not have the disease.<a href="#" class="button next-validity">Next Question</a>
+				</div>
+				<div class="validity-feedback shadow incorrect feedback-val-question-2" > Try again, your selection does not measure the specificity of the test. Remember to select your numerator first. </div>
+				<div class="validity-feedback shadow correct feedback-val-question-3" > Well done. You've taken all the people who were accurately tested positive and divided it by all the people who tested positive.<a href="#" class="button next-validity">Next Question</a>
+				</div>
+				<div class="validity-feedback shadow incorrect feedback-val-question-3" > Try again, your selection does not measure PVP. Remember to select your numerator first. </div>
+				<div class="validity-feedback shadow correct feedback-val-question-4" > Well done. You've taken all the people who were accurately tested negative and divided it by all the people who tested negative.<a href="#" class="button next-validity">Next Question</a>
+				</div>
+				<div class="validity-feedback shadow incorrect feedback-val-question-4" > Try again, your selection does not measure PVN. Remember to select your numerator first. </div>
+			</div>
+			<table class="validity-table shadow">
+				<tr>
+					<td class="first-column no-bottom the-blue"></td>
+					<td class="second-column no-right the-gold">True</td>
+					<td class="third-column the-gold">Diagnosis</td>
+					<td class="last-column no-bottom the-gold"></td>
+				</tr>
+				<tr>
+					<td class="the-blue">Screening<br>
+						Result</td>
+					<td class="the-gold"><b>Diseased<br>
+						+</b></td>
+					<td class="the-gold"><b>Not Diseased<br>
+						-</b></td>
+					<td class="the-gold"></td>
+				</tr>
+				<tr>
+					<td class="the-blue"><b>Positive<br>
+						+</b></td>
+					<td class="val-click" id="vc11">A<br>
+						True +</td>
+					<td class="val-click" id="vc12">B<br>
+						False +</td>
+					<td class="val-click" id="vc13">A+B</td>
+				</tr>
+				<tr>
+					<td class="the-blue"><b>Negative<br>
+						-</b></td>
+					<td class="val-click" id="vc21">C<br>
+						False -</td>
+					<td class="val-click" id="vc22">D<br>
+						True -</td>
+					<td class="val-click" id="vc23">C+D</td>
+				</tr>
+				<tr>
+					<td class="the-blue"></td>
+					<td class="val-click" id="vc31">A+C</td>
+					<td class="val-click" id="vc32">B+D</td>
+					<td></td>
+				</tr>
+			</table>
+			<div class="instructions-container" id="validity-instructions">
+				<h3 class="button shadow">Instructions</h3>
+				<div class="box shadow">
+					<p>Validity is a measure of accuracy in relation to the truth. A special 4-fold table is used to evaluate the indices of validity. The screening test results, positive or negative, are displayed along the left side (rows) and the person's "true" disease status based on the diagnostic gold-standard test is indicated at the top (columns). The people who correctly screen positive or correctly screen negative are shown in cells A and D.  The people who falsely screen positive or falsely screen negative are shown in cells B and C. We use this table to evaluate the clinical usefulness of a test by comparing the results of the screening test under evaluation with those derived from a definitive diagnostic procedure ("gold standard").</p>
+					<p>You will determine how to calculate the sensitivity, the specificity, the predictive value positive, and the predictive value negative of the test.</p>
+				</div>
+			</div>
+		</div>
+		<div class="slide videoSlide" id="slide4" title="Validity"></div>
+		<div class="slide" id="slide5" title="Validity">
+			<div class="two-table-container first shadow the-green">
+				<h3>Population A Prev. =0.5%</h3>
+				<table class="two-table">
+					<tr>
+						<td class="first-column no-bottom the-blue">&nbsp;</td>
+						<td class="second-column no-right the-gold"><b>True</b></td>
+						<td class="third-column the-gold"><b>Diagnosis</b></td>
+						<td class="last-column no-bottom the-gold">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Screening<br>
+							Result</b></td>
+						<td class="the-gold"><b>Diseased</b></td>
+						<td class="the-gold"><b>Not<br>
+							Diseased</b></td>
+						<td class="the-gold"><b>Total</b></td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Positive</b></td>
+						<td>485</td>
+						<td>4,975</td>
+						<td>5,460</td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Negative</b></td>
+						<td>15</td>
+						<td>94,585</td>
+						<td>94,540</td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Total</b></td>
+						<td>500</td>
+						<td>99,500</td>
+						<td>100,000</td>
+					</tr>
+				</table>
+			</div>
+			<div class="two-table-container second shadow the-red">
+				<h3>Population B Prev. = 5%</h3>
+				<table class="two-table">
+					<tr>
+						<td class="first-column no-bottom the-blue">&nbsp;</td>
+						<td class="second-column no-right the-gold"><b>True</b></td>
+						<td class="third-column the-gold"><b>Diagnosis</b></td>
+						<td class="last-column no-bottom the-gold">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Screening<br>
+							Result</b></td>
+						<td class="the-gold"><b>Diseased</b></td>
+						<td class="the-gold"><b>Not<br>
+							Diseased</b></td>
+						<td class="the-gold"><b>Total</b></td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Positive</b></td>
+						<td>4,850</td>
+						<td>4,750</td>
+						<td>9,600</td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Negative</b></td>
+						<td>150</td>
+						<td>90,250</td>
+						<td>90,400</td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Total</b></td>
+						<td>5,000</td>
+						<td>95,000</td>
+						<td>100,000</td>
+					</tr>
+				</table>
+			</div>
+			<div class="two-table-answer-container box shadow">
+				<table class="two-table-answer">
+					<tr>
+						<th>&nbsp;</th>
+						<th class="the-green">Population A</th>
+						<th class="the-red">Population B</th>
+					</tr>
+					<tr>
+						<td class="the-blue">Prevalence rate of Disease</td>
+						<td><span class="two-text-input-correct">0.5</span>
+							<input type="text" class="two-text-input" id="tti1-1" />
+							%</td>
+						<td><span class="two-text-input-correct">5.0</span>
+							<input type="text" class="two-text-input" id="tti2-1" />
+							%</td>
+					</tr>
+					<tr>
+						<td class="button view-equation view-sensitivity the-blue">Sensitivity</td>
+						<td><span class="two-text-input-correct">97.0</span>
+							<input type="text" class="two-text-input" id="tti1-2" />
+							%</td>
+						<td><span class="two-text-input-correct">97.0</span>
+							<input type="text" class="two-text-input" id="tti2-2" />
+							%</td>
+					</tr>
+					<tr>
+						<td class="button view-equation view-specificity the-blue">Specificity</td>
+						<td><span class="two-text-input-correct">95.0</span>
+							<input type="text" class="two-text-input" id="tti1-3" />
+							%</td>
+						<td><span class="two-text-input-correct">95.0</span>
+							<input type="text" class="two-text-input" id="tti2-3" />
+							%</td>
+					</tr>
+					<tr>
+						<td class="button view-equation view-pvp the-blue">PVP</td>
+						<td><span class="two-text-input-correct">8.9</span>
+							<input type="text" class="two-text-input" id="tti1-4" />
+							%</td>
+						<td><span class="two-text-input-correct">50.5</span>
+							<input type="text" class="two-text-input" id="tti2-4" />
+							%</td>
+					</tr>
+					<tr>
+						<td class="button view-equation view-pvn the-blue">PVN</td>
+						<td><span class="two-text-input-correct">99.5</span>
+							<input type="text" class="two-text-input" id="tti1-5" />
+							%</td>
+						<td><span class="two-text-input-correct">95.0</span>
+							<input type="text" class="two-text-input" id="tti2-5" />
+							%</td>
+					</tr>
+				</table>
+			</div>
+			<div class="two-popup-container modal-background">
+				<div class="two-popup shadow box two-popup-sensitivity">
+					<h3>Sensitivity<span class="two-close-button button">[X]</span></h3>
+					<p>Sensitivity is the proportion of persons with disease who test positive. You would take those who have tested positive  and truly have the disease (true positives) and then divide that by the total number of people who truly have the disease.</p>
+				</div>
+				<div class="two-popup shadow box two-popup-specificity">
+					<h3>Specificity<span class="two-close-button button">[X]</span></h3>
+					<p>Specificity is the proportion of persons without the disease who test negative. You would take those who have tested negative and truly do not have the disease (true negatives) and then divide that number by the total number of people who are not diseased.</p>
+				</div>
+				<div class="two-popup shadow box two-popup-pvp">
+					<h3>PVP<span class="two-close-button button">[X]</span></h3>
+					<p>Predictive value positive is the predictive value of a positive test. You would take those who tested positive who truly have the disease (true positives) and then divide that number by the total number of people who screen tested positive.</p>
+				</div>
+				<div class="two-popup shadow box two-popup-pvn">
+					<h3>PVN<span class="two-close-button button">[X]</span></h3>
+					<p>Predictive value negative is the predictive value of a negative test. You would take those who tested negative who truly did not have the disease (true negatives) and then divide that number by the total number of people who screen tested negative.</p>
+				</div>
+			</div>
+			<a href="#" class="submit-button two-table-submit button" >Check Answers</a>
+			<div class="instructions-container" id="two-table-instructions">
+				<h3 class="button shadow">Instructions</h3>
+				<div class="box shadow">
+					<p>Here is some example information that you can use to calculate the sensitivity, specificity, PVP, and PVN.</p>
+					<p>Fill in the values in the chart provided. If you need to refresh your memory on the equation to use, simply click on the item you are trying to calculate for. So if you needed to see the equation for sensitivity, you can click on sensitivity.</p>
+					<p>Enter your answers as percentages; include one decimal place.</p>
+					<p>You will not be able to advance in the presentation until you fill in all the correct values.</p>
+				</div>
+			</div>
+		</div>
+		<div class="slide" id="slide6" title="Validity">
+			<div class="two-table-container first shadow the-green">
+				<h3>Low Specificity 25%</h3>
+				<table class="two-table">
+					<tr>
+						<td class="first-column no-bottom the-blue">&nbsp;</td>
+						<td class="second-column no-right the-gold"><b>True</b></td>
+						<td class="third-column the-gold"><b>Diagnosis</b></td>
+						<td class="last-column no-bottom the-gold">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Screening<br>
+							Result</b></td>
+						<td class="the-gold"><b>Diseased</b></td>
+						<td class="the-gold"><b>Not<br>
+							Diseased</b></td>
+						<td class="the-gold"><b>Total</b></td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Positive</b></td>
+						<td>4,850</td>
+						<td>71,250</td>
+						<td>76,100</td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Negative</b></td>
+						<td>150</td>
+						<td>23,750</td>
+						<td>23,900</td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Total</b></td>
+						<td>5,000</td>
+						<td>95,000</td>
+						<td>100,000</td>
+					</tr>
+				</table>
+			</div>
+			<div class="two-table-container second shadow the-red">
+				<h3>High Specificity 96%</h3>
+				<table class="two-table">
+					<tr>
+						<td class="first-column no-bottom the-blue">&nbsp;</td>
+						<td class="second-column no-right the-gold"><b>True</b></td>
+						<td class="third-column the-gold"><b>Diagnosis</b></td>
+						<td class="last-column no-bottom the-gold">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Screening<br>
+							Result</b></td>
+						<td class="the-gold"><b>Diseased</b></td>
+						<td class="the-gold"><b>Not<br>
+							Diseased</b></td>
+						<td class="the-gold"><b>Total</b></td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Positive</b></td>
+						<td>3,200</td>
+						<td>3,800</td>
+						<td>7,000</td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Negative</b></td>
+						<td>1,800</td>
+						<td>91,200</td>
+						<td>9,300</td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Total</b></td>
+						<td>5,000</td>
+						<td>95,000</td>
+						<td>100,000</td>
+					</tr>
+				</table>
+			</div>
+			<div class="two-table-answer-container box shadow">
+				<table class="two-table-answer">
+					<tr>
+						<th>&nbsp;</th>
+						<th class="the-green">Low Specificity</th>
+						<th class="the-red">High Specificity</th>
+					</tr>
+					<tr>
+						<td class="the-blue">Prevalence rate of Disease</td>
+						<td><span class="two-text-input-correct">5.0</span>
+							<input type="text" class="two-text-input" />
+							%</td>
+						<td><span class="two-text-input-correct">5.0</span>
+							<input type="text" class="two-text-input" />
+							%</td>
+					</tr>
+					<tr>
+						<td class="button view-equation view-sensitivity the-blue">Sensitivity</td>
+						<td><span class="two-text-input-correct">97.0</span>
+							<input type="text" class="two-text-input" />
+							%</td>
+						<td><span class="two-text-input-correct">64.0</span>
+							<input type="text" class="two-text-input" />
+							%</td>
+					</tr>
+					<tr>
+						<td class="button view-equation view-specificity the-blue">Specificity</td>
+						<td><span class="two-text-input-correct">25.0</span>
+							<input type="text" class="two-text-input" />
+							%</td>
+						<td><span class="two-text-input-correct">96.0</span>
+							<input type="text" class="two-text-input" />
+							%</td>
+					</tr>
+					<tr>
+						<td class="button view-equation view-pvp the-blue">PVP</td>
+						<td><span class="two-text-input-correct">6.4</span>
+							<input type="text" class="two-text-input" />
+							%</td>
+						<td><span class="two-text-input-correct">45.7</span>
+							<input type="text" class="two-text-input" />
+							%</td>
+					</tr>
+					<tr>
+						<td class="button view-equation view-pvn the-blue">PVN</td>
+						<td><span class="two-text-input-correct">99.0</span>
+							<input type="text" class="two-text-input" />
+							%</td>
+						<td><span class="two-text-input-correct">98.0</span>
+							<input type="text" class="two-text-input" />
+							%</td>
+					</tr>
+				</table>
+			</div>
+			<div class="two-popup-container modal-background">
+				<div class="two-popup shadow box two-popup-sensitivity">
+					<h3>Sensitivity<span class="two-close-button button">[X]</span></h3>
+					<p>Sensitivity is the proportion of persons with disease who test positive. You would take those who have tested positive  and truly have the disease (true positives) and then divide that by the total number of people who truly have the disease.</p>
+				</div>
+				<div class="two-popup shadow box two-popup-specificity">
+					<h3>Specificity<span class="two-close-button button">[X]</span></h3>
+					<p>Specificity is the proportion of persons without the disease who test negative. You would take those who have tested negative and truly do not have the disease (true negatives) and then divide that number by the total number of people who are not diseased.</p>
+				</div>
+				<div class="two-popup shadow box two-popup-pvp">
+					<h3>PVP<span class="two-close-button button">[X]</span></h3>
+					<p>Predictive value positive is the predictive value of a positive test. You would take those who tested positive who truly have the disease (true positives) and then divide that number by the total number of people who screen tested positive.</p>
+				</div>
+				<div class="two-popup shadow box two-popup-pvn">
+					<h3>PVN<span class="two-close-button button">[X]</span></h3>
+					<p>Predictive value negative is the predictive value of a negative test. You would take those who tested negative who truly did not have the disease (true negatives) and then divide that number by the total number of people who screen tested negative.</p>
+				</div>
+				<div class="two-popup two-feedback shadow box" >
+					<h3>Well done!<span class="two-close-button button">[X]</span></h3>
+					Specificity does not affect prevalence, in this example prevalence was the same for both at 5%. Sensitivity was higher for the test that had a lower specificity and lower for the test that had higher specificity. PVP, when prevalence is constant, went higher as specificity went higher. PVN remained relatively the same. </div>
+			</div>
+			<a href="#" class="submit-button two-table-submit button" >Check Answers</a>
+			<div class="instructions-container" id="two-table-instructions">
+				<h3 class="button shadow">Instructions</h3>
+				<div class="box shadow">
+					<p>Here is another set of example information that you can use to calculate the sensitivity, specificity, PVP, and PVN. Fill in the values in the chart provided. If you need to refresh your memory on the equation to use, simply click on the item you are trying to calculate for. So if you needed to see the equation for sensitivity, you can click on sensitivity. Enter your answers as percentages; include one decimal place. You will not be able to advance in the presentation until you fill in all the correct values. </p>
+					<p>Note that this data is comparing a test with a low specificity and high specificity. Take special notice of how each parameter you are measuring is affected by specificity.</p>
+				</div>
+			</div>
+		</div>
+		<div class="slide presentation" id="slide7" title="Validity: Determinants of Predictive Values">
+			<div class="presentation-table-container red-box shadow">
+				<div class="presentation-text">PVP increases when prevalence of undetected disease increases.</div>
+				<table class="presentation-table">
+					<tr>
+						<td class="first-column no-bottom the-blue"></td>
+						<td class="second-column no-right the-gold">True</td>
+						<td class="third-column the-gold">Diagnosis</td>
+						<td class="last-column no-bottom the-gold"></td>
+					</tr>
+					<tr>
+						<td class="the-blue">Screening<br>
+							Result</td>
+						<td class="the-gold"><b>Diseased<br>
+							+</b></td>
+						<td class="the-gold"><b>Not Diseased<br>
+							-</b></td>
+						<td class="the-gold"></td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Positive<br>
+							+</b></td>
+						<td>A = <span class="number-change nc-a" id="nc-1">30</span><br>
+							True +</td>
+						<td>B = <span class="number-change nc-b" id="nc-2">25</span><br>
+							False +</td>
+						<td class="from-a from-b">A+B = <span class="number-change-auto" id="ab">55</span></td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Negative<br>
+							-</b></td>
+						<td>C = <span class="nc-c">20</span><br>
+							False -</td>
+						<td>D = <span class="nc-d">100</span><br>
+							True -</td>
+						<td>C+D = 120</td>
+					</tr>
+					<tr>
+						<td class="the-blue"></td>
+						<td class="from-a">A+C = <span class="number-change-auto" id="ac">50</span></td>
+						<td class="from-b">B+D = <span class="number-change-auto" id="bd">125</span></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="slide presentation" id="slide8" title="Validity: Determinants of Predictive Values">
+			<div class="presentation-table-container red-box shadow">
+				<div class="presentation-text">Sensitivity and specificity in rare diseases.</div>
+				<table class="presentation-table">
+					<tr>
+						<td class="first-column no-bottom the-blue"></td>
+						<td class="second-column no-right the-gold">True</td>
+						<td class="third-column the-gold">Diagnosis</td>
+						<td class="last-column no-bottom the-gold"></td>
+					</tr>
+					<tr>
+						<td class="the-blue">Screening<br>
+							Result</td>
+						<td class="the-gold"><b>Diseased<br>
+							+</b></td>
+						<td class="the-gold"><b>Not Diseased<br>
+							-</b></td>
+						<td class="the-gold"></td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Positive<br>
+							+</b></td>
+						<td>A = 10<br>
+							True +</td>
+						<td id="cell-b" class="highlight-me">B = 15<br>
+							False +</td>
+						<td>A+B = 25</td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Negative<br>
+							-</b></td>
+						<td>C = 5<br>
+							False -</td>
+						<td>D = 100<br>
+							True -</td>
+						<td>C+D = 105</td>
+					</tr>
+					<tr>
+						<td class="the-blue"></td>
+						<td>A+C = 15</td>
+						<td>B+D = 110</td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="slide presentation" id="slide9" title="Validity: Determinants of Predictive Values">
+			<div class="presentation-table-container red-box shadow">
+				<div class="presentation-text">Predictive Value Negative decreases (slightly) when the PVP increases.</div>
+				<table class="presentation-table">
+					<tr>
+						<td class="first-column no-bottom the-blue"></td>
+						<td class="second-column no-right the-gold">True</td>
+						<td class="third-column the-gold">Diagnosis</td>
+						<td class="last-column no-bottom the-gold"></td>
+					</tr>
+					<tr>
+						<td class="the-blue">Screening<br>
+							Result</td>
+						<td class="the-gold"><b>Diseased<br>
+							+</b></td>
+						<td class="the-gold"><b>Not Diseased<br>
+							-</b></td>
+						<td class="the-gold"></td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Positive<br>
+							+</b></td>
+						<td>A = 10<br>
+							True +</td>
+						<td>B = 15<br>
+							False +</td>
+						<td>A+B = 25</td>
+					</tr>
+					<tr>
+						<td class="the-blue"><b>Negative<br>
+							-</b></td>
+						<td>C = 5<br>
+							False -</td>
+						<td id="cell-d" class="highlight-me">D = 100<br>
+							True -</td>
+						<td>C+D = 105</td>
+					</tr>
+					<tr>
+						<td class="the-blue"></td>
+						<td>A+C = 15</td>
+						<td>B+D = 110</td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="slide audio" id="slide10" title="Validity: Two Stage Testing">
+			<div class="stage-two-container">
+				<div class="stage-two box shadow">
+					<div class="first-div">Net<br>
+						sensitivity</div>
+					<div class="second-div"> = <span class="red-text">Sensitivity<span class="small-text">[Test 1]</span> x Sensitivity<span class="small-text">[Test 2]</span></span></div>
+				</div>
+				<div class="stage-two box shadow">
+					<div class="first-div">Net<br>
+						specificity</div>
+					<div class="second-div"> = <span class="red-text">Specificity<span class="small-text">[Test 1]</span> + Specificity<span class="small-text">[Test 2]</span> (1 - Specificity<span class="small-text">[Test 1]</span>)</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="slide" id="slide11">
+			<table class="presentation-table fillin-table fillin-table1">
+				<tr>
+					<td colspan="4" class="fillin-table-title the-green">Test 1 Fasting Glucose</td>
+				</tr>
+				<tr>
+					<td class="first-column no-bottom the-blue"></td>
+					<td class="second-column no-right the-gold">True</td>
+					<td class="third-column the-gold">Diagnosis</td>
+					<td class="last-column no-bottom the-gold"></td>
+				</tr>
+				<tr>
+					<td class="the-blue"><b>Screening<br>
+						Result</b></td>
+					<td class="the-gold"><b><br>
+						Diseased</b></td>
+					<td class="the-gold"><b>Not<br>
+						Diseased</b></td>
+					<td class="the-gold"><b><br>
+						Total</b></td>
+				</tr>
+				<tr>
+					<td class="the-blue"><b>Positive</b></td>
+					<td>350</td>
+					<td>1900</td>
+					<td>2250</td>
+				</tr>
+				<tr>
+					<td class="the-blue"><b>Negative</b></td>
+					<td>150</td>
+					<td>7600</td>
+					<td>7750</td>
+				</tr>
+				<tr>
+					<td class="the-blue"><b>Total</b></td>
+					<td>500</td>
+					<td>9500</td>
+					<td>10000</td>
+				</tr>
+			</table>
+			<table class="presentation-table fillin-table fillin-table2">
+				<tr>
+					<td colspan="4" class="fillin-table-title the-red">Test 2 Glucose Tolerance Test</td>
+				</tr>
+				<tr>
+					<td class="first-column no-bottom the-blue"></td>
+					<td class="second-column no-right the-gold">True</td>
+					<td class="third-column the-gold">Diagnosis</td>
+					<td class="last-column no-bottom the-gold"></td>
+				</tr>
+				<tr>
+					<td class="the-blue"><b>Screening<br>
+						Result</b></td>
+					<td class="the-gold"><b><br>
+						Diseased</b></td>
+					<td class="the-gold"><b>Not<br>
+						Diseased</b></td>
+					<td class="the-gold"><b><br>
+						Total</b></td>
+				</tr>
+				<tr>
+					<td class="the-blue"><b>Positive</b></td>
+					<td>315</td>
+					<td>190</td>
+					<td>505</td>
+				</tr>
+				<tr>
+					<td class="the-blue"><b>Negative</b></td>
+					<td>35</td>
+					<td>1710</td>
+					<td>1745</td>
+				</tr>
+				<tr>
+					<td class="the-blue"><b>Total</b></td>
+					<td>350</td>
+					<td>1900</td>
+					<td>2250</td>
+				</tr>
+			</table>
+			<div class="small-fillin-table-container small-fillin-table-container1 shadow">
+				<table class="small-table small-fillin-table small-fillin-table1  the-green">
+					<tr>
+						<td>Sensitivity</td>
+						<td>70%</td>
+					</tr>
+					<tr>
+						<td>Specificity</td>
+						<td>80%</td>
+					</tr>
+				</table>
+				<div class="small-fillin-text">
+					<div class="sft"> Net sensitivity = <br>
+						Sensitivity [Test 1] x Sensitivity [Test 2]<br>
+						<br>
+						<br>
+						=
+						<input type="text" class="fillin-answer fillin-1" id="fillin-1" />
+						<a href="#" class="button submit-button fillin-submit shadow" id="fillin-submit-1">Submit</a>
+					</div>
+					<div class="fillin-feedback" id="fillin-feedback-1">
+						<p>Net sensitivity =.70 X .90 = .63</p>
+						<p>Also… 315/500 =.63</p>
+					</div>
+				</div>
+			</div>
+			<div class="small-fillin-table-container small-fillin-table-container2 shadow">
+				<table class="small-table small-fillin-table small-fillin-table2 the-red">
+					<tr>
+						<td>Sensitivity</td>
+						<td>90%</td>
+					</tr>
+					<tr>
+						<td>Specificity</td>
+						<td>90%</td>
+					</tr>
+				</table>
+				<div class="small-fillin-text">
+					<div class="sft"> Net specificity = <br>
+						Specificity [Test 1] + Specificity [Test 2] (1 – Specificity [Test 1] )<br>
+						<br>
+						=
+						<input type="text" class="fillin-answer fillin-2" id="fillin-2" />
+						<a href="#" class="button submit-button fillin-submit shadow" id="fillin-submit-2">Submit</a>
+					</div>
+					<div class="fillin-feedback" id="fillin-feedback-2">
+						<p>Net specificity = .80 +.90(1-.80) =.98</p>
+						<p>Also… (7600 + 1710)/9500 =.98</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide audio" id="slide12">
+			<table class="presentation-table dif kappa-table shadow box">
+				<tr>
+					<td class="first-column no-bottom the-red"></td>
+					<td colspan="2" class="second-column the-blue">Judge 2</td>
+					<td class="last-column no-bottom"></td>
+				</tr>
+				<tr>
+					<td class="the-red">Judge 1</td>
+					<td class="the-blue"><b>Positive</b></td>
+					<td class="the-blue"><b>Negative</b></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="the-red"><b>Positive</b></td>
+					<td class="the-green">A</td>
+					<td class="the-green">B</td>
+					<td>A + B</td>
+				</tr>
+				<tr>
+					<td class="the-red"><b>Negative</b></td>
+					<td class="the-green">C</td>
+					<td class="the-green">D</td>
+					<td>C + D</td>
+				</tr>
+				<tr>
+					<td class="the-red"></td>
+					<td>A + C</td>
+					<td>B + D</td>
+					<td>A + B + C + D</td>
+				</tr>
+			</table>
+			<img src="images/s12.png" class="box shadow twelve-image" />
+		</div>
+		<div class="slide audio" id="slide13" title="Reliability of Tests: Kappa Statistic"></div>
+		<div class="slide" id="slide14">
+			<table class="presentation-table kappa-table shadow">
+				<tr>
+					<td class="first-column no-bottom the-red"></td>
+					<td colspan="2" class="second-column the-blue">Judge 2</td>
+					<td class="last-column no-bottom"></td>
+				</tr>
+				<tr>
+					<td class="the-red">Judge 1</td>
+					<td class="the-blue"><b>Positive</b></td>
+					<td class="the-blue"><b>Negative</b></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="the-red"><b>Positive</b></td>
+					<td class="the-green">A = 12</td>
+					<td class="the-green">B = 5</td>
+					<td>17</td>
+				</tr>
+				<tr>
+					<td class="the-red"><b>Negative</b></td>
+					<td class="the-green">C = 3</td>
+					<td class="the-green">D = 80</td>
+					<td>83</td>
+				</tr>
+				<tr>
+					<td class="the-red"></td>
+					<td>15</td>
+					<td>85</td>
+					<td>100</td>
+				</tr>
+			</table>
+			<div class="kappa-popup-container">
+				<div class="kappa-popup shadow" id="overall-formula">
+					<img src="images/s14-overall-formula.png" />
+				</div>
+				<div class="kappa-popup shadow" id="percent-formula">
+					<img src="images/s14-percent-formula.png" />
+				</div>
+				<div class="kappa-popup shadow" id="kappa-formula">
+					<img src="images/s14-kappa-formula.png" />
+				</div>
+				<div class="kappa-popup shadow" id="interpretation">
+					<table class="inter-table">
+						<tr>
+							<th class="first-row">Kappa Value</th>
+							<th class="last-row">Interpretation</th>
+						</tr>
+						<tr>
+							<td>Kappa ≥ 0.75</td>
+							<td>Excellent Agreement</td>
+						</tr>
+						<tr>
+							<td>0.40≤ Kappa  ≤ 0.75</td>
+							<td>Intermediate to good agreement</td>
+						</tr>
+						<tr>
+							<td>Kappa < 0.40</td>
+							<td>Poor Agreement</td>
+						</tr>
+						<tr>
+							<td>Kappa = 0</td>
+							<td>Agreement as expected by chance alone</td>
+						</tr>
+						<tr>
+							<td>Kappa < 0</td>
+							<td>Agreement is worse than expected by chance alone</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="kappa-text-container box shadow">
+				<div class="kappa-line"><a href="#overall-formula" class="button kappa-button" >Overall percent agreement</a>
+					=
+					<input type="text" class="kappa-answer kappa-1 add-percent" id="kappa-1" />
+					<span class="percent-sign"> %</span>
+					<span class="kappa-correct">92%</span>
+				</div>
+				<div class="kappa-line"><a href="#percent-formula" class="button kappa-button">Percent chance agreement</a>
+					=
+					<input type="text" class="kappa-answer kappa-2" id="kappa-2" />
+					<span class="percent-sign"> %</span>
+					<span class="kappa-correct">73.1%</span>
+				</div>
+				<div class="kappa-line">
+					<div class="kt-left"><a href="#kappa-formula" class="button kappa-button">Kappa</a>
+						=
+						<input type="text" class="kappa-answer kappa-3" id="kappa-3" />
+						<span class="kappa-correct">.70</span>
+					</div>
+					<div class="kt-right">(enter answer as 2 decimal value (e.g. 0.50))</div>
+				</div>
+				<div class="kappa-line last-kappa-line"><a href="#interpretation" class="button kappa-button">Interpretation of Kappa</a>
+				</div>
+			</div>
+			<div class="kappa-instructions box">Use the information provided to calculate the Kappa. Enter in the values for the Overall Percent Agreement, Percent chance of agreement, and the Kappa. After you’ve calculated the Kappa, click on the Interpretation of Kappa button to see what that value means.</div>
+			<a href="#" class="button kappa-submit">Submit</a>
+		</div>
+		<div class="slide presentation" id="slide15" title="Relation between Validity and Reliability">
+			<div class="reliability-list-container">
+				<ul class="reliability-list">
+					<li class="reliability" id="rel1">Valid and Reliable</li>
+					<li class="reliability" id="rel2">Valid but not Reliable</li>
+					<li class="reliability" id="rel3">Reliable but not Valid </li>
+					<li class="reliability" id="rel4">Neither Valid nor Reliable</li>
+				</ul>
+			</div>
+			<div class="relation-list-container box shadow">
+				<ol class="relation-list">
+					<li>Ideal tests are both valid and reliable.</li>
+					<li>Tests with high validity but low reliability are useful for measuring group values but not for measuring values for a given individual.</li>
+					<li>Tests with high reliability but low validity are repeatable for a  given individual but the resulting value is not predictive of the intended value.</li>
+					<li>Tests with both low validity and low reliability are essentially useless.</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="lk-footer">
+</div>
+<div id="lk-preloader">
+	<img src="https://lmscontent.embanet.com/Multimedia/LK_Assets/skin/preloader.gif" width="32" height="32">
+</div>
+<script type="text/javascript" src="js/PM512-w12-m01.js" ></script>
+<script type="text/javascript" src="js/jQuery.lilkev.js" ></script>
+<script type="text/javascript" src="js/jquery.jplayer.js"></script>
+</body>
+</html>

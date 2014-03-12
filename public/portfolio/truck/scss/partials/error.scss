@@ -1,0 +1,565 @@
+$grey : #515151;
+$green : rgb(77,125,17);
+$orange: rgb(250, 65, 42);
+$light: tint($grey, 25%);
+$white: #fff;
+$body_bg: $white;
+$headline_clr: #615b55;
+$border_clr : #ccc;
+
+/* 
+//==============================
+//  layout
+//
+//
+//
+//
+*/
+body.errors{
+	position: absolute;
+	display: table;
+	overflow: hidden;
+	padding: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	h1, h2, h3, img, .img_holder, .exit, .arrows, li, a{
+			@include transition-property(font-size color max-width width max-height height);
+			@include transition-duration(0.7s);
+		}
+}
+#error{
+	width: 100%;
+	margin: auto;
+	display: table-cell;
+	vertical-align: middle;
+	>header{
+		text-align: center;
+		h1{
+			font-family: "Helvetica Neue", "Arial", sans-serif;
+			font-weight: 900; 
+			color: $green; 
+		}
+		h2{
+			color: $grey;
+			font-weight: 400;
+
+		}
+	}
+}
+.img_holder{
+	font-family: "Helvetica Neue", "Arial", sans-serif;
+	font-weight: 400;
+	color: $green;
+	text-align: center;
+	img{
+		margin: auto;
+		display: block;
+	}
+}
+section.exit, div.exit{
+	position: relative;
+	>header{
+		h1{
+			font-weight: 400;
+			text-align: center;
+			color: $grey;
+			span{
+				display:block;
+				color: $light;
+			}
+		}
+		h2{
+			font-weight: 400;
+			text-align: center;
+			color: $grey;
+		}
+	}
+	a{
+		background: $orange;
+		color: $white;
+		display: table; 
+		span{
+			vertical-align: middle;
+			display: table-cell;
+		}
+	}
+}
+.exit{
+	a{
+		position: relative;
+		text-align:center;
+		z-index: 2;
+	}
+}
+.arrows{
+	display: block;
+	margin:auto;
+	@include transform( rotate(180deg));
+	position: relative;
+	z-index: 1;
+}
+ul.exit {
+	display: table;
+	margin: auto;
+	list-style-type: disc;
+	>li {
+		display: inline-block;
+		&:nth-of-type(1) a{
+			display:inline;
+		}
+		a{
+			display: list-item;
+			list-style-type:disc;
+			color: $green;
+			font-weight: normal;
+			
+		}
+	}
+}
+a{
+	text-decoration: none;
+}
+$font-size: 3.3rem;
+$lt-font-size: 2.7rem;
+$st-font-size: 2rem;
+$sp-font-size: 1.5rem;
+$tp-font-size: 1.3rem;
+/* 
+//==============================
+//  dimensions + media queries
+//
+//
+//
+//
+*/
+@mixin respond-to($media) {
+	
+	//  tiny phone / portrait mode
+	//  width:    370 < ; height: 370<
+	$tiny-max-width : 370px;
+	$tiny-max-height : 340px;
+	//  phone
+	//  width:    399  height: 339  
+	$phone-max-width : 399px;
+	$phone-max-height: 339px;
+	
+    //  small tablet 
+    //  width:    400 - 619   :   height:   320 - 599
+	$small-tablet-min-width : 400px;
+	$small-tablet-max-width : 619px;
+	$small-tablet-min-height: 340px;
+	$small-tablet-max-height: 599px;
+	
+	//  large tablet 
+	//  width:    620 - 780   :   height:   600 - 819
+	$large-tablet-min-width : 620px;
+	$large-tablet-max-width : 780px;
+	$large-tablet-min-height: 600px;
+	$large-tablet-max-height: 819px;
+	
+	//  desktop
+	//  width:  780 >  :    height: 820
+	$desktop-min-width :  780px;
+	$desktop-min-height:  820px;
+	 
+	
+  @if $media == tiny-phones {
+    @media all and (max-width: $tiny-max-width){ @content; }
+  }
+  @else if $media == skinny-phones{
+	 @media all and (max-height: $tiny-max-height) { @content; }
+  }
+  @else if  $media == phones {
+    @media all and (max-width: $phone-max-width), all and (max-height:$phone-max-height) { @content; }
+  }
+  @else if $media == small-tablets {
+	  @media all and (max-width:$small-tablet-max-width) and (min-width:$small-tablet-min-width), all and (max-height: $small-tablet-max-height) and (min-height: $small-tablet-min-height) { @content; }
+  }
+  @else if $media == large-tablets {
+    @media all and (max-width:$large-tablet-max-width) and (min-width: $large-tablet-min-width)
+         , all and (max-height: $large-tablet-max-height) and (min-height:$large-tablet-min-height) { @content; }
+  }	  
+  @else if $media == desktops {
+    @media all and (min-width:$desktop-min-width)
+         , all and (min-height: $desktop-min-height) { @content; }
+  }
+}
+
+//  shared styles.
+//
+#error > header, .img_holder, .img_holder img, .exit{
+
+	@include transform(translateZ(0));
+	@include transition(font-size 0.25s);
+	@include transition(max-width 0.25s);
+	@include transition(max-height 0.25s);
+	@include transition(min-width 0.25s);
+	@include transition(min-height 0.25s);
+}
+ul.exit li a {
+	padding: 30px 10px 30px 0px;
+}
+.big_button{
+	border-radius: 5px;
+	border-radius: 0.5rem;
+	height: 50px;
+	height: 5rem;
+}
+
+//  dynamic styles
+//
+#error > header {
+	@include respond-to(desktops){
+		h1{
+			font-size: 80px;
+			font-size: 8rem;
+		}
+		h2{
+			font-size: 45px;
+			font-size: 4.5rem;
+		}
+	}
+	@include respond-to(large-tablets){
+				
+		h1{
+			font-size: 65px;
+			font-size: 6.5rem;
+		}
+		h2{
+			font-size: 35px;
+			font-size: 3.5rem;
+		}
+		
+	}
+	@include respond-to(small-tablets){
+		h1{
+			font-size: 40px;
+			font-size: 4rem;
+	}
+		h2{
+			font-size: 18px;
+			font-size: $st-font-size + 0.3;
+		}
+	}
+	@include respond-to(phones){
+		h1{
+			font-size: 30px;
+			font-size: 3rem;
+		}
+		h2{
+			font-size: 16px;
+			font-size: 1.6rem;
+		}
+	}
+}
+.img_holder{
+	@include respond-to(desktops){
+		padding: 30px 0;
+		padding: 3rem 0;
+		font-size: 4rem;
+		margin: 40px auto 20px;
+		margin: 4rem auto 2rem;	
+	}
+	@include respond-to(large-tablets){
+		padding: 10px 0;
+		padding: 1rem 0;
+		font-size: 3rem;
+		margin: 30px auto 1.5px;
+		margin: 3rem auto 1.5rem;
+	}
+	@include respond-to(small-tablets){
+		@include transform(translateZ(0));
+		padding: 5px 0;
+		padding: 2.3rem 0;
+		font-size: 2rem;
+		margin: 0;
+	}
+	@include respond-to(phones){
+		padding: 5px 0 0;
+		padding: 0.5rem 0 0;
+		font-size: 1.5rem;
+		margin: 1.4rem 0;
+	}
+	
+}
+.img_holder img{
+	width:auto;
+	height: auto;
+	@include respond-to(desktops){
+		max-height: 295px;
+		max-height: 29.5rem;
+	}
+	@include respond-to(large-tablets){
+		max-width: 500px;
+		max-width:50rem;
+	}
+	@include respond-to(small-tablets){
+		max-width: 85%;
+		
+		//max-width: 30.5rem;
+	}
+	@include respond-to(phones){
+		max-width: 305px;
+		max-width: 85%;
+		
+		//max-height: 80px;
+		//max-height: 8rem;
+	}
+	@include respond-to(skinny-phones){
+		max-width: 50%;
+	}
+}
+section.exit >header, div.exit >header{
+	@include respond-to(desktops){
+		h1{
+			font-size: 35px;
+			font-size: $font-size;
+			span{
+				font-size: 30px;
+				font-size: 3rem;
+				margin-top:15px;
+			}
+		}
+		h2{
+				font-size: 25px;
+				font-size: $font-size;
+				margin-bottom: 15px;
+				margin-bottom: 1.5rem;
+			}
+	}
+	@include respond-to(large-tablets){
+		h1{
+			font-size: 25px;
+			font-size: $lt-font-size;
+			span{
+				font-size: 20px;
+				font-size: 2rem;
+				margin-top:10px;
+				margin-top:1rem;
+			}
+		}
+		h2{
+				font-size: 20px;
+				font-size: $lt-font-size;
+				margin-bottom: 10px;
+				margin-bottom: 1rem;
+			}
+	}
+	@include respond-to(small-tablets){
+		h1{
+			font-size: 16px;
+			font-size: $st-font-size;
+			span{
+				font-size: 14px;
+				font-size: $st-font-size;
+				margin: 0.5rem 0 1rem;
+			}
+		}
+		h2{
+			font-size: 16px;
+			font-size: $st-font-size;
+			margin-bottom: 3px;
+			margin-bottom: 0.3rem;
+		}
+	}
+	@include respond-to(phones){
+		h1{
+			font-size: $sp-font-size;
+			-webkit-text-size-adjust:none;
+			span{
+				-webkit-text-size-adjust:none;
+				margin: 1.4rem 0 1.7rem;
+				font-size: $sp-font-size;
+				line-height: 5px;
+			}
+		}
+		h2{
+			-webkit-text-size-adjust:none;
+			font-size: 16px;
+			font-size: $sp-font-size;
+			margin-bottom: 3px;
+			margin-bottom: 0.3rem;
+		}
+	}
+	@include respond-to(tiny-phones){
+		h2{
+			-webkit-text-size-adjust:none;
+			font-size: $tp-font-size !important;
+		}
+		h1{
+			font-size: $tp-font-size !important;
+			span{
+				-webkit-text-size-adjust:none;
+				margin: 1.4rem 0 1.7rem;
+				font-size: $tp-font-size !important;	
+			}
+		}
+	}
+}
+section.exit a, div.exit a {
+	@include respond-to(desktops){
+		font-size: 19px;
+			font-size: 1.9rem;
+			width: 190px;
+			width: 19rem;			
+			padding: 0 2.5rem; 
+	}
+	@include respond-to(large-tablets){
+		font-size: 17px;
+		font-size: 1.7rem;
+		width: 150px;
+		width: 15rem;			
+		padding: 0 20px; 
+		padding: 0 2rem; 
+	
+	}
+	@include respond-to(small-tablets){
+		font-size: 14px;
+		font-size: 1.4rem;
+		width: 130px;
+		width: 13rem;
+		padding: 0 20px; 
+		padding: 0 2rem;
+	}
+	@include respond-to(phones){
+		font-size:13px;
+		font-size:1.3rem;
+	}
+}
+.arrows {
+	@include respond-to(desktops){
+	top: -130px;
+	top: -13rem;
+	width: 800px;
+	width: 80rem;
+	height: 308px;
+	height: 30.8rem;
+}
+	@include respond-to(large-tablets){
+		top: -130px;
+		top: -13rem;
+		width: 800px;
+		width: 80rem;
+		height: 308px;
+		height: 30.8rem;
+	}
+	@include respond-to(small-tablets){
+		top: -130px;
+		top: -13rem;
+		width: 800px;
+		width: 80rem;
+		height: 308px;
+		height: 30.8rem;
+	}
+	@include respond-to(phones){
+	}
+}
+ul.exit li {
+	@include respond-to(desktops){
+		margin: 20px;
+		&:nth-of-type(1) a{
+			padding: 20px 10px 20px 0px;
+		}
+		a{
+			padding: 20px 18px 20px 18px;
+			font-size: 22px;
+			font-size: 2.2rem;
+		}
+	}
+	@include respond-to(large-tablets){
+		margin: 0 16px;
+		&:nth-of-type(1) a{
+			padding-left: 0px;
+			padding-right: 8px;
+		}
+		a{
+			padding: 16px 16px;
+			font-size: 20px;
+			font-size: 2rem;
+			
+		}
+	}
+	@include respond-to(small-tablets){ 
+		margin: 0 12px;
+		&:nth-of-type(1) a{
+			padding-left: 0px;
+			padding-right: 6px;
+		}
+		a{
+			padding: 14px 12px;
+				font-size: 18px;
+				font-size: 1.8rem;
+				
+			}
+		
+	}
+	@include respond-to(phones){
+		margin: 0 8px;
+		&:nth-of-type(1) a{
+			padding-left: 0px;
+			padding-right: 8px;
+		}
+		a{
+			padding: 12px 8px;
+			font-size: $sp-font-size;
+			font-size: $sp-font-size;
+		}
+	}
+	@include respond-to(tiny-phones){
+		&:nth-of-type(1) a{
+			padding-left: 0px;
+			padding-right: 8px;
+		}
+		a{
+			padding: 12px 8px;
+			font-size: $tp-font-size;
+			font-size: $tp-font-size;
+		}
+		
+	}
+}
+.exit a{
+	@include respond-to(large-tablets){
+		border-radius: 5px;
+		border-radius: 0.5rem;
+		height: 50px;
+		height: 5rem;
+		margin: 30px auto;
+		margin: 3rem auto;
+		top: 0;	
+	}
+	@include respond-to(small-tablets){
+		border-radius: 5px;
+		border-radius: 0.5rem;
+		height: 30px;
+		height: 3rem;
+		margin: 25px auto;
+		margin: 2.5rem auto;
+	}
+	@include respond-to(phones){
+		height: 30px;
+		height: 3rem;
+		margin: 40px auto;
+		margin: 2rem auto;
+	}
+}
+.exit .big_button{
+	margin: 30px auto;
+	margin: 3rem auto;
+	top: 0;	
+	@include respond-to(large-tablets){
+		margin: 20px auto;
+		margin: 2rem auto;
+	}
+	@include respond-to(small-tablets){
+		margin: 5px auto;
+		margin: 0.5rem auto;
+	}
+	@include respond-to(phones){
+		margin: 5px auto;
+		margin: 0.5rem auto;
+		width: 110px;
+		width: 11rem;
+	}
+}

@@ -1,0 +1,107 @@
+<!doctype html>
+<html charset="UTF-8">
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <title>GoHealth Web Test</title>
+        <style type="text/css">
+			body {
+				background: #ddd;
+				min-width: 46em;
+			}
+			h1 {
+				box-shadow: 5px 5px 5px -3px #333;
+			}
+			h1:last-of-type {
+				text-shadow: 5px 5px 5px #ccc;
+			}
+			li {
+				list-style-type: none;
+			}
+			li:nth-of-type(2n) {
+				background: #444;
+				color: #f5f5f5;
+			}
+			li:nth-of-type(2n+1) {
+				background: #f5f5f5;
+				color: #444;
+			}
+			p, ul {
+				width: 50%;
+				float: left;
+			}
+			p {
+				max-width: 20em;
+			}
+			#footer {
+				width: 100%;
+				background: #eee;
+				border-top: 1px solid blue;
+				overflow: hidden;
+			}
+			#footer:before, #footer:after {
+				content: "";
+				display: table;
+			}
+			footer:after {
+				clear: both;
+			}
+			aside{
+			    text-align: center;
+			    margin-top: 50px;
+			}
+			aside a{
+			    font: normal normal normal 0.6rem/1rem "Helvetica Neue", sans-serif;
+			    font-size: 0.6rem;
+			    text-decoration: none;
+			    color: #88f;
+			}
+
+        </style>
+        <script type="text/javascript">
+			jQuery(document).ready(function($) {
+				var li = $.makeArray($('li'));
+				for (var i = li.length + 1; i <= 10; i++) {
+					$("ul").append("<li>Item " + i + "</li>");
+					li = $('li');
+				}
+				$("#footer").append("<a class='append' href='#'>Click Me!</a>");
+				$(".append").click(function(event) {
+					event.preventDefault();
+					if (li.length > 5) {
+						$(li).filter("li:even").remove();
+						li = $('li');
+						console.log(li.length);
+					}
+				});
+			});
+        </script>
+    </head>
+    <body>
+        <h1>GoHealth Web Test</h1>
+        <div id="content">
+            <p>
+                Here is a list.
+            </p>
+            <ul>
+                <li>
+                    Item 1
+                </li>
+                <li>
+                    Item 2
+                </li>
+                <li>
+                    Item 3
+                </li>
+                <li>
+                    Item 4
+                </li>
+            </ul>
+        </div>
+        <div id="footer">
+            That's all, folks
+        </div>
+        <aside>
+            <a href='me.html'>click here to see how I would have written this</a>
+        </aside>
+    </body>
+</html>

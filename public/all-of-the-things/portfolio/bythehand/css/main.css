@@ -1,0 +1,631 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("./avenir_next.ttf"); }
+
+/* line 5, reseted.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222; }
+
+/* line 9, reseted.scss */
+body {
+  font-size: 1em;
+  line-height: 1.4; }
+
+/* line 14, reseted.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/* line 19, reseted.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+/* line 28, reseted.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+/* line 41, reseted.scss */
+img {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+/* line 49, reseted.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+/* line 59, reseted.scss */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+/* line 67, reseted.scss */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+/* line 102, reseted.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px; }
+
+/* line 110, reseted.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%; }
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* line 121, reseted.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 130, reseted.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 147, reseted.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+/* line 160, reseted.scss */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 177, reseted.scss */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+/* line 182, reseted.scss */
+.cf:after {
+  clear: both; }
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 191, reseted.scss */
+.cf {
+  *zoom: 1; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  /* line 211, reseted.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  /* line 219, reseted.scss */
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  /* line 223, reseted.scss */
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  /* line 227, reseted.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 237, reseted.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  /* line 242, reseted.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid; }
+
+  /* line 247, reseted.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  /* line 252, reseted.scss */
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  /* line 256, reseted.scss */
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  /* line 266, reseted.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  /* line 272, reseted.scss */
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+/* line 22, main.scss */
+body {
+  background: #e7e7e7; }
+
+/*body font size*/
+/*body font color*/
+/*header font size*/
+/*header font family*/
+/*header font color*/
+/*header font weight*/
+/* line 68, main.scss */
+#bgh {
+  position: absolute;
+  width: 1200px;
+  display: none; }
+
+/* line 73, main.scss */
+a {
+  text-decoration: none; }
+
+/* line 77, main.scss */
+#wrapper, footer {
+  margin: auto;
+  padding: 10px; }
+
+/* line 83, main.scss */
+#wrapper {
+  min-width: 1300px;
+  max-width: 1500px;
+  -webkit-transform: rotate(-43deg);
+  -moz-transform: rotate(-43deg);
+  -ms-transform: rotate(-43deg);
+  -o-transform: rotate(-43deg);
+  transform: rotate(-43deg);
+  margin: auto;
+  position: relative; }
+
+/* line 93, main.scss */
+#wrapperer {
+  position: relative; }
+
+/* line 98, main.scss */
+header {
+  background: #9bc8f5;
+  max-width: 750px; }
+  /* line 101, main.scss */
+  header img {
+    max-width: 750px;
+    height: auto;
+    margin: 0px auto; }
+  /* line 106, main.scss */
+  header hgroup {
+    position: absolute;
+    top: 0;
+    visibility: hidden; }
+  /* line 111, main.scss */
+  header nav {
+    background: #9bc8f5;
+    margin: auto; }
+    /* line 114, main.scss */
+    header nav ul {
+      margin: 0px auto;
+      padding: 0px;
+      width: 691px; }
+      /* line 118, main.scss */
+      header nav ul li:hover {
+        background: #6e97cd; }
+      /* line 121, main.scss */
+      header nav ul li {
+        float: left;
+        margin: 0px;
+        border-right: 1px solid #6e97cd;
+        width: 114px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        background: #9bc8f5;
+        font-family: "Avenir", sans-serif;
+        font-weight: bold;
+        font-variant: small-caps; }
+        /* line 133, main.scss */
+        header nav ul li a {
+          color: #255FBD; }
+      /* line 137, main.scss */
+      header nav ul li:first-of-type {
+        border-left: 1px solid #6e97cd; }
+
+/* line 145, main.scss */
+article {
+  float: left;
+  -webkit-transform: rotate(-49deg) translate(-70px, 560px);
+  -moz-transform: rotate(-49deg) translate(-70px, 560px);
+  -ms-transform: rotate(-49deg) translate(-70px, 560px);
+  -o-transform: rotate(-49deg) translate(-70px, 560px);
+  transform: rotate(-49deg) translate(-70px, 560px);
+  left: 95px;
+  font-size: 11px;
+  color: #333333;
+  line-height: 16px;
+  z-index: 10;
+  position: relative;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #333333;
+  line-height: 16px; }
+  /* line 156, main.scss */
+  article div:nth-of-type(1) {
+    /*
+        */
+    background: #f5f5f5;
+    width: 484px;
+    height: 405px;
+    padding: 220px 30px 16px 20px;
+    border-bottom-left-radius: 179px;
+    border-bottom-right-radius: 324px;
+    border-top-right-radius: 400px;
+    border-bottom-right-radius: 324px;
+    border-top-left-radius: 400px;
+    -webkit-transform: translate(159px, 30px);
+    -moz-transform: translate(159px, 30px);
+    -ms-transform: translate(159px, 30px);
+    -o-transform: translate(159px, 30px);
+    transform: translate(159px, 30px);
+    /*
+    
+        background: #f5f5f5;
+        width: 484px;
+        height: 405px;
+        padding: 220px 30px 16px 20px;
+        -webkit-transform: translate(162px, 15px);
+        border-bottom-left-radius: 179px;
+        border-bottom-right-radius: 324px;
+        border-top-left-radius: 400px;
+    
+    
+    
+    
+    */ }
+    /* line 193, main.scss */
+    article div:nth-of-type(1) h1, article div:nth-of-type(1) p, article div:nth-of-type(1) span, article div:nth-of-type(1) div {
+      max-width: 400px;
+      margin: auto;
+      display: block;
+      visibility: hidden; }
+  /* line 201, main.scss */
+  article div:nth-of-type(2) {
+    max-width: 300px;
+    background: #f5f5f5;
+    -webkit-transform: rotate(15deg) translate(160px, 0px);
+    -moz-transform: rotate(15deg) translate(160px, 0px);
+    -ms-transform: rotate(15deg) translate(160px, 0px);
+    -o-transform: rotate(15deg) translate(160px, 0px);
+    transform: rotate(15deg) translate(160px, 0px);
+    padding: 20px; }
+    /* line 206, main.scss */
+    article div:nth-of-type(2) h1, article div:nth-of-type(2) p, article div:nth-of-type(2) span, article div:nth-of-type(2) div {
+      max-width: 400px;
+      margin: auto;
+      display: block;
+      visibility: hidden; }
+  /* line 213, main.scss */
+  article div:nth-child(3) {
+    width: 263px;
+    height: 409px;
+    background: #f5f5f5;
+    position: absolute;
+    -webkit-transform: rotate(27deg) skew(0deg, -15deg) translate(-93px, 88px);
+    -moz-transform: rotate(27deg) skew(0deg, -15deg) translate(-93px, 88px);
+    -ms-transform: rotate(27deg) skew(0deg, -15deg) translate(-93px, 88px);
+    -o-transform: rotate(27deg) skew(0deg, -15deg) translate(-93px, 88px);
+    transform: rotate(27deg) skew(0deg, -15deg) translate(-93px, 88px);
+    border-radius: 900px 300px 999px 83px;
+    left: 638px;
+    top: 260px;
+    z-index: 0; }
+  /* line 225, main.scss */
+  article div:nth-child(4) {
+    width: 100px;
+    height: 300px;
+    background: #f5f5f5;
+    position: absolute;
+    top: 0px;
+    -webkit-transform: rotate(57deg) translate(-100px, 28px);
+    -moz-transform: rotate(57deg) translate(-100px, 28px);
+    -ms-transform: rotate(57deg) translate(-100px, 28px);
+    -o-transform: rotate(57deg) translate(-100px, 28px);
+    transform: rotate(57deg) translate(-100px, 28px);
+    border-radius: 900px 300px 999px 83px;
+    left: 825px;
+    top: 260px;
+    z-index: -1; }
+  /* line 237, main.scss */
+  article div:nth-child(5) {
+    background: #f5f5f5;
+    width: 300px;
+    height: 378px;
+    position: absolute;
+    z-index: -1;
+    -webkit-transform: rotate(54deg) translate(-57px, -67px);
+    -moz-transform: rotate(54deg) translate(-57px, -67px);
+    -ms-transform: rotate(54deg) translate(-57px, -67px);
+    -o-transform: rotate(54deg) translate(-57px, -67px);
+    transform: rotate(54deg) translate(-57px, -67px);
+    top: 490px;
+    left: 300px;
+    border-radius: 100px; }
+  /* line 249, main.scss */
+  article div:nth-child(6) {
+    width: 100px;
+    height: 300px;
+    position: absolute;
+    -webkit-transform: rotate(74deg) translate(31px, -276px);
+    -moz-transform: rotate(74deg) translate(31px, -276px);
+    -ms-transform: rotate(74deg) translate(31px, -276px);
+    -o-transform: rotate(74deg) translate(31px, -276px);
+    transform: rotate(74deg) translate(31px, -276px);
+    border-radius: 900px 300px 999px 83px;
+    left: 0;
+    top: 0;
+    background: #f5f5f5;
+    z-index: -2; }
+  /* line 261, main.scss */
+  article div:nth-child(7) {
+    width: 100px;
+    height: 300px;
+    position: absolute;
+    -webkit-transform: rotate(74deg) translate(31px, -276px);
+    -moz-transform: rotate(74deg) translate(31px, -276px);
+    -ms-transform: rotate(74deg) translate(31px, -276px);
+    -o-transform: rotate(74deg) translate(31px, -276px);
+    transform: rotate(74deg) translate(31px, -276px);
+    border-radius: 900px 300px 999px 83px;
+    left: 0;
+    top: 0;
+    background: red;
+    z-index: 0;
+    display: none; }
+  /* line 274, main.scss */
+  article div:nth-child(8) {
+    position: absolute;
+    left: 200px;
+    top: 230px;
+    -webkit-transform: rotate(93deg);
+    -moz-transform: rotate(93deg);
+    -ms-transform: rotate(93deg);
+    -o-transform: rotate(93deg);
+    transform: rotate(93deg);
+    width: 400px; }
+  /* line 281, main.scss */
+  article div:nth-child(9) {
+    position: absolute;
+    width: 200px;
+    -webkit-transform: rotate(104deg) translate(-286px);
+    -moz-transform: rotate(104deg) translate(-286px);
+    -ms-transform: rotate(104deg) translate(-286px);
+    -o-transform: rotate(104deg) translate(-286px);
+    transform: rotate(104deg) translate(-286px);
+    width: 350px;
+    right: 88px; }
+  /* line 293, main.scss */
+  article h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #ff6600;
+    line-height: 24px;
+    font-weight: bold; }
+
+/* line 298, main.scss */
+#rsb {
+  position: relative;
+  float: left; }
+  /* line 302, main.scss */
+  #rsb nav ul {
+    padding: 0px;
+    margin: 0px; }
+    /* line 306, main.scss */
+    #rsb nav ul li {
+      z-index: 0;
+      height: 90px;
+      display: table;
+      background: #f5f5f5;
+      width: 100%;
+      margin: -3px auto;
+      position: relative;
+      width: 250px;
+      visibility: hidden; }
+      /* line 317, main.scss */
+      #rsb nav ul li a {
+        display: table-cell;
+        vertical-align: middle;
+        color: #aaa;
+        font: normal small-caps 700 30px "Avenir", "Helvetica Neue", "Helvetica", sans-serif;
+        line-height: 25px;
+        text-decoration: none;
+        padding-left: 20px; }
+    /* line 327, main.scss */
+    #rsb nav ul li:first-child {
+      z-index: 1;
+      -webkit-transform: rotate(-90deg) translate(-403px, 88px);
+      -moz-transform: rotate(-90deg) translate(-403px, 88px);
+      -ms-transform: rotate(-90deg) translate(-403px, 88px);
+      -o-transform: rotate(-90deg) translate(-403px, 88px);
+      transform: rotate(-90deg) translate(-403px, 88px);
+      border-top-right-radius: 70px;
+      border-bottom-right-radius: 70px;
+      width: 720px;
+      height: 133px;
+      visibility: visible; }
+      /* line 335, main.scss */
+      #rsb nav ul li:first-child a {
+        width: 100%;
+        height: 100%; }
+        /* line 338, main.scss */
+        #rsb nav ul li:first-child a span {
+          float: right;
+          margin: 0px 40px;
+          -webkit-transform: rotate(90deg);
+          -moz-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          -o-transform: rotate(90deg);
+          transform: rotate(90deg); }
+    /* line 345, main.scss */
+    #rsb nav ul li:nth-child(2) {
+      -webkit-transform: rotate(50deg) translate(-200px, 295px);
+      -moz-transform: rotate(50deg) translate(-200px, 295px);
+      -ms-transform: rotate(50deg) translate(-200px, 295px);
+      -o-transform: rotate(50deg) translate(-200px, 295px);
+      transform: rotate(50deg) translate(-200px, 295px);
+      z-index: 2;
+      width: 550px;
+      border-top-left-radius: 60px;
+      border-bottom-left-radius: 60px;
+      height: 120px;
+      visibility: visible; }
+      /* line 353, main.scss */
+      #rsb nav ul li:nth-child(2) a {
+        padding-left: 100px; }
+    /* line 357, main.scss */
+    #rsb nav ul li:nth-child(3) {
+      -webkit-transform: rotate(47deg) translate(-388px, 348px);
+      -moz-transform: rotate(47deg) translate(-388px, 348px);
+      -ms-transform: rotate(47deg) translate(-388px, 348px);
+      -o-transform: rotate(47deg) translate(-388px, 348px);
+      transform: rotate(47deg) translate(-388px, 348px);
+      z-index: 2;
+      width: 600px;
+      border-top-left-radius: 70px;
+      border-bottom-left-radius: 70px;
+      height: 140px;
+      visibility: visible; }
+      /* line 365, main.scss */
+      #rsb nav ul li:nth-child(3) a {
+        padding-left: 100px; }
+    /* line 370, main.scss */
+    #rsb nav ul li:nth-child(4) {
+      -webkit-transform: rotate(41deg) translate(-492px, 368px);
+      -moz-transform: rotate(41deg) translate(-492px, 368px);
+      -ms-transform: rotate(41deg) translate(-492px, 368px);
+      -o-transform: rotate(41deg) translate(-492px, 368px);
+      transform: rotate(41deg) translate(-492px, 368px);
+      z-index: 2;
+      width: 530px;
+      border-top-left-radius: 60px;
+      border-bottom-left-radius: 60px;
+      visibility: visible;
+      height: 120px; }
+      /* line 378, main.scss */
+      #rsb nav ul li:nth-child(4) a {
+        padding-left: 100px; }
+    /* line 383, main.scss */
+    #rsb nav ul li:nth-child(5) {
+      -webkit-transform: rotate(34deg) translate(-466px, 368px);
+      -moz-transform: rotate(34deg) translate(-466px, 368px);
+      -ms-transform: rotate(34deg) translate(-466px, 368px);
+      -o-transform: rotate(34deg) translate(-466px, 368px);
+      transform: rotate(34deg) translate(-466px, 368px);
+      z-index: 2;
+      width: 500px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      visibility: visible;
+      height: 110px; }
+      /* line 391, main.scss */
+      #rsb nav ul li:nth-child(5) a {
+        padding-left: 100px; }

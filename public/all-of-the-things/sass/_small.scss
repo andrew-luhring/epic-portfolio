@@ -1,0 +1,255 @@
+body {
+	font-size: 0.5em;
+	font-size: 0.5rem;
+	margin: 0.5em auto;
+	margin: 0.5rem auto;
+}
+header  h1 {
+	margin-top:  10px;
+	font-size:30px;
+	margin-top:  1rem;
+	font-size:3rem;
+}
+#centeringDiv .ui-effects-wrapper{
+	display: inline-block !important;
+	.workTypes{
+		height: 75px !important;
+		height: 7.5rem !important;
+	}
+}
+#portfolio {
+	margin:auto;
+	width:100%;
+	min-width: 240px;
+	min-width: 24rem;
+}
+
+#galleryDiv {
+	min-height: 400px;
+	min-height: 40rem;
+	margin: auto;
+	width: 80%;
+	border: 1px solid #c2c2c2;
+	behavior: url(/PIE.php);
+	-webkit-align-content: center;
+	-webkit-flex-direction: column;
+	flex-direction:column;
+	-webkit-justify-content: center;
+	-webkit-align-items: flex-start;
+	align-items:flex-start;
+	overflow:hidden;
+	img{
+		-webkit-align-self: flex-start;
+		max-width: 100%;
+		max-height: 100px;
+		max-height: 1rem;
+		margin:auto;
+		border: none;
+	}
+	div {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		-webkit-align-content: center;
+		align-content: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		p {
+			-webkit-align-self: center;
+			align-self: center;
+			height: auto;
+		}
+}
+	a, img.gallery, img, #temp, #clickToClose{
+		-webkit-align-self: center;
+		align-self: center;
+		height:auto;
+	}
+}
+#preview {
+	margin:none;
+	padding: 10%;
+	overflow: hidden;
+	text-align: left;
+}
+#warning {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15% 10%;
+	overflow: hidden;
+	text-align: center;
+}
+#hint {
+	margin-bottom: 0;
+	text-align: center;
+	top:0;
+}
+#galleryDiv{
+	padding-top: 10px;
+	padding-top: 1rem;
+}
+.workTypes {
+	width: 100%;
+	height:75px;
+	height:7.5rem;
+	border-radius: 10px;
+	border-radius: 1rem;
+	font-size: .8em;
+	font-size: .8rem;
+	border: 2px solid #7BE5E5;
+	display:table;
+	behavior: url(/PIE.php);
+}
+.workTypes p {
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+}
+.workTypesSelected {
+	background-color: #f6f6f6;
+	@include box-shadow(0 0 0 0 rgb(64,3,57) );
+}
+footer {
+	padding:20px;
+	padding:2rem;
+	margin:auto;
+	> div {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: column;
+		flex-direction: column;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		-webkit-align-items: stretch;
+		align-items: stretch;
+		$w-align-self: stretch;
+		align-self:stretch;
+		min-width: 100%;
+		min-height: 100%;
+		margin: 0;
+	}
+
+	a {
+		border-radius:2px;
+		border:1px solid #7BE5E5;
+		text-decoration:none;
+		margin: 1% 10%;
+		padding:20px;
+		padding:2rem;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-flex: 1;
+		flex:1;
+		p{
+			margin:auto;
+		}
+	}
+}
+#clickToClose {
+	margin: 20px auto;
+	margin: 2rem auto;
+	padding: 10px;
+	padding: 1rem;
+	min-width: 10%;
+	max-width: 300px;
+	border: 1px solid #CCC;
+	clear: both;
+	text-align: center;
+	border-radius: 10px;
+	border-radius: 1rem;
+	cursor: pointer;
+}
+
+
+.no-flexbox{
+	#centeringDiv, #galleryDiv{
+		min-width: 240px;
+		min-width: 24rem;
+		width: 90%;
+	}
+	#galleryDiv{
+		display: table !important;
+		a{
+			display: table !important;
+			margin:auto;
+			img{
+				float:left;
+				clear:both;
+			}
+		}
+	}
+	.portfolioContent{
+		min-width: 260px;
+		min-width: 26rem;
+		width:90%;
+	}
+	#centeringDiv, .centeringDiv  {
+		@include box(vertical, stretch, stretch);
+		@include box-flex(1);
+		margin-top: 30px;
+		height: 400px;
+		padding:20px 10px;
+			.workTypesSelected, .workTypes, .workTypes-footer{
+				@include box-sizing(border-box);
+				width: 90%;
+				border: 2px solid #7BE5E5;
+				max-width: 450px; max-width: 45rem;
+				min-width: 220px; min-width: 22rem;
+				height: 75px; height: 7.5rem;
+				border-radius: 20px; border-radius: 2rem;
+				background: #fff;
+			}
+		}
+
+
+	footer {
+		min-width:240px; min-width:24rem;
+
+		width:80%;
+		padding:0px !important;
+		> div a{
+			margin: 5px auto; margin: 0.5rem auto;
+			width: 50%;
+			height: 30px; height: 3rem;
+			border-radius: 15px; border-radius: 1.5rem;
+			display:table;
+		}
+	}
+}
+.no-flexbox.flexboxlegacy #centeringDiv{
+	-webkit-box-orient: vertical;
+}
+
+.flexbox{
+	#centeringDiv , .centeringDiv {
+	@include flex-direction(column);
+	@include align-items(stretch);
+	height: 400px;
+	padding:0 10px;
+	height: 40rem;
+	padding: 2rem 1rem;
+
+	.workTypesSelected, .workTypes, .workTypes-footer{
+
+		@include box-sizing(border-box);
+		@include flex(1);
+		@include display(flex);
+		@include justify-content(space-between);
+		@include align-items(center);
+		border-radius: 10px;
+		font-size: 14px;
+
+		border-radius: 1rem;
+		font-size: 1.4rem;
+		behavior: url(/PIE.php);
+		p{
+			margin:auto;
+		}
+	}
+}
+}
+
+

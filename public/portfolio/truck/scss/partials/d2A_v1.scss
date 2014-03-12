@@ -1,0 +1,22 @@
+
+.no-flexbox{
+	#d2Av1{
+		.main_txt{
+			float: left;
+		}
+		.main_img{
+			float:right;
+		}
+	}
+}
+
+.flexbox{
+	#d2Av1{
+		.top{
+			flex-direction: row;
+		}
+		.main_txt{
+			padding: 0 20px 0 0;
+		}
+	}
+}

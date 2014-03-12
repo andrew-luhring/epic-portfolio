@@ -1,0 +1,77 @@
+/*Code + Design + everything else by Andrew Luhring @ bisforbounce.com*/
+@import "base";
+@import "failsafe";
+@import "defaults";
+@import "responsive";
+@import "lightbox";
+//dont forget these:
+.no-flexbox #galleryDiv {
+  width: 100%;
+  display: table; }
+  .no-flexbox #galleryDiv.flexy {
+  display: table !important; }
+	
+.navHint {
+	position: absolute;
+	width: 200px;
+	z-index: 999;
+	background: transparent;
+	padding: 15px 0px 15px 0px;
+	margin-left: -30px;
+	behavior: url(/PIE.php);
+}
+
+.navHint p {
+	text-align: center;
+	margin: 0;
+}
+
+#galleryDiv > div:last-of-type {
+    margin: auto;
+    text-align:center;
+}
+
+.cf {
+	overflow: hidden; 
+}
+.cf:before, .cf:after {
+	content: "";
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
+.unhide {
+	
+	opacity: 1;
+}
+.hide {
+	display: none !important;
+	overflow:hidden;
+	opacity: 0;
+	position: relative;
+}
+a{
+	color: #55D;
+}
+#galleryDiv img:hover , #galleryDiv img {
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -ms-transition-property: all;
+    -o-transition-property: all;
+    transition-property:all;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -ms-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s
+}
+
+#galleryDIv img:hover{
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    }
+

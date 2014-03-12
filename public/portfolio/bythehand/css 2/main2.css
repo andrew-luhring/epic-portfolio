@@ -1,0 +1,408 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("./avenir_next.ttf"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\0000313}}
+html,
+button,
+input,
+select,
+textarea {
+  color: #222; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\0000317}}
+body {
+  font-size: 1em;
+  line-height: 1.4; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\0000322}}
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\0000327}}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\0000336}}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\0000349}}
+img {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\0000357}}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\0000367}}
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\0000375}}
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003110}}
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003118}}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%; }
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003129}}
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003138}}
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003155}}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003168}}
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003185}}
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003190}}
+.cf:after {
+  clear: both; }
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003199}}
+.cf {
+  *zoom: 1; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003219}}
+  * {
+    background: transparent !important;
+    color: black !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003227}}
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003231}}
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003235}}
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003245}}
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003250}}
+  pre,
+  blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003255}}
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003260}}
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003264}}
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003274}}
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003280}}
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+/*andwee stylin all over the place! andrew luhring @bisforbounce.com/ */
+/*body font family*/
+/*body font size*/
+/*body font color*/
+/*header font size*/
+/*header font family*/
+/*header font color*/
+/*header font weight*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003336}}
+body {
+  background: #e7e7e7; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003339}}
+a {
+  text-decoration: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003343}}
+#wrapper, footer {
+  margin: auto;
+  padding: 10px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003354}}
+header {
+  background: #9bc8f5;
+  max-width: 750px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003357}}
+  header img {
+    max-width: 750px;
+    height: auto;
+    margin: 0px auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003362}}
+  header hgroup {
+    position: absolute;
+    top: 0;
+    visibility: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003367}}
+  header nav {
+    background: #9bc8f5;
+    margin: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003370}}
+    header nav ul {
+      margin: 0px auto;
+      padding: 0px;
+      width: 691px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003374}}
+      header nav ul li:hover {
+        background: #6e97cd; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003377}}
+      header nav ul li {
+        float: left;
+        margin: 0px;
+        border-right: 1px solid #6e97cd;
+        width: 114px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        background: #9bc8f5;
+        font-family: "Avenir", sans-serif;
+        font-weight: bold;
+        font-variant: small-caps; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003389}}
+        header nav ul li a {
+          color: #255FBD; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003393}}
+      header nav ul li:first-of-type {
+        border-left: 1px solid #6e97cd; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003401}}
+article {
+  clear: left;
+  max-width: 420px;
+  margin: 20px 10px;
+  float: left;
+  -webkit-transform: rotate(-40deg) translate(85px, 400px);
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #333333;
+  line-height: 16px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003408}}
+  article h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #ff6600;
+    line-height: 24px;
+    font-weight: bold; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003413}}
+#rsb {
+  float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003416}}
+  #rsb nav ul {
+    padding: 0px;
+    margin: 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003420}}
+    #rsb nav ul li {
+      z-index: 0;
+      height: 90px;
+      display: table;
+      background: #6e97cd;
+      width: 100%;
+      margin: 7px auto;
+      position: relative;
+      width: 250px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003430}}
+      #rsb nav ul li a {
+        display: table-cell;
+        vertical-align: middle;
+        color: white;
+        font: normal small-caps 700 30px "Avenir", "Helvetica Neue", "Helvetica", sans-serif;
+        line-height: 25px;
+        text-decoration: none;
+        padding-left: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003440}}
+    #rsb nav ul li:first-child {
+      z-index: 1;
+      -webkit-transform: rotate(-62deg) translate(-103px, 166px);
+      border-top-right-radius: 40px;
+      border-bottom-right-radius: 40px;
+      width: 250px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003446}}
+      #rsb nav ul li:first-child a {
+        -webkit-transform: rotate(90deg) translate(74px); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003450}}
+    #rsb nav ul li:nth-child(2) {
+      -webkit-transform: rotate(56deg) translate(-190px, 195px);
+      z-index: 2;
+      width: 375px;
+      border-top-left-radius: 45px;
+      border-bottom-left-radius: 45px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003456}}
+      #rsb nav ul li:nth-child(2) a {
+        padding-left: 100px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003460}}
+    #rsb nav ul li:nth-child(3) {
+      -webkit-transform: rotate(54deg) translate(-300px, 250px);
+      z-index: 2;
+      width: 420px;
+      border-top-left-radius: 45px;
+      border-bottom-left-radius: 45px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003466}}
+      #rsb nav ul li:nth-child(3) a {
+        padding-left: 100px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003471}}
+    #rsb nav ul li:nth-child(4) {
+      -webkit-transform: rotate(52deg) translate(-355px, 300px);
+      z-index: 2;
+      width: 375px;
+      border-top-left-radius: 45px;
+      border-bottom-left-radius: 45px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003477}}
+      #rsb nav ul li:nth-child(4) a {
+        padding-left: 100px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003482}}
+    #rsb nav ul li:nth-child(5) {
+      -webkit-transform: rotate(50deg) translate(-369px, 336px);
+      z-index: 2;
+      width: 250px;
+      border-top-left-radius: 45px;
+      border-bottom-left-radius: 45px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nerdlife\/Sites\/bythehand\/css\/main2\.scss}line{font-family:\00003488}}
+      #rsb nav ul li:nth-child(5) a {
+        padding-left: 100px; }

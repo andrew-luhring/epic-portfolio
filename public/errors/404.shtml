@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href="http://fonts.googleapis.com/css?family=Quicksand:300|Passion+One:900,700" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			body {
+				font: normal normal 300 16px "Quicksand", sans-serif;
+				-webkit-animation:myfirst 5s linear 10s infinite alternate;
+				-moz-animation:myfirst 5s linear 10s infinite alternate;
+				-o-animation:myfirst 5s linear 10s infinite alternate;
+				animation:myfirst 5s linear 10s infinite alternate;
+				font-size: 62.5%; //makes font 1em = 10px;
+							}
+			p, div, a, h1 {
+				color: black;
+				-webkit-transition: all 0.75s ease 10s;
+				transition: all 0.75s ease 0s; 
+				-webkit-animation:mysecond 5s linear 10s infinite alternate;
+				-moz-animation:mysecond 5s linear 10s infinite alternate;
+				-o-animation:mysecond 5s linear 10s infinite alternate;
+				animation:mysecond 5s linear 10s infinite alternate;
+				
+			}
+
+			
+			
+			
+			 div {
+				max-width: 960px;
+				min-width: 100%;
+				width: 100%;
+				margin: auto;
+				display: table;
+				height: 100%;
+				position: absolute;
+				
+			}
+			div > h1 {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				font-size: 2em;
+				padding-bottom: 4em;
+				p:nth-of-type(2){
+					background: #aaa;
+				}
+			}
+			div > p {
+				text-align: center;
+				position: absolute;
+				z-index: 2000;
+				height: 100%;
+				width: 100%;
+				display:table;
+			}
+			div > p a {
+				text-decoration: none;
+				color: #000;
+				font: normal normal 700 10em "Passion One", sans-serif;
+				width: 100%;
+				height: 100%;
+				display: table-cell;
+				vertical-align:top;
+			}
+			@media all and (max-width: 465px){
+				div > p a{
+					font-size:10.5em;
+				}
+				div > h1{
+					vertical-align: bottom;
+					font-size: 3em;
+				}
+			}
+			@media all and (min-width: 1023px){
+				div > p a{
+					font-size:13em;
+				}
+				div > h1{
+					vertical-align: bottom;
+					font-size: 4em;
+				}
+			}
+			@-webkit-keyframes myfirst{
+				0% {
+					background:rgb(37, 254, 252);
+				}
+				25% {
+					background:rgb(37, 254, 252);
+				}
+				75% {
+					background:rgb(209, 234, 241 );
+				}
+				
+				100% {
+					background:rgb(209, 234, 241 );
+				}
+			}
+			
+			
+			@-moz-keyframes myfirst{
+				0% {
+					background:rgb(37, 254, 252);
+				}
+				25% {
+					background:rgb(37, 254, 252);
+				}
+				75% {
+					background:rgb(209, 234, 241 );
+				}
+				
+				100% {
+					background:rgb(209, 234, 241 );
+				}
+			}
+			
+			@-o-keyframes myfirst{
+				0% {
+					background:rgb(37, 254, 252);
+				}
+				25% {
+					background:rgb(37, 254, 252);
+				}
+				75% {
+					background:rgb(209, 234, 241 );
+				}
+				
+				100% {
+					background:rgb(209, 234, 241 );
+				}
+			}
+			
+			
+			
+			@keyframes myfirst{
+				0% {
+					background:rgb(37, 254, 252);
+				}
+				25% {
+					background:rgb(37, 254, 252);
+				}
+				75% {
+					background:rgb(209, 234, 241 );
+				}
+				
+				100% {
+					background:rgb(209, 234, 241 );
+				}
+			}
+
+
+
+
+
+
+			@-webkit-keyframes mysecond{
+				0% {
+					color:rgb(209, 234, 241 );
+				}
+				25% {
+					color:rgb(209, 234, 241 );
+				}
+				75% {
+					color:rgb(37, 254, 252);
+				}
+				100% {
+					color:rgb(37, 254, 252);
+				}
+			}
+
+			@-moz-keyframes mysecond{
+				0% {
+					color:rgb(209, 234, 241 );
+				}
+				25% {
+					color:rgb(209, 234, 241 );
+				}
+				75% {
+					color:rgb(37, 254, 252);
+				}
+				100% {
+					color:rgb(37, 254, 252);
+				}
+			}
+
+			@-o-keyframes mysecond{
+				0% {
+					color:rgb(209, 234, 241 );
+				}
+				25% {
+					color:rgb(209, 234, 241 );
+				}
+				75% {
+					color:rgb(37, 254, 252);
+				}
+				100% {
+					color:rgb(37, 254, 252);
+				}
+			}
+			@keyframes mysecond{
+				0% {
+					color:rgb(209, 234, 241 );
+				}
+				25% {
+					color:rgb(209, 234, 241 );
+				}
+				75% {
+					color:rgb(37, 254, 252);
+				}
+				100% {
+					color:rgb(37, 254, 252);
+				}
+			}
+
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>
+				<a href="/">LEAVE THIS PLACE!</a>
+			</p>
+			<h1>
+				<p>Sorry, dude with ip address: <!--#echo var="REMOTE_ADDR" -->. </p>
+				<p> I&#39;m at a loss for words.</p>
+				<p>(click anywhere to leave.)</p>
+			</h1>
+
+
+		</div>
+	</body>
+</html>

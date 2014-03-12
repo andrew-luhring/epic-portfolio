@@ -1,0 +1,92 @@
+{
+	"categories": {
+		"designs": [
+			{
+				"id": "glitch",
+				"src": "portfolio/bounceLinesbcropped.png"
+			}, {
+				"id": "slater",
+				"src": "portfolio/ACslater.png"
+			}, {
+				"id": "deadmau5",
+				"src": "portfolio/deadmau5.gif"
+			}, {
+				"id": "otter",
+				"src": "portfolio/otterLineWork.gif"
+			}, {
+				"id": "twitter",
+				"src": "portfolio/twitter.png"
+			}, {
+				"id": "soundcloud",
+				"src": "portfolio/soundcloud.png"
+			}, {
+				"id": "pdficon",
+				"src": "portfolio/pdficonc.png"
+			}
+		],
+		"websites": [
+			{
+			},{
+			},{
+			},{
+			},{
+			},{
+			},{
+			},{
+			}
+		],
+		"experiments": [],
+		"code": []
+	}
+}
+
+
+// "portfolio/corptax.png" title="Translated photoshop design to cross-browser/device friendly HTML5 & CSS3 code by hand." id="corptax" class="UX lb_gal"
+//
+//
+// "portfolio/milyli.png" id="milyli" title="Translated photoshop design to cross-browser/device friendly HTML5 & CSS3 code by hand." class="UX lb_gal"
+//
+//
+// "portfolio/quinn.png" title="All code by me, all designs not by me." id="quinn" class="UX lb_gal"
+//
+//
+// "portfolio/bobbys.png" title="HTML(5), CSS(3), JavaScript, jQuery by me but also made use of a jQ slider plugin." id="bobbys" class="UX lb_gal"
+//
+//
+// "portfolio/danaco.png" title="Prexisting website, had to build out a few new pages from scratch and build a more stable responsive design." id="danaco" class="UX lb_gal"
+// "portfolio/temporaryPage.png" title="" id="tempLink" class="UX lb_gal"
+//
+//
+//
+// "portfolio/hand.png" title="What's so special about this hand? The fact that it's constructed only with CSS3." id="otterLink" class="albumArt lb_gal"
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// "portfolio/resumes.png" title="my resume" class="resume lb_gal"
+//
+//
+//
+//
+//
+//
+//
+//
+// "portfolio/boxybutton.png" title="Boxy Buttons" id="boxyButtons" class="other lb_gal"
+//
+//
+// "portfolio/jCuteMenu.png" title="A Cute jQuery Menu" id="cuteMenu" class="other lb_gal"
+//
+//
+// "portfolio/jqanimation.png" title="Animation" id="jqanimation" class="other lb_gal"
+//
+//
+// "portfolio/resize.png" title="Resize" id="jqanimation" class="other lb_gal"
+//

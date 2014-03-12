@@ -1,0 +1,33 @@
+{"playlist":
+    [
+	{
+	    "0": {"src":"http://www.bisforbounce.com/wp-content/uploads/2012/privatestuff/cliff_explains_al_pt1.mp3", "type":"audio/mp3"},
+	    "config": {
+		"title": "Cliff explains Al's situation part 1 of 4",
+		"poster": "junk/cover.jpg"
+	    }
+	},
+	{
+	    "0": {"src":"http://www.bisforbounce.com/wp-content/uploads/2012/privatestuff/cliff_explains_al_pt2.mp3", "type":"audio/mp3"},
+	    "config": {
+		"title": "Cliff explains Al's situation part 2 of 4",
+		"poster": "junk/cover.jpg"
+	    }
+	},
+	{
+	    "0": {"src":"http://www.bisforbounce.com/wp-content/uploads/2012/privatestuff/cliff_explains_al_pt3.mp3", "type":"audio/mp3"},
+	    "config": {
+		"title": "Cliff explains Al's situation part 3 of 4",
+		"poster": "junk/cover.jpg"
+	    }
+	},
+	{
+	    "0": {"src":"http://www.bisforbounce.com/wp-content/uploads/2012/privatestuff/cliff_explains_al_pt4_full2.mp3", "type":"audio/mp3"},
+	    "config": {
+		"title": "Cliff explains Al's situation part 4 of 4",
+		"poster": "soItsComeToThis.PNG"
+	    }
+	}
+
+    ]
+}

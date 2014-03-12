@@ -1,0 +1,113 @@
+@import "compass";
+$w : -webkit ;
+$m : -moz ;
+
+
+@mixin displayFlex {
+	display: -webkit-box  !important;
+	//display: -moz-box  !important;
+	display: box  !important;
+	display: -webkit-flex  !important;
+	display: -moz-flex  !important;
+	display: -o-flex  !important;
+	display: -ms-flexbox  !important;
+	display: flex  !important;
+} 
+
+@mixin displayInlineFlex{
+	display: -webkit-inline-box;
+	display: -moz-inline-box;
+	display: inline-box;
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -o-inline-flex;
+	display: -ms-inline-flex;
+	display: inline-flex;
+	
+}
+
+@mixin flexAmt ($x...){
+	-webkit-box-flex: $x;
+	-moz-box-flex: $x;
+	-webkit-flex: $x;
+	-moz-flex: $x;
+	-o-flex: $x;
+	-ms-flex: $x;
+	flex: $x;
+	
+}
+@mixin flexAlign($y...){
+	-webkit-flex-align: $y;
+	-moz-flex-align: $y;
+	-o-flex-align:$y;
+	-ms-flex-align:$y;
+	flex-align: $y;
+	
+}
+
+@mixin flexDir($z){
+	-webkit-box-direction:$z;
+	-moz-box-direction: $z;    
+	-webkit-box-orient: $z;
+	-moz-box-orient: $z;
+	-webkit-flex-direction: $z;
+	-ms-flex-direction: $z;
+	-o-flex-direction:$z;
+	flex-direction: $z;
+}
+
+@mixin flexWrap($a...){
+	-webkit-flex-wrap: $a;
+	-ms-flex-wrap: $a;
+	-moz-flex-wrap: $a;
+	-o-flex-wrap: $a;
+	flex-wrap: $a;
+    
+}
+@mixin flexJustify($b...){
+	$w-justify-content: $b;
+	$m-justify-content: $b;
+	-ms-flex-pack: $b;
+	justify-content: $b;
+}
+
+@mixin flexOrder($c){
+	-webkit-box-ordinal-group: 2;
+	-moz-box-ordinal-group: 2;
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
+} 
+
+@mixin flexPack($d){
+    -webkit-align-self: $d;
+    -ms-flex-item-align: $d;
+    align-self: $d;
+	
+}
+
+@mixin flexWrap($e){
+	-moz-flex-wrap:$e;
+	-webkit-wrap: $e;
+	-ms-flex-wrap:$e;
+	flex-wrap:$e;
+}
+
+@mixin   flexContainer{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+  
+}
+
+@mixin flexCenter{
+-webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center; 
+	
+}
+  
+
+

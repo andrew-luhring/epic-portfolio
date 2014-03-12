@@ -1,0 +1,119 @@
+$form-width: 500px;
+$form-field-width: 300px;
+$form-bg-dark: #232323;
+$form-bg-red: #db4a39;
+$form-bg-light: #e8e8e8;
+$form-title-fnt-sz: 14px;
+$form-title-fnt-fmly: "Arial", sans-serif;
+$form-input-fnt-sz: 12px;
+$form-input-radius: 2px;
+
+main[role="main"], #test{
+	margin: 20px auto;
+	background: #f5f5f5;
+	padding: 30px 0;
+	width: 500px;
+	>header{
+		text-align: center;
+	}
+}
+form.loginform, form.specificity{
+	background: $form-bg-dark;
+	width: $form-width;
+	position: relative;
+}
+
+form.loginform,
+fieldset.credentials,
+fieldset.specificity,
+button.loginform{
+	margin: auto;
+	display: block;
+}
+fieldset.credentials, fieldset.specificity{
+	font: normal normal normal $form-input-fnt-sz $form-title-fnt-fmly;
+	position: relative;
+}
+legend.specificity {
+	font-size: 16px;
+}
+.specificity {
+margin-bottom: 15px;
+}
+form.specificity{
+	padding:5px 0;
+	margin-bottom: 30px;
+}
+form > fieldset.loginform legend,
+button.loginform{
+	color: $form-bg-light;
+}
+fieldset.loginform,
+.credentials-input,
+.specificity-input,
+button.loginform{
+	width: $form-field-width;
+}
+.credentials > input, .specificity > input{
+	margin-bottom:10px;
+	display: block;
+	background: $form-bg-light;
+}
+.credentials > input{
+	margin-bottom:0;
+}
+.credentials > input, button.loginform{
+	border-radius: $form-input-radius;
+}
+.specificity label, .credentials label{
+    position: absolute;
+    right: 0;
+}
+label.specificity-input{
+	float: left;
+	width: 50%;
+	position: relative;
+}
+input.specificity-input{
+	float: left;
+	width: 10%;
+	position: relative;
+}
+.credentials label{
+    display: none;
+    width: $form-field-width;
+}
+.lte-ie9 .credentials label{
+	display: inline;
+}
+div.specificity-input{
+	display: inline-table;
+	margin: 20px 0px;
+
+}
+.specificity label, .specificity input{
+	color: $form-bg-light;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 15px;
+	line-height: 15px;
+
+}
+button.loginform{
+	background: $form-bg-red;
+}
+legend.credentials{
+	font-size: $form-input-fnt-sz;
+}
+.word{
+	border: 2px solid black;
+	background: #ddd;
+
+}
+hr{
+	opacity: 0.0;
+}
+
+.credentials-requirement{
+	margin:40px auto;
+}

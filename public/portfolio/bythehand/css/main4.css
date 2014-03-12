@@ -1,0 +1,486 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("./avenir_next.ttf"); }
+
+/* line 13, main4.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222; }
+
+/* line 17, main4.scss */
+body {
+  font-size: 1em;
+  line-height: 1.4; }
+
+/* line 22, main4.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/* line 27, main4.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+/* line 36, main4.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+/* line 49, main4.scss */
+img {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+/* line 57, main4.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+/* line 67, main4.scss */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+/* line 75, main4.scss */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+/* line 110, main4.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px; }
+
+/* line 118, main4.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%; }
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* line 129, main4.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 138, main4.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 155, main4.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+/* line 168, main4.scss */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 185, main4.scss */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+/* line 190, main4.scss */
+.cf:after {
+  clear: both; }
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 199, main4.scss */
+.cf {
+  *zoom: 1; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  /* line 219, main4.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  /* line 227, main4.scss */
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  /* line 231, main4.scss */
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  /* line 235, main4.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 245, main4.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  /* line 250, main4.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid; }
+
+  /* line 255, main4.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  /* line 260, main4.scss */
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  /* line 264, main4.scss */
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  /* line 274, main4.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  /* line 280, main4.scss */
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+/*andwee stylin all over the place! andrew luhring @bisforbounce.com/ */
+/*body font family*/
+/*body font size*/
+/*body font color*/
+/*header font size*/
+/*header font family*/
+/*header font color*/
+/*header font weight*/
+/* line 336, main4.scss */
+body {
+  background: #e7e7e7; }
+
+/* line 340, main4.scss */
+#bgh {
+  position: absolute;
+  width: 1200px; }
+
+/* line 344, main4.scss */
+a {
+  text-decoration: none; }
+
+/* line 348, main4.scss */
+#wrapper, footer {
+  margin: auto;
+  padding: 10px; }
+
+/* line 359, main4.scss */
+header {
+  background: #9bc8f5;
+  max-width: 750px; }
+  /* line 362, main4.scss */
+  header img {
+    max-width: 750px;
+    height: auto;
+    margin: 0px auto; }
+  /* line 367, main4.scss */
+  header hgroup {
+    position: absolute;
+    top: 0;
+    visibility: hidden; }
+  /* line 372, main4.scss */
+  header nav {
+    background: #9bc8f5;
+    margin: auto; }
+    /* line 375, main4.scss */
+    header nav ul {
+      margin: 0px auto;
+      padding: 0px;
+      width: 691px; }
+      /* line 379, main4.scss */
+      header nav ul li:hover {
+        background: #6e97cd; }
+      /* line 382, main4.scss */
+      header nav ul li {
+        float: left;
+        margin: 0px;
+        border-right: 1px solid #6e97cd;
+        width: 114px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        background: #9bc8f5;
+        font-family: "Avenir", sans-serif;
+        font-weight: bold;
+        font-variant: small-caps; }
+        /* line 394, main4.scss */
+        header nav ul li a {
+          color: #255FBD; }
+      /* line 398, main4.scss */
+      header nav ul li:first-of-type {
+        border-left: 1px solid #6e97cd; }
+
+/* line 406, main4.scss */
+article {
+  float: left;
+  -webkit-transform: rotate(-49deg) translate(-70px, 560px);
+  font-size: 11px;
+  color: #333333;
+  line-height: 16px;
+  z-index: 10;
+  position: relative;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #333333;
+  line-height: 16px; }
+  /* line 407, main4.scss */
+  article div:nth-of-type(1) {
+    background: #f5f5f5;
+    width: 484px;
+    height: 405px;
+    padding: 220px 30px 16px 20px;
+    -webkit-transform: translate(159px, 30px);
+    border-bottom-left-radius: 179px;
+    border-bottom-right-radius: 324px;
+    border-top-right-radius: 400px;
+    border-top-left-radius: 400px;
+    /*
+        background: #f5f5f5;
+        width: 484px;
+        height: 405px;
+        padding: 220px 30px 16px 20px;
+        -webkit-transform: translate(159px, 30px);
+        border-bottom-left-radius: 179px;
+        border-bottom-right-radius: 324px;
+        border-top-right-radius: 400px;
+        border-top-left-radius: 400px;
+        */
+    /*
+        background: #f5f5f5;
+        width: 484px;
+        height: 405px;
+        padding: 220px 30px 16px 20px;
+        -webkit-transform: translate(162px, 15px);
+        border-bottom-left-radius: 179px;
+        border-bottom-right-radius: 324px;
+        border-top-left-radius: 400px;
+    */
+    /*
+        background: #f5f5f5;
+        width: 484px;
+        height: 485px;
+        padding: 40px;
+        -webkit-transform: translate(128px, 30px);
+        border-bottom-left-radius: 156px;
+        border-bottom-right-radius: 324px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 300px;*/ }
+    /* line 456, main4.scss */
+    article div:nth-of-type(1) h1, article div:nth-of-type(1) p, article div:nth-of-type(1) span, article div:nth-of-type(1) div {
+      max-width: 400px;
+      margin: auto;
+      display: block; }
+  /* line 463, main4.scss */
+  article div:nth-of-type(2) {
+    max-width: 300px;
+    background: #f5f5f5;
+    -webkit-transform: rotate(15deg) translate(160px, 0px);
+    padding: 20px; }
+  /* line 482, main4.scss */
+  article h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #ff6600;
+    line-height: 24px;
+    font-weight: bold; }
+
+/* line 487, main4.scss */
+#rsb {
+  position: absolute;
+  right: 270px; }
+  /* line 491, main4.scss */
+  #rsb nav ul {
+    padding: 0px;
+    margin: 0px; }
+    /* line 495, main4.scss */
+    #rsb nav ul li {
+      z-index: 0;
+      height: 90px;
+      display: table;
+      background: #f5f5f5;
+      width: 100%;
+      margin: 7px auto;
+      position: relative;
+      width: 250px;
+      visibility: hidden; }
+      /* line 506, main4.scss */
+      #rsb nav ul li a {
+        display: table-cell;
+        vertical-align: middle;
+        color: #aaa;
+        font: normal small-caps 700 30px "Avenir", "Helvetica Neue", "Helvetica", sans-serif;
+        line-height: 25px;
+        text-decoration: none;
+        padding-left: 20px; }
+    /* line 516, main4.scss */
+    #rsb nav ul li:first-child {
+      z-index: 1;
+      -webkit-transform: rotate(-90deg) translate(-403px, 88px);
+      border-top-right-radius: 70px;
+      border-bottom-right-radius: 70px;
+      width: 720px;
+      height: 133px;
+      visibility: visible; }
+      /* line 524, main4.scss */
+      #rsb nav ul li:first-child a {
+        width: 100%;
+        height: 100%; }
+        /* line 527, main4.scss */
+        #rsb nav ul li:first-child a span {
+          float: right;
+          margin: 0px 40px;
+          -webkit-transform: rotate(90deg); }
+    /* line 534, main4.scss */
+    #rsb nav ul li:nth-child(2) {
+      -webkit-transform: rotate(50deg) translate(-234px, 295px);
+      z-index: 2;
+      width: 500px;
+      border-top-left-radius: 60px;
+      border-bottom-left-radius: 60px;
+      height: 120px;
+      visibility: visible; }
+      /* line 542, main4.scss */
+      #rsb nav ul li:nth-child(2) a {
+        padding-left: 100px; }
+    /* line 546, main4.scss */
+    #rsb nav ul li:nth-child(3) {
+      -webkit-transform: rotate(47deg) translate(-388px, 348px);
+      z-index: 2;
+      width: 600px;
+      border-top-left-radius: 70px;
+      border-bottom-left-radius: 70px;
+      height: 140px;
+      visibility: visible; }
+      /* line 554, main4.scss */
+      #rsb nav ul li:nth-child(3) a {
+        padding-left: 100px; }
+    /* line 559, main4.scss */
+    #rsb nav ul li:nth-child(4) {
+      -webkit-transform: rotate(41deg) translate(-492px, 368px);
+      z-index: 2;
+      width: 500px;
+      border-top-left-radius: 60px;
+      border-bottom-left-radius: 60px;
+      visibility: visible;
+      height: 120px; }
+      /* line 567, main4.scss */
+      #rsb nav ul li:nth-child(4) a {
+        padding-left: 100px; }
+    /* line 572, main4.scss */
+    #rsb nav ul li:nth-child(5) {
+      -webkit-transform: rotate(34deg) translate(-466px, 368px);
+      z-index: 2;
+      width: 500px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      visibility: visible;
+      height: 110px; }
+      /* line 580, main4.scss */
+      #rsb nav ul li:nth-child(5) a {
+        padding-left: 100px; }

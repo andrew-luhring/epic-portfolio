@@ -1,0 +1,91 @@
+@import "compass";
+@import "_flex-box";
+
+$white : #fff;
+$green: #7db041;
+$body_bg: $white;
+$headline_clr: #615b55;
+$border_clr : #ccc;
+
+@mixin cf{
+//	overflow: hidden;
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+html {
+	font-size: 62.5%;
+	color: black;
+}
+body {
+	background: $body_bg;
+	font-size: 16px;
+	font-family: 'Helvetica Neue';
+	font-weight: 300;
+	padding: 50px;
+}
+
+a{
+  text-decoration: none;
+  transition: all 1s;
+
+  &:hover{
+    transition: all 1s;
+  }
+}
+ul, li{
+  list-style-type: none;
+}
+ul, h1, h2, h3, h4, h5 , h6, ul, li, ol, p, hr, figure, figcaption, blockquote, menu, dir, dl, dt, dd, defs, details, summary, form, fieldset, input {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start:0;
+  -webkit-padding-end:0;
+  -webkit-padding-before:0;
+  -webkit-padding-after:0;
+
+  -moz-margin-before: 0;
+  -moz-margin-after: 0;
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+  -moz-padding-start: 0;
+  -moz-padding-end: 0;
+  -moz-padding-before: 0;
+  -moz-padding-after: 0;
+
+  -ms-margin-before: 0;
+  -ms-margin-after: 0;
+  -ms-margin-start: 0;
+  -ms-margin-end: 0;
+  -ms-padding-start: 0;
+  -ms-padding-end: 0;
+  -ms-padding-before: 0;
+  -ms-padding-after: 0;
+
+  -o-margin-before: 0;
+  -o-margin-after: 0;
+  -o-margin-start: 0;
+  -o-margin-end: 0;
+  -o-padding-start: 0;
+  -o-padding-end: 0;
+  -o-padding-before: 0;
+  -o-padding-after: 0;
+}
+
+header h1 {
+	font-weight: 300;
+}
+figure{
+	display:block;
+}
+
+strong{
+	font-weight: 900;
+}

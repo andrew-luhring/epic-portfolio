@@ -1,0 +1,65 @@
+
+#ui-lightbox-bottombar {
+	margin-top: 0px;
+	height: 0px;
+	position: relative;
+	z-index: 200;
+	overflow: visible;
+}
+
+#ui-lightbox-bottombar > #ui-lightbox-title-wrapper {
+	margin: auto;
+	height: auto;
+	font-size: 20px;
+	line-height: 20px;
+	z-index: 999;
+	overflow: visible;
+}
+
+#ui-lightbox-title {
+	position: relative;
+	line-height: 40px;
+	padding: 3% 10%;
+	min-width: 300px;
+	margin-left: 1px;
+	margin-right: 1px;
+	background-color: #e2e2e2;
+	color: black;
+	text-align: center;
+}
+
+#ui-lightbox-button-prev, #ui-lightbox-button-next, #ui-lightbox-button-close, #ui-description {
+	position: absolute;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 20px;
+	vertical-align: middle;
+	z-index: 300;
+	border: 1px solid gray;
+	display: inline-block;
+	background-color: #E2E2E2;
+	padding: 5px 15px;
+	line-height: 20px;
+	behavior: url(/PIE.php);
+	overflow: visible;
+}
+#ui-lightbox-button-prev {
+	top: 50%;
+	left: 5%;
+}
+#ui-lightbox-button-next {
+	top: 50%;
+	right: 5%;
+}
+#ui-description {
+	top: 50%;
+	left: 40%;
+}
+#ui-lightbox-button-close {
+	padding: 5px 15px;
+	right: 5%;
+	top: 17px;
+}
+#sb-wrapper{
+	top: 0px !important;
+}
