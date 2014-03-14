@@ -15,7 +15,7 @@ jQuery.extend( jQuery.fn, {
     }
  });
 jQuery(document).ready(function($) {
-		timeoutId = window.setTimeout(clickaBox, 6000);
+
 
 		$('.workTypes').each(function() {
 			worktypes.push(this);
@@ -158,4 +158,6 @@ jQuery(document).ready(function($) {
 						timeoutId = window.setTimeout(showArt, 10000);
 					}
 					function showArt() {}
+					var timeoutId = window.setTimeout(clickaBox, 6000);
+	timeoutId;
 });

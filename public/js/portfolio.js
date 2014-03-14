@@ -152,8 +152,8 @@ jQuery(document).ready(function($) {
 	$("#centeringDiv a, a.resume, #centeringDiv a img").click(function(event) {
 		event.preventDefault();
 		$(event.target).stop(true, true);
+		showGallery();
 	});
-	showGallery();
 	$('.workTypes').parent().click(function() {
 			window.clearTimeout(timeoutId);
 			$('#galleryDiv').removeClass("hide").show("blind","slow");
