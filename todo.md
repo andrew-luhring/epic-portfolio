@@ -14,6 +14,8 @@ Minimum Marketable Features
 +   +   mirror
 +   +   served
 
+4.)     Bonus points: get nyan cat reporter to work in html.
+
 current
 ---------
 

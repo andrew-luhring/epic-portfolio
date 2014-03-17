@@ -28,12 +28,6 @@
                     "uri": "http://www.bisforbounce.com/TemporaryLandingIndex.html",
                     "type": "iframe"
                 },
-                /*{
-                this is no longer relevant.
-                    "id": "plasticSurgery",
-                    "uri": "http://www.plasticsurgeryresource.com/wordpress/",
-                    "type": "iframe"
-                },*/
                 {
                     "id": "corpTax",
                     "uri": "http://bisforbounce.com/portfolio/portfolio/corptax/",
