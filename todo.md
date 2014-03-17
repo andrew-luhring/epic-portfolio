@@ -2,7 +2,7 @@ Minimum Marketable Features
 =====================
 
 1.)     Refactor JavaScript. <==
-
++  +    refactor html.
 2.)     Add new features
    *       Aria-roles, tooltips, angular stuff.
 
@@ -18,6 +18,8 @@ Minimum Marketable Features
 
 current
 ---------
+
++   **figure out if the json tests are encountering a race condition because sometimes they fail for some reason.
 
 +   the links within #centeringDiv should probably be buttons because we're not doing the gallery.php thing anymore. i'll just link to the pictures if people don't have javascript enabled.
 +   the links within #galleryDiv should be figure elements.
