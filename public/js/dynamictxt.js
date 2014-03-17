@@ -2,6 +2,7 @@
 /* global jQuery: true, resizeImg: true*/
 //prevent button font from being too big for flexbox (the word illustrations specifically)
 //this is ridiculously bloated (so many nested ifs) but it works and I don't feel like beautifying it right now.
+var jQuery = require('jquery');
 (function($){
 "use strict";
 
@@ -37,7 +38,7 @@ function textResize(){
 			console.log("e");
 			fp = $(this).css("font-size");
 			parInt = parseInt(fp, 10);
-//							
+//
 			if ($(this).is( $("a, p, div").hasParent(".workTypes")) ) {
 //^^^^^ .parent isnt right... because it's saying this is the parent of a p or div instead of a p div with the parent
 				console.log("f");

@@ -42,14 +42,24 @@
 	clear: both;
 }
 .unhide {
-	
 	opacity: 1;
+}
+.hidden{
+	opacity: 0;
 }
 .hide {
 	display: none !important;
 	overflow:hidden;
 	opacity: 0;
 	position: relative;
+}
+.no-js .hide{
+	display: inherit;
+	overflow: visible;
+	opacity: 1;
+}
+.no-js .hidden{
+	opacity: 1;
 }
 a{
 	color: #55D;

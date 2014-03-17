@@ -1,7 +1,4 @@
-/**
- * @author Andy
- */
 
-Shadowbox.init({    
+Shadowbox.init({
 	skipSetup: true
 });

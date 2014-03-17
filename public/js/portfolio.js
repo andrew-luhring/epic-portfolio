@@ -1,16 +1,21 @@
 /* jshint undef: true */
-/* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true*/
+/* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true, define: true*/
 
+/*
 
-
-
-(function(root){
+define([
+ 	    'require'
+	,   'shadowbox'
+	,   'jquery'
+	,   'jqueryui'
+], function(req, Shadowbox, $){
 	"use strict";
+	//port = root.port || {};
+*/
 
-	port = root.port || {};
 
 
-(function($){
+
 var boxShadowDown = { boxShadow : '2 3 9 -1 #400339' }
 	,  boxShadowUp = { boxShadow : '10 15 30 -5 #400339' }
 	,   selected
@@ -23,11 +28,15 @@ var boxShadowDown = { boxShadow : '2 3 9 -1 #400339' }
 	,   galleryDivA
 	,   timeoutId;
 
+
+
 	$("body,html").bind ("scroll mousedown DOMMouseScroll mousewheel keyup", function(e) {
 		if (e.which > 0 || e.type === "mousedown" || e.type === "mousewheel") {
 			$("html,body").stop(true,true);
 		}
 	});
+
+
 function showGallery() {
 	$('#temp, #clickToClose').hide("fade", 200);
 	jQuery.each($('img.gallery, #galleryDiv a'), function() {
@@ -159,36 +168,36 @@ function categoryActions(thing) {
 }
 
 
-$(document).ready(function() {
-	for ( i = 0; i < contentArray.length; i++) {
-		var className = contentArray[i];
-		content[className] = $('.' + className);
-	}
-	$("#centeringDiv a, a.resume, #centeringDiv a img").click(function(event) {
-		event.preventDefault();
-		$(event.target).stop(true, true);
-		showGallery();
-	});
-	$('.workTypes').parent().click(function() {
-			window.clearTimeout(timeoutId);
-			$('#galleryDiv').removeClass("hide").show("blind","slow");
-			$("#hint").hide();
-			$("#galleryDiv").text();
-	});
-	$('.workTypes').click(function() {
-		showGallery();
-		populationAnimation($(this));
-		populate();
-		Shadowbox.setup($("#galleryDiv a.lb_gal"), {
-			gallery : "gallery"
+	$(document).ready(function() {
+		for ( i = 0; i < contentArray.length; i++) {
+			var className = contentArray[i];
+			content[className] = $('.' + className);
+		}
+		$("#centeringDiv a, a.resume, #centeringDiv a img").click(function(event) {
+			event.preventDefault();
+			$(event.target).stop(true, true);
+			showGallery();
 		});
-	});
-	// end click handler
-	$('.resume').click(function() {
-		Shadowbox.setup($(this));
-	});
+		$('.workTypes').parent().click(function() {
+				window.clearTimeout(timeoutId);
+				$('#galleryDiv').removeClass("hide").show("blind","slow");
+				$("#hint").hide();
+				$("#galleryDiv").text();
+		});
+		$('.workTypes').click(function() {
+			showGallery();
+			populationAnimation($(this));
+			populate();
+			Shadowbox.setup($("#galleryDiv a.lb_gal"), {
+				gallery : "gallery"
+			});
+		});
+		Shadowbox.setup($('.resume'));
+		// end click handler
+//		$('.resume').click(function() {
+//			Shadowbox.setup($(this));
+//		});
 
-});
-})(jQuery);
-
-})(this);
+	});
+/*
+});*/

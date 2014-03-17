@@ -1,0 +1,6 @@
+--ui 'bdd'
+--require 'expect.js'
+--colors 
+--reporter 'nyan'
+--growl
+--bail  false

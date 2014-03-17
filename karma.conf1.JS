@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Sun Mar 16 2014 19:29:48 GMT-0500 (CDT)
+// Generated on Sun Mar 16 2014 17:34:37 GMT-0500 (CDT)
 
 module.exports = function(config) {
   config.set({
@@ -9,26 +9,26 @@ module.exports = function(config) {
 
 
     // frameworks to use
-    frameworks: ['mocha', 'requirejs'],
+    frameworks: ['mocha', 'commonjs'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      {pattern: 'public/lib/*.js', included: true},
-      {pattern: 'public/js/*.js', included: true},
-      {pattern: 'public/tests/*.js', included: true}
+	  'public/lib/jquery.js',
+      'public/js/*.js',
+      'public/tests/*.js'
     ],
 
 
     // list of files to exclude
     exclude: [
-      
+      'node_modules/*'
     ],
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['progress'],
+	  reporters: ['unicorn', 'growl'],
 
 
     // web server port
@@ -45,7 +45,7 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: true,
+    autoWatch: false,
 
 
     // Start these browsers, currently available:
@@ -65,6 +65,15 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false
+    singleRun: false,
+
+	  plugins: [
+		  'karma-mocha',
+		  'karma-chrome-launcher',
+		  'karma-growl-reporter',
+		  'karma-phantomjs-launcher',
+		  'karma-commonjs',
+		  'karma-unicorn-reporter'
+	  ]
   });
 };

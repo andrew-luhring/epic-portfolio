@@ -4,10 +4,9 @@
 "use strict";
 
 var expect = require("expect.js");
-var fs = require('fs');
 
 
-var thing = require('../js/portfolio.js');
+//var thing = require('../js/portfolio.js');
 
 
 
