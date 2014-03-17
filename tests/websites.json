@@ -28,11 +28,12 @@
                     "uri": "http://www.bisforbounce.com/TemporaryLandingIndex.html",
                     "type": "iframe"
                 },
-                {
+                /*{
+                this is no longer relevant.
                     "id": "plasticSurgery",
                     "uri": "http://www.plasticsurgeryresource.com/wordpress/",
                     "type": "iframe"
-                },
+                },*/
                 {
                     "id": "corpTax",
                     "uri": "http://bisforbounce.com/portfolio/portfolio/corptax/",
@@ -66,8 +67,15 @@
                 {
                     "id": "byTheHand",
                     "uri": "http://www.bisforbounce.com/portfolio/portfolio/bythehand/",
-                    "type": "iframe"
-                }
+                    "type": "iframe",
+	                "title": "What's so special about this hand? The fact that it's constructed only with CSS3."
+
+                }, {
+		            "id" : "truck",
+		            "uri" : "portfolio/screenshots/truck.png",
+		            "type" : "iframe",
+		            "title" : "This is a truck made out of html and css. All the behaviors of the truck are controlled using angular. It's still in progress."
+	            }
             ]
         },
         {
