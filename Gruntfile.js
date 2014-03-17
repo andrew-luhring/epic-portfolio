@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 		,   SCSS_DIR = ASSETS_DIR + "scss/"
 		,   STYLEGUIDE_DIR = ASSETS_DIR + "styleguide/"
 		,   JS_DIR = ASSETS_DIR + 'js/'
-		,   TEST_DIR = ASSETS_DIR + 'tests/'
+		,   TEST_DIR =  'tests/'
 		,   BUNDLE_DIR = ASSETS_DIR + 'min/'
 		,   VIEWS_DIR = './'
 		,   LAYOUTS_DIR = VIEWS_DIR + 'layouts/'
@@ -25,13 +25,16 @@ module.exports = function(grunt) {
 		}
 		,   jshint:     {
 				files : {
-					src: [JS_DIR + "*.js", TEST_DIR + "*.js"]
+						src: [/*JS_DIR + "*.js",*/
+							TEST_DIR + "_portfolio.js"
+							, TEST_DIR + "_tests.js"
+							, '!**/node_modules/**']
 					}
 			,	options: lintOptions()
 			}
 		,   karma: {
 				unit: {
-					configFile: './karma.conf.js'
+					configFile: './tests/karma.conf.js'
 				,   background: true
 				}
 			}
@@ -66,9 +69,14 @@ module.exports = function(grunt) {
 				}
 			}
 		,   Mocha: {
-				files: [ TEST_DIR + "/*.js", "!node_modules/**/*"]
+				files: [
+					TEST_DIR + "_portfolio.js"
+					, TEST_DIR + "_tests.js"
+					, "!node_modules/*"
+					,   '!**/node_modules/**']
+			,   exclude: ["node_modules/*", "./node_modules/"]
 			}
-		,   browserify: {
+/*		,   browserify: {
 				client: {
 					// A single entry point for our app
 					src: JS_DIR + "script.js"
@@ -79,13 +87,26 @@ module.exports = function(grunt) {
 					src: TEST_DIR + "_script.js"
 				,   dest: BUNDLE_DIR + "_bundle.js"
 				}
-			}
+			}*/
 		,   watch:{
-
-				js: {
-					files: [ TEST_DIR + "*.js", JS_DIR + "*.js"]
-				,   tasks: ['jshint', 'browserify', 'karma:unit:run', 'Mocha']
+			/*	js: {
+					files: [ JS_DIR + "*.js", ASSETS_DIR + 'main.js']
+				,   tasks: ['Mocha', 'jshint']
 				}
+			,   */
+			test: {
+					files : [
+						TEST_DIR + "tests.js"
+					,   TEST_DIR + "_portfolio.js"
+					,	"!node_modules/*"
+					,   '!**/node_modules/**'
+					]
+				,   tasks: ['jshint']
+				}
+			/*,   k: {
+					files: ['./tests*//*.js']
+				,   tasks: ['karma:unit:run']
+				}*/
 			,   guide : {
 					files: ['./README.md']
 				,   tasks: ['styleguide:docco']
@@ -95,7 +116,13 @@ module.exports = function(grunt) {
 				,	files: [SCSS_DIR + "**/*.scss", SCSS_DIR + "**/**/.scss"]
 				}
 			,   livereload: {
-					files : [ STYLE_DIR + "*.css", VIEWS_DIR + "**/*.hbs", BUNDLE_DIR + "*.js"]
+					files : [
+						STYLE_DIR + "*.css"
+						, VIEWS_DIR + "**/*.hbs"
+						, TEST_DIR + "_portfolio.js"
+						, TEST_DIR + "_tests.js"
+						, '!**/node_modules/**'
+					]
 				,	options: {
 						livereload: true
 				}
@@ -149,6 +176,8 @@ function lintOptions() {
 		strict: true,
 		globals : {
 			jquery : true
+		,   jQuery : true
+		,   $ : true
 		,   expect : true
 		,   mocha : true
 		,   describe : true

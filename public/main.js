@@ -1,3 +1,5 @@
+"use strict";
+
 require.config({
 	paths: {
 			jquery: 'lib/jquery'
@@ -13,7 +15,7 @@ require.config({
 		,   portfolio: 'js/portfolio'
 		,   temp: 'js/temp'
 		,   initial : 'js/initial'
-		,   _portfolio: 'tests/_portfolio'
+		,   portfolioTest: 'tests/_portfolio'
 	},
 	shim : {
 	   jqueryui : ['jquery']
@@ -23,7 +25,7 @@ require.config({
 	,   initial : ['jquery', 'jqueryui', 'animateShadow']
 	,   animateShadow: ['jquery', 'jqueryui']
 	,   dynamictxt : ['jquery', 'jqueryui']
-
+	,   Portfolio : ['jquery', 'jqueryui', 'shadow', 'portfolio']
 	}
 });
 
@@ -39,3 +41,4 @@ require([
 
 		}
 );
+

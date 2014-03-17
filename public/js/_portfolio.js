@@ -1,7 +1,10 @@
 /* jshint undef: true */
 /* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true, define: true*/
 
+
+(function(root) {
 "use strict";
+
 
 var boxShadowDown = { boxShadow : '2 3 9 -1 #400339' }
 	,  boxShadowUp = { boxShadow : '10 15 30 -5 #400339' }
@@ -181,3 +184,5 @@ function categoryActions(thing) {
 		Shadowbox.setup($('.resume'));
 
 	});
+	return root;
+})(this);

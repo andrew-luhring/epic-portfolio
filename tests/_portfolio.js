@@ -1,10 +1,7 @@
 /* jshint undef: true */
 /* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true, define: true*/
-
 "use strict";
-
-var boxShadowDown = { boxShadow : '2 3 9 -1 #400339' }
-	,  boxShadowUp = { boxShadow : '10 15 30 -5 #400339' }
+var shadow = {}
 	,   selected
 	,   contentArray = ['albumArt', 'logoDesign', 'UX', 'other']
 	,   content = {}
@@ -13,10 +10,9 @@ var boxShadowDown = { boxShadow : '2 3 9 -1 #400339' }
 	,   imgGallery
 	,   galleryDivA
 	,   timeoutId;
-
-
-
-	$("body,html").bind ("scroll mousedown DOMMouseScroll mousewheel keyup", function(e) {
+shadow.down = { boxShadow : '2 3 9 -1 #400339' };
+shadow.up = { boxShadow : '10 15 30 -5 #400339' };
+$("body,html").bind ("scroll mousedown DOMMouseScroll mousewheel keyup", function(e) {
 		if (e.which > 0 || e.type === "mousedown" || e.type === "mousewheel") {
 			$("html,body").stop(true,true);
 		}
@@ -34,12 +30,12 @@ function showGallery() {
 function populationAnimation(thing) {
 	window.clearTimeout(timeoutId);
 	var $thing = $(thing);
-	$thing.stop(true, true).animate(boxShadowDown, 300);
+	$thing.stop(true, true).animate(shadow.down, 300);
 	$thing.addClass("workTypesSelected", "fast");
 	selected = $thing.attr('id');
 	$selectedArray = content[selected];
 	if ($('.workTypes').not($thing).hasClass("workTypesSelected")) {
-		$('.workTypes').not($thing).animate(boxShadowUp, 400);
+		$('.workTypes').not($thing).animate(shadow.up, 400);
 		$('.workTypes').not($thing).removeClass('workTypesSelected', " fast");
 	}
 	$('#galleryDiv').empty().addClass("flexy");
@@ -152,9 +148,11 @@ function categoryActions(thing) {
 			break;
 	}
 }
-
-
 	$(document).ready(function() {
+		$.ajax({
+			url : 'websites.json'
+		}).done(function(data){
+		});
 		for ( i = 0; i < contentArray.length; i++) {
 			var className = contentArray[i];
 			content[className] = $('.' + className);
@@ -179,5 +177,4 @@ function categoryActions(thing) {
 			});
 		});
 		Shadowbox.setup($('.resume'));
-
 	});
