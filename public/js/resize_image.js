@@ -1,12 +1,20 @@
-var galDiv = document.getElementById("galleryDiv");
+/* jshint undef: true */
+/* global jQuery: true, resizeImg: true*/
 
-var height = galDiv.innerHeight;
-var width = galDiv.innerWidth;
-var imgArray = [];
-var imgs = document.getElementsByTagName("img");
-var section;
-var timeoutIda;
-var viewportWidth;
+"use strict";
+
+
+var galDiv = document.getElementById("galleryDiv")
+	,   height = galDiv.innerHeight
+	,   width = galDiv.innerWidth
+	,   imgArray = []
+	,   imgs = document.getElementsByTagName("img")
+	,   section
+	,   timeoutIda
+	,   viewportWidth
+	,   $ = jQuery;
+
+
 function scrollUp() {
 	viewportWidth = $(window).width();
 	if (viewportWidth < 767) {
@@ -17,6 +25,7 @@ function scrollUp() {
 	}
 	window.clearTimeout(timeoutIda);
 }
+
 
 function resizeImg() {
 	var w = $('#galleryDiv').width();

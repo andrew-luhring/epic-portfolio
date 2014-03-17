@@ -12,10 +12,13 @@
 	//
 	var express = require('express')
 		, portN = 5000
+		, statPort = 5001
+
 		, hbs = require('express-hbs')
 		, app = express()
 		, path = require('path')
 		, Server = require('./server')
+		, stat = express()
 
 	//  view paths
 	//==============================
@@ -25,6 +28,7 @@
 		, viewsD = __dirname + '/views/'
 		, partialsD = viewsD + 'partials/'
 		, layoutsD = viewsD + 'layouts/'
+		, testsD =  __dirname + 'tests/'
 
 	//  view file paths
 	//==============================
@@ -42,6 +46,7 @@
 			.use(express.bodyParser())
 			.use(express.logger('dev'))
 			.use(express.methodOverride())
+			//.use(express.static(path.join(__dirname, 'tests')))
 			.use(express.static(path.join(__dirname, 'public')))
 			.use(express.errorHandler());
 
@@ -65,7 +70,20 @@
 	app.get( '/' ,function (req, res) {
 		res.render(partialsD + 'index.hbs', indx);
 	});
+
+
+	stat.use(express.static('tests'));
+
+
+
+
+	stat.set('port', statPort)
+			.set('cache', false)
+
+
 	new Server(app);
+	new Server(stat);
+
 })();
 
 

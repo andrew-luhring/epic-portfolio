@@ -1,36 +1,19 @@
-// Karma configuration
-// Generated on Sun Mar 16 2014 19:29:48 GMT-0500 (CDT)
-
 module.exports = function(config) {
   config.set({
-
-    // base path, that will be used to resolve files and exclude
-    basePath: '../',
-
-
-    // frameworks to use
-    frameworks: ['mocha', 'requirejs'],
-
-
-    // list of files / patterns to load in the browser
+    basePath: '',
+    frameworks: ['mocha', 'commonjs'],
     files: [
-      {pattern: 'public/lib/*.js', included: false},
-      {pattern: 'public/js/*.js', included: false},
-      {pattern: 'public/tests/*.js', included: false},
-      {pattern: 'public/main.js', included: false},
-		'tests/main-test.js'
+      'public/*.js'
     ],
-
-
-    // list of files to exclude
-    exclude: [
-      
-    ],
-
-
-    // test results reporter to use
-    // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['progress', 'growl'],
+	  exclude: [
+		  './public/min/*.js'
+	  ],
+	  /*preprocessors: {
+		  'public/lib*//*.js': ['commonjs'],
+		  'public/js*//*.js': ['commonjs'],
+		  'public/tests*//*.js': ['commonjs']
+	  },*/
+    reporters: ['unicorn', 'growl'],
 
 
     // web server port
@@ -68,6 +51,9 @@ module.exports = function(config) {
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
     singleRun: false,
+
+
+
 	  plugins: [
 		  'karma-mocha',
 		  'karma-chrome-launcher',
@@ -76,6 +62,5 @@ module.exports = function(config) {
 		  'karma-commonjs',
 		  'karma-unicorn-reporter'
 	  ]
-
   });
 };

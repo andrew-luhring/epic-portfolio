@@ -1,21 +1,22 @@
-/**
- * @author Andrew Luhring
- */
+/* jshint undef: true */
+/* global jQuery: true, resizeImg: true*/
+
+"use strict";
 	var boxShadowDown = {boxShadow : '2 3 9 -1 #400339'}
-	var boxShadowUp = {boxShadow : '10 15 30 -5 #400339'}
-	var timeoutId
-	var worktypes = []
-	var paragraphs =[]
+		,   boxShadowUp = {boxShadow : '10 15 30 -5 #400339'}
+		,   timeoutId
+		,   worktypes = []
+		,   paragraphs =[];
 	// Big up @Jonathan Sampson over at s/o for this extension.
-jQuery.extend( jQuery.fn, {
-    hasParent: function(p) {
-        return this.filter(function(){
-            return $(p).find(this).length;
-        });
-    }
- });
+
 jQuery(document).ready(function($) {
-		timeoutId = window.setTimeout(clickaBox, 6000);
+	jQuery.extend( jQuery.fn, {
+		hasParent: function(p) {
+			return this.filter(function(){
+				return $(p).find(this).length;
+			});
+		}
+	});
 
 		$('.workTypes').each(function() {
 			worktypes.push(this);
@@ -108,9 +109,8 @@ jQuery(document).ready(function($) {
 						timeoutId = window.setTimeout(autoExpand, 10000);
 					}
 
-
 					$('article, footer').hide();
-					$('header h1').replaceWith('<h1> :-) </h1>');
+					$('header h1').replaceWith('<h1> :-) </h1>').removeClass('hide').show("fast");
 					$('header h1').delay(500).effect("fade", "easeOutQuart", 1000, function() {
 										$(this).hide().text('Andrew Luhring').show("slow");
 										$('header h1').switchClass('hide', 'unhide').show();
@@ -120,8 +120,8 @@ jQuery(document).ready(function($) {
 					$('#galleryDiv').addClass('hide');
 
 					$('.workTypes').animate(boxShadowDown, 100);
-					$('article').delay(2000).show(1500, function(){
-						$('footer').show(1500);
+					$('article').removeClass('hide').delay(2000).show(1500, function(){
+						$('footer').removeClass('hide').show(1500);
 					});
 					$('.workTypes').delay(3500).animate(boxShadowUp, 500);
 
@@ -131,7 +131,6 @@ jQuery(document).ready(function($) {
 						$("#hint").hide();
 						$("#galleryDiv").text();
 					});
-
 
 					function autoExpand() {
 						$('.galleryDiv, header h1, #portfolio, footer')
@@ -158,4 +157,7 @@ jQuery(document).ready(function($) {
 						timeoutId = window.setTimeout(showArt, 10000);
 					}
 					function showArt() {}
+					timeoutId = window.setTimeout(clickaBox, 6000);
+
+	//timeoutId;
 });
