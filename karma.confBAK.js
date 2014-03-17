@@ -1,34 +1,19 @@
-// Karma configuration
-// Generated on Sun Mar 16 2014 17:34:37 GMT-0500 (CDT)
-
 module.exports = function(config) {
   config.set({
-
-    // base path, that will be used to resolve files and exclude
     basePath: '',
-
-
-    // frameworks to use
     frameworks: ['mocha', 'commonjs'],
-
-
-    // list of files / patterns to load in the browser
     files: [
-      'public/lib/*.js',
-      'public/js/*.js',
-      'public/tests/*.js'
+      'public/*.js'
     ],
-
-
-    // list of files to exclude
-    exclude: [
-      'node_modules/*'
-    ],
-
-
-    // test results reporter to use
-    // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-	  reporters: ['unicorn', 'growl'],
+	  exclude: [
+		  './public/min/*.js'
+	  ],
+	  /*preprocessors: {
+		  'public/lib*//*.js': ['commonjs'],
+		  'public/js*//*.js': ['commonjs'],
+		  'public/tests*//*.js': ['commonjs']
+	  },*/
+    reporters: ['unicorn', 'growl'],
 
 
     // web server port
@@ -45,7 +30,7 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
 
     // Start these browsers, currently available:
@@ -66,6 +51,8 @@ module.exports = function(config) {
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
     singleRun: false,
+
+
 
 	  plugins: [
 		  'karma-mocha',

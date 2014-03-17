@@ -1,21 +1,23 @@
-/**
- * @author Andrew Luhring
- */
-	var boxShadowDown = {boxShadow : '2 3 9 -1 #400339'}
-	var boxShadowUp = {boxShadow : '10 15 30 -5 #400339'}
-	var timeoutId
-	var worktypes = []
-	var paragraphs =[]
-	// Big up @Jonathan Sampson over at s/o for this extension.
-jQuery.extend( jQuery.fn, {
-    hasParent: function(p) {
-        return this.filter(function(){
-            return $(p).find(this).length;
-        });
-    }
- });
-jQuery(document).ready(function($) {
+/* jshint undef: true */
+/* global jQuery: true, resizeImg: true*/
 
+
+"use strict";
+	var boxShadowDown = {boxShadow : '2 3 9 -1 #400339'}
+		,   boxShadowUp = {boxShadow : '10 15 30 -5 #400339'}
+		,   timeoutId
+		,   worktypes = []
+		,   paragraphs =[];
+	// Big up @Jonathan Sampson over at s/o for this extension.
+
+jQuery(document).ready(function($) {
+	jQuery.extend( jQuery.fn, {
+		hasParent: function(p) {
+			return this.filter(function(){
+				return $(p).find(this).length;
+			});
+		}
+	});
 
 		$('.workTypes').each(function() {
 			worktypes.push(this);
@@ -108,7 +110,6 @@ jQuery(document).ready(function($) {
 						timeoutId = window.setTimeout(autoExpand, 10000);
 					}
 
-
 					$('article, footer').hide();
 					$('header h1').replaceWith('<h1> :-) </h1>');
 					$('header h1').delay(500).effect("fade", "easeOutQuart", 1000, function() {
@@ -131,7 +132,6 @@ jQuery(document).ready(function($) {
 						$("#hint").hide();
 						$("#galleryDiv").text();
 					});
-
 
 					function autoExpand() {
 						$('.galleryDiv, header h1, #portfolio, footer')
@@ -158,6 +158,7 @@ jQuery(document).ready(function($) {
 						timeoutId = window.setTimeout(showArt, 10000);
 					}
 					function showArt() {}
-					var timeoutId = window.setTimeout(clickaBox, 6000);
-	timeoutId;
+					timeoutId = window.setTimeout(clickaBox, 6000);
+
+	//timeoutId;
 });

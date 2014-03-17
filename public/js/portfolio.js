@@ -1,14 +1,29 @@
-var boxShadowDown = {
-	boxShadow : '2 3 9 -1 #400339'
-};
-var boxShadowUp = {
-	boxShadow : '10 15 30 -5 #400339'
-};
-var selected;
-var contentArray = ['albumArt', 'logoDesign', 'UX', 'other'], content = {}, newClassName, $selectedArray, i, imgGallery, galleryDivA, timeoutId;
+/* jshint undef: true */
+/* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true*/
 
 
-	$("body,html").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(e) {
+
+
+(function(root){
+	"use strict";
+
+	port = root.port || {};
+
+
+(function($){
+var boxShadowDown = { boxShadow : '2 3 9 -1 #400339' }
+	,  boxShadowUp = { boxShadow : '10 15 30 -5 #400339' }
+	,   selected
+	,   contentArray = ['albumArt', 'logoDesign', 'UX', 'other']
+	,   content = {}
+	,   newClassName
+	,   $selectedArray
+	,   i
+	,   imgGallery
+	,   galleryDivA
+	,   timeoutId;
+
+	$("body,html").bind ("scroll mousedown DOMMouseScroll mousewheel keyup", function(e) {
 		if (e.which > 0 || e.type === "mousedown" || e.type === "mousewheel") {
 			$("html,body").stop(true,true);
 		}
@@ -144,7 +159,7 @@ function categoryActions(thing) {
 }
 
 
-jQuery(document).ready(function($) {
+$(document).ready(function() {
 	for ( i = 0; i < contentArray.length; i++) {
 		var className = contentArray[i];
 		content[className] = $('.' + className);
@@ -174,4 +189,6 @@ jQuery(document).ready(function($) {
 	});
 
 });
-// end the document ready jquery function
+})(jQuery);
+
+})(this);
