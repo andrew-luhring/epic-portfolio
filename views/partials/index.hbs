@@ -10,6 +10,39 @@
 				<a href="" class="lb_gal" > <img id="largeGallery1" src="" title="" class="gallery cf hide" /></a>
 				<a href="" class="lb_gal" > <img id="largeGallery2" src="" title="" class="gallery cf hide" /></a>
 			</div>
+			<style>
+				html{
+					font-size: 62.5%;
+				}
+				body{
+					font-size: 1.6rem;
+				}
+				#newCenteringDiv .ng-isolate-scope{
+					align-items: stretch;
+					display: flex;
+					flex-direction: row;
+					margin: auto auto 2rem;
+					justify-content: space-around;
+					align-items: stretch;
+					align-self: stretch;
+					overflow: visible;
+				}
+				#newCenteringDiv button {
+					align-items: center;
+					outline: none;
+					color: #55D;
+					font-family: 'Quicksand' , sans-serif;
+					flex: 1;
+					justify-content: center;
+					height: 20rem;
+					margin: 3rem 2rem;
+					font-size: 3.1rem;
+					text-align: center;
+				}
+			</style>
+			<div id="newCenteringDiv" ng-controller="Buttons">
+				<werk work></werk>
+			</div>
 			<div id="centeringDiv" class="cf">
 				<a href="gallery.php">
 					<div id="UX" class="workTypes failsafe">

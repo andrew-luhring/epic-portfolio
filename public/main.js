@@ -16,9 +16,13 @@ require.config({
 		,   temp: 'js/temp'
 		,   initial : 'js/initial'
 		,   portfolioTest: 'tests/_portfolio'
+		,   angular : 'lib/angular'
+		,   ang : 'js/ang'
 	},
 	shim : {
-	   jqueryui : ['jquery']
+		jqueryui : ['jquery']
+	//angular : {'exports' : 'angular'}
+	,   ang : {deps: ['jquery', 'angular']}
 	,	shadowbox : ['jquery', 'jqueryui']
 	,   shadow: ['shadowbox']
 	,   portfolio : ['jquery', 'jqueryui', 'animateShadow']
@@ -35,10 +39,13 @@ require([
 	, 'shadow'
 	, 'initial'
 	], function(jquery, portfolio, shadow){
-
 				portfolio;
 				shadow;
-
 		}
 );
 
+require([
+	'jquery'
+,   'ang'], function(ang){
+	ang;
+});

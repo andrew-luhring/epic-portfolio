@@ -1,7 +1,10 @@
 /* jshint undef: true */
 /* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true, define: true*/
+
 "use strict";
-var shadow = {}
+
+var boxShadowDown = { boxShadow : '2 3 9 -1 #400339' }
+	,  boxShadowUp = { boxShadow : '10 15 30 -5 #400339' }
 	,   selected
 	,   contentArray = ['albumArt', 'logoDesign', 'UX', 'other']
 	,   content = {}
@@ -10,9 +13,10 @@ var shadow = {}
 	,   imgGallery
 	,   galleryDivA
 	,   timeoutId;
-shadow.down = { boxShadow : '2 3 9 -1 #400339' };
-shadow.up = { boxShadow : '10 15 30 -5 #400339' };
-$("body,html").bind ("scroll mousedown DOMMouseScroll mousewheel keyup", function(e) {
+
+
+
+	$("body,html").bind ("scroll mousedown DOMMouseScroll mousewheel keyup", function(e) {
 		if (e.which > 0 || e.type === "mousedown" || e.type === "mousewheel") {
 			$("html,body").stop(true,true);
 		}
@@ -30,12 +34,12 @@ function showGallery() {
 function populationAnimation(thing) {
 	window.clearTimeout(timeoutId);
 	var $thing = $(thing);
-	$thing.stop(true, true).animate(shadow.down, 300);
+	$thing.stop(true, true).animate(boxShadowDown, 300);
 	$thing.addClass("workTypesSelected", "fast");
 	selected = $thing.attr('id');
 	$selectedArray = content[selected];
 	if ($('.workTypes').not($thing).hasClass("workTypesSelected")) {
-		$('.workTypes').not($thing).animate(shadow.up, 400);
+		$('.workTypes').not($thing).animate(boxShadowUp, 400);
 		$('.workTypes').not($thing).removeClass('workTypesSelected', " fast");
 	}
 	$('#galleryDiv').empty().addClass("flexy");
@@ -149,21 +153,8 @@ function categoryActions(thing) {
 	}
 }
 
-$(document).ready(function() {
-		var obj = {};
-		$.getJSON("websites.json")
-			.done(function(data){
-				obj.resp = data;
-				obj.work = obj.resp.work;
-			}).fail(function(){
-					console.log("failed");
-			}).always();
 
-			for ( i = 0; i < obj.work.length; i++) {
-				var className = obj.work[i].id;
-				content[className] = $('.' + className);
-			}
-
+	$(document).ready(function() {
 		for ( i = 0; i < contentArray.length; i++) {
 			var className = contentArray[i];
 			content[className] = $('.' + className);
@@ -188,4 +179,5 @@ $(document).ready(function() {
 			});
 		});
 		Shadowbox.setup($('.resume'));
+
 	});

@@ -65,7 +65,14 @@ a{
 	color: #55D;
 }
 #galleryDiv img:hover , #galleryDiv img {
-    -webkit-transition-property: all;
+	$prop : all;
+	$dur : 3s;
+	@mixin thing($property, $value, $browser){
+		$prepend : $browsers;
+		$pr
+	}
+
+    -webkit-transition-property: $prop;
     -moz-transition-property: all;
     -ms-transition-property: all;
     -o-transition-property: all;
