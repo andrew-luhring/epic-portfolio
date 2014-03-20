@@ -2,7 +2,20 @@
 /* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, it: true, shadow: true*/
 
 "use strict";
+var $ = jQuery;
 
+
+function keysAndValues(object){
+	//	var keys = [Object.keys(config)];
+
+	for(var i in object){
+		console.log(i + " :  ");
+		for(var j in object[ i ]){
+			console.log("      "+ j + " : " + object[ i ][ j ]);
+		}
+		console.log("");
+	}
+}
 
 (function(){
 	//describe("worktypes")
@@ -83,3 +96,4 @@
 		});
 	});
 })();
+

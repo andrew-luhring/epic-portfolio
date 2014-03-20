@@ -15,7 +15,8 @@ requirejs.config({
 
 	paths: {
 		jquery: 'public/lib/jquery'
-		, 'jQuery': 'public/lib/jquery'
+		,  'expect' : 'expect.js'
+		,  'jQuery': 'public/lib/jquery'
 		,   jqueryui : 'public/lib/jquery-ui'
 		,   migrate: 'public/lib/jquery-migrate'
 		,   animateShadow : 'public/lib/animate-shadow'
@@ -47,17 +48,11 @@ requirejs.config({
 });
 
 
-define(['jquery'], function($) {
 
 	describe('just checking', function() {
 
 		it('works for app', function() {
-			var el = $('<div></div>');
-
-			expect(el).to.be.ok();
+			expect("str").to.be.a("string");
 		});
 
 	});
-
-});
-

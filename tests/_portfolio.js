@@ -1,4 +1,4 @@
-/* jshint undef: true */
+/* jshint undef: true, shadow: true */
 /* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true, define: true*/
 "use strict";
 var shadow = {}
