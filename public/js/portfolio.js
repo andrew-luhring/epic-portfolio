@@ -19,6 +19,24 @@ $("body,html").bind ("scroll mousedown DOMMouseScroll mousewheel keyup", functio
 	});
 
 
+function keysAndValues(object, depth){
+	for(var i in object){
+		if(object.hasOwnProperty(i)){
+			if(depth > 1){
+				console.log(i + " :  " + object[i]);
+				for(var j in object[ i ]){
+					if(object.hasOwnProperty(j)){
+						console.log("      "+ j + " : " + object[ i ][ j ]);
+					}
+				}
+				console.log("");
+			} else{
+				console.log(i + " :  " + object[i]);
+			}
+		}
+	}
+}
+
 function showGallery() {
 	$('#temp, #clickToClose').hide("fade", 200);
 	jQuery.each($('img.gallery, #galleryDiv a'), function() {
@@ -150,86 +168,108 @@ function categoryActions(thing) {
 }
 
 
-	// Calculate and apply incremental hsl colors to the flex-items
-	// To make life easier later and always have a 3 digit number
-function colorChangyDoodad(){
-
-	var calculations = {
-		pallete :  Math.floor(Math.random() * 360)
-	,   range : 45
-	,   worklength : $('.workTypes').length
-	}
-	calculations.end = calculations.pallete + calculations.range;
-	calculations.increment = calculations.range / calculations.worklength;
-
-	$('.workTypes').each(function(i) {
-
-		var min = i+1;
-		var gradient = {}
-			gradient.beginning = calculations.pallete + calculations.increment * min
-			gradient.end = gradient.beginning + calculations.range;
-		var hsl = function(hue){
-			return 'hsl(' + hue + ',50%,75%)';
-		}
-		var background_gradient =  "linear-gradient(45deg, " + hsl(gradient.beginning) + " 0%," +  hsl(gradient.end) + "100%)";
-		console.log(background_gradient);
-		//var beginning = 'background:hsl(' + hue + ',50%,75%)';
-		$(this).css("background", background_gradient );
-		//$(this).attr("style", background_color);
-
-	});
+//  Function crossBrowserCssValue($obj, property, value){
+//  requires:
+//  *   jQuery Object
+//  *   property                        :   property to change
+//  *   value                              :   value to change it to.
+//
+//  For the record, I was hesitant to write this because css and js should not mix, but it's meant for properties that change over time.
+//
+//
+function crossBrowserCssValue($obj, property, val){
+	$obj.selector.css("-webkit-" + property, val);
+	$obj.selector.css("-moz-" + property, val);
+	$obj.selector.css("-ms-" + property, val);
+	$obj.selector.css("-o-" + property, val);
+	$obj.selector.css(property, val);
 }
-/*
 
-idea time:
--------
-why not have each one of the worktypes be a ball. like a 3d ball. like a marble. page loads the balls roll out and scatter across the page.
-moving your mouse over a ball without clicking it will move the ball in the direction your mouse leaves. the balls clank into eachother like marbles.
+//     Object Pallete( jQueryObject, range, transitionTime )
+//      requires:
+//      *   jQueryObject.
+//		*   range                   :   is the maximum range of start gradient to end gradient. default is 45
+//     *   transitionTime    :   length in seconds of transition.
+//
+//      Properties:
+//
+//		.pallete               hsl hue value (between 0 and 360) ===>   default is randomly generated,
+//		.selector             value of the jQueryObject used in instantiation.
+//		.worklength      default is the number of objects returned by .selector ;
+//		.delta                 the difference between the start gradient hsl value and end gradient hsl value ====> default is range value divided by worklength value.
+//
+//      Methods:
+//
+//     .transition()    method that sets the length in sections the transition should last. default is transitionTime passed at instantiation.
+//     .colorShift(i)     requires incrementor amount. the incrementor amount means that whatever you call this method with should have its own iterator and timing sequence.
+//
+//
+function Pallete( $obj, transition, range ){
+	function Gradient (palleteObject, incrementBy) {
+		this.start  = palleteObject.pallete + palleteObject.delta + incrementBy;
+		this.end = this.start + palleteObject.range;
+		console.log("gradient start is " + this.start + "\ngradeint end  is: " + this.end + " increase by " +  incrementBy);
+	}
+	this.pallete = Math.floor(Math.random() * 360);
+	this.selector = $obj;
+	this.range = 45 || range;
+	this.worklength = $obj.length;
+	this.delta = (function(range, worklength){
+		if(range >= 0 && worklength >= 0 ){
+			return range / worklength;
+		} else {
+			return 1;
+		}
+	})(this.range, this.worklength);
+	this.transition = (function($obj, value){
+		var val;
+		if(value){
+			val = value;
+		} else {
+			val = "all 5s";
+		}
+		crossBrowserCssValue($obj, "transition", val);
+	})(this, transition);
+	this.colorShift = function(incrementor, isDrastic, isGradient){
+		var incrementBy;
+		if(isDrastic){
+			incrementBy = incrementor  * (this.range );
+		} else {
+			incrementBy = incrementor  +  (this.range );
+		}
+		var gradient = new Gradient(this , incrementBy );
+		var hsl = function(hue){
+			return 'hsl(' + hue + ',100%,80%)';
+		};
+		if(isGradient){
+			this.selector.css( "background", "-webkit-linear-gradient(45deg, " + hsl(gradient.start) + " 0%," +  hsl(gradient.end) + "100%)") ;
+			this.selector.css("background","-moz-linear-gradient(45deg, " + hsl(gradient.start) + " 0%," +  hsl(gradient.end) + "100%)");
+			this.selector.css("background", "-ms-linear-gradient(45deg, " + hsl(gradient.start) + " 0%," +  hsl(gradient.end) + "100%)");
+			this.selector.css("background", "-o-linear-gradient(45deg, " + hsl(gradient.start) + " 0%," +  hsl(gradient.end) + "100%)");
+			this.selector.css("background", "linear-gradient(45deg, " + hsl(gradient.start) + " 0%," +  hsl(gradient.end) + "100%)");
+		} else {
 
-***
+			this.selector.css("background",  hsl(gradient.start));
+		}
+	};
+}
 
-each one of the worktypes is like those cut out shape toys---
-ex. a triangle can only fit in a triangle spot, a star only fits in a star spot, etc... it's like a puzzle but with bigger, slightly more 3d shapes.
-the gallery thing could be the thing you move a shape into... so it's like a key. each worktype is like a key to the gallery.
-...which makes conceptual sense because what i my goal is for the gallery is to make the experience the best part of it.
-
-***
-
- right now, the site is simple. you push a button you get the content.
- without messing with the interaction a lot, i could make it more interesting by giving it a different context
-
- like... a science lab environment.
-  i could have little mice wander around in the background. i could make a mouse on a wheel!!!
-  the worktypes could be styled to look like blocks of cheese. you click a block of cheese, a mouse comes up and starts eating the block of cheese
-  until you click a different block of cheese... in which case he moves over to that one and the old one respawns. whichever block of cheese currently
-   being eaten is the type of work being displayed.
-
-   or
-
- a vending machine.  push a button, the gallery gives you a packet of work.
-
- or
-
- a science environment vending machine. you push a button, it drops some cheese in the mice cage. a mouse pulls the work over by its mouth.
- oooor the work is on a little wagon thing thats strung to the mouse's tail.
-
- or
-
- you're inside of a mousewheel.
- you push the category button and the next rung in the mousewheel is the first piece.
- scrolling to the next item moves into view but it looks like the old item is being moved away from you...
- it would look like the "price is right wheel" but what it would look like the inside of the wheel rather than the outside.
- the inside would be cooler to animate because it's skewing stuff into your perspective rather than away from you.
-
-
-
-
-
-
-*/
-
+function bodyColorShift(){
+	var bodyPallete = new Pallete($('html'), "all 5s", 45);
+	keysAndValues(bodyPallete, 2);
+	var j= 1;
+	bodyPallete.colorShift(j, true, false);
+	var bodyShifter = setInterval(function(){
+		bodyPallete.colorShift(j, true, false);
+		j = j+1;
+	}, 15000);
+}
 $(document).ready(function() {
 		var obj = {};
+
+	//$http.get('phones/phones.json').success(function(data) {
+	//	$scope.phones = data;
+	//});
 		$.getJSON("models/websites.json").done(function(data){
 				obj.resp = data;
 				obj.work = obj.resp.work;
@@ -237,7 +277,7 @@ $(document).ready(function() {
 				var className = obj.work[m].id;
 				content[className] = $('.' + className);
 			}
-			colorChangyDoodad();
+			bodyColorShift();
 			}).fail(function(){
 					console.log("failed");
 			}).always();
