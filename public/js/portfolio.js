@@ -277,7 +277,6 @@ $(document).ready(function() {
 				var className = obj.work[m].id;
 				content[className] = $('.' + className);
 			}
-			bodyColorShift();
 			}).fail(function(){
 					console.log("failed");
 			}).always();
