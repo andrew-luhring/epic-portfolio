@@ -32,7 +32,6 @@ function resizeImg() {
 	var sec;
 	for (var i = 0; i < imgArray.length; i++) {
 		sec = imgArray[i].width = (w / imgs.length) - 5;
-
 		$("#galleryDiv a img").css({
 			width : sec + "px",
 			height : "auto",
@@ -40,7 +39,6 @@ function resizeImg() {
 		}, "slow");
 	}
 	viewportWidth = $(window).width();
-
 	if (viewportWidth >= 767 && viewportWidth <= 1024) {
 		if (((w / imgs.length) - 5) * imgs.length <= w) {
 			var blah = parseFloat($('#galleryDiv img').css("min-width")) * imgs.length;
@@ -50,7 +48,6 @@ function resizeImg() {
 		$("#galleryDiv").css("min-width", 240);
 		timeoutIda = window.setTimeout(scrollUp, 2000);
 	}
-
 }
 
 

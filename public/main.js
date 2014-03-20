@@ -23,9 +23,10 @@ require.config({
 	,	angular : {'exports' : 'angular'}
 	,   ang : {deps: ['jquery', 'angular']}
 	,	shadowbox : ['jquery', 'jqueryui']
-	,   shadow: ['shadowbox']
-	,   portfolio : ['shadow', 'shadowbox', 'jquery', 'jqueryui', 'animateShadow']
-	,   initial : ['jquery', 'jqueryui', 'animateShadow']
+	,   shadow: ['shadowbox', 'jquery', 'jqueryui']
+	,   portfolio : ['jquery', 'jqueryui', 'animateShadow']
+	,   resizeImg : ['jquery']
+	,   initial : ['jquery', 'jqueryui', 'animateShadow', 'resizeImg']
 	,   animateShadow: ['jquery', 'jqueryui']
 	,   dynamictxt : ['jquery', 'jqueryui']
 	,   Portfolio : ['jquery', 'jqueryui', 'shadow', 'portfolio']
@@ -33,16 +34,15 @@ require.config({
 });
 
 require([
-	  'jquery'
+	  'initial'
 	, 'portfolio'
 	, 'shadow'
-	, 'initial'
-	], function(jquery, portfolio, shadow){
+	], function(initial, portfolio, shadow){
+				initial;
 				portfolio;
 				shadow;
 		}
 );
-
 require([
 	'jquery'
 ,   'ang'], function(ang){

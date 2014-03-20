@@ -262,7 +262,7 @@ function Pallete( $obj, transition, range ){
 		}
 	};
 }
-
+//  TODO: put bodyColorShift in a jsfiddle and include it in the code section.
 function bodyColorShift(){
 	var bodyPallete = new Pallete($('html'), "all 5s", 45);
 	keysAndValues(bodyPallete, 2);
