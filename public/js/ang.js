@@ -1,17 +1,7 @@
+/* jshint undef: true */
+/* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, it: true, shadow: true, angular: true, $: true*/
 
 'use strict';
-/*
-	var portfolio =  angular.module('portfolio', [])
-			.config(function($interpolateProvider){
-				$interpolateProvider.startSymbol('[[').endSymbol(']]');
-			});
-
-	portfolio.controller('Buttons', ['$scope' ,function($scope){
-		$scope.thing = "this is a thing";
-	}]);
-	angular.bootstrap(document, ['portfolio']);
-
-*/
 angular.element(document).ready(function() {
 	var portfolio = angular.module('portfolio', [])
 		.config(function($interpolateProvider){
@@ -40,10 +30,7 @@ angular.element(document).ready(function() {
 				};
 			});
 	angular.bootstrap(document, ['portfolio']);
-
+	// TODO use angular's get instead of jquery's:  $http.get('phones/phones.json').success(function(data) {
+	//	$scope.phones = data;
+	//});
 });
-/*
-
-function Buttons($scope){
-//	$scope.thing = "this is a thing";
-}*/

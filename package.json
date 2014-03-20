@@ -49,6 +49,7 @@
     "grunt-contrib-sass": "~0.7.2",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-kss": "~0.2.6",
-    "grunt-styleguide": "~0.2.15"
+    "grunt-styleguide": "~0.2.15",
+    "karma-requirejs": "~0.2.1"
   }
 }

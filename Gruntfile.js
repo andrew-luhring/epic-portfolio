@@ -25,10 +25,11 @@ module.exports = function(grunt) {
 		}
 		,   jshint:     {
 				files : {
-						src: [/*JS_DIR + "*.js",*/
-							TEST_DIR + "_portfolio.js"
-							, TEST_DIR + "_tests.js"
-							, '!**/node_modules/**']
+						src: [
+								JS_DIR + "*.js"
+							,   TEST_DIR + "_portfolio.js"
+							,   TEST_DIR + "_tests.js"
+							,   '!**/node_modules/**']
 					}
 			,	options: lintOptions()
 			}
@@ -76,37 +77,18 @@ module.exports = function(grunt) {
 					,   '!**/node_modules/**']
 			,   exclude: ["node_modules/*", "./node_modules/"]
 			}
-/*		,   browserify: {
-				client: {
-					// A single entry point for our app
-					src: JS_DIR + "script.js"
-					// Compile to a single file to add a script tag for in your HTML
-				,	dest: BUNDLE_DIR+ "bundle.js"
-				}
-			,   test: {
-					src: TEST_DIR + "_script.js"
-				,   dest: BUNDLE_DIR + "_bundle.js"
-				}
-			}*/
 		,   watch:{
-			/*	js: {
-					files: [ JS_DIR + "*.js", ASSETS_DIR + 'main.js']
-				,   tasks: ['Mocha', 'jshint']
-				}
-			,   */
 			test: {
 					files : [
-						TEST_DIR + "tests.js"
+						JS_DIR + "*.js"
+					,   ASSETS_DIR + 'main.js'
+					,	TEST_DIR + "tests.js"
 					,   TEST_DIR + "_portfolio.js"
 					,	"!node_modules/*"
 					,   '!**/node_modules/**'
 					]
-				,   tasks: ['jshint']
+				,   tasks: [ 'jshint' ]
 				}
-			/*,   k: {
-					files: ['./tests*//*.js']
-				,   tasks: ['karma:unit:run']
-				}*/
 			,   guide : {
 					files: ['./README.md']
 				,   tasks: ['styleguide:docco']
@@ -117,7 +99,9 @@ module.exports = function(grunt) {
 				}
 			,   livereload: {
 					files : [
-						STYLE_DIR + "*.css"
+						  JS_DIR + "*.js"
+						, ASSETS_DIR + 'main.js'
+						, STYLE_DIR + "*.css"
 						, VIEWS_DIR + "**/*.hbs"
 						, TEST_DIR + "_portfolio.js"
 						, TEST_DIR + "_tests.js"
@@ -127,8 +111,22 @@ module.exports = function(grunt) {
 						livereload: true
 				}
 			}
+//			,   k: {files: ['./tests.js'] ,   tasks: ['karma:unit:run']}
 		}
 	};
+
+/*	function keysAndValues(object){
+	//	var keys = [Object.keys(config)];
+
+		for(var i in object){
+			console.log(i + " :  ");
+			for(var j in object[ i ]){
+				console.log("      "+ j + " : " + object[ i ][ j ]);
+			}
+			console.log("");
+		}
+	}*/
+	//keysAndValues(config);
 
 	//because you can't use expressions for identifiers in an object literal
 	config["sass"]["dist"]["files"][cssF] = scssF;
