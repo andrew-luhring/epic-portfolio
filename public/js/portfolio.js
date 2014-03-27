@@ -1,6 +1,14 @@
 /* jshint undef: true */
 /* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true, define: true*/
 "use strict";
+
+describe([
+	'jquery'
+,   'animateShadow'
+,   'shadowbox'
+,   'jqueryui'
+	],  function($, animateShadow, Shadowbox){
+
 var shadow = {}
 	,   selected
 	,   contentArray = ['albumArt', 'logoDesign', 'UX', 'other']
@@ -311,3 +319,4 @@ $(document).ready(function() {
 		});
 		Shadowbox.setup($('.resume'));
 	});
+});

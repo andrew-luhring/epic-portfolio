@@ -50,6 +50,10 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-kss": "~0.2.6",
     "grunt-styleguide": "~0.2.15",
-    "karma-requirejs": "~0.2.1"
+    "karma-requirejs": "~0.2.1",
+    "grunt-jsdoc": "~0.5.4",
+    "chai": "~1.9.1",
+    "karma-chai": "~0.1.0",
+    "chai-jq": "0.0.6"
   }
 }

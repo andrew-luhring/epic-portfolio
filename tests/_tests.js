@@ -1,19 +1,23 @@
 /* jshint undef: true */
 /* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, it: true, shadow: true*/
 
+require(['jquery', 'portfolio', 'chai',  'chaijq', 'jqueryui'], function($, portfolio, chai){
 "use strict";
-var $ = jQuery;
-
+var expect = chai.expect;
 
 function keysAndValues(object){
 	//	var keys = [Object.keys(config)];
 
 	for(var i in object){
+		if(object.hasOwnProperty(i)){
 		console.log(i + " :  ");
-		for(var j in object[ i ]){
-			console.log("      "+ j + " : " + object[ i ][ j ]);
+			for(var j in object[ i ]){
+				if(object.hasOwnProperty(i)){
+					console.log("      "+ j + " : " + object[ i ][ j ]);
+				}
+			}
+			console.log("");
 		}
-		console.log("");
 	}
 }
 
@@ -38,7 +42,7 @@ function keysAndValues(object){
 
 		it("will populate content with its id attribute", function(done){
 			var content = {};
-			for ( i = 0; i < obj.work.length; i++) {
+			for ( var i = 0; i < obj.work.length; i++) {
 				var className = obj.work[i].id;
 				content[className] = $('.' + className);
 				console.log(content[className]);
@@ -48,7 +52,7 @@ function keysAndValues(object){
 		});
 	});
 	describe("obj.work", function(){
-		var obj = {}
+		var obj = {};
 		beforeEach(function(done){
 			obj = ajaxWebsites(done);
 		});
@@ -97,3 +101,5 @@ function keysAndValues(object){
 	});
 })();
 
+
+});

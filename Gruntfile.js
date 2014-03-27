@@ -6,6 +6,7 @@ module.exports = function(grunt) {
 		,   STYLEGUIDE_DIR = ASSETS_DIR + "styleguide/"
 		,   JS_DIR = ASSETS_DIR + 'js/'
 		,   TEST_DIR =  'tests/'
+		,   LIB_DIR = ASSETS_DIR + 'lib/'
 		,   BUNDLE_DIR = ASSETS_DIR + 'min/'
 		,   VIEWS_DIR = './'
 		,   LAYOUTS_DIR = VIEWS_DIR + 'layouts/'
@@ -14,6 +15,8 @@ module.exports = function(grunt) {
 	var  cssF = STYLE_DIR  + "style.css"
 		,   scssF = SCSS_DIR + "style.scss"
 		,   styleguideF = LAYOUTS_DIR + 'styleguide.hbs'
+
+
 	var simplebuild = require("./extensions/simplebuild-ext-gruntify.js")(grunt);
 	var config = 	{
 		pkg: grunt.file.readJSON('package.json')
@@ -23,19 +26,34 @@ module.exports = function(grunt) {
 					options: sassOptions()
 				}
 		}
+		,   shell: {
+				start: {
+					options: {
+						stdout: true
+					},
+					command: 'grunt karma:unit:start watch'
+				}
+			}
+		,   jsdoc : {
+				dist : {
+					src: [
+						JS_DIR + "*.js"
+						,   TEST_DIR + "*.js"
+					]
+					, options: {
+						destination: 'doc'
+					}
+				}
+			}
 		,   jshint:     {
 				files : {
-						src: [
-								JS_DIR + "*.js"
-							,   TEST_DIR + "_portfolio.js"
-							,   TEST_DIR + "_tests.js"
-							,   '!**/node_modules/**']
+						src: [ JS_DIR + "*.js", TEST_DIR + "*.js"]
 					}
 			,	options: lintOptions()
 			}
 		,   karma: {
 				unit: {
-					configFile: './tests/karma.conf.js'
+					configFile: './config/karma.conf.js'
 				,   background: true
 				}
 			}
@@ -70,66 +88,63 @@ module.exports = function(grunt) {
 				}
 			}
 		,   Mocha: {
-				files: [
-					TEST_DIR + "_portfolio.js"
-					, TEST_DIR + "_tests.js"
-					, "!node_modules/*"
-					,   '!**/node_modules/**']
+				files: [ TEST_DIR + "*.js", '!**/node_modules/**']
 			,   exclude: ["node_modules/*", "./node_modules/"]
 			}
 		,   watch:{
-			test: {
-					files : [
-						JS_DIR + "*.js"
-					,   ASSETS_DIR + 'main.js'
-					,	TEST_DIR + "tests.js"
-					,   TEST_DIR + "_portfolio.js"
-					,	"!node_modules/*"
-					,   '!**/node_modules/**'
-					]
-				,   tasks: [ 'jshint' ]
+					lint : {
+						files : [
+							JS_DIR + "*.js"
+						,   ASSETS_DIR + 'main.js'
+						,	TEST_DIR + "*.js"
+						]
+					,   tasks: [ 'jshint' ]
+					}
+				,   karma: {
+							files : [
+							TEST_DIR + "*.js"
+							,   JS_DIR + "*.js"
+						]
+						,   tasks: ['karma:unit:run:start watch'] //NOTE the :run flag
+					}
+//				,   test : {
+//						files: [
+//							TEST_DIR + "*.js"
+//							,   JS_DIR + "*.js"
+//						]
+//					,   tasks: [
+//							'karma'
+//						]
+//					}
+				,   guide : {
+						files: ['./README.md']
+					,   tasks: ['styleguide:docco']
+					}
+				,   style : {
+						tasks: ['sass:dist', 'styleguide:docco']
+					,	files: [SCSS_DIR + "**/*.scss", SCSS_DIR + "**/**/.scss"]
+					}
+				,   livereload: {
+						files : [
+							  JS_DIR + "*.js"
+							, ASSETS_DIR + 'main.js'
+							, STYLE_DIR + "*.css"
+							, VIEWS_DIR + "**/*.hbs"
+							, TEST_DIR + "_portfolio.js"
+							, TEST_DIR + "_tests.js"
+							, '!**/node_modules/**'
+						]
+					,	options: {
+							livereload: true
+					}
 				}
-			,   guide : {
-					files: ['./README.md']
-				,   tasks: ['styleguide:docco']
-				}
-			,   style : {
-					tasks: ['sass:dist', 'styleguide:docco']
-				,	files: [SCSS_DIR + "**/*.scss", SCSS_DIR + "**/**/.scss"]
-				}
-			,   livereload: {
-					files : [
-						  JS_DIR + "*.js"
-						, ASSETS_DIR + 'main.js'
-						, STYLE_DIR + "*.css"
-						, VIEWS_DIR + "**/*.hbs"
-						, TEST_DIR + "_portfolio.js"
-						, TEST_DIR + "_tests.js"
-						, '!**/node_modules/**'
-					]
-				,	options: {
-						livereload: true
-				}
-			}
-//			,   k: {files: ['./tests.js'] ,   tasks: ['karma:unit:run']}
 		}
 	};
 
-/*	function keysAndValues(object){
-	//	var keys = [Object.keys(config)];
-
-		for(var i in object){
-			console.log(i + " :  ");
-			for(var j in object[ i ]){
-				console.log("      "+ j + " : " + object[ i ][ j ]);
-			}
-			console.log("");
-		}
-	}*/
-	//keysAndValues(config);
-
 	//because you can't use expressions for identifiers in an object literal
 	config["sass"]["dist"]["files"][cssF] = scssF;
+	config["styleguide"]["docco"]["files"][STYLEGUIDE_DIR] = SCSS_DIR +'*.scss' ;
+	config["styleguide"]["kss"]["files"][STYLEGUIDE_DIR] = SCSS_DIR +'*.scss' ;
 
 	grunt.initConfig( config );
 
@@ -145,9 +160,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('bundle_cli', "Browserify only client files!", ["browserify:client"]);
 	grunt.registerTask('bundle_test', "Browserify only test files!", ["browserify:test"]);
 	grunt.registerTask("default", 'That income tax swag', ['sass:dist', 'styleguide:docco']);
-
-
-
 };
 function lintOptions() {
 	"use strict";
@@ -176,12 +188,15 @@ function lintOptions() {
 			jquery : true
 		,   jQuery : true
 		,   $ : true
-		,   expect : true
 		,   mocha : true
 		,   describe : true
 		,   it : true
 		,   beforeEach: true
 		,   afterEach : true
+		,   define : true
+		,   require : true
+		,   requirejs : true
+		,   chai : true
 		}
 	};
 }

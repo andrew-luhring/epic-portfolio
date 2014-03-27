@@ -1,6 +1,7 @@
 (function(){
-//noinspection JSUnresolvedVariable,JSUnusedGlobalSymbols
 	"use strict";
+
+//noinspection JSUnresolvedVariable,JSUnusedGlobalSymbols
 
 	//  node requires
 

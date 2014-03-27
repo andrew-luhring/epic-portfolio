@@ -1,7 +1,9 @@
 /* jshint undef: true, shadow: true */
 /* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true, define: true*/
+define(['jquery' ], function($) {
 "use strict";
-var shadow = {}
+
+	var shadow = {}
 	,   selected
 	,   contentArray = ['albumArt', 'logoDesign', 'UX', 'other']
 	,   content = {}
@@ -17,7 +19,6 @@ $("body,html").bind ("scroll mousedown DOMMouseScroll mousewheel keyup", functio
 			$("html,body").stop(true,true);
 		}
 	});
-
 
 function showGallery() {
 	$('#temp, #clickToClose').hide("fade", 200);
@@ -151,7 +152,7 @@ function categoryActions(thing) {
 
 $(document).ready(function() {
 		var obj = {};
-		$.getJSON("websites.json")
+		$.getJSON("models/websites.json")
 			.done(function(data){
 				obj.resp = data;
 				obj.work = obj.resp.work;
@@ -189,3 +190,14 @@ $(document).ready(function() {
 		});
 		Shadowbox.setup($('.resume'));
 	});
+
+
+
+});
+
+
+
+
+
+
+

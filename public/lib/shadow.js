@@ -1,4 +1,5 @@
-
-Shadowbox.init({
-	skipSetup: true
-});
+(function(){"use strict";
+	Shadowbox.init({
+		skipSetup: true
+	});
+})();

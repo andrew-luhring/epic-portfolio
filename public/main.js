@@ -5,6 +5,8 @@ require.config({
 			jquery: 'lib/jquery'
 		,   jqueryui : 'lib/jquery-ui'
 		,   migrate: 'lib/jquery-migrate'
+		,   angular : 'lib/angular'
+		,   ang : 'js/ang'
 		,   animateShadow : 'lib/animate-shadow'
 		,   utility : 'lib/utility'
 		,   shadowbox : 'lib/shadowbox/shadowbox'
@@ -16,12 +18,10 @@ require.config({
 		,   temp: 'js/temp'
 		,   initial : 'js/initial'
 		,   portfolioTest: 'tests/_portfolio'
-		,   angular : 'lib/angular'
-		,   ang : 'js/ang'
 	},
 	shim : {
 		jqueryui : ['jquery']
-	//angular : {'exports' : 'angular'}
+	,	angular : {'exports' : 'angular'}
 	,   ang : {deps: ['jquery', 'angular']}
 	,	shadowbox : ['jquery', 'jqueryui']
 	,   shadow: ['shadowbox']
