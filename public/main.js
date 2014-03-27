@@ -3,13 +3,13 @@
 require.config({
 	paths: {
 			jquery: 'lib/jquery'
-		,   jqueryui : 'lib/jquery-ui'
+		,   jqueryui : 'lib/jqueryui'
 		,   migrate: 'lib/jquery-migrate'
 		,   angular : 'lib/angular'
 		,   ang : 'js/ang'
-		,   animateShadow : 'lib/animate-shadow'
+		,   animateShadow : 'lib/animateShadow'
 		,   utility : 'lib/utility'
-		,   shadowbox : 'lib/shadowbox/shadowbox'
+		,   shadowbox : 'lib/shadowbox'
 		,   shadow : 'lib/shadow'
 		,   dynamictxt : 'js/dynamictxt'
 		,   attrchange : 'lib/attrchange'
@@ -17,7 +17,6 @@ require.config({
 		,   portfolio: 'js/portfolio'
 		,   temp: 'js/temp'
 		,   initial : 'js/initial'
-		,   portfolioTest: 'tests/_portfolio'
 	},
 	shim : {
 		jqueryui : ['jquery']
@@ -25,7 +24,7 @@ require.config({
 	,   ang : {deps: ['jquery', 'angular']}
 	,	shadowbox : ['jquery', 'jqueryui']
 	,   shadow: ['shadowbox']
-	,   portfolio : ['jquery', 'jqueryui', 'animateShadow']
+	,   portfolio : ['shadow', 'shadowbox', 'jquery', 'jqueryui', 'animateShadow']
 	,   initial : ['jquery', 'jqueryui', 'animateShadow']
 	,   animateShadow: ['jquery', 'jqueryui']
 	,   dynamictxt : ['jquery', 'jqueryui']

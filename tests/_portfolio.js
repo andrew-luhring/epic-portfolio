@@ -3,6 +3,7 @@
 define(['jquery' ], function($) {
 "use strict";
 
+
 	var shadow = {}
 	,   selected
 	,   contentArray = ['albumArt', 'logoDesign', 'UX', 'other']
@@ -157,7 +158,7 @@ $(document).ready(function() {
 				obj.resp = data;
 				obj.work = obj.resp.work;
 			}).fail(function(){
-					console.log("failed");
+					//console.log("failed");
 			}).always();
 
 			for ( i = 0; i < obj.work.length; i++) {
@@ -194,7 +195,6 @@ $(document).ready(function() {
 
 
 });
-
 
 
 

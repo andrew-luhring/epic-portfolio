@@ -2,12 +2,13 @@
 /* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true, define: true*/
 "use strict";
 
-describe([
+define([
 	'jquery'
+,   'jqueryui'
 ,   'animateShadow'
 ,   'shadowbox'
-,   'jqueryui'
-	],  function($, animateShadow, Shadowbox){
+,
+	],  function($, jqueryui, animateShadow, Shadowbox){
 
 var shadow = {}
 	,   selected

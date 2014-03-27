@@ -19,13 +19,16 @@ module.exports = function (config) {
 				,   growl : true
 			}
 		},
-		reporters     : ['unicorn', 'progress', 'growl'],
+		specjson: {
+			output: 'derp.json'
+		},
+		reporters     : ['unicorn', 'progress', 'growl', 'mocha'],
 		port          : 9876,
 		colors        : true,
 		//logLevel      : config.LOG_DEBUG,
 		logLevel      : config.LOG_INFO,
 		//autoWatch     : true,
-		autoWatch     : false,
+		autoWatch     : true,
 		browsers      : ['Chrome'],
 		plugins       : [
 			'karma-requirejs',
@@ -33,7 +36,9 @@ module.exports = function (config) {
 			'karma-chai',
 			'karma-chrome-launcher',
 			'karma-firefox-launcher',
-			'karma-unicorn-reporter'
+			'karma-unicorn-reporter',
+			'karma-mocha-reporter',
+			'karma-growl'
 		],
 		captureTimeout: 60000,
 		singleRun     : false

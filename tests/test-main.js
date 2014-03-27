@@ -44,7 +44,7 @@ requirejs.config({
 		,	shadowbox : ['jquery', 'jqueryui']
 		,   shadow: ['shadowbox']
 		,   portfolio : ['jquery', 'jqueryui', 'animateShadow', 'shadow']
-		,   initial : ['jquery', 'jqueryui', 'animateShadow']
+		,   initial : ['jquery', 'jqueryui', 'animateShadow', 'shadowbox']
 		,   animateShadow: ['jquery', 'jqueryui']
 		,   dynamictxt : ['jquery', 'jqueryui']
 		,   'angular' : {'exports' : 'angular'}
@@ -58,8 +58,5 @@ requirejs.config({
 	// start test run, once Require.js is done
 	callback: window.__karma__.start
 });
-
-
-
 
 
