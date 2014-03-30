@@ -5,7 +5,9 @@
   "description": "derp",
   "main": "controller.js",
   "scripts": {
-    "start": "node-dev controller.js"
+    "dev": "node ./node_modules/.bin/grunt test",
+    "test": "node ./node_modules/.bin/grunt test",
+    "start": "node ./node_modules/.bin/grunt"
   },
   "repository": "",
   "author": "Me ",
@@ -24,7 +26,9 @@
     "karma-requirejs": "~0.2.1",
     "karma-phantomjs-launcher": "~0.1.2",
     "karma": "~0.10.9",
-    "karma-commonjs": "0.0.6"
+    "karma-commonjs": "0.0.6",
+    "grunt": "~0.4.4",
+    "grunt-cli": "~0.1.13"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

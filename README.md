@@ -23,7 +23,17 @@ To Run
 	npm start
 
 
-To Play
+To Test
 ---------
 
-	grunt watch
+	npm test
+
+
+To play
+---------
+
+	node grunt test
+
+	(or if you have grunt installed globally)
+
+	grunt test

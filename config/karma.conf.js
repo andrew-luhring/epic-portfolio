@@ -10,6 +10,7 @@ module.exports = function (config) {
 		],
 		exclude       : [
 			'**/*min*',
+
 			'public/main.js'
 		],
 		client: {

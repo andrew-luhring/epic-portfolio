@@ -27,11 +27,23 @@ module.exports = function(grunt) {
 				}
 		}
 		,   shell: {
-				start: {
-					options: {
-						stdout: true
-					},
-					command: 'grunt karma:unit:start watch'
+				    start:{
+						options: {
+							stdout: true
+						}
+					,   command: 'node ./node_modules/.bin/node-dev controller.js'
+					}
+				,   test: {
+						options: {
+							stdout: true
+						}
+					,   command: 'node ./node_modules/.bin/grunt karma:unit:start watch'
+					}
+				,   dev: {
+						options: {
+							stdout: true
+						}
+					,   command: 'node ./node_modules/.bin/node-dev controller.js & node ./node_modules/.bin/grunt karma:unit:start watch'
 				}
 			}
 		,   jsdoc : {
@@ -153,13 +165,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-browserify');
 	grunt.loadNpmTasks('grunt-karma');
 	grunt.loadNpmTasks('grunt-shell');
 	grunt.loadNpmTasks('grunt-styleguide');
-	grunt.registerTask('bundle_cli', "Browserify only client files!", ["browserify:client"]);
-	grunt.registerTask('bundle_test', "Browserify only test files!", ["browserify:test"]);
-	grunt.registerTask("default", 'That income tax swag', ['sass:dist', 'styleguide:docco']);
+	grunt.registerTask("default", 'That income tax swag', ['shell:start']);
+	grunt.registerTask("test", 'That income tax swag', ['shell:test']);
+	grunt.registerTask("dev", 'That income tax swag', ['shell:dev']);
 };
 function lintOptions() {
 	"use strict";
