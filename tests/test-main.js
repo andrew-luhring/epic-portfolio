@@ -39,7 +39,7 @@ requirejs.config({
 	},
 
 	shim: {
-			'jquery' : { exports: '$' }
+			jquery : { exports: '$' }
 		,   jqueryui : ['jquery']
 		,	shadowbox : ['jquery', 'jqueryui']
 		,   shadow: ['shadowbox']

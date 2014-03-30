@@ -1,15 +1,17 @@
 /* jshint undef: true */
 /* global jQuery: true, resizeImg: true*/
 
+define(['jquery'], function(jQuery){
+
+
 "use strict";
 	var boxShadowDown = {boxShadow : '2 3 9 -1 #400339'}
 		,   boxShadowUp = {boxShadow : '10 15 30 -5 #400339'}
 		,   timeoutId
 		,   worktypes = []
 		,   paragraphs =[];
-	// Big up @Jonathan Sampson over at s/o for this extension.
-
-jQuery(document).ready(function($) {
+	jQuery(document).ready(function($) {
+// Big up @Jonathan Sampson over at s/o for this extension.
 	jQuery.extend( jQuery.fn, {
 		hasParent: function(p) {
 			return this.filter(function(){
@@ -160,4 +162,6 @@ jQuery(document).ready(function($) {
 					timeoutId = window.setTimeout(clickaBox, 6000);
 
 	//timeoutId;
+});
+
 });

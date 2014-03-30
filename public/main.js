@@ -17,6 +17,10 @@ require.config({
 		,   portfolio: 'js/portfolio'
 		,   temp: 'js/temp'
 		,   initial : 'js/initial'
+		,   'mocha': 'lib/mocha'
+		,   'chai': 'lib/chai'
+		,   'chaijq' : 'lib/chai-jq'
+		,   'browserMocha' : 'js/_browserMocha'
 	},
 	shim : {
 		jqueryui : ['jquery']
@@ -25,26 +29,26 @@ require.config({
 	,	shadowbox : ['jquery', 'jqueryui']
 	,   shadow: ['shadowbox']
 	,   portfolio : ['shadow', 'shadowbox', 'jquery', 'jqueryui', 'animateShadow']
-	,   initial : ['jquery', 'jqueryui', 'animateShadow']
 	,   animateShadow: ['jquery', 'jqueryui']
+	,   initial : ['jquery', 'jqueryui','ang', 'animateShadow']
 	,   dynamictxt : ['jquery', 'jqueryui']
 	,   Portfolio : ['jquery', 'jqueryui', 'shadow', 'portfolio']
+	,   'chaijq': ['chai']
 	}
 });
 
 require([
 	  'jquery'
-	, 'portfolio'
+	, 'ang'
 	, 'shadow'
-	, 'initial'
-	], function(jquery, portfolio, shadow){
-				portfolio;
-				shadow;
-		}
-);
-
-require([
-	'jquery'
-,   'ang'], function(ang){
+	], function(jquery, ang, shadow, portfolio, initial){
 	ang;
-});
+
+	}
+);
+//
+//require([
+//	'jquery'
+//,   'ang'], function(ang){
+//	ang;
+//});

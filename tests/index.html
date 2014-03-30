@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Mocha</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mocha.css" />
+<html >
+<head >
+	<title >Mocha</title >
+	<meta http-equiv = "Content-Type" content = "text/html; charset=UTF-8" >
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0" >
+	<link rel = "stylesheet" href = "mocha.css" />
 
-  </head>
-  <body>
-    <div id="mocha"></div>
-	<div><iframe id="portfolio" src="http://localhost:5000/"></iframe><div id="output"></div></div>
-    <!--<script src="mocha.js"></script>-->
-    <!--<script src="expect.js"></script>-->
-    <!--<script>mocha.setup('bdd')</script>-->
-    <!--<script src="lib/jquery.js"></script>-->
-    <!--<script src="_portfolio.js"></script>-->
-    <!--<script src="tests.js"></script>-->
-    <script>
-      mocha.run();
-    </script>
-  </body>
-</html>
+</head >
+<body >
+<div id = "mocha" ></div >
+<div >
+	<iframe id = "portfolio" src = "http://localhost:5000/" ></iframe >
+	<div id = "output" ></div >
+</div >
+<!--<script src="expect.js"></script>-->
+<!--<script src="lib/jquery.js"></script>-->
+<!--<script src="_portfolio.js"></script>-->
+<!--<script src="tests.js"></script>-->
+
+<script src="lib/mocha.js"></script>
+<script>mocha.setup('bdd')</script>
+<script >
+	mocha.run ();
+</script >
+<script data-main = "main" src = "lib/require.js" ></script >
+</body >
+</html >

@@ -1,5 +1,8 @@
-/* jshint undef: true */
-/* global jQuery: true, resizeImg: true*/
+/* jshint undef: true *//*
+
+*/
+/* global jQuery: true, resizeImg: true*//*
+
 
 "use strict";
 (function($){
@@ -11,4 +14,4 @@
 		}
 	});
 
-})(jQuery);
+})(jQuery);*/

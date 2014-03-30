@@ -4,6 +4,7 @@
 // in this case my model will be powered by Backbone
 // View == powered by Handlebars. //ruby =======ActionView
 // Controller == Node, Backbone and F/E js //ruby  =ActionController
+/*
 var Model= function(){
     var worktypes= require('./websites.json').work
         , model = {}
@@ -24,8 +25,9 @@ var Model= function(){
 
     return arr;
 };
-var work = new Model;
-exports.work = work;
+*/
+//var work = new Model;
+//exports.work = work;
 //console.log("bh" + work.length);
 
 

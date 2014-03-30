@@ -1,9 +1,10 @@
-/* jshint undef: true, shadow: true */
-/* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true, define: true*/
-define(['jquery' ], function($) {
+/* jshint undef: true, shadow: true *//*
+
+*/
+/* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true, define: true*//*
+
+define(['jquery', 'shadowbox' ], function($, Shadowbox) {
 "use strict";
-
-
 	var shadow = {}
 	,   selected
 	,   contentArray = ['albumArt', 'logoDesign', 'UX', 'other']
@@ -153,7 +154,8 @@ function categoryActions(thing) {
 
 $(document).ready(function() {
 		var obj = {};
-		$.getJSON("models/websites.json")
+*/
+/*		$.getJSON("http://localhost:5000/models/websites.json")
 			.done(function(data){
 				obj.resp = data;
 				obj.work = obj.resp.work;
@@ -169,7 +171,8 @@ $(document).ready(function() {
 		for ( i = 0; i < contentArray.length; i++) {
 			var className = contentArray[i];
 			content[className] = $('.' + className);
-		}
+		}*//*
+
 		$("#centeringDiv a, a.resume, #centeringDiv a img").click(function(event) {
 			event.preventDefault();
 			$(event.target).stop(true, true);
@@ -195,9 +198,4 @@ $(document).ready(function() {
 
 
 });
-
-
-
-
-
-
+*/

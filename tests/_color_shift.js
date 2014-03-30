@@ -2,4 +2,12 @@
 /* global jQuery: true  */
 
 "use strict";
-var $ = jQuery;
+
+define(['jquery'], function(jquery){
+
+	(function ($){
+
+	})(jquery);
+
+
+});
