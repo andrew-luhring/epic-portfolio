@@ -114,20 +114,13 @@ module.exports = function(grunt) {
 					}
 				,   karma: {
 							files : [
-							TEST_DIR + "*.js"
+							TEST_DIR + "_*.js"
 							,   JS_DIR + "*.js"
+							,   ASSETS_DIR + "main.js"
+							,   TEST_DIR + "test-main.js"
 						]
-						,   tasks: ['karma:unit:run:start watch'] //NOTE the :run flag
+						,   tasks: ['karma:unit:run'] //NOTE the :run flag
 					}
-//				,   test : {
-//						files: [
-//							TEST_DIR + "*.js"
-//							,   JS_DIR + "*.js"
-//						]
-//					,   tasks: [
-//							'karma'
-//						]
-//					}
 				,   guide : {
 						files: ['./README.md']
 					,   tasks: ['styleguide:docco']

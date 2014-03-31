@@ -5,8 +5,7 @@
   "description": "derp",
   "main": "controller.js",
   "scripts": {
-    "dev": "node ./node_modules/.bin/grunt test",
-    "test": "node ./node_modules/.bin/grunt test",
+    "test": "node ./node_modules/.bin/grunt test --stack",
     "start": "node ./node_modules/.bin/grunt"
   },
   "repository": "",
