@@ -3,13 +3,13 @@
 require.config({
 	paths: {
 			jquery: 'lib/jquery'
-		,   jqueryui : 'lib/jqueryui'
+		,   jqueryui : 'lib/jquery-ui'
 		,   migrate: 'lib/jquery-migrate'
 		,   angular : 'lib/angular'
 		,   ang : 'js/ang'
-		,   animateShadow : 'lib/animateShadow'
+		,   animateShadow : 'lib/animate-shadow'
 		,   utility : 'lib/utility'
-		,   shadowbox : 'lib/shadowbox'
+		,   shadowbox : 'lib/shadowbox/shadowbox'
 		,   shadow : 'lib/shadow'
 		,   dynamictxt : 'js/dynamictxt'
 		,   attrchange : 'lib/attrchange'
@@ -17,25 +17,19 @@ require.config({
 		,   portfolio: 'js/portfolio'
 		,   temp: 'js/temp'
 		,   initial : 'js/initial'
-		,   'mocha': 'lib/mocha'
-		,   'chai': 'lib/chai'
-		,   'chaijq' : 'lib/chai-jq'
-		,   'browserMocha' : 'js/_browserMocha'
+		,   portfolioTest: 'tests/_portfolio'
 	},
 	shim : {
 		jqueryui : ['jquery']
-	,	angular : {'exports' : 'angular'}
+	//angular : {'exports' : 'angular'}
 	,   ang : {deps: ['jquery', 'angular']}
 	,	shadowbox : ['jquery', 'jqueryui']
 	,   shadow: ['shadowbox']
-	//,   portfolio : ['shadow', 'shadowbox', 'jquery', 'jqueryui', 'animateShadow']
-	//,   initial : ['jquery', 'jqueryui','ang', 'animateShadow']
-	//,   portfolio : ['jquery', 'jqueryui', 'animateShadow']
+	,   portfolio : ['jquery', 'jqueryui', 'animateShadow']
 	,   initial : ['jquery', 'jqueryui', 'animateShadow']
 	,   animateShadow: ['jquery', 'jqueryui']
 	,   dynamictxt : ['jquery', 'jqueryui']
-	//,   Portfolio : ['jquery', 'jqueryui', 'shadow', 'portfolio']
-	,   'chaijq': ['chai']
+	,   Portfolio : ['jquery', 'jqueryui', 'shadow', 'portfolio']
 	}
 });
 
@@ -43,14 +37,13 @@ require([
 	  'jquery'
 	, 'portfolio'
 	, 'shadow'
-	], function(jquery, ang, shadow, portfolio){
-//	ang;
-			shadow;
-			portfolio;
-
-	}
+	, 'initial'
+	], function(jquery, portfolio, shadow){
+				portfolio;
+				shadow;
+		}
 );
-//
+
 require([
 	'jquery'
 ,   'ang'], function(ang){

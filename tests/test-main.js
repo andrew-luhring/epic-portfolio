@@ -8,7 +8,7 @@ for (var file in window.__karma__.files) {
 	//console.log(file);
 	if (regex.test(file)  && not.test(file) ) {
 		//console.log("******************************");
-		//console.log("testing: " + file);
+		console.log("testing: " + file);
 		//console.log("******************************");
 		tests.push(file);
 	}

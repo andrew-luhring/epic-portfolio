@@ -99,5 +99,5 @@ define (['jquery'], function ($) {
 		//ALL YOU NEED TO DO NOW IS CHANGE WINDOW TO ATTRCHANGE BUT NOT
 		//evidently the way you just did it...u need to access 'parent' because that selects the current one.
 	});
-})
+});
 

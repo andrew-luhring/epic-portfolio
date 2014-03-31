@@ -1,5 +1,8 @@
-/* jshint undef: true, shadow: true */
-/* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true, define: true*/
+/* jshint undef: true, shadow: true *//*
+
+*/
+/* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true, define: true*//*
+
 "use strict";
 var shadow = {}
 	,   selected
@@ -170,6 +173,7 @@ function categoryActions(thing) {
 
 $(document).ready(function() {
 		var obj = {};
+*/
 /*
 		$.getJSON("websites.json")
 			.done(function(data){
@@ -182,7 +186,8 @@ $(document).ready(function() {
 				var className = obj.work[i].id;
 				content[className] = $('.' + className);
 			}
-*/
+*//*
+
 
 		for ( i = 0; i < contentArray.length; i++) {
 			var className = contentArray[i];
@@ -209,3 +214,4 @@ $(document).ready(function() {
 		});
 		Shadowbox.setup($('.resume'));
 	});
+*/

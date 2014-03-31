@@ -1,8 +1,6 @@
 /* jshint undef: true */
 /* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true, define: true*/
 
-
-
 //module pattern.
 
 define('jquery', function(jQuery){
@@ -35,7 +33,6 @@ define('jquery', function(jQuery){
 		//test api
 		, privateFunction : privateFunction
 	};
-
 	var content = {}, contentArray = [];
 	for (var i = 0; i < contentArray.length; i++) {
 		var className = contentArray[i];

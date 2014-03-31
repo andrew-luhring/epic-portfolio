@@ -1,5 +1,8 @@
-/* jshint undef: true */
-/* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, it: true, shadow: true, angular: true, $: true*/
+/* jshint undef: true *//*
+
+*/
+/* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, it: true, shadow: true, angular: true, $: true*//*
+
 
 'use strict';
 angular.element(document).ready(function() {
@@ -34,3 +37,4 @@ angular.element(document).ready(function() {
 	//	$scope.phones = data;
 	//});
 });
+*/
