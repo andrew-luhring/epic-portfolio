@@ -2,42 +2,51 @@
 
 require.config({
 	paths: {
-			jquery: 'lib/jquery'
-		,   jqueryui : 'lib/jqueryui'
-		,   migrate: 'lib/jquery-migrate'
-		,   angular : 'lib/angular'
-		,   ang : 'js/ang'
-		,   animateShadow : 'lib/animateShadow'
-		,   utility : 'lib/utility'
+		//  lib
+			'jquery': 'lib/jquery'
+		,   'jqueryui' : 'lib/jqueryui'
+		,   'migrate': 'lib/jquery-migrate'
+		,   'angular' : 'lib/angular'
+		,	'angular-touch': 'lib/angular-touch'
+		,   'angular-animate': 'lib/angular-animate'
+		,   'animate-shadow': 'lib/angular-shadow'
 		,   shadowbox : 'lib/shadowbox'
 		,   shadow : 'lib/shadow'
-		,   dynamictxt : 'js/dynamictxt'
-		,   attrchange : 'lib/attrchange'
-		,   resizeImg : 'js/resize_image'
-		,   portfolio: 'js/portfolio'
-		,   temp: 'js/temp'
-		,   initial : 'js/initial'
 		,   'mocha': 'lib/mocha'
 		,   'chai': 'lib/chai'
 		,   'chaijq' : 'lib/chai-jq'
+		,   'attrchange': 'lib/attrchange'
+		,   'js_utility': 'lib/js_utility'
+		//  js
 		,   'browserMocha' : 'js/_browserMocha'
+		,   'ang': 'js/ang'
+		,  'button_init': 'js/button_init'
+		,  'button_methods': 'js/button_methods'
+		,  'category_actions': 'js/category_actions'
+		,  'dynamictxt': 'js/dynamictxt'
+		,  'gallery_init': 'js/gallery_init'
+		,  'gallery_methods': 'js/gallery_methods'
+		,  'image_resize' : 'js/image_resize'
+		,  'intro_animation' : 'js/intro_animation'
+		,  'intro_explanation': 'js/intro_explanation'
+		,   'portfolio' : 'js/portfolio'
+		,  'utility': 'js/utility'
+		,  'viewport_actions': 'js/viewport_actions'
 	},
+
 	shim : {
 		jqueryui : ['jquery']
 	,	angular : {'exports' : 'angular'}
 	,   ang : {deps: ['jquery', 'angular']}
 	,	shadowbox : ['jquery', 'jqueryui']
 	,   shadow: ['shadowbox']
-	//,   portfolio : ['shadow', 'shadowbox', 'jquery', 'jqueryui', 'animateShadow']
-	//,   initial : ['jquery', 'jqueryui','ang', 'animateShadow']
-	//,   portfolio : ['jquery', 'jqueryui', 'animateShadow']
 	,   initial : ['jquery', 'jqueryui', 'animateShadow']
 	,   animateShadow: ['jquery', 'jqueryui']
 	,   dynamictxt : ['jquery', 'jqueryui']
-	//,   Portfolio : ['jquery', 'jqueryui', 'shadow', 'portfolio']
 	,   'chaijq': ['chai']
 	}
 });
+/*
 
 require([
 	  'jquery'
@@ -55,4 +64,4 @@ require([
 	'jquery'
 ,   'ang'], function(ang){
 	ang;
-});
+});*/

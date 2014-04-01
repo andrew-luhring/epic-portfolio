@@ -1,12 +1,16 @@
+/* jshint undef: true */
+/* global  imgGallery: true, galleryDivA: true, timeoutId: true, populate: true, showGallery: true, populationAnimation: true, Shadowbox: true, worktypes: true, joke: true*/
 
+define(['jquery', 'button_populate', 'jqueryui'], function($, buttons){
+"use strict";
 function otherSpecific() {
 	jQuery.each($('img.gallery, #galleryDiv a'), function() {
 		$(this).hide().addClass("hide");
-		imgGallery = $('img.gallery').toArray();
-		galleryDivA = $('#galleryDiv a').toArray();
+		var imgGallery = $('img.gallery').toArray();
+		var galleryDivA = $('#galleryDiv a').toArray();
 	});
 	$('#galleryDiv').append('<div><p id="temp" style="text-align:center">Click the pic to play with the code</p> <p id="clickToClose">Show</p></div>').show(500);
-	timeoutId = window.setTimeout(showGallery, 2000);
+	var timeoutId = window.setTimeout(showGallery, 2000);
 	$('#temp, #clickToClose').click(function() {
 		timeoutId = window.setTimeout(showGallery, 200);
 	});
@@ -87,3 +91,5 @@ function categoryActions(thing) {
 			break;
 	}
 }
+
+});

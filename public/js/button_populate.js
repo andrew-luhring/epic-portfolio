@@ -3,15 +3,15 @@
 
 define(['angular', 'jquery'], function(angular, jQuery){
 	'use strict';
+	var portfolio;
 	angular.element(document).ready(function() {
-		var portfolio = angular.module('portfolio', [])
-			.config(function($interpolateProvider){
+			portfolio = angular.module('portfolio', []).config(function($interpolateProvider){
 				$interpolateProvider.startSymbol('[[').endSymbol(']]');
-			})
-			.controller('Buttons', function($scope){
+			});
+			portfolio.controller('Buttons', function($scope){
 				$scope.iv = "this is a new thing";
-			})
-			.directive('werk', function(){
+			});
+			portfolio.directive('werk', function(){
 					var obj = {};
 					jQuery.getJSON("models/websites.json")
 							.done(function(data){
@@ -31,8 +31,9 @@ define(['angular', 'jquery'], function(angular, jQuery){
 					};
 				});
 		angular.bootstrap(document, ['portfolio']);
-		// TODO use angular's get instead of jquery's:  $http.get('phones/phones.json').success(function(data) {
-		//	$scope.phones = data;
-		//});
 	});
+	return portfolio;
 });
+
+
+// TODO use angular's get instead of jquery's:  $http.get('phones/phones.json').success(function(data) {

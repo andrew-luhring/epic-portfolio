@@ -1,5 +1,8 @@
-/* jshint undef: true */
-/* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true, define: true*/
+/* jshint undef: true *//*
+
+*/
+/* global jQuery: true, resizeImg: true, Shadowbox: true, port: true, window: true, define: true*//*
+
 "use strict";
 
 define([
@@ -27,6 +30,7 @@ $(document).ready(function() {
 
 	});
 });
+*/
 /*
 	Parts of this file:
 	1.  gallery
@@ -42,5 +46,7 @@ $(document).ready(function() {
 	4.  Button actions.
 
 
-*/
+*//*
 
+
+*/

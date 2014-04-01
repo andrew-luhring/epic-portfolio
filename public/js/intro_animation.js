@@ -1,3 +1,9 @@
+/* jshint undef: true */
+/* global  imgGallery: true, galleryDivA: true, timeoutId: true, populate: true, showGallery: true, populationAnimation: true, Shadowbox: true, worktypes: true, joke: true*/
+define(['jquery', 'button_populate', 'jqueryui'], function($, buttons){
+	"use strict";
+
+
 jQuery.extend( jQuery.fn, {
 	hasParent: function(p) {
 		return this.filter(function(){
@@ -13,7 +19,7 @@ $('.workTypes').each(function() {
 
 //intro animation.
 var boxShadowDown = {boxShadow : '2 3 9 -1 #400339'}
-		,   boxShadowUp = {boxShadow : '10 15 30 -5 #400339'}
+		,   boxShadowUp = {boxShadow : '10 15 30 -5 #400339'};
 $('article, footer').hide();
 $('header h1').replaceWith('<h1> :-) </h1>').removeClass('hide').show("fast");
 $('header h1').delay(500).effect("fade", "easeOutQuart", 1000, function() {
@@ -33,4 +39,6 @@ $('.workTypes').parent().click(function() {
 	$('#galleryDiv').show("blind","slow").removeClass("hide");
 	$("#hint").hide();
 	$("#galleryDiv").text();
+});
+
 });

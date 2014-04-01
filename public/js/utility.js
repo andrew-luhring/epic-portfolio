@@ -1,8 +1,10 @@
-define (['jquery'], function ($) {
-	var utility = {
 
+define (['jquery'], function ($) {
+	"use strict";
+	function Utility(){
+		var utility = this;
 		/**
-		 *
+		 *  generates vender prefixes
 		 * @param $obj  :  jQuery Object
 		 * @param property :   property to change
 		 * @param val   :   value to change it to.
@@ -10,24 +12,57 @@ define (['jquery'], function ($) {
 		 *
 		 *      For the record, I was hesitant to write this because css and js should not mix, but it's meant for properties that change over time.
 		 */
-		crossBrowserCssValue: function ($obj, property, val) {
-			$obj.selector.css ("-webkit-" + property, val);
-			$obj.selector.css ("-moz-" + property, val);
-			$obj.selector.css ("-ms-" + property, val);
-			$obj.selector.css ("-o-" + property, val);
-			$obj.selector.css (property, val);
-			return $obj;
-		}
+		this.crossBrowserCssValue = function ($obj, property, val) {
+			var jqO;
+
+			if ($obj instanceof $) {
+				jqO = $obj;
+			} else {
+				jqO = $ ($obj);
+			}
+			jqO.css ("-webkit-" + property, val);
+			jqO.css ("-moz-" + property, val);
+			jqO.css ("-ms-" + property, val);
+			jqO.css ("-o-" + property, val);
+			jqO.css (property, val);
+			return jqO;
+		};
 		/**
-		 *
+		 *  logs out keys and values of an object.
+		 * @param object
+		 */
+		this.keysVals = function (object, isSilent) {
+			var obj = object
+				,   mode = isSilent;
+
+			function log (thing, _mode ) {
+				if (_mode === true ) { console.log (thing); }
+			}
+			for (var i in object) {
+				if (obj.hasOwnProperty (i)) {
+					var str = i + " :  " + obj[i];
+					log (str, mode);
+					for (var j in object[ i ]) {
+						if (obj.hasOwnProperty (j)) {
+							var str2 = "      " + j + " : " + object[ i ][ j ];
+							log (str2, mode);
+							obj.toString ("\n" + j + " : " + object[ i ][ j ]);
+						}
+					}
+				}
+			}
+			return obj.toString();
+		};
+		/**
+		 *  creates a Pallete object- which can be color shifted over a period of time
 		 * @param $obj  :  jQueryObject.
-		 * @param transition   :   is the maximum range of the hsl start value of the gradient to the end hsl value of the gradient. default is 45
-		 * @param range :   length in seconds of transition.
+		 * @param transition: default: 'all 5s'
+		 * @param range : difference between hsl color value 1 and hsl color value 2.
 		 * @constructor
 		 *
 		 *
 		 * @Properties:
-	    .pallete               hsl hue value (between 0 and 360) ===>   default is randomly generated,
+		 .pallete               hsl hue value (between 0 and 360) ===>   default is randomly generated,
 		 .selector             value of the jQueryObject used in instantiation.
 		 .worklength      default is the number of objects returned by .selector ;
 		 .delta                 the difference between the start gradient hsl value and end gradient hsl value ====> default is range value divided by worklength value.
@@ -38,8 +73,7 @@ define (['jquery'], function ($) {
 		 .colorShift(i)     requires incrementor amount. the incrementor amount means that whatever you call this method with should have its own iterator and timing sequence.
 		 *
 		 */
-		,   Pallete : function ($obj, transition, range) {
-
+		this.Pallete = function ($obj, transition, range) {
 			/**
 			 * @param palleteObject
 			 * @param incrementBy
@@ -48,12 +82,10 @@ define (['jquery'], function ($) {
 			function Gradient (palleteObject, incrementBy) {
 				this.start = palleteObject.pallete + palleteObject.delta + incrementBy;
 				this.end = this.start + palleteObject.range;
-				console.log ("gradient start is " + this.start + "\ngradeint end  is: " + this.end + " increase by " + incrementBy);
 			}
-
 			this.pallete = Math.floor (Math.random () * 360);
 			this.selector = $obj;
-			this.range = 45 || range;
+			this.range = range || 45;
 			this.worklength = $obj.length;
 			this.delta = (function (range, worklength) {
 				if (range >= 0 && worklength >= 0) {
@@ -69,19 +101,12 @@ define (['jquery'], function ($) {
 				} else {
 					val = "all 5s";
 				}
-				crossBrowserCssValue ($obj, "transition", val);
+				utility.crossBrowserCssValue ($obj, "transition", val);
 			}) (this, transition);
 			this.colorShift = function (incrementor, isDrastic, isGradient) {
-				var incrementBy;
-				if (isDrastic) {
-					incrementBy = incrementor * (this.range );
-				} else {
-					incrementBy = incrementor + (this.range );
-				}
-				var gradient = new Gradient (this, incrementBy);
-				var hsl = function (hue) {
-					return 'hsl(' + hue + ',100%,80%)';
-				};
+				var incrementBy = (isDrastic) ? incrementor * (this.range ) : incrementor + (this.range )      //if (isDrastic) { incrementBy = incrementor * (this.range );} else {incrementBy = incrementor + (this.range );}
+						,   gradient = new Gradient (this, incrementBy)
+						,   hsl = function (hue) {  return 'hsl(' + hue + ',100%,80%)'; };
 				if (isGradient) {
 					this.selector.css ("background", "-webkit-linear-gradient(45deg, " + hsl (gradient.start) + " 0%," + hsl (gradient.end) + "100%)");
 					this.selector.css ("background", "-moz-linear-gradient(45deg, " + hsl (gradient.start) + " 0%," + hsl (gradient.end) + "100%)");
@@ -89,11 +114,14 @@ define (['jquery'], function ($) {
 					this.selector.css ("background", "-o-linear-gradient(45deg, " + hsl (gradient.start) + " 0%," + hsl (gradient.end) + "100%)");
 					this.selector.css ("background", "linear-gradient(45deg, " + hsl (gradient.start) + " 0%," + hsl (gradient.end) + "100%)");
 				} else {
-
 					this.selector.css ("background", hsl (gradient.start));
 				}
+				return this.selector.css;
 			};
-		}
+		};
 	}
-	return utility;
+
+
+
+	return new Utility();
 });

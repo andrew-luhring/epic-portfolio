@@ -8,7 +8,7 @@ for (var file in window.__karma__.files) {
 	//console.log(file);
 	if (regex.test(file)  && not.test(file) ) {
 		//console.log("******************************");
-		console.log("testing: " + file);
+		//console.log("testing: " + file);
 		//console.log("******************************");
 		tests.push(file);
 	}
@@ -17,6 +17,7 @@ requirejs.config({
 	baseUrl: '/base/public/lib/',
 
 	paths: {
+		//lib
 		'jquery': 'jquery',
 		'angular': 'angular',
 		'angular-touch': 'angular-touch',
@@ -27,10 +28,21 @@ requirejs.config({
 		'chai': 'chai',
 		'chaijq' : 'chai-jq',
 		'shadow': 'shadow',
-		'utility': 'utility',
+		'js_utility': 'js_utility',
 		'shadowbox': 'shadowbox',
-		'truck': '../js/truck',
+		//js
 		'ang': '../js/ang',
+		'button_populate': '../js/button_populate',
+		'button_init': '../js/button_init',
+		'button_methods': '../js/button_methods',
+		'category_actions': '../js/category_actions',
+		'gallery_init': '../js/gallery_init',
+		'gallery_methods': '../js/gallery_methods',
+		'image_resize' : '../js/image_resize',
+		'intro_animation' : '../js/intro_animation',
+		'intro_explanation': '../js/intro_explanation',
+		'utility': '../js/utility',
+		'viewport_actions': '../js/viewport_actions',
 		'dynamictxt': '../js/dynamictxt',
 		'initial': '../js/initial',
 		'portfolio': '../js/portfolio',
@@ -41,20 +53,16 @@ requirejs.config({
 	shim: {
 			jquery : { exports: '$' }
 		,   jqueryui : ['jquery']
-		,	shadowbox : ['jquery', 'jqueryui']
-		,   shadow: ['shadowbox']
-		,   portfolio : ['jquery', 'jqueryui', 'animateShadow', 'shadow']
-		,   initial : ['jquery', 'jqueryui', 'animateShadow', 'shadowbox']
-		,   animateShadow: ['jquery', 'jqueryui']
-		,   dynamictxt : ['jquery', 'jqueryui']
 		,   'angular' : {'exports' : 'angular'}
 		,   'angularRoute': ['angular']
 		,   'chaijq': ['jquery', 'chai']
+		,	shadowbox : ['jquery', 'jqueryui']
+		,   shadow: ['shadowbox']
+		,   animateShadow: ['jquery', 'jqueryui']
+		,   dynamictxt : ['jquery', 'jqueryui']
 	},
-
 	// ask Require.js to load these files (all our tests)
 	deps: tests,
-
 	// start test run, once Require.js is done
 	callback: window.__karma__.start
 });

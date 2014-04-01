@@ -4,7 +4,6 @@
 
 define(['jquery', 'jqueryui'], function(jQuery){
 
-
 "use strict";
 var galDiv = document.getElementById("galleryDiv")
 	,   height = galDiv.innerHeight

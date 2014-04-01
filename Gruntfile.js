@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 						options: {
 							stdout: true
 						}
-					,   command: 'node ./node_modules/.bin/node-dev controller.js & node ./node_modules/.bin/grunt karma:unit:start watch'
+					,   command: ['node ./node_modules/.bin/node-dev controller.js',  'grunt karma:unit:start watch'].join('&')
 				}
 			}
 		,   jsdoc : {
@@ -57,10 +57,15 @@ module.exports = function(grunt) {
 					}
 				}
 			}
-		,   jshint:     {
+		,   jshint: {
 				files : {
-						src: [ JS_DIR + "*.js", TEST_DIR + "*.js"]
-					}
+					src: [
+						JS_DIR + "*.js"
+					,   ASSETS_DIR + 'main.js'
+					,	TEST_DIR + "_*.js"
+					,	TEST_DIR + "test-main.js"
+					]
+				}
 			,	options: lintOptions()
 			}
 		,   karma: {
@@ -69,6 +74,7 @@ module.exports = function(grunt) {
 				,   background: true
 				}
 			}
+
 		,   styleguide: {
 				docco: {
 					options: {
@@ -108,13 +114,14 @@ module.exports = function(grunt) {
 						files : [
 							JS_DIR + "*.js"
 						,   ASSETS_DIR + 'main.js'
-						,	TEST_DIR + "*.js"
+						,	TEST_DIR + "_*.js"
+						,	TEST_DIR + "test-main.js"
 						]
 					,   tasks: [ 'jshint' ]
 					}
 				,   karma: {
 							files : [
-							TEST_DIR + "_*.js"
+								TEST_DIR + "_*.js"
 							,   JS_DIR + "*.js"
 							,   ASSETS_DIR + "main.js"
 							,   TEST_DIR + "test-main.js"
@@ -164,6 +171,12 @@ module.exports = function(grunt) {
 	grunt.registerTask("default", 'That income tax swag', ['shell:start']);
 	grunt.registerTask("test", 'That income tax swag', ['shell:test']);
 	grunt.registerTask("dev", 'That income tax swag', ['shell:dev']);
+
+
+
+
+
+
 };
 function lintOptions() {
 	"use strict";
@@ -205,7 +218,7 @@ function lintOptions() {
 	};
 }
 function sassOptions(){
-	return {
+return {
 		compass : "true"
 		,	lineNumbers: "true"
 		,	style : 'expanded'
