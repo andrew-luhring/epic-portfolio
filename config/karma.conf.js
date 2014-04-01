@@ -22,7 +22,7 @@ module.exports = function (config) {
 		specjson: {
 			output: 'derp.json'
 		},
-		reporters     : ['unicorn', 'progress', 'growl', 'mocha'],
+		reporters     : ['growl', 'mocha'],
 		port          : 9876,
 		colors        : true,
 		//logLevel      : config.LOG_DEBUG,
