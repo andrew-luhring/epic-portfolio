@@ -1,5 +1,4 @@
-/*jshint expr: true*/
-
+/*jshint expr: true, undef: true */
 var tests = []
 	,   regex = /(tests\/)(_.*\.js)/
 	,   not = /(.[_])*((^(?:(?!ignore).)*)(js))/;
@@ -27,6 +26,8 @@ requirejs.config({
 		'animateShadow': 'animateShadow',
 		'chai': 'chai',
 		'chaijq' : 'chai-jq',
+		'mocha' : 'mocha',
+		'window' : '../js/mocha_window',
 		'shadow': 'shadow',
 		'js_utility': 'js_utility',
 		'shadowbox': 'shadowbox',
@@ -56,6 +57,7 @@ requirejs.config({
 		,   'angular' : {'exports' : 'angular'}
 		,   'angularRoute': ['angular']
 		,   'chaijq': ['jquery', 'chai']
+		,   'window' : ['mocha']
 		,	shadowbox : ['jquery', 'jqueryui']
 		,   shadow: ['shadowbox']
 		,   animateShadow: ['jquery', 'jqueryui']

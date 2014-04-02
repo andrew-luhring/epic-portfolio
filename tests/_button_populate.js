@@ -17,19 +17,19 @@ define([
 		var keysVals = utility.keysVals;
 
 
-	describe("angular Buttons", function(){
-		it("has a controller Buttons", function(done){
+	//describe("angular Buttons", function(){
+	//	it("has a controller Buttons", function(done){
 			//keysVals(obj, false );
 		//	console.log(vals);
 			//console.log(obj.controller('Buttons'));
 			//expect(obj.controller('Buttons')).to.be.ok;
 			//done();
-		});
-		it("exists", function(done){
-			expect(obj).to.exist;
+	//	});
+	//	it("exists", function(done){
+			//expect(obj).to.exist;
 			//done();
-		});
-	});
+	//	});
+	//});
 
 	/*	var module
 		before(function() {
@@ -65,7 +65,6 @@ define([
 		it("should have App.Routes as a dependency", function() {
 			expect(hasModule('App.Routes')).to.equal(true);
 		});
-
 		it("should have App.Services as a dependency", function() {
 			expect(hasModule('App.Services')).to.equal(true);
 		});

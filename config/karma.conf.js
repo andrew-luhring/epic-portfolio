@@ -6,6 +6,7 @@ module.exports = function (config) {
 			{pattern: 'public/lib/*.js', included: false},
 			{pattern: 'public/js/*.js', included: false},
 			{pattern: 'tests/_*.js', included: false},
+			'config/mocha.window.js',
 			'tests/test-main.js'
 		],
 		exclude       : [

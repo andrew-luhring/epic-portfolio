@@ -4,6 +4,8 @@ define ([
 	, 'jqueryui'
 ], function (jquery, buttons) {
 	"use strict";
+	$ = jquery;
+
 	/*  timings = [
 	90
 ,   10
@@ -22,7 +24,12 @@ define ([
 	 *  @function
 	 *  singleton that explains the site.
 	 */
+
 	function Explain(objToPrintTo, callback){
+
+
+
+
 		var $obj = $(objToPrintTo);
 		var hints = [
 					"(if you want to see my work, just click one of these buttons.)"
@@ -38,27 +45,26 @@ define ([
 					,   "i'm just gonna show stuff, now if that's ok..."
 					,   ''
 				];
-		//$obj.css("visibility", "visible").text( ).show("fade", 500);
+
+
+		function insertText(str, testapi){
+			$($obj).text(str);
+			if(testapi === true){
+				//console.log("true");
+				return $obj.text();
+			}
+		}
 		this.test = {
 			string : "this is an Explain object"
 		};
 		this.obj = $obj;
 		this.hints = hints;
-		this.insertText = function(str, testapi){
-			$obj.text(str);
-			if(testapi === true){
-				console.log("true");
-				return $obj.text();
-			}
-		};
-		if(callback){
-			callback();
-		}
-	}
+		this.insertText = insertText;
+
 /*	var explanation = new Explain($('#hint'));
 
 	return explanation;*/
 
-
+	}
 	return Explain;
 });
