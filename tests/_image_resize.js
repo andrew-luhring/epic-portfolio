@@ -5,7 +5,7 @@ define ([
 	, 'chai'
 	, 'jquery'
 	, 'jqueryui'
-	, 'chaijq'], function (require, utility/*, image_resize*/, chai, jquery) {
+	, 'chai_jq'], function (require, utility/*, image_resize*/, chai, jquery) {
 
 	"use strict";
 

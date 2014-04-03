@@ -25,7 +25,11 @@ requirejs.config({
 		'attrchange': 'attrchange',
 		'animateShadow': 'animateShadow',
 		'chai': 'chai',
-		'chaijq' : 'chai-jq',
+		'chai_jq' : 'chai-jq',
+
+		'chai_things': 'chai-things',
+		'chai_change': 'chai-change',
+		'chai_as_promised': 'chai-as-promised',
 		'sinon-chai': 'sinon-chai',
 		'mocha' : 'mocha',
 		'window' : '../js/mocha_window',
@@ -57,7 +61,8 @@ requirejs.config({
 		,   jqueryui : ['jquery']
 		,   'angular' : {'exports' : 'angular'}
 		,   'angularRoute': ['angular']
-		,   'chaijq': ['jquery', 'chai']
+		,   'chai_things': ['chai']
+//		,   'chai_change': ['chai']
 		,   'window' : ['mocha']
 		,	shadowbox : ['jquery', 'jqueryui']
 		,   shadow: ['shadowbox']

@@ -4,7 +4,7 @@ define([
 		'jquery'
 	,	'utility'
 	,   'chai'
-	,   'chaijq'
+	,   'chai_jq'
 	], function(jquery, utility, chai, chaijq){
 	"use strict";
 

@@ -84,7 +84,7 @@ define ([
 			} , time);
 			if(testapi === true){
 				if(callback){callback();}
-				return $obj.text();
+				return returnTxt
 			}
 		}
 		this.explainHints = explainHints;

@@ -1,4 +1,4 @@
-define(['mocha', 'chai', 'chaijq'], function(mocha, chai, chaijq){
+define(['mocha', 'chai', 'chai_jq'], function(mocha, chai, chaijq){
 "use strict";
 
 });

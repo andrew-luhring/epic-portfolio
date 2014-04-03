@@ -7,7 +7,7 @@ define([
 	, 'button_populate'
 	, 'utility'
 	, 'chai'
-	, 'chaijq'
+	, 'chai_jq'
 	] , function(angular, jquery, button_populate, utility, chai ){
 	"use strict";
 		var assert = chai.assert;

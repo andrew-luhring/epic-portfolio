@@ -5,7 +5,7 @@ define ([
 	, 'chai'
 	, 'jquery'
 	, 'jqueryui'
-	, 'chaijq'], function (require, utility, viewport_actions, chai, jquery) {
+	, 'chai_jq'], function (require, utility, viewport_actions, chai, jquery) {
 
 	"use strict";
 
