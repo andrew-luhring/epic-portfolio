@@ -10,7 +10,7 @@ define ([
 	, 'jquery'
 	, 'window'
 	, 'jqueryui'
-	, 'chaijq'], function (require, utility, intro_explanation, chai, jquery, mochaWindow) {
+	, 'chai_jq'], function (require, utility, intro_explanation, chai, jquery, mochaWindow) {
 
 	"use strict";
 	var assert = chai.assert

@@ -5,7 +5,7 @@ define ([
 	, 'chai'
 	, 'jquery'
 	, 'jqueryui'
-	, 'chaijq'], function (require, utility, /*intro_animation,*/ chai, jquery) {
+	, 'chai_jq'], function (require, utility, /*intro_animation,*/ chai, jquery) {
 
 	"use strict";
 
