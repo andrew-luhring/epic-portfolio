@@ -1,6 +1,7 @@
 /* jshint expr: true, undef: true */
 /* global before:true, after:true, beforeEach:true, afterEach:true */
-
+//protip-- if you're going to insert something into the dom to test something--
+// TEST THE FUNCTION TO MAKE SURE IT ACTUALLY INSERTS SOMETHING INTO THE DOM
 define ([
 	'require'
 	, 'utility'
@@ -24,26 +25,38 @@ define ([
 		var sel = "#" + id;
 		return jQuery(sel);
 	}
-
-//var derp = new Explain($("#content"));
-// derp.insertText("a string of text", true);
-
-//protip-- if you're going to insert something into the dom to test something--
-// TEST THE FUNCTION TO MAKE SURE IT ACTUALLY INSERTS SOMETHING INTO THE DOM
+	describe("explain.explainHints", function(){
+		var explain, test, $test, str;
+		before(function(){
+			$test = fakeDiv('explainHints');
+			explain = new Explanation($test);
+			str = explain.hints;
+			explain.str = str;
+		});
+		it('exists and ', function(){
+			expect(explain).to.exist;
+		});
+		it("and has a function explainHints", function(){
+			expect(explain).to.respondTo('explainHints');
+		});
+	});
 	describe("explanation.insertText", function(){
 		var explain, test, $test, str;
 		before(function(){
-				$test = fakeDiv('test');
+				$test = fakeDiv('insertText');
 				str = "a string of text";
 				explain = new Explanation($test);
 				explain.str = str;
 		});
-		it("will insert the string passed to it into its' element", function(){
+		it("explanation exists and ", function(){
+			expect(explain).to.exist;
+		});
+		it("has a function insertText", function(){
+			expect(explain).to.respondTo('insertText');
+		});
+		it("which inserts the string passed to it into its' element", function(){
 			var returnTxt = explain.insertText(str, true);
 			expect(returnTxt).to.equal(str);
-		});
-		it("exists", function(){
-			expect(explain).to.respondTo('insertText');
 		});
 	});
 	describe("explanation", function(){

@@ -26,6 +26,7 @@ requirejs.config({
 		'animateShadow': 'animateShadow',
 		'chai': 'chai',
 		'chaijq' : 'chai-jq',
+		'sinon-chai': 'sinon-chai',
 		'mocha' : 'mocha',
 		'window' : '../js/mocha_window',
 		'shadow': 'shadow',

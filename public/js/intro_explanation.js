@@ -43,9 +43,14 @@ define ([
 					,   "have you ever been on a website while it's having an existential crisis?"
 					,   "just kidding, i'm fine."
 					,   "i'm just gonna show stuff, now if that's ok..."
-					,   ''
-				];
 
+				];
+		var interval = window.setInterval;
+		this.test = {
+			string : "this is an Explain object"
+		};
+		this.obj = $obj;
+		this.hints = hints;
 
 		function insertText(str, testapi){
 			$($obj).text(str);
@@ -54,12 +59,35 @@ define ([
 				return $obj.text();
 			}
 		}
-		this.test = {
-			string : "this is an Explain object"
-		};
-		this.obj = $obj;
-		this.hints = hints;
 		this.insertText = insertText;
+
+		function explainHints(time, testapi, callback){
+			//console.log(hints);
+			var ok = false
+				, index = 0
+				, returnTxt = [];
+			interval(function(){
+				if(ok === false ){
+					ok = true;
+				} else {
+					var length = hints.length;
+					if(index < length){
+						insertText(hints[index], true);
+						returnTxt.push(hints[index]);
+
+						ok = false;
+						index++;
+					}
+
+				}
+
+			} , time);
+			if(testapi === true){
+				if(callback){callback();}
+				return $obj.text();
+			}
+		}
+		this.explainHints = explainHints;
 
 /*	var explanation = new Explain($('#hint'));
 
