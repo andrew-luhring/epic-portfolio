@@ -1,0 +1,181 @@
+$worktypes_color: #55d;
+$worktypes_borderclr: #7be5e5;
+$worktypes_bg: #fff;
+$worktypes_bg_selected: #f6f6f6;
+
+#centeringDiv, #newCenteringDiv .ng-isolate-scope {
+	margin-bottom: 20px;
+	margin: auto auto 2rem;
+	overflow: visible;
+	@include displayFlex;
+	@include flex-direction(row);
+	@include justify-content(space-around);
+	@include align-self(stretch);
+	@include align-items(stretch);
+	a {
+		//margin: 3rem 2rem;
+		@include displayFlex;
+		@include align-items(center);
+		@include flex(1);
+		@include justify-content(center);
+
+		p {
+			margin: auto;
+		}
+	}
+}
+#newCenteringDiv .ng-isolate-scope {
+
+}
+
+
+
+
+a, .workTypes, .workTypesSelected, footer a, footer div{
+	@include transition-property(border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color);
+	@include transition-duration(2s)
+}
+.workTypes {
+	background-color: $worktypes_bg;
+	border: 3px solid $worktypes_borderclr;
+	border-radius: 20%;
+	color: $worktypes_color;
+	cursor: pointer;
+	display: table;
+	font-family: "Quicksand", sans-serif;
+	font-size: 2.2rem;
+	outline: thin;
+	text-transform: capitalize;
+
+	&, .workTypesSelected{
+		@include transition(font-size 0.5s);
+	}
+	p {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+}
+
+
+.workTypesSelected {
+	background-color: $worktypes_bg_selected;
+}
+
+footer {
+	margin: auto;
+	padding: 2rem;
+	> div {
+		align-items: stretch;
+		align-self: stretch;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	a   {
+		align-items: center;
+		border: 2px solid #7be5e5;
+		border-radius: 20%;
+		display: flex;
+		flex: 1;
+		justify-content: center;
+		margin: 0 10%;
+	}
+}
+
+//large
+@media all and (min-width: 1025px) {
+	.workTypes {
+		font-size: 2.3rem;
+		width: 22.5rem;
+		height: 22.5rem;
+	}
+	footer {
+		> div {
+			margin: 0;
+		}
+		a {
+			font-size: 1.8rem;
+
+			text-decoration: none;
+			height:17.5rem;
+			width: 17.5rem;
+			-webkit-flex: 1;
+			p {
+				margin: auto;
+			}
+		}
+	}
+}
+
+//medium
+@media all and (min-width: 768px) and (max-width: 1024px) {
+	.workTypes {
+		font-size: 2.2rem;
+		height: 19.5rem;
+		min-width: 19.5rem;
+	}
+	footer {
+		padding: 0 0 2rem 0;
+		> div {
+		}
+		a {
+			flex: none;
+			font-size: 1.5rem;
+			height: 13.5rem;
+			width: 13.5rem;
+			p {
+				margin: auto;
+			}
+		}
+	}
+}
+
+//small
+@media all and (max-width: 767px) {
+	.workTypes {
+		border: 2px solid $worktypes_borderclr;
+		border-radius: 1px;
+		font-size: 1.8rem;
+		height: 7.5rem;
+		margin: 1rem auto;
+		width: 70%;
+		&:first-of-type{
+			margin-top: 0;
+		}
+	}
+	#newCenteringDiv .ng-isolate-scope, #centeringDiv {
+		@include flex-direction(column);
+	}
+	footer {
+		padding: 0  2rem 2rem;
+		> div {
+			flex-direction: column;
+			margin: 0;
+		}
+		a {
+			border: 1px solid #7be5e5;
+			border-radius: 2px;
+			flex: 1;
+			font-size: 1.2rem;
+			margin: 2% 10%;
+			padding: 20px;
+			text-decoration: none;
+			p {
+				margin: auto;
+			}
+		}
+	}
+}
+
+
+
+
+
+// TODO add in landscape orientation mode for iphones, so the buttons flex direction is horizontal.
+// TODO after factor out old buttons take this style and add it to the worktypes class.
+/* TODO set #hint to:
+    -webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+*/

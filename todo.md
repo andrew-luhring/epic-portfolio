@@ -21,41 +21,39 @@ current
 +   the links within #galleryDiv should be figure elements.
 
 +   add this to files that use jquery and replace jquery with it; see [coderwall](https://coderwall.com/p/q19via) for details :
+
+```js
 		$$ = (function($){
 		    var DOMCACHESTORE = {};
-
 		    return function(selector, force) {
 		            if (DOMCACHESTORE[selector] !== undefined && !force) {
 		                return DOMCACHESTORE[selector];
 		            }
-
 		            DOMCACHESTORE[selector] = $(selector);
 		            return DOMCACHESTORE[selector];
 		        }
 		})($);
 
+```
 
-
-
-	other
+other
 ======
 
-use these more:
+```bash
 		console.info('console.info');
 		console.debug('console.debug');
 		console.warn('console.warn');
 		console.error('console.error');
-
+```
 use pdf to create webpage from html
 ---------------------------
 
-		phantomjs rasterize.js 'http://en.wikipedia.org/w/index.php?title=Jakarta&printable=yes' jakarta.pdf
-
-
+[phantomjs rasterize.js]('http://en.wikipedia.org/w/index.php?title=Jakarta&printable=yes' jakarta.pdf)
 
 inverted border radius:
 -------------
 
+```css
 		.outer {
 		  overflow: hidden;
 		}
@@ -87,7 +85,9 @@ inverted border radius:
 		.content {
 		  min-height: 80px;
 		}
+```
 
+```html
 		<div class="outer">
 		<div class="inner">
 		<i class="top left"></i>
@@ -97,3 +97,4 @@ inverted border radius:
 		<i class="bottom left"></i>
 		</div>
 		</div>
+```

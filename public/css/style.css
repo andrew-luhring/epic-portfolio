@@ -1,4 +1,32 @@
 /*Code + Design + everything else by Andrew Luhring @ bisforbounce.com*/
+/* line 6, ../scss/_base.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 10, ../scss/_base.scss */
+body {
+  font-size: 1.6rem;
+}
+
+/* line 114, ../scss/_base.scss */
+.noise, html {
+  z-index: 1;
+}
+
+/* line 118, ../scss/_base.scss */
+.noise:before, html:before, .body-noise:before {
+  background-image: url(data:image/png;base64,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) !important;
+  bottom: 0;
+  content: "" !important;
+  left: 0;
+  opacity: 0.6;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
 /* line 2, ../scss/_failsafe.scss */
 .no-flexbox .portfolioContent {
   min-width: 1015px;
@@ -84,53 +112,41 @@
   vertical-align: middle;
 }
 
-/* line 1, ../scss/_defaults.scss */
-.ie {
-  behavior: url(/PIE.php);
-  list-style-type: none;
-}
-
 /* line 5, ../scss/_defaults.scss */
-* {
-  behavior: url(/PIE.php);
-}
-
-/* line 8, ../scss/_defaults.scss */
 body {
-  -browser-transform: scale(30%);
-  font-family: 'Quicksand';
-  font-weight: 300;
-  font-size: 1em;
-  width: 100%;
   background: #fefeff;
+  font-family: "Quicksand";
+  font-size: 1em;
+  font-weight: 300;
+  width: 100%;
 }
 
-/* line 16, ../scss/_defaults.scss */
+/* line 13, ../scss/_defaults.scss */
 a {
   text-decoration: none;
 }
 
-/* line 19, ../scss/_defaults.scss */
+/* line 17, ../scss/_defaults.scss */
 #IEroot {
-  font-size: .75em;
-  color: #aaaaaa;
+  color: #aaa;
+  font-size: 0.75em;
 }
-/* line 22, ../scss/_defaults.scss */
+/* line 20, ../scss/_defaults.scss */
 #IEroot a {
   color: #5dc6f2;
 }
 
-/* line 27, ../scss/_defaults.scss */
+/* line 25, ../scss/_defaults.scss */
 header {
   margin: auto;
 }
-/* line 29, ../scss/_defaults.scss */
+/* line 27, ../scss/_defaults.scss */
 header h1 {
-  font: normal normal 200 80px 'Comfortaa', 'Helvetica-Neue', Arial, sans-serif;
+  font: normal normal 200 80px "Comfortaa", "Helvetica-Neue", Arial, sans-serif;
   text-align: center;
 }
 
-/* line 34, ../scss/_defaults.scss */
+/* line 33, ../scss/_defaults.scss */
 .flexy {
   display: -webkit-flex !important;
   display: -moz-flex !important;
@@ -139,336 +155,221 @@ header h1 {
   display: flex !important;
 }
 
-/* line 43, ../scss/_defaults.scss */
+/* line 41, ../scss/_defaults.scss */
 #portfolio {
   margin: auto;
   width: 100%;
 }
 
-/* line 47, ../scss/_defaults.scss */
+/* line 46, ../scss/_defaults.scss */
 #galleryDiv {
-  behavior: url(/PIE.php);
-  flex-direction: row;
   display: -webkit-flex;
+  flex-direction: row;
+  behavior: url(/PIE.php);
 }
-/* line 51, ../scss/_defaults.scss */
+/* line 50, ../scss/_defaults.scss */
 #galleryDiv img {
-  min-width: 100px;
   height: auto;
+  min-width: 100px;
 }
 
-/* line 59, ../scss/_defaults.scss */
+/* line 56, ../scss/_defaults.scss */
 #centeringDiv {
-  margin: auto;
-  width: 100%;
+  align-items: stretch;
+  align-self: stretch;
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
-  -webkit-justify-content: space-around;
   justify-content: space-around;
-  -webkit-align-items: stretch;
-  align-items: stretch;
-  align-self: stretch;
+  margin: auto;
   overflow: visible;
+  width: 100%;
+  -webkit-justify-content: space-around;
+  -webkit-align-items: stretch;
 }
-/* line 73, ../scss/_defaults.scss */
+/* line 70, ../scss/_defaults.scss */
 #centeringDiv a {
+  align-items: center;
   display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-flex: 1;
   flex: 1;
-  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -webkit-flex: 1;
+  -webkit-justify-content: center;
   behavior: url(/PIE.php);
 }
-/* line 83, ../scss/_defaults.scss */
+/* line 80, ../scss/_defaults.scss */
 #centeringDiv a p {
   margin: auto;
 }
 
-/* line 89, ../scss/_defaults.scss */
-footer {
-  padding-bottom: 20px;
+/* line 86, ../scss/_defaults.scss */
+#galleryDiv img, #galleryDiv a {
+  position: relative;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
+
 /* line 91, ../scss/_defaults.scss */
-footer > div {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-  -webkit-align-items: stretch;
-  align-items: stretch;
-  align-self: stretch;
-}
-/* line 102, ../scss/_defaults.scss */
-footer a {
-  text-decoration: none;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-/* line 110, ../scss/_defaults.scss */
-footer a p {
-  margin: auto;
+#galleryDiv img:hover, #galleryDIv a:hover {
+  transform: scale(1.3);
+  z-index: 9000;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 @media all and (min-width: 1025px) {
   /* line 1, ../scss/_large.scss */
   body {
+    font-family: "Quicksand";
     font-size: 1em;
+    font-weight: 400;
     margin: 0.5em auto;
     width: 100%;
-    font-family: 'Quicksand';
-    font-weight: 400;
   }
 
   /* line 9, ../scss/_large.scss */
   #page {
-    border: solid 5px #7BE5E5;
-    border-radius: 20px 20px 20px 20px;
-    -webkit-box-shadow: 10px 15px 45px -5px #400339;
-    box-shadow: 10px 15px 45px -5px #400339;
-    max-width: 1300px;
     background-color: #fff;
-    min-width: 1025px;
+    border: solid 5px #7be5e5;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 10px 15px 45px -5px #400339;
     margin: auto;
+    max-width: 1300px;
+    min-width: 1025px;
+    -webkit-box-shadow: 10px 15px 45px -5px #400339;
   }
 
-  /* line 22, ../scss/_large.scss */
+  /* line 20, ../scss/_large.scss */
   header h1 {
-    margin-top: 30px;
     color: #444;
     font-size: 100px;
+    margin-top: 30px;
   }
 
-  /* line 28, ../scss/_large.scss */
+  /* line 26, ../scss/_large.scss */
   #portfolio {
     margin: auto;
-    width: 100%;
     min-width: 1025px;
+    width: 100%;
   }
 
-  /* line 34, ../scss/_large.scss */
-  #centeringDiv {
-    margin-bottom: 20px;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: row;
-    -webkit-align-items: stretch;
-    align-items: stretch;
-  }
-  /* line 46, ../scss/_large.scss */
-  #centeringDiv a {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-flex: 1;
-    flex: 1;
-    -webkit-justify-content: center;
-    justify-content: center;
-    height: 200px;
-    margin: 30px 20px;
-    font-size: 24px;
-    behavior: url(/PIE.php);
-  }
-  /* line 63, ../scss/_large.scss */
-  #centeringDiv a p {
-    margin: auto;
-  }
-
-  /* line 68, ../scss/_large.scss */
+  /* line 32, ../scss/_large.scss */
   #galleryDiv {
-    height: 400px;
-    margin: auto;
     border: 1px solid #c2c2c2;
     border-radius: 50px 50px 50px 50px;
+    height: 400px;
+    margin: auto;
     width: 80%;
     behavior: url(/PIE.php);
     -webkit-align-content: space-around;
     -webkit-flex-flow: row nowrap;
     -webkit-justify-content: center;
   }
-  /* line 79, ../scss/_large.scss */
+  /* line 42, ../scss/_large.scss */
   #galleryDiv img {
-    max-height: 300px;
-    margin: auto;
     border: none;
     height: auto;
-    max-width: 100%;
+    margin: auto;
+    max-height: 300px;
     max-height: auto;
+    max-width: 100%;
   }
-  /* line 87, ../scss/_large.scss */
+  /* line 50, ../scss/_large.scss */
   #galleryDiv div {
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-align-content: center;
     -webkit-justify-content: center;
   }
-  /* line 93, ../scss/_large.scss */
+  /* line 55, ../scss/_large.scss */
   #galleryDiv div p {
-    -webkit-align-self: center;
     align-self: center;
     height: auto;
+    -webkit-align-self: center;
   }
-  /* line 98, ../scss/_large.scss */
+  /* line 61, ../scss/_large.scss */
   #galleryDiv a, #galleryDiv img.gallery, #galleryDiv img, #galleryDiv #temp, #galleryDiv #clickToClose {
-    -webkit-align-self: center;
     align-self: center;
     height: auto;
+    -webkit-align-self: center;
   }
 
-  /* line 104, ../scss/_large.scss */
+  /* line 68, ../scss/_large.scss */
   #preview {
     margin: none;
-    padding: 10%;
     overflow: hidden;
+    padding: 10%;
     text-align: left;
   }
 
-  /* line 110, ../scss/_large.scss */
+  /* line 75, ../scss/_large.scss */
   #warning {
     margin-left: auto;
     margin-right: auto;
-    padding: 15% 10%;
     overflow: hidden;
+    padding: 15% 10%;
     text-align: center;
   }
 
-  /* line 117, ../scss/_large.scss */
+  /* line 83, ../scss/_large.scss */
   #hint {
-    margin-bottom: 0em;
+    margin-bottom: 0;
     text-align: center;
-    top: 0px;
+    top: 0;
   }
 
-  /* line 122, ../scss/_large.scss */
-  .workTypes {
-    width: 100%;
-    height: 100%;
-    border: 3px solid #7BE5E5;
-    border-radius: 50px;
-    background-color: #fff;
-    font-size: 1.3em;
-    display: table;
-    behavior: url(/PIE.php);
-  }
-
-  /* line 132, ../scss/_large.scss */
-  .workTypes p {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-  }
-
-  /* line 137, ../scss/_large.scss */
-  .workTypesSelected {
-    background-color: #f6f6f6;
-    border: 3px solid #7BE5E5;
-    border-radius: 50px;
-  }
-
-  /* line 142, ../scss/_large.scss */
-  footer {
-    padding: 20px;
-    margin: auto;
-    height: 7em;
-  }
-  /* line 146, ../scss/_large.scss */
-  footer > div {
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: row;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-    -webkit-align-items: stretch;
-    align-items: stretch;
-    align-self: stretch;
-    min-width: 100%;
-    min-height: 100%;
-    margin: 0;
-  }
-  /* line 163, ../scss/_large.scss */
-  footer a {
-    border-radius: 20%;
-    border: 2px solid #7BE5E5;
-    font-size: 1em;
-    text-decoration: none;
-    margin: 0% 10%;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-flex: 1;
-    flex: 1;
-    width: 0;
-    -webkit-justify-content: center;
-    justify-content: center;
-  }
-  /* line 181, ../scss/_large.scss */
-  footer a p {
-    margin: auto;
-  }
-
-  /* line 186, ../scss/_large.scss */
+  /* line 89, ../scss/_large.scss */
   #clickToClose {
-    margin: 20px auto;
-    padding: 10px;
-    min-width: 10%;
-    max-width: 300px;
-    border: 1px solid #CCC;
-    clear: both;
-    text-align: center;
+    border: 1px solid #ccc;
     border-radius: 10px;
+    clear: both;
     cursor: pointer;
+    margin: 20px auto;
+    max-width: 300px;
+    min-width: 10%;
+    padding: 10px;
+    text-align: center;
   }
 
-  /* line 202, ../scss/_large.scss */
+  /* line 102, ../scss/_large.scss */
   .no-flexbox #centeringDiv, .no-flexbox #galleryDiv {
-    transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
+    transition-delay: 0s;
     transition-duration: 0.25s;
+    transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
     -webkit-transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
     -webkit-transition-duration: 0.25s;
-    transition-delay: 0s;
     -webkit-transition-delay: 0s;
   }
-  /* line 210, ../scss/_large.scss */
+  /* line 110, ../scss/_large.scss */
   .no-flexbox #galleryDiv {
     padding-top: 30px;
   }
-  /* line 213, ../scss/_large.scss */
+  /* line 113, ../scss/_large.scss */
   .no-flexbox .portfolioContent {
     min-width: 1015px;
     width: 90%;
   }
-  /* line 217, ../scss/_large.scss */
+  /* line 117, ../scss/_large.scss */
   .no-flexbox #centeringDiv {
     min-width: 1010px;
   }
-  /* line 220, ../scss/_large.scss */
+  /* line 119, ../scss/_large.scss */
   .no-flexbox #centeringDiv div {
-    max-width: 200px;
     max-height: 200px;
+    max-width: 200px;
   }
-  /* line 225, ../scss/_large.scss */
+  /* line 124, ../scss/_large.scss */
   .no-flexbox #centeringDiv > a .workTypesSelected, .no-flexbox #centeringDiv > a .workTypes {
-    border: 3px solid #7BE5E5;
+    border: 3px solid #7be5e5;
+    border-radius: 25%;
     height: 200px;
     width: 200px;
-    border-radius: 25%;
-    transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
-    transition-duration: 2s;
-    -webkit-transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
-    -webkit-transition-duration: 2s;
-  }
-  /* line 238, ../scss/_large.scss */
-  .no-flexbox footer {
-    min-width: 620px;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1024px) {
@@ -478,221 +379,130 @@ footer a p {
     margin: 0.5em auto;
   }
 
-  /* line 5, ../scss/_medium.scss */
+  /* line 6, ../scss/_medium.scss */
   header h1 {
-    margin-top: 10px;
-    font-size: 80px;
     color: #333;
+    font-size: 80px;
+    margin-top: 10px;
   }
 
-  /* line 10, ../scss/_medium.scss */
-  #centeringDiv {
-    flex-direction: row;
-    -webkit-align-items: stretch;
-    align-items: stretch;
-    margin-bottom: 20px;
-  }
-  /* line 16, ../scss/_medium.scss */
-  #centeringDiv a {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-flex: 1;
-    flex: 1;
-    -webkit-justify-content: center;
-    justify-content: center;
-    margin: 30px 20px;
-    font-size: 22px;
-    behavior: url(/PIE.php);
-  }
-  /* line 28, ../scss/_medium.scss */
-  #centeringDiv a p {
-    margin: auto;
-  }
-
-  /* line 33, ../scss/_medium.scss */
+  /* line 12, ../scss/_medium.scss */
   #galleryDiv {
-    height: 400px;
-    margin: auto;
     border: 1px solid #c2c2c2;
     border-radius: 50px 50px 50px 50px;
+    height: 400px;
+    margin: auto;
     width: 80%;
     -webkit-align-content: space-around;
     -webkit-flex-flow: row nowrap;
     -webkit-justify-content: center;
     behavior: url(/PIE.php);
   }
-  /* line 43, ../scss/_medium.scss */
+  /* line 22, ../scss/_medium.scss */
   #galleryDiv img {
-    max-height: 300px;
-    margin: auto;
     border: none;
     height: auto;
-    max-width: 100%;
+    margin: auto;
+    max-height: 300px;
     max-height: auto;
+    max-width: 100%;
   }
-  /* line 51, ../scss/_medium.scss */
+  /* line 30, ../scss/_medium.scss */
   #galleryDiv div {
     display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-align-content: center;
     -webkit-justify-content: center;
   }
-  /* line 57, ../scss/_medium.scss */
+  /* line 35, ../scss/_medium.scss */
   #galleryDiv div p {
-    -webkit-align-self: center;
     align-self: center;
     height: auto;
+    -webkit-align-self: center;
   }
-  /* line 62, ../scss/_medium.scss */
+  /* line 41, ../scss/_medium.scss */
   #galleryDiv a, #galleryDiv img.gallery, #galleryDiv img, #galleryDiv #temp, #galleryDiv #clickToClose {
-    -webkit-align-self: center;
     align-self: center;
     height: auto;
+    -webkit-align-self: center;
   }
 
-  /* line 68, ../scss/_medium.scss */
+  /* line 48, ../scss/_medium.scss */
   #preview {
     margin: none;
-    padding: 10%;
     overflow: hidden;
+    padding: 10%;
     text-align: left;
   }
 
-  /* line 74, ../scss/_medium.scss */
+  /* line 55, ../scss/_medium.scss */
   #warning {
     margin-left: auto;
     margin-right: auto;
-    padding: 15% 10%;
     overflow: hidden;
+    padding: 15% 10%;
     text-align: center;
   }
 
-  /* line 81, ../scss/_medium.scss */
+  /* line 63, ../scss/_medium.scss */
   #hint {
-    margin-bottom: 0em;
+    margin-bottom: 0;
     text-align: center;
-    top: 0px;
+    top: 0;
   }
 
-  /* line 86, ../scss/_medium.scss */
-  .workTypes {
-    width: 100%;
-    height: 100%;
-    font-size: 1em;
-    display: table;
-    behavior: url(/PIE.php);
-    height: 175px;
-    background-color: #fff;
-    border: 3px solid #7BE5E5;
-    border-radius: 50px;
-  }
-
-  /* line 98, ../scss/_medium.scss */
-  .workTypes p {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-  }
-
-  /* line 103, ../scss/_medium.scss */
-  .workTypesSelected {
-    background-color: #f6f6f6;
-  }
-
-  /* line 108, ../scss/_medium.scss */
-  footer {
-    padding-bottom: 20px;
-    height: 7em;
-  }
-  /* line 111, ../scss/_medium.scss */
-  footer > div {
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: row;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-    -webkit-align-items: stretch;
-    align-items: stretch;
-    align-self: stretch;
-    min-width: 100%;
-    min-height: 100%;
-  }
-  /* line 126, ../scss/_medium.scss */
-  footer a {
-    border-radius: 20%;
-    border: 2px solid #7BE5E5;
-    font-size: 1em;
-    text-decoration: none;
-    margin: 0% 10%;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-flex: 1;
-    flex: 1;
-    width: 0;
-    -webkit-justify-content: center;
-    justify-content: center;
-  }
-  /* line 143, ../scss/_medium.scss */
-  footer a p {
-    margin: auto;
-  }
-
-  /* line 148, ../scss/_medium.scss */
+  /* line 69, ../scss/_medium.scss */
   #clickToClose {
-    margin: 20px auto;
-    padding: 10px;
-    min-width: 10%;
-    max-width: 300px;
-    border: 1px solid #CCC;
-    clear: both;
-    text-align: center;
+    border: 1px solid #ccc;
     border-radius: 10px;
+    clear: both;
     cursor: pointer;
+    margin: 20px auto;
+    max-width: 300px;
+    min-width: 10%;
+    padding: 10px;
+    text-align: center;
   }
 
-  /* line 163, ../scss/_medium.scss */
+  /* line 82, ../scss/_medium.scss */
   .no-flexbox #centeringDiv, .no-flexbox #galleryDiv {
-    transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
+    transition-delay: 2s;
     transition-duration: 0.25s;
+    transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
     -webkit-transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
     -webkit-transition-duration: 0.25s;
-    transition-delay: 2s;
     -webkit-transition-delay: 2s;
   }
-  /* line 171, ../scss/_medium.scss */
+  /* line 90, ../scss/_medium.scss */
   .no-flexbox .portfolioContent {
     min-width: 800px;
     width: 90%;
   }
-  /* line 175, ../scss/_medium.scss */
+  /* line 94, ../scss/_medium.scss */
   .no-flexbox #galleryDiv {
     padding-top: 30px;
   }
-  /* line 178, ../scss/_medium.scss */
+  /* line 97, ../scss/_medium.scss */
   .no-flexbox #centeringDiv {
     min-width: 800px;
   }
-  /* line 180, ../scss/_medium.scss */
+  /* line 99, ../scss/_medium.scss */
   .no-flexbox #centeringDiv div {
     max-height: 150px;
     max-width: 150px;
   }
-  /* line 185, ../scss/_medium.scss */
+  /* line 104, ../scss/_medium.scss */
   .no-flexbox #centeringDiv > a .workTypesSelected, .no-flexbox #centeringDiv > a .workTypes {
-    border: 2px solid #7BE5E5;
-    height: 150px;
-    width: 150px;
+    border: 2px solid #7be5e5;
     border-radius: 25%;
-    transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
+    height: 150px;
     transition-duration: 2s;
+    transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
+    width: 150px;
     -webkit-transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
     -webkit-transition-duration: 2s;
   }
-  /* line 198, ../scss/_medium.scss */
+  /* line 116, ../scss/_medium.scss */
   .no-flexbox footer {
     min-width: 620px;
   }
@@ -704,279 +514,169 @@ footer a p {
     margin: 0.5em auto;
   }
 
-  /* line 5, ../scss/_small.scss */
+  /* line 6, ../scss/_small.scss */
   header h1 {
-    margin-top: 10px;
     font-size: 30px;
+    margin-top: 10px;
   }
 
-  /* line 9, ../scss/_small.scss */
+  /* line 11, ../scss/_small.scss */
   #portfolio {
     margin: auto;
-    width: 100%;
     min-width: 240px;
+    width: 100%;
   }
 
-  /* line 14, ../scss/_small.scss */
-  #centeringDiv {
-    -webkit-flex-flow: column;
-    flex-direction: column;
-    -webkit-align-items: stretch;
-    align-items: stretch;
-    margin-top: 30px;
-    height: 400px;
-    padding: 20px 10px;
-  }
-  /* line 22, ../scss/_small.scss */
-  #centeringDiv a {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-flex: 1;
-    flex: 1;
-    -webkit-justify-content: center;
-    justify-content: center;
-    margin: 5px 20%;
-    border-radius: 10px;
-    font-size: 14px;
-    behavior: url(/PIE.php);
-  }
-  /* line 35, ../scss/_small.scss */
-  #centeringDiv a p {
-    margin: auto;
-  }
-
-  /* line 40, ../scss/_small.scss */
+  /* line 17, ../scss/_small.scss */
   #galleryDiv {
-    min-height: 400px;
-    margin: auto;
-    width: 80%;
+    align-items: flex-start;
     border: 1px solid #c2c2c2;
+    flex-direction: column;
+    margin: auto;
+    min-height: 400px;
+    overflow: hidden;
+    width: 80%;
     behavior: url(/PIE.php);
     -webkit-align-content: center;
     -webkit-flex-direction: column;
-    flex-direction: column;
     -webkit-justify-content: center;
     -webkit-align-items: flex-start;
-    align-items: flex-start;
-    overflow: hidden;
   }
-  /* line 53, ../scss/_small.scss */
+  /* line 30, ../scss/_small.scss */
   #galleryDiv img {
-    -webkit-align-self: flex-start;
-    max-width: 100%;
-    max-height: 100px;
-    margin: auto;
     border: none;
+    margin: auto;
+    max-height: 100px;
+    max-width: 100%;
+    -webkit-align-self: flex-start;
   }
-  /* line 60, ../scss/_small.scss */
+  /* line 37, ../scss/_small.scss */
   #galleryDiv div {
+    align-content: center;
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: column;
     flex-direction: column;
-    -webkit-align-content: center;
-    align-content: center;
-    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-flex-direction: column;
+    -webkit-align-content: center;
+    -webkit-justify-content: center;
   }
-  /* line 69, ../scss/_small.scss */
+  /* line 46, ../scss/_small.scss */
   #galleryDiv div p {
-    -webkit-align-self: center;
     align-self: center;
     height: auto;
+    -webkit-align-self: center;
   }
-  /* line 75, ../scss/_small.scss */
+  /* line 52, ../scss/_small.scss */
   #galleryDiv a, #galleryDiv img.gallery, #galleryDiv img, #galleryDiv #temp, #galleryDiv #clickToClose {
-    -webkit-align-self: center;
     align-self: center;
     height: auto;
+    -webkit-align-self: center;
   }
 
-  /* line 81, ../scss/_small.scss */
+  /* line 59, ../scss/_small.scss */
   #preview {
     margin: none;
-    padding: 10%;
     overflow: hidden;
+    padding: 10%;
     text-align: left;
   }
 
-  /* line 87, ../scss/_small.scss */
+  /* line 66, ../scss/_small.scss */
   #warning {
     margin-left: auto;
     margin-right: auto;
-    padding: 15% 10%;
     overflow: hidden;
+    padding: 15% 10%;
     text-align: center;
   }
 
-  /* line 94, ../scss/_small.scss */
+  /* line 74, ../scss/_small.scss */
   #hint {
-    margin-bottom: 0em;
+    margin-bottom: 0;
     text-align: center;
-    top: 0px;
+    top: 0;
   }
 
-  /* line 99, ../scss/_small.scss */
+  /* line 80, ../scss/_small.scss */
   #galleryDiv {
     padding-top: 10px;
   }
 
-  /* line 102, ../scss/_small.scss */
-  .workTypes {
-    width: 100%;
-    height: 75px;
-    border-radius: 10px;
-    font-size: .8em;
-    border: 2px solid #7BE5E5;
-    display: table;
-    behavior: url(/PIE.php);
-  }
-
-  /* line 111, ../scss/_small.scss */
-  .workTypes p {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-  }
-
-  /* line 116, ../scss/_small.scss */
-  .workTypesSelected {
-    background-color: #f6f6f6;
-    -webkit-box-shadow: 0px 0px 0px 0px #400339;
-    box-shadow: 0px 0px 0px 0px #400339;
-  }
-
-  /* line 121, ../scss/_small.scss */
-  footer {
-    padding: 20px;
-    margin: auto;
-  }
-  /* line 124, ../scss/_small.scss */
-  footer > div {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: column;
-    flex-direction: column;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-    -webkit-align-items: stretch;
-    align-items: stretch;
-    align-self: stretch;
-    min-width: 100%;
-    min-height: 100%;
-    margin: 0;
-  }
-  /* line 140, ../scss/_small.scss */
-  footer a {
-    border-radius: 2px;
-    border: 1px solid #7BE5E5;
-    text-decoration: none;
-    margin: 1% 10%;
-    padding: 20px;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-flex: 1;
-    flex: 1;
-  }
-  /* line 152, ../scss/_small.scss */
-  footer a p {
-    margin: auto;
-  }
-
-  /* line 157, ../scss/_small.scss */
+  /* line 84, ../scss/_small.scss */
   #clickToClose {
-    margin: 20px auto;
-    padding: 10px;
-    min-width: 10%;
-    max-width: 300px;
-    border: 1px solid #CCC;
-    clear: both;
-    text-align: center;
+    border: 1px solid #ccc;
     border-radius: 10px;
+    clear: both;
     cursor: pointer;
+    margin: 20px auto;
+    max-width: 300px;
+    min-width: 10%;
+    padding: 10px;
+    text-align: center;
   }
 
-  /* line 171, ../scss/_small.scss */
+  /* line 97, ../scss/_small.scss */
   .no-flexbox #centeringDiv, .no-flexbox #galleryDiv {
     min-width: 240px;
     width: 90%;
   }
-  /* line 175, ../scss/_small.scss */
+  /* line 101, ../scss/_small.scss */
   .no-flexbox #galleryDiv {
     display: table !important;
   }
-  /* line 177, ../scss/_small.scss */
+  /* line 103, ../scss/_small.scss */
   .no-flexbox #galleryDiv a {
     display: table !important;
     margin: auto;
   }
-  /* line 180, ../scss/_small.scss */
+  /* line 106, ../scss/_small.scss */
   .no-flexbox #galleryDiv a img {
-    float: left;
     clear: both;
+    float: left;
   }
-  /* line 186, ../scss/_small.scss */
+  /* line 112, ../scss/_small.scss */
   .no-flexbox .portfolioContent {
     min-width: 260px;
     width: 90%;
   }
-  /* line 192, ../scss/_small.scss */
+  /* line 117, ../scss/_small.scss */
   .no-flexbox #centeringDiv > a {
-    margin: 10px auto;
     display: table;
+    margin: 10px auto;
   }
-  /* line 195, ../scss/_small.scss */
+  /* line 120, ../scss/_small.scss */
   .no-flexbox #centeringDiv > a .workTypesSelected, .no-flexbox #centeringDiv > a .workTypes {
+    background: #fff;
+    border: 2px solid #7be5e5;
+    border-radius: 20px;
+    height: 75px;
     max-width: 450px;
     min-width: 220px;
     width: 90%;
-    border: 2px solid #7BE5E5;
-    height: 75px;
-    border-radius: 20px;
-    background: #fff;
   }
-  /* line 207, ../scss/_small.scss */
+  /* line 131, ../scss/_small.scss */
   .no-flexbox footer {
     min-width: 240px;
+    padding: 0 !important;
     width: 80%;
-    padding: 0px !important;
   }
-  /* line 211, ../scss/_small.scss */
+  /* line 135, ../scss/_small.scss */
   .no-flexbox footer > div a {
-    margin: 5px auto;
-    width: 50%;
-    height: 30px;
     border-radius: 15px;
     display: table;
+    height: 30px;
+    margin: 5px auto;
+    width: 50%;
   }
 }
 /* transitions: */
-/* line 13, ../scss/_responsive.scss */
+/* line 12, ../scss/_responsive.scss */
 #page {
   transition-property: border, border-radius, box-shadow, -webkit-box-shadow;
   transition-duration: 0.5s;
   -webkit-transition-property: border, border-radius, box-shadow, -webkit-box-shadow;
   -webkit-transition-duration: 0.5s;
-}
-
-/* line 22, ../scss/_responsive.scss */
-.no-flexbox a, .no-flexbox .workTypes, .no-flexbox .workTypesSelected, .no-flexbox footer a, .no-flexbox footer div {
-  transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
-  transition-duration: 2s;
-  -webkit-transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
-  -webkit-transition-duration: 2s;
-  transition-delay: 0s;
-  -webkit-transition-delay: 0s;
-}
-
-/* line 31, ../scss/_responsive.scss */
-.workTypes {
-  transition-property: font-size;
-  transition-duration: 0.5s;
 }
 
 /* line 2, ../scss/_lightbox.scss */
@@ -1058,18 +758,227 @@ footer a p {
   top: 0px !important;
 }
 
-/* line 8, ../scss/style.scss */
+/* line 6, ../scss/_buttons.scss */
+#centeringDiv, #newCenteringDiv .ng-isolate-scope {
+  margin-bottom: 20px;
+  margin: auto auto 2rem;
+  overflow: visible;
+  display: -webkit-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-self: stretch;
+  align-self: stretch;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+/* line 15, ../scss/_buttons.scss */
+#centeringDiv a, #newCenteringDiv .ng-isolate-scope a {
+  display: -webkit-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/* line 22, ../scss/_buttons.scss */
+#centeringDiv a p, #newCenteringDiv .ng-isolate-scope a p {
+  margin: auto;
+}
+
+/* line 34, ../scss/_buttons.scss */
+a, .workTypes, .workTypesSelected, footer a, footer div {
+  -moz-transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
+  -o-transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
+  -webkit-transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
+  transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+  transition-duration: 2s;
+}
+
+/* line 38, ../scss/_buttons.scss */
+.workTypes {
+  background-color: white;
+  border: 3px solid #7be5e5;
+  border-radius: 20%;
+  color: #5555dd;
+  cursor: pointer;
+  display: table;
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.2rem;
+  outline: thin;
+  text-transform: capitalize;
+}
+/* line 50, ../scss/_buttons.scss */
+.workTypes, .workTypes .workTypesSelected {
+  -moz-transition: font-size 0.5s;
+  -o-transition: font-size 0.5s;
+  -webkit-transition: font-size 0.5s;
+  transition: font-size 0.5s;
+}
+/* line 53, ../scss/_buttons.scss */
+.workTypes p {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 61, ../scss/_buttons.scss */
+.workTypesSelected {
+  background-color: #f6f6f6;
+}
+
+/* line 65, ../scss/_buttons.scss */
+footer {
+  margin: auto;
+  padding: 2rem;
+}
+/* line 68, ../scss/_buttons.scss */
+footer > div {
+  align-items: stretch;
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+/* line 75, ../scss/_buttons.scss */
+footer a {
+  align-items: center;
+  border: 2px solid #7be5e5;
+  border-radius: 20%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin: 0 10%;
+}
+
+@media all and (min-width: 1025px) {
+  /* line 88, ../scss/_buttons.scss */
+  .workTypes {
+    font-size: 2.3rem;
+    width: 22.5rem;
+    height: 22.5rem;
+  }
+
+  /* line 94, ../scss/_buttons.scss */
+  footer > div {
+    margin: 0;
+  }
+  /* line 97, ../scss/_buttons.scss */
+  footer a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    height: 17.5rem;
+    width: 17.5rem;
+    -webkit-flex: 1;
+  }
+  /* line 104, ../scss/_buttons.scss */
+  footer a p {
+    margin: auto;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  /* line 113, ../scss/_buttons.scss */
+  .workTypes {
+    font-size: 2.2rem;
+    height: 19.5rem;
+    min-width: 19.5rem;
+  }
+
+  /* line 118, ../scss/_buttons.scss */
+  footer {
+    padding: 0 0 2rem 0;
+  }
+  /* line 122, ../scss/_buttons.scss */
+  footer a {
+    flex: none;
+    font-size: 1.5rem;
+    height: 13.5rem;
+    width: 13.5rem;
+  }
+  /* line 127, ../scss/_buttons.scss */
+  footer a p {
+    margin: auto;
+  }
+}
+@media all and (max-width: 767px) {
+  /* line 136, ../scss/_buttons.scss */
+  .workTypes {
+    border: 2px solid #7be5e5;
+    border-radius: 1px;
+    font-size: 1.8rem;
+    height: 7.5rem;
+    margin: 1rem auto;
+    width: 70%;
+  }
+  /* line 143, ../scss/_buttons.scss */
+  .workTypes:first-of-type {
+    margin-top: 0;
+  }
+
+  /* line 147, ../scss/_buttons.scss */
+  #newCenteringDiv .ng-isolate-scope, #centeringDiv {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  /* line 150, ../scss/_buttons.scss */
+  footer {
+    padding: 0  2rem 2rem;
+  }
+  /* line 152, ../scss/_buttons.scss */
+  footer > div {
+    flex-direction: column;
+    margin: 0;
+  }
+  /* line 156, ../scss/_buttons.scss */
+  footer a {
+    border: 1px solid #7be5e5;
+    border-radius: 2px;
+    flex: 1;
+    font-size: 1.2rem;
+    margin: 2% 10%;
+    padding: 20px;
+    text-decoration: none;
+  }
+  /* line 164, ../scss/_buttons.scss */
+  footer a p {
+    margin: auto;
+  }
+}
+/* TODO set #hint to:
+    -webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+*/
+/* line 9, ../scss/style.scss */
 .no-flexbox #galleryDiv {
   width: 100%;
   display: table;
 }
 
-/* line 11, ../scss/style.scss */
+/* line 13, ../scss/style.scss */
 .no-flexbox #galleryDiv.flexy {
   display: table !important;
 }
 
-/* line 14, ../scss/style.scss */
+/* line 16, ../scss/style.scss */
 .navHint {
   position: absolute;
   width: 200px;
@@ -1080,107 +989,84 @@ footer a p {
   behavior: url(/PIE.php);
 }
 
-/* line 24, ../scss/style.scss */
+/* line 26, ../scss/style.scss */
 .navHint p {
   text-align: center;
   margin: 0;
 }
 
-/* line 29, ../scss/style.scss */
+/* line 31, ../scss/style.scss */
 #galleryDiv > div:last-of-type {
   margin: auto;
   text-align: center;
 }
 
-/* line 34, ../scss/style.scss */
+/* line 36, ../scss/style.scss */
 .cf {
   overflow: hidden;
 }
 
-/* line 37, ../scss/style.scss */
+/* line 40, ../scss/style.scss */
 .cf:before, .cf:after {
   content: "";
   display: table;
 }
 
-/* line 41, ../scss/style.scss */
+/* line 45, ../scss/style.scss */
 .cf:after {
   clear: both;
 }
 
-/* line 44, ../scss/style.scss */
+/* line 49, ../scss/style.scss */
 .unhide {
   opacity: 1;
 }
 
-/* line 48, ../scss/style.scss */
+/* line 53, ../scss/style.scss */
+.hidden {
+  opacity: 0;
+}
+
+/* line 57, ../scss/style.scss */
 .hide {
   display: none !important;
   overflow: hidden;
   opacity: 0;
   position: relative;
 }
-.hidden{
-	opacity: 0;
+
+/* line 64, ../scss/style.scss */
+.no-js .hide {
+  display: inherit;
+  overflow: visible;
+  opacity: 1;
 }
-.no-js .hide{
-	display: inherit;
-	overflow: visible;
-	opacity: 1;
+
+/* line 70, ../scss/style.scss */
+.no-js .hidden {
+  opacity: 1;
 }
-.no-js .hidden{
-	opacity: 1;
-}
-/* line 54, ../scss/style.scss */
+
+/* line 74, ../scss/style.scss */
 a {
   color: #55D;
 }
 
-/* line 57, ../scss/style.scss */
-#galleryDiv a:hover, #galleryDiv img {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -ms-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
-	position: relative;
+/* line 77, ../scss/style.scss */
+#galleryDiv img:hover, #galleryDiv img {
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
 
+/* line 80, ../scss/style.scss */
+#galleryDIv img:hover {
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
 }
-#galleryDiv img, #galleryDiv a{
-	position: relative;
-}
-#galleryDiv img:hover, #galleryDIv a:hover {
-	-webkit-transform: scale(1.3);
-	-moz-transform: scale(1.3);
-	-ms-transform: scale(1.3);
-	-o-transform: scale(1.3);
-	transform: scale(1.3);
-	z-index: 9000;
-	position: relative;
-}
-/* line 70, ../scss/style.scss */
 
 /*# sourceMappingURL=style.css.map */
-
-
-
-.noise {
-	position: relative;
-	z-index: 1;
-}
-
-.noise:before, .body-noise:before {
-	content: "" !important;
-	position: absolute;
-	z-index: -1;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
-	background-image: url(data:image/png;base64,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) !important;
-}
