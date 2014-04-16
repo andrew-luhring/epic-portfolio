@@ -1,107 +1,12 @@
-body {
-	font-size: 0.5em;
-	margin: 0.5em auto;
-}
-
-header h1 {
-	font-size: 30px;
-	margin-top: 10px;
-}
-
-#portfolio {
-	margin: auto;
-	min-width: 240px;
-	width: 100%;
-}
-
-#galleryDiv {
-	align-items: flex-start;
-	border: 1px solid #c2c2c2;
-	flex-direction: column;
-	margin: auto;
-	min-height: 400px;
-	overflow: hidden;
-	width: 80%;
-	behavior: url(/PIE.php);
-	-webkit-align-content: center;
-	-webkit-flex-direction: column;
-	-webkit-justify-content: center;
-	-webkit-align-items: flex-start;
-	img {
-		border: none;
-		margin: auto;
-		max-height: 100px;
-		max-width: 100%;
-		-webkit-align-self: flex-start;
-	}
-	div {
-		align-content: center;
-		display: -webkit-flex;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		-webkit-flex-direction: column;
-		-webkit-align-content: center;
-		-webkit-justify-content: center;
-		p {
-			align-self: center;
-			height: auto;
-			-webkit-align-self: center;
-		}
-	}
-	a, img.gallery, img, #temp, #clickToClose {
-		align-self: center;
-		height: auto;
-		-webkit-align-self: center;
-	}
-}
-
-#preview {
-	margin: none;
-	overflow: hidden;
-	padding: 10%;
-	text-align: left;
-}
-
-#warning {
-	margin-left: auto;
-	margin-right: auto;
-	overflow: hidden;
-	padding: 15% 10%;
-	text-align: center;
-}
-
-#hint {
-	margin-bottom: 0;
-	text-align: center;
-	top: 0;
-}
-
-#galleryDiv {
-	padding-top: 10px;
-}
-
-#clickToClose {
-	border: 1px solid #ccc;
-	border-radius: 10px;
-	clear: both;
-	cursor: pointer;
-	margin: 20px auto;
-	max-width: 300px;
-	min-width: 10%;
-	padding: 10px;
-	text-align: center;
-}
-
 .no-flexbox {
-	#centeringDiv, #galleryDiv {
+	#centeringDiv, .gallery {
 		min-width: 240px;
 		width: 90%;
 	}
-	#galleryDiv {
-		display: table !important;
+	.gallery {
+		display: table;
 		a {
-			display: table !important;
+			display: table;
 			margin: auto;
 			img {
 				clear: both;
@@ -128,9 +33,9 @@ header h1 {
 			}
 		}
 	}
-	footer {
+	.page_footer {
 		min-width: 240px;
-		padding: 0 !important;
+		padding: 0;
 		width: 80%;
 		> div a {
 			border-radius: 15px;

@@ -1,0 +1,207 @@
+<html>
+<head>
+<style>
+body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
+#HTMLReporter { font-size: 11px; font-family: Monaco, "Lucida Console", monospace; line-height: 14px; color: #333333; }
+#HTMLReporter a { text-decoration: none; }
+#HTMLReporter a:hover { text-decoration: underline; }
+#HTMLReporter p, #HTMLReporter h1, #HTMLReporter h2, #HTMLReporter h3, #HTMLReporter h4, #HTMLReporter h5, #HTMLReporter h6 { margin: 0; line-height: 14px; }
+#HTMLReporter .banner, #HTMLReporter .symbolSummary, #HTMLReporter .summary, #HTMLReporter .resultMessage, #HTMLReporter .specDetail .description, #HTMLReporter .alert .bar, #HTMLReporter .stackTrace { padding-left: 9px; padding-right: 9px; }
+#HTMLReporter #jasmine_content { position: fixed; right: 100%; }
+#HTMLReporter .version { color: #aaaaaa; }
+#HTMLReporter .banner { margin-top: 14px; }
+#HTMLReporter .duration { color: #aaaaaa; float: right; }
+#HTMLReporter .exceptions { color: #fff; float: right; margin-top: 5px; margin-right: 5px; }
+#HTMLReporter .bar { line-height: 28px; font-size: 14px; display: block; color: #eee; }
+#HTMLReporter .runningAlert { background-color: #666666; }
+#HTMLReporter .skippedAlert { background-color: #aaaaaa; }
+#HTMLReporter .skippedAlert:first-child { background-color: #333333; }
+#HTMLReporter .skippedAlert:hover { text-decoration: none; color: white; text-decoration: underline; }
+#HTMLReporter .passingAlert { background-color: #a6b779; }
+#HTMLReporter .passingAlert:first-child { background-color: #5e7d00; }
+#HTMLReporter .failingAlert { background-color: #cf867e; }
+#HTMLReporter .failingAlert:first-child { background-color: #b03911; }
+#HTMLReporter .results { margin-top: 14px; }
+#HTMLReporter #details { display: none; }
+#HTMLReporter .resultsMenu, #HTMLReporter .resultsMenu a { background-color: #fff; color: #333333; }
+#HTMLReporter.showDetails .summaryMenuItem { font-weight: normal; text-decoration: inherit; }
+#HTMLReporter.showDetails .summaryMenuItem:hover { text-decoration: underline; }
+#HTMLReporter.showDetails .detailsMenuItem { font-weight: bold; text-decoration: underline; }
+#HTMLReporter.showDetails .summary { display: none; }
+#HTMLReporter.showDetails #details { display: block; }
+#HTMLReporter .summaryMenuItem { font-weight: bold; text-decoration: underline; }
+#HTMLReporter .summary { margin-top: 14px; }
+#HTMLReporter .summary .suite .suite, #HTMLReporter .summary .specSummary { margin-left: 14px; }
+#HTMLReporter .summary .specSummary.passed span { color: #5e7d00; }
+#HTMLReporter .summary .specSummary.failed span { color: #b03911; }
+#HTMLReporter .description + .suite { margin-top: 0; }
+#HTMLReporter .suite { margin-top: 14px; }
+#HTMLReporter .suite a { color: #333333; }
+#HTMLReporter #details .specDetail { margin-bottom: 28px; }
+#HTMLReporter #details .specDetail .description { display: block; color: white; background-color: #b03911; }
+#HTMLReporter .resultMessage { padding-top: 14px; color: #333333; }
+#HTMLReporter .resultMessage span.result { display: block; }
+#HTMLReporter .stackTrace { margin: 5px 0 0 0; max-height: 224px; overflow: auto; line-height: 18px; color: #666666; border: 1px solid #ddd; background: white; white-space: pre; }
+</style>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ <script>
+ 	$(function(){
+		$("a.summaryMenuItem").on("click", function(){
+			$("body").removeClass("showDetails").addClass("showSummary");
+		});
+		$("a.detailsMenuItem").on("click", function(){
+			$("body").addClass("showDetails").removeClass("showSummary");
+		});
+
+	});
+ </script>
+</head>
+
+<body id="HTMLReporter" class="html-reporter showDetails">
+<h1>Chrome 33.0.1750 (Mac OS X 10.9.2)</h1>
+
+<div class="alert">
+
+
+<span class="failingAlert bar">Failed 2 specs</span>
+<span class="resultsMenu bar">
+<a class="summaryMenuItem" href="#">14 specs<a>|<a class="detailsMenuItem" href="#">2 failing</a>
+</span>
+
+
+
+</div>
+<div class="results">
+	<div class="summary">
+
+
+	
+		<div class="suite passed">
+			<span class="description">utility has a</span>
+		
+			<div class="specSummary passed">
+			<span class="description">method crossBrowserCssValue which returns a jq object</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">method pallete</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">method keysVals</span>
+			</div>
+		
+		</div>
+	
+		<div class="suite passed">
+			<span class="description">explain.explainHints</span>
+		
+			<div class="specSummary passed">
+			<span class="description">exists and </span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">and has a function explainHints</span>
+			</div>
+		
+		</div>
+	
+		<div class="suite passed">
+			<span class="description">explanation.insertText</span>
+		
+			<div class="specSummary passed">
+			<span class="description">explanation exists and </span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">has a function insertText</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">which inserts the string passed to it into its' element</span>
+			</div>
+		
+		</div>
+	
+		<div class="suite passed">
+			<span class="description">explanation</span>
+		
+			<div class="specSummary passed">
+			<span class="description">has an array of hints</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">has a jquery object</span>
+			</div>
+		
+		</div>
+	
+		<div class="suite passed">
+			<span class="description">requires</span>
+		
+			<div class="specSummary passed">
+			<span class="description">exist in the way they should</span>
+			</div>
+		
+		</div>
+	
+		<div class="suite failed">
+			<span class="description">sinon</span>
+		
+			<div class="specSummary failed">
+			<span class="description">&quot;before all&quot; hook</span>
+			</div>
+		
+			<div class="specSummary failed">
+			<span class="description">&quot;after all&quot; hook</span>
+			</div>
+		
+		</div>
+	
+		<div class="suite passed">
+			<span class="description">explainHints</span>
+		
+			<div class="specSummary passed">
+			<span class="description">is the method of explain that iterates over each item in the hints array inserting it into the page</span>
+			</div>
+		
+			<div class="specSummary passed">
+			<span class="description">will iterate over each item every second</span>
+			</div>
+		
+		</div>
+	
+</div>
+
+<div id="details">
+	
+	
+	<div class="specDetail failed">
+		<span class="description">sinon &quot;before all&quot; hook</span>
+		<div class="stackTrace">
+			<div class="resultMessage">TypeError: Cannot call method 'useFakeTimers' of undefined
+    at Context.&lt;anonymous&gt; (http://localhost:9876/base/tests/_intro_explanation_midway.js?fe7077734bc870ce79177bb985a63e27f3726e13:52:18)
+    at Hook.Runnable.run (http://localhost:9876/base/node_modules/mocha/mocha.js?a1638402532b75bc2adb78441db75749e8de791c:4336:32)
+    at next (http://localhost:9876/base/node_modules/mocha/mocha.js?a1638402532b75bc2adb78441db75749e8de791c:4609:10)
+    at http://localhost:9876/base/node_modules/mocha/mocha.js?a1638402532b75bc2adb78441db75749e8de791c:4626:5
+    at timeslice (http://localhost:9876/base/node_modules/mocha/mocha.js?a1638402532b75bc2adb78441db75749e8de791c:5733:27)</div>
+		</div>
+	</div>
+	
+	<div class="specDetail failed">
+		<span class="description">sinon &quot;after all&quot; hook</span>
+		<div class="stackTrace">
+			<div class="resultMessage">TypeError: Cannot call method 'restore' of undefined
+    at Context.&lt;anonymous&gt; (http://localhost:9876/base/tests/_intro_explanation_midway.js?fe7077734bc870ce79177bb985a63e27f3726e13:65:10)
+    at Hook.Runnable.run (http://localhost:9876/base/node_modules/mocha/mocha.js?a1638402532b75bc2adb78441db75749e8de791c:4336:32)
+    at next (http://localhost:9876/base/node_modules/mocha/mocha.js?a1638402532b75bc2adb78441db75749e8de791c:4609:10)
+    at http://localhost:9876/base/node_modules/mocha/mocha.js?a1638402532b75bc2adb78441db75749e8de791c:4626:5
+    at timeslice (http://localhost:9876/base/node_modules/mocha/mocha.js?a1638402532b75bc2adb78441db75749e8de791c:5733:27)</div>
+		</div>
+	</div>
+	
+	
+</div>
+</body>
+</html>
+

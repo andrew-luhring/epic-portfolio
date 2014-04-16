@@ -9,9 +9,4 @@
         @import "small";
 }
 /* transitions: */
-#page{
-	transition-property: border, border-radius, box-shadow, -webkit-box-shadow;
-	transition-duration:0.5s;
-	-webkit-transition-property: border, border-radius, box-shadow, -webkit-box-shadow;
-	-webkit-transition-duration:0.5s;
-}
+

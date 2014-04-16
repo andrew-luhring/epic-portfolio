@@ -1,0 +1,32 @@
+//todo : use this for intro, animate the removal
+#page > header.loading {
+	display: table;
+	height: 100%;
+	margin: auto;
+	position: absolute;
+	width: 100%;
+		h1 {
+		background: rgba(122, 122, 122, 1);
+		color: #000;
+		display: table-cell;
+		margin: auto;
+		vertical-align: middle;
+		@include transform(90deg);
+	}
+}
+
+
+body{
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+}
+#page{
+	transform: rotateX(45deg) rotateY(45deg);
+	transform-style: preserve-3d;
+}
+
+header, portfolio, footer{
+	transform-style:  preserve-3d;
+
+}

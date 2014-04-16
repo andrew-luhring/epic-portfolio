@@ -17,13 +17,18 @@ require.config({
 		,   'chai_jq' : 'lib/chai-jq'
 		,   'attrchange': 'lib/attrchange'
 		,   'js_utility': 'lib/js_utility'
+		,   'create': 'lib/create'
+		,   'three' : 'lib/three'
+		,   'mixitup': 'lib/mixitup'
 		//  js
 		,  'browserMocha' : 'js/_browserMocha'
 		,  'ang': 'js/ang'
 		,  'button_init': 'js/button_init'
 		,  'button_methods': 'js/button_methods'
+		,  'button_populate': 'js/button_populate'
 		,  'category_actions': 'js/category_actions'
 		,  'dynamictxt': 'js/dynamictxt'
+		,  'experiments': 'js/experiments'
 		,  'gallery_init': 'js/gallery_init'
 		,  'gallery_methods': 'js/gallery_methods'
 		,  'image_resize' : 'js/image_resize'
@@ -58,6 +63,7 @@ require([
 	,   'category_actions'
 	,   'gallery_methods'
 	,   'image_resize'
+	,   'experiments'
 
 		], function(init){
     });

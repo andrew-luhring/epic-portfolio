@@ -18,6 +18,7 @@ requirejs.config({
 	paths: {
 		//lib
 		'jquery': 'jquery',
+		'jquery-migrate': 'jquery-migrate.js',
 		'angular': 'angular',
 		'angular-touch': 'angular-touch',
 		'angular-animate': 'angular-animate',
@@ -26,25 +27,34 @@ requirejs.config({
 		'animateShadow': 'animateShadow',
 		'chai': 'chai',
 		'chai_jq' : 'chai-jq',
+		'sinon': 'sinon',
+		'create': 'create',
+		'three' : 'three',
+		'mixitup': 'mixitup',
 
+		//tests
 		'chai_things': 'chai-things',
 		'chai_change': 'chai-change',
 		'chai_as_promised': 'chai-as-promised',
-		'sinon-chai': 'sinon-chai',
+		'sinon_chai': 'sinon-chai',
+		'sinon_timers': 'sinon-timers',
 		'mocha' : 'mocha',
 		'window' : '../js/mocha_window',
 		'shadow': 'shadow',
 		'js_utility': 'js_utility',
 		'shadowbox': 'shadowbox',
-		//js
+
+		//scripts
 		'ang': '../js/ang',
 		'button_populate': '../js/button_populate',
 		'button_init': '../js/button_init',
 		'button_methods': '../js/button_methods',
 		'category_actions': '../js/category_actions',
+		'experiments': '../js/experiments',
 		'gallery_init': '../js/gallery_init',
 		'gallery_methods': '../js/gallery_methods',
 		'image_resize' : '../js/image_resize',
+		'imagebox': '../js/imagebox',
 		'intro_animation' : '../js/intro_animation',
 		'intro_explanation': '../js/intro_explanation',
 		'utility': '../js/utility',
@@ -54,11 +64,16 @@ requirejs.config({
 		'portfolio': '../js/portfolio',
 		'resize': '../js/resize_image',
 		'temp': '../js/temp'
+
 	},
 
 	shim: {
 			jquery : { exports: '$' }
 		,   jqueryui : ['jquery']
+		,   sinon : {
+				exports: 'sinon'
+			}
+
 		,   'angular' : {'exports' : 'angular'}
 		,   'angularRoute': ['angular']
 		,   'chai_things': ['chai']

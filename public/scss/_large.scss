@@ -1,105 +1,7 @@
-body {
-	font-family: "Quicksand";
-	font-size: 1em;
-	font-weight: 400;
-	margin: 0.5em auto;
-	width: 100%;
-}
 
-#page {
-	background-color: #fff;
-	border: solid 5px #7be5e5;
-	border-radius: 20px 20px 20px 20px;
-	box-shadow: 10px 15px 45px -5px #400339;
-	margin: auto;
-	max-width: 1300px;
-	min-width: 1025px;
-	-webkit-box-shadow: 10px 15px 45px -5px #400339;
-}
-
-header h1 {
-	color: #444;
-	font-size: 100px;
-	margin-top: 30px;
-}
-
-#portfolio {
-	margin: auto;
-	min-width: 1025px;
-	width: 100%;
-}
-
-#galleryDiv {
-	border: 1px solid #c2c2c2;
-	border-radius: 50px 50px 50px 50px;
-	height: 400px;
-	margin: auto;
-	width: 80%;
-	behavior: url(/PIE.php);
-	-webkit-align-content: space-around;
-	-webkit-flex-flow: row nowrap;
-	-webkit-justify-content: center;
-	img {
-		border: none;
-		height: auto;
-		margin: auto;
-		max-height: 300px;
-		max-height: auto;
-		max-width: 100%;
-	}
-	div {
-		display: -webkit-flex;
-		-webkit-flex-direction: column;
-		-webkit-align-content: center;
-		-webkit-justify-content: center;
-		p {
-			align-self: center;
-			height: auto;
-			-webkit-align-self: center;
-		}
-	}
-	a, img.gallery, img, #temp, #clickToClose {
-		align-self: center;
-		height: auto;
-		-webkit-align-self: center;
-	}
-}
-
-#preview {
-	margin: none;
-	overflow: hidden;
-	padding: 10%;
-	text-align: left;
-}
-
-#warning {
-	margin-left: auto;
-	margin-right: auto;
-	overflow: hidden;
-	padding: 15% 10%;
-	text-align: center;
-}
-
-#hint {
-	margin-bottom: 0;
-	text-align: center;
-	top: 0;
-}
-
-#clickToClose {
-	border: 1px solid #ccc;
-	border-radius: 10px;
-	clear: both;
-	cursor: pointer;
-	margin: 20px auto;
-	max-width: 300px;
-	min-width: 10%;
-	padding: 10px;
-	text-align: center;
-}
 
 .no-flexbox {
-	#centeringDiv, #galleryDiv {
+	#centeringDiv, .gallery {
 		transition-delay: 0s;
 		transition-duration: 0.25s;
 		transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
@@ -107,7 +9,7 @@ header h1 {
 		-webkit-transition-duration: 0.25s;
 		-webkit-transition-delay: 0s;
 	}
-	#galleryDiv {
+	.gallery {
 		padding-top: 30px;
 	}
 	.portfolioContent {

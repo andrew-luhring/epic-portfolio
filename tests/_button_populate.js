@@ -13,10 +13,10 @@ define([
 		var assert = chai.assert;
 		var expect = chai.expect;
 		var should = chai.should;
-		var obj = button_populate;
+
 		var keysVals = utility.keysVals;
 
-
+	button_populate;
 	//describe("angular Buttons", function(){
 	//	it("has a controller Buttons", function(done){
 			//keysVals(obj, false );
@@ -31,44 +31,37 @@ define([
 	//	});
 	//});
 
-	/*	var module
-		before(function() {
-			module = angular.module("App");
-		});
-		it("should be registered", function() {
-			expect(module).not.to.equal(null);
-		});*/
-	/*
-	describe("Dependencies:", function() {
 
-		var deps;
-		var hasModule = function(m) {
+/*	describe("Dependencies:", function() {
+			var obj = button_populate;
+			var   testApp = 'portfolio'
+			,   hasModule ;
+			hasModule = function(m) {
+			var deps = module.value(testApp).requires;
 			return deps.indexOf(m) >= 0;
 		};
-		before(function() {
-			deps = module.value('appName').requires;
-		});
 
+		it("should be registered", function() {
+			expect(obj).to.be.ok;
+		});
 		//you can also test the module's dependencies
-		it("should have App.Controllers as a dependency", function() {
-			expect(hasModule('App.Controllers')).to.equal(true);
+		it.skip("should have "+  testApp + ".Controllers as a dependency", function() {
+			expect(module.controllers).to.equal(true);
 		});
-
-		it("should have App.Directives as a dependency", function() {
-			expect(hasModule('App.Directives')).to.equal(true);
+		it.skip("should have "+  testApp + ".Directives as a dependency", function() {
+			expect(hasModule('portfolio.Directives')).to.equal(true);
 		});
-
-		it("should have App.Filters as a dependency", function() {
-			expect(hasModule('App.Filters')).to.equal(true);
+		it.skip("should have "+  testApp + ".Filters as a dependency", function() {
+			expect(hasModule('portfolio.Filters')).to.equal(true);
 		});
-
-		it("should have App.Routes as a dependency", function() {
-			expect(hasModule('App.Routes')).to.equal(true);
+		it.skip("should have "+  testApp + ".Routes as a dependency", function() {
+			expect(hasModule('portfolio.Routes')).to.equal(true);
 		});
-		it("should have App.Services as a dependency", function() {
-			expect(hasModule('App.Services')).to.equal(true);
+		it.skip("should have "+  testApp + ".Services as a dependency", function() {
+			expect(hasModule('portfolio.Services')).to.equal(true);
 		});
 	});*/
+
 
 
 });

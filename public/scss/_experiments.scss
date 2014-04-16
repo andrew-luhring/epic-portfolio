@@ -1,0 +1,17 @@
+
+body.experiments, #playground{
+	margin: auto;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+}
+
+#overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background: $overlay_bg;
+	display: flex;
+}

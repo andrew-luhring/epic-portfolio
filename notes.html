@@ -1,0 +1,282 @@
+<code >
+
+/*
+	Standard Module Pattern
+ */
+(function(){
+	/**
+	 * Usage:
+	 * Increment our counter
+	 * testModule.incrementCounter();
+	 * Check the counter value
+	 * >>Outputs: 1
+	 * and reset:
+	 * testModule.resetCounter();
+	 */
+	var testModule = (function () {
+		var counter = 0;
+		return {
+			incrementCounter: function () {
+				return counter++;
+			},
+
+			resetCounter: function () {
+				console.log( "counter value prior to reset: " + counter );
+				counter = 0;
+			}
+		};
+	})();
+})();
+/*
+	Module Pattern used to create a namespace.
+ */
+(function(){
+	/**
+	 * Namespacing module pattern:
+	 *  @private myPrivateVar :  private counter variable
+	 *  @private myPrivateMethod : logs any arguments
+	 *  @returns myPublicVar
+	 *  @returns myPublicFunction : @param {thing to pass to private method}
+	 *  increments a private counter, passes {parameter } to myPrivateMethod.
+	 *
+	 *
+	 */
+	var modulePattern = (function () {
+		var myPrivateVar, myPrivateMethod;
+		myPrivateVar = 0;
+		myPrivateMethod = function (foo) {
+			console.log (foo);
+		};
+
+		return {
+			myPublicVar: "foo",
+
+			myPublicFunction: function (bar) {
+
+				myPrivateVar++;
+
+				// Call our private method using bar
+				myPrivateMethod (bar);
+
+			}
+		};
+	}) ();
+})();
+/*
+	Revealing Module pattern
+ */
+(function(){
+	/**
+	 *  this is almost like just adding default behavior ... but it provides a public api.
+	 *
+	 *  privateFunction will always only log Name: privateVar;
+	 *  privateVar can only be set via a public function- but the public function itself can't be by the public; at most it can be erased.
+	 *
+	 *  @Usage: myRevealingModule.setName( "Paul Kinlan" );
+	 *
+	 *  evidently this is more fragile.
+	 */
+	var myRevealingModule = (function () {
+
+		var privateVar = "Ben Cherry",
+				publicVar  = "Hey there!";
+
+		function privateFunction() {
+			console.log( "Name:" + privateVar );
+		}
+
+		function publicSetName( strName ) {
+			privateVar = strName;
+		}
+
+		function publicGetName() {
+			privateFunction();
+		}
+		// Reveal public pointers to
+		// private functions and properties
+		return {
+			setName: publicSetName,
+			greeting: publicVar,
+			getName: publicGetName
+		};
+
+	})();
+
+});
+/*
+	The Singleton Pattern
+		If you find yourself using a lot of singletons, it may be time to reevalutate your design
+		<a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript">bottom of this section.</a>
+*/
+(function(){
+	/**
+	 *
+	 *  Usage:
+	 *  var singleA = mySingleton.getInstance();
+	 *  var singleB = mySingleton.getInstance();
+	 *  console.log( singleA.getRandomNumber() === singleB.getRandomNumber() ); // true
+	 *
+	 *  var badSingleA = myBadSingleton.getInstance();
+	 *  var badSingleB = myBadSingleton.getInstance();
+	 *  console.log( badSingleA.getRandomNumber() === badSingleB.getRandomNumber() ); // NOT true
+	 *  see tldr above badSingleton for details
+	 */
+
+	var mySingleton = (function () {
+
+		// Instance stores a reference to the Singleton
+		var instance;
+
+		function init() {
+
+			// Singleton
+
+			// Private methods and variables
+			function privateMethod(){
+				console.log( "I am private" );
+			}
+
+			var privateVariable = "Im also private";
+
+			var privateRandomNumber = Math.random();
+
+			return {
+
+				// Public methods and variables
+				publicMethod: function () {
+					console.log( "The public can see me!" );
+				},
+
+				publicProperty: "I am also public",
+
+				getRandomNumber: function() {
+					return privateRandomNumber;
+				}
+
+			};
+
+		};
+
+		return {
+
+			// Get the Singleton instance if one exists
+			// or create one if it doesn't
+			getInstance: function () {
+
+				if ( !instance ) {
+					instance = init();
+				}
+
+				return instance;
+			}
+
+		};
+
+	})();
+	/*
+			TLDR: A singleton should make sure there can only ever be 1 of itself.
+			This is the same as above except getInstance doesn't check to make sure the instance doesn't exist yet.
+	 */
+	var myBadSingleton = (function () {
+
+		// Instance stores a reference to the Singleton
+		var instance;
+
+		function init() {
+			// Singleton
+			var privateRandomNumber = Math.random();
+			return {
+				getRandomNumber: function() {
+					return privateRandomNumber;
+				}
+
+			};
+
+		};
+
+		return {
+
+			// Always create a new Singleton instance
+			getInstance: function () {
+// this is NOT a singleton because it does NOT check to make sure there isn't already an instance
+				instance = init();
+
+				return instance;
+			}
+
+		};
+
+	})();
+})();
+
+/*
+	##Observer pattern
+
++   Subject: maintains a list of observers, facilitates adding or removing observers
++   Observer: provides a update interface for objects that need to be notified of a Subject's changes of state
++   ConcreteSubject: broadcasts notifications to observers on changes of state, stores the state of ConcreteObservers
++   ConcreteObserver: stores a reference to the ConcreteSubject, implements an update interface for the Observer to ensure state is consistent with the Subject's
+
+*/
+
+(function(){
+//  make observer list to pass to subject.
+	function ObserverList(){
+		this.observerList = [];
+	}
+	//  give observer list add count get indexOf and removeAt methods
+	ObserverList.prototype.add = function( obj ){
+		return this.observerList.push( obj );
+	};
+	ObserverList.prototype.count = function(){
+		return this.observerList.length;
+	};
+	ObserverList.prototype.get = function( index ){
+		if( index > -1 && index < this.observerList.length ){
+			return this.observerList[ index ];
+		}
+	};
+	ObserverList.prototype.indexOf = function( obj, startIndex ){
+	var i = startIndex;
+		while( i < this.observerList.length ){
+			if( this.observerList[i] === obj ){
+				return i;
+			}
+			i++;
+		}
+		return -1;
+	};
+	ObserverList.prototype.removeAt = function( index ){
+	this.observerList.splice( index, 1 );
+};
+
+//  make subject
+function Subject(){
+	this.observers = new ObserverList();
+}
+	//  give the subject the ability to add remove and notify observers in the Observer list;
+	Subject.prototype.addObserver = function( observer ){
+		this.observers.add( observer );
+	};
+	Subject.prototype.removeObserver = function( observer ){
+		this.observers.removeAt( this.observers.indexOf( observer, 0 ) );
+	};
+	Subject.prototype.notify = function( context ){
+		var observerCount = this.observers.count();
+		for(var i=0; i < observerCount; i++){
+			//update? where's that defined?
+		this.observers.get(i).update( context );
+		}
+	};
+
+//  create observer skeleton; add the update method that I was confused about above.
+function Observer(){
+	this.update = function(){
+		//do stuff.
+	};
+}
+
+})();
+
+
+</code >

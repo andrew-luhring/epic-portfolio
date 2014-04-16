@@ -89,9 +89,7 @@ module.exports = function(grunt) {
 						}
 					,   name: 'doccoV'
 					}
-				,   files: {
-						'./assets/styleguide/styledocco' : 'assets/scss/*.scss'
-					}
+				,   files: []
 				}
 			,   kss: {
 					options: {
@@ -100,9 +98,7 @@ module.exports = function(grunt) {
 						}
 					,   name: 'kssV'
 					}
-					,   files: {
-						'./assets/styleguide/kss' : 'assets/scss/*.scss'
-					}
+					,   files: []
 				}
 			}
 		,   Mocha: {
@@ -158,8 +154,8 @@ module.exports = function(grunt) {
 	config["styleguide"]["docco"]["files"][STYLEGUIDE_DIR] = SCSS_DIR +'*.scss' ;
 	config["styleguide"]["kss"]["files"][STYLEGUIDE_DIR] = SCSS_DIR +'*.scss' ;
 
-	grunt.initConfig( config );
 
+	grunt.initConfig( config );
 
 	simplebuild.loadNpmTasks("../config/simplebuild-mocha.js");
 	grunt.loadNpmTasks('grunt-contrib-sass');
@@ -208,7 +204,9 @@ function lintOptions() {
 		,   mocha : true
 		,   describe : true
 		,   it : true
+		,   before : true
 		,   beforeEach: true
+		,   after: true
 		,   afterEach : true
 		,   define : true
 		,   require : true
@@ -220,7 +218,7 @@ function lintOptions() {
 function sassOptions(){
 return {
 		compass : "true"
-		,	lineNumbers: "true"
+		,	lineNumbers: "false"
 		,	style : 'expanded'
 		,	sourcemap: 'true'
 	};

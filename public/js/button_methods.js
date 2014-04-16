@@ -25,7 +25,7 @@ define(['jquery', 'button_populate', 'jqueryui'], function($, buttons){
 		});
 	});
 	$('.workTypes').each(function() {
-		worktypes.push(this);
+		//worktypes.push(this);
 	});
 
 	function fadeThemOut(worktypes) {

@@ -1,95 +1,88 @@
 html {
 	@extend .noise;
 }
-
 body {
-	background: #fefeff;
 	font-family: "Quicksand";
-	font-size: 1em;
+	font-size: 1rem;
 	font-weight: 300;
+	margin: 0.5rem auto;
 	width: 100%;
 }
-
 a {
 	text-decoration: none;
 }
-
-#IEroot {
-	color: #aaa;
-	font-size: 0.75em;
-	a {
-		color: #5dc6f2;
-	}
+.page{
+	transition-property: border, border-radius, box-shadow, -webkit-box-shadow;
+	transition-duration:0.5s;
+	-webkit-transition-property: border, border-radius, box-shadow, -webkit-box-shadow;
+	-webkit-transition-duration:0.5s;
 }
-
-header {
-	margin: auto;
-	h1 {
-		font: normal normal 200 80px "Comfortaa", "Helvetica-Neue", Arial, sans-serif;
+.page_title{
+		margin-top: 1rem;
+		font: normal normal 200 8rem "Comfortaa", "Helvetica-Neue", Arial, sans-serif;
 		text-align: center;
-	}
+}
+.smile{
+	@include transform(rotate(90deg));
+}
+.page_header {
+	margin: auto;
 }
 
 .flexy {
-	display: -webkit-flex !important;
-	display: -moz-flex !important;
-	display: -o-flex !important;
-	display: -ms-flexbox !important;
-	display: flex !important;
-}
-
-#portfolio {
-	margin: auto;
-	width: 100%;
-}
-
-#galleryDiv {
-	display: -webkit-flex;
-	flex-direction: row;
-	behavior: url(/PIE.php);
-	img {
-		height: auto;
-		min-width: 100px;
-	}
+	@include displayflex;
 }
 
 #centeringDiv {
-	$w-flex-flow: row nowrap;
-	$w-align-self: stretch;
-	align-items: stretch;
-	align-self: stretch;
-	display: -webkit-flex;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
 	margin: auto;
 	overflow: visible;
 	width: 100%;
-	-webkit-justify-content: space-around;
-	-webkit-align-items: stretch;
+	@include align-items(stretch);
+	@include align-self(stretch);
+	@include displayflex;
+	@include justify-content(space-around);
+	@include flex-direction(row);
+	@include align-items(stretch);
 	a {
-		align-items: center;
-		display: -webkit-flex;
-		display: flex;
-		flex: 1;
-		justify-content: center;
-		-webkit-align-items: center;
-		-webkit-flex: 1;
-		-webkit-justify-content: center;
-		behavior: url(/PIE.php);
+		@include align-items(center);
+		@include justify-content(center);
+		@include displayflex;
+		@include flex(1);
 		p {
 			margin: auto;
 		}
 	}
 }
 
-#galleryDiv img, #galleryDiv a {
-	position: relative;
-	@include transition(all 1s);
+
+
+@media all and (min-width: 1025px){
+	.page {
+		background-color: #fff;
+		border: solid 5px #7be5e5;
+		border-radius: 20px 20px 20px 20px;
+		box-shadow: 10px 15px 45px -5px #400339;
+		margin: auto;
+		max-width: 1300px;
+		min-width: 1025px;
+		-webkit-box-shadow: 10px 15px 45px -5px #400339;
+	}
+	.page_title {
+		color: #444;
+		font-size: 10rem;
+		margin-top: 3rem;
+	}
 }
 
-#galleryDiv img:hover, #galleryDIv a:hover {
-	transform: scale(1.3);
-	z-index: 9000;
-	@include transition(all 1s);
+@media all and (min-width: 768px) and (max-width: 1024px){
+	.page_title {
+		color: #333;
+	}
+}
+
+@media all and (max-width: 767px){
+	.page_title {
+		color: #222;
+		font-size: 3rem;
+	}
 }

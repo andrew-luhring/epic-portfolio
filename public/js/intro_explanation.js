@@ -26,10 +26,6 @@ define ([
 	 */
 
 	function Explain(objToPrintTo, callback){
-
-
-
-
 		var $obj = $(objToPrintTo);
 		var hints = [
 					"(if you want to see my work, just click one of these buttons.)"
@@ -55,14 +51,12 @@ define ([
 		function insertText(str, testapi){
 			$($obj).text(str);
 			if(testapi === true){
-				//console.log("true");
 				return $obj.text();
 			}
 		}
 		this.insertText = insertText;
 
 		function explainHints(time, testapi, callback){
-			//console.log(hints);
 			var ok = false
 				, index = 0
 				, returnTxt = [];
@@ -74,7 +68,6 @@ define ([
 					if(index < length){
 						insertText(hints[index], true);
 						returnTxt.push(hints[index]);
-
 						ok = false;
 						index++;
 					}
@@ -84,7 +77,7 @@ define ([
 			} , time);
 			if(testapi === true){
 				if(callback){callback();}
-				return returnTxt
+				return returnTxt;
 			}
 		}
 		this.explainHints = explainHints;

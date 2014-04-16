@@ -1,24 +1,24 @@
 /*Code + Design + everything else by Andrew Luhring @ bisforbounce.com*/
-/* line 6, ../scss/_base.scss */
+/* line 14, ../scss/_base.scss */
 html {
   font-size: 62.5%;
 }
 
-/* line 10, ../scss/_base.scss */
+/* line 18, ../scss/_base.scss */
 body {
   font-size: 1.6rem;
 }
 
-/* line 114, ../scss/_base.scss */
+/* line 134, ../scss/_base.scss */
 .noise, html {
   z-index: 1;
 }
 
-/* line 118, ../scss/_base.scss */
+/* line 138, ../scss/_base.scss */
 .noise:before, html:before, .body-noise:before {
-  background-image: url(data:image/png;base64,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) !important;
+  background-image: url(data:image/png;base64,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);
   bottom: 0;
-  content: "" !important;
+  content: "";
   left: 0;
   opacity: 0.6;
   position: absolute;
@@ -29,27 +29,27 @@ body {
 
 /* line 2, ../scss/_failsafe.scss */
 .no-flexbox .portfolioContent {
-  min-width: 1015px;
-  width: 90%;
   margin: auto;
+  min-width: 1015px;
   overflow: visible;
+  width: 90%;
 }
 /* line 8, ../scss/_failsafe.scss */
-.no-flexbox #galleryDiv {
-  width: 100%;
+.no-flexbox .gallery {
   display: table;
+  width: 100%;
 }
 /* line 11, ../scss/_failsafe.scss */
-.no-flexbox #galleryDiv > a {
+.no-flexbox .gallery > a {
   border: none;
+  display: table-cell;
   font-size: 1em;
-  text-align: center;
   margin: auto;
+  text-align: center;
   vertical-align: middle;
-  display: table-cell !important;
 }
 /* line 19, ../scss/_failsafe.scss */
-.no-flexbox #galleryDiv img {
+.no-flexbox .gallery img {
   max-height: 200px;
   max-width: 315px;
   min-width: 100px;
@@ -59,182 +59,160 @@ body {
   margin: auto;
   text-align: justify;
 }
-/* line 29, ../scss/_failsafe.scss */
+/* line 28, ../scss/_failsafe.scss */
 .no-flexbox #centeringDiv:after {
   content: " ";
   display: inline-block;
   width: 100%;
 }
-/* line 34, ../scss/_failsafe.scss */
+/* line 33, ../scss/_failsafe.scss */
 .no-flexbox #centeringDiv > a {
   border: none;
+  display: inline-table;
   font-size: 1em;
   text-align: center;
-  display: inline-table;
 }
-/* line 41, ../scss/_failsafe.scss */
+/* line 40, ../scss/_failsafe.scss */
 .no-flexbox .workTypesSelected, .no-flexbox .workTypes {
   display: table;
 }
-/* line 43, ../scss/_failsafe.scss */
+/* line 42, ../scss/_failsafe.scss */
 .no-flexbox .workTypesSelected p, .no-flexbox .workTypes p {
   display: table-cell;
 }
-/* line 50, ../scss/_failsafe.scss */
-.no-flexbox footer {
-  width: 50%;
+/* line 46, ../scss/_failsafe.scss */
+.no-flexbox .page_footer {
   margin: auto;
   min-width: 620px;
+  width: 50%;
 }
-/* line 54, ../scss/_failsafe.scss */
-.no-flexbox footer > div:after {
+/* line 50, ../scss/_failsafe.scss */
+.no-flexbox .page_footer > div:after {
   content: " ";
   display: inline-block;
   width: 100%;
 }
-/* line 59, ../scss/_failsafe.scss */
-.no-flexbox footer > div {
+/* line 55, ../scss/_failsafe.scss */
+.no-flexbox .page_footer > div {
   margin: 0;
   min-height: 100%;
   text-align: justify;
 }
-/* line 63, ../scss/_failsafe.scss */
-.no-flexbox footer > div a {
+/* line 59, ../scss/_failsafe.scss */
+.no-flexbox .page_footer > div a {
   display: inline-table;
-  white-space: normal;
   height: 75px;
+  white-space: normal;
   width: 75px;
 }
-/* line 68, ../scss/_failsafe.scss */
-.no-flexbox footer > div a div {
+/* line 64, ../scss/_failsafe.scss */
+.no-flexbox .page_footer > div a div {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
 
-/* line 5, ../scss/_defaults.scss */
+/* line 4, ../scss/_defaults.scss */
 body {
-  background: #fefeff;
   font-family: "Quicksand";
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 300;
+  margin: 0.5rem auto;
   width: 100%;
 }
 
-/* line 13, ../scss/_defaults.scss */
+/* line 11, ../scss/_defaults.scss */
 a {
   text-decoration: none;
 }
 
-/* line 17, ../scss/_defaults.scss */
-#IEroot {
-  color: #aaa;
-  font-size: 0.75em;
-}
-/* line 20, ../scss/_defaults.scss */
-#IEroot a {
-  color: #5dc6f2;
+/* line 14, ../scss/_defaults.scss */
+.page {
+  transition-property: border, border-radius, box-shadow, -webkit-box-shadow;
+  transition-duration: 0.5s;
+  -webkit-transition-property: border, border-radius, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 0.5s;
 }
 
-/* line 25, ../scss/_defaults.scss */
-header {
-  margin: auto;
-}
-/* line 27, ../scss/_defaults.scss */
-header h1 {
-  font: normal normal 200 80px "Comfortaa", "Helvetica-Neue", Arial, sans-serif;
+/* line 20, ../scss/_defaults.scss */
+.page_title {
+  margin-top: 1rem;
+  font: normal normal 200 8rem "Comfortaa", "Helvetica-Neue", Arial, sans-serif;
   text-align: center;
 }
 
-/* line 33, ../scss/_defaults.scss */
-.flexy {
-  display: -webkit-flex !important;
-  display: -moz-flex !important;
-  display: -o-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+/* line 25, ../scss/_defaults.scss */
+.smile {
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
-/* line 41, ../scss/_defaults.scss */
-#portfolio {
+/* line 28, ../scss/_defaults.scss */
+.page_header {
   margin: auto;
-  width: 100%;
 }
 
-/* line 46, ../scss/_defaults.scss */
-#galleryDiv {
+/* line 32, ../scss/_defaults.scss */
+.flexy {
+  display: -webkit-box;
+  display: box;
   display: -webkit-flex;
-  flex-direction: row;
-  behavior: url(/PIE.php);
-}
-/* line 50, ../scss/_defaults.scss */
-#galleryDiv img {
-  height: auto;
-  min-width: 100px;
-}
-
-/* line 56, ../scss/_defaults.scss */
-#centeringDiv {
-  align-items: stretch;
-  align-self: stretch;
-  display: -webkit-flex;
+  display: -moz-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+}
+
+/* line 36, ../scss/_defaults.scss */
+#centeringDiv {
   margin: auto;
   overflow: visible;
   width: 100%;
-  -webkit-justify-content: space-around;
   -webkit-align-items: stretch;
-}
-/* line 70, ../scss/_defaults.scss */
-#centeringDiv a {
-  align-items: center;
+  align-items: stretch;
+  -webkit-align-self: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: box;
   display: -webkit-flex;
+  display: -moz-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-flex: 1;
-  -webkit-justify-content: center;
-  behavior: url(/PIE.php);
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  align-items: stretch;
 }
-/* line 80, ../scss/_defaults.scss */
+/* line 46, ../scss/_defaults.scss */
+#centeringDiv a {
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  flex: 1;
+}
+/* line 51, ../scss/_defaults.scss */
 #centeringDiv a p {
   margin: auto;
 }
 
-/* line 86, ../scss/_defaults.scss */
-#galleryDiv img, #galleryDiv a {
-  position: relative;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-/* line 91, ../scss/_defaults.scss */
-#galleryDiv img:hover, #galleryDIv a:hover {
-  transform: scale(1.3);
-  z-index: 9000;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
 @media all and (min-width: 1025px) {
-  /* line 1, ../scss/_large.scss */
-  body {
-    font-family: "Quicksand";
-    font-size: 1em;
-    font-weight: 400;
-    margin: 0.5em auto;
-    width: 100%;
-  }
-
-  /* line 9, ../scss/_large.scss */
-  #page {
+  /* line 60, ../scss/_defaults.scss */
+  .page {
     background-color: #fff;
     border: solid 5px #7be5e5;
     border-radius: 20px 20px 20px 20px;
@@ -245,100 +223,30 @@ header h1 {
     -webkit-box-shadow: 10px 15px 45px -5px #400339;
   }
 
-  /* line 20, ../scss/_large.scss */
-  header h1 {
+  /* line 70, ../scss/_defaults.scss */
+  .page_title {
     color: #444;
-    font-size: 100px;
-    margin-top: 30px;
+    font-size: 10rem;
+    margin-top: 3rem;
   }
-
-  /* line 26, ../scss/_large.scss */
-  #portfolio {
-    margin: auto;
-    min-width: 1025px;
-    width: 100%;
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  /* line 78, ../scss/_defaults.scss */
+  .page_title {
+    color: #333;
   }
-
-  /* line 32, ../scss/_large.scss */
-  #galleryDiv {
-    border: 1px solid #c2c2c2;
-    border-radius: 50px 50px 50px 50px;
-    height: 400px;
-    margin: auto;
-    width: 80%;
-    behavior: url(/PIE.php);
-    -webkit-align-content: space-around;
-    -webkit-flex-flow: row nowrap;
-    -webkit-justify-content: center;
+}
+@media all and (max-width: 767px) {
+  /* line 84, ../scss/_defaults.scss */
+  .page_title {
+    color: #222;
+    font-size: 3rem;
   }
-  /* line 42, ../scss/_large.scss */
-  #galleryDiv img {
-    border: none;
-    height: auto;
-    margin: auto;
-    max-height: 300px;
-    max-height: auto;
-    max-width: 100%;
-  }
-  /* line 50, ../scss/_large.scss */
-  #galleryDiv div {
-    display: -webkit-flex;
-    -webkit-flex-direction: column;
-    -webkit-align-content: center;
-    -webkit-justify-content: center;
-  }
-  /* line 55, ../scss/_large.scss */
-  #galleryDiv div p {
-    align-self: center;
-    height: auto;
-    -webkit-align-self: center;
-  }
-  /* line 61, ../scss/_large.scss */
-  #galleryDiv a, #galleryDiv img.gallery, #galleryDiv img, #galleryDiv #temp, #galleryDiv #clickToClose {
-    align-self: center;
-    height: auto;
-    -webkit-align-self: center;
-  }
-
-  /* line 68, ../scss/_large.scss */
-  #preview {
-    margin: none;
-    overflow: hidden;
-    padding: 10%;
-    text-align: left;
-  }
-
-  /* line 75, ../scss/_large.scss */
-  #warning {
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    padding: 15% 10%;
-    text-align: center;
-  }
-
-  /* line 83, ../scss/_large.scss */
-  #hint {
-    margin-bottom: 0;
-    text-align: center;
-    top: 0;
-  }
-
-  /* line 89, ../scss/_large.scss */
-  #clickToClose {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    clear: both;
-    cursor: pointer;
-    margin: 20px auto;
-    max-width: 300px;
-    min-width: 10%;
-    padding: 10px;
-    text-align: center;
-  }
-
-  /* line 102, ../scss/_large.scss */
-  .no-flexbox #centeringDiv, .no-flexbox #galleryDiv {
+}
+@Include "gallery";
+@media all and (min-width: 1025px) {
+  /* line 4, ../scss/_large.scss */
+  .no-flexbox #centeringDiv, .no-flexbox .gallery {
     transition-delay: 0s;
     transition-duration: 0.25s;
     transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
@@ -346,25 +254,25 @@ header h1 {
     -webkit-transition-duration: 0.25s;
     -webkit-transition-delay: 0s;
   }
-  /* line 110, ../scss/_large.scss */
-  .no-flexbox #galleryDiv {
+  /* line 12, ../scss/_large.scss */
+  .no-flexbox .gallery {
     padding-top: 30px;
   }
-  /* line 113, ../scss/_large.scss */
+  /* line 15, ../scss/_large.scss */
   .no-flexbox .portfolioContent {
     min-width: 1015px;
     width: 90%;
   }
-  /* line 117, ../scss/_large.scss */
+  /* line 19, ../scss/_large.scss */
   .no-flexbox #centeringDiv {
     min-width: 1010px;
   }
-  /* line 119, ../scss/_large.scss */
+  /* line 21, ../scss/_large.scss */
   .no-flexbox #centeringDiv div {
     max-height: 200px;
     max-width: 200px;
   }
-  /* line 124, ../scss/_large.scss */
+  /* line 26, ../scss/_large.scss */
   .no-flexbox #centeringDiv > a .workTypesSelected, .no-flexbox #centeringDiv > a .workTypes {
     border: 3px solid #7be5e5;
     border-radius: 25%;
@@ -373,99 +281,8 @@ header h1 {
   }
 }
 @media all and (min-width: 768px) and (max-width: 1024px) {
-  /* line 1, ../scss/_medium.scss */
-  body {
-    font-size: 1em;
-    margin: 0.5em auto;
-  }
-
-  /* line 6, ../scss/_medium.scss */
-  header h1 {
-    color: #333;
-    font-size: 80px;
-    margin-top: 10px;
-  }
-
-  /* line 12, ../scss/_medium.scss */
-  #galleryDiv {
-    border: 1px solid #c2c2c2;
-    border-radius: 50px 50px 50px 50px;
-    height: 400px;
-    margin: auto;
-    width: 80%;
-    -webkit-align-content: space-around;
-    -webkit-flex-flow: row nowrap;
-    -webkit-justify-content: center;
-    behavior: url(/PIE.php);
-  }
-  /* line 22, ../scss/_medium.scss */
-  #galleryDiv img {
-    border: none;
-    height: auto;
-    margin: auto;
-    max-height: 300px;
-    max-height: auto;
-    max-width: 100%;
-  }
-  /* line 30, ../scss/_medium.scss */
-  #galleryDiv div {
-    display: -webkit-flex;
-    -webkit-flex-direction: column;
-    -webkit-align-content: center;
-    -webkit-justify-content: center;
-  }
-  /* line 35, ../scss/_medium.scss */
-  #galleryDiv div p {
-    align-self: center;
-    height: auto;
-    -webkit-align-self: center;
-  }
-  /* line 41, ../scss/_medium.scss */
-  #galleryDiv a, #galleryDiv img.gallery, #galleryDiv img, #galleryDiv #temp, #galleryDiv #clickToClose {
-    align-self: center;
-    height: auto;
-    -webkit-align-self: center;
-  }
-
-  /* line 48, ../scss/_medium.scss */
-  #preview {
-    margin: none;
-    overflow: hidden;
-    padding: 10%;
-    text-align: left;
-  }
-
-  /* line 55, ../scss/_medium.scss */
-  #warning {
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    padding: 15% 10%;
-    text-align: center;
-  }
-
-  /* line 63, ../scss/_medium.scss */
-  #hint {
-    margin-bottom: 0;
-    text-align: center;
-    top: 0;
-  }
-
-  /* line 69, ../scss/_medium.scss */
-  #clickToClose {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    clear: both;
-    cursor: pointer;
-    margin: 20px auto;
-    max-width: 300px;
-    min-width: 10%;
-    padding: 10px;
-    text-align: center;
-  }
-
-  /* line 82, ../scss/_medium.scss */
-  .no-flexbox #centeringDiv, .no-flexbox #galleryDiv {
+  /* line 2, ../scss/_medium.scss */
+  .no-flexbox #centeringDiv, .no-flexbox .gallery {
     transition-delay: 2s;
     transition-duration: 0.25s;
     transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
@@ -473,25 +290,25 @@ header h1 {
     -webkit-transition-duration: 0.25s;
     -webkit-transition-delay: 2s;
   }
-  /* line 90, ../scss/_medium.scss */
+  /* line 10, ../scss/_medium.scss */
   .no-flexbox .portfolioContent {
     min-width: 800px;
     width: 90%;
   }
-  /* line 94, ../scss/_medium.scss */
-  .no-flexbox #galleryDiv {
+  /* line 14, ../scss/_medium.scss */
+  .no-flexbox .gallery {
     padding-top: 30px;
   }
-  /* line 97, ../scss/_medium.scss */
+  /* line 17, ../scss/_medium.scss */
   .no-flexbox #centeringDiv {
     min-width: 800px;
   }
-  /* line 99, ../scss/_medium.scss */
+  /* line 19, ../scss/_medium.scss */
   .no-flexbox #centeringDiv div {
     max-height: 150px;
     max-width: 150px;
   }
-  /* line 104, ../scss/_medium.scss */
+  /* line 24, ../scss/_medium.scss */
   .no-flexbox #centeringDiv > a .workTypesSelected, .no-flexbox #centeringDiv > a .workTypes {
     border: 2px solid #7be5e5;
     border-radius: 25%;
@@ -502,150 +319,42 @@ header h1 {
     -webkit-transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
     -webkit-transition-duration: 2s;
   }
-  /* line 116, ../scss/_medium.scss */
-  .no-flexbox footer {
+  /* line 36, ../scss/_medium.scss */
+  .no-flexbox .page_footer {
     min-width: 620px;
   }
 }
 @media all and (max-width: 767px) {
-  /* line 1, ../scss/_small.scss */
-  body {
-    font-size: 0.5em;
-    margin: 0.5em auto;
-  }
-
-  /* line 6, ../scss/_small.scss */
-  header h1 {
-    font-size: 30px;
-    margin-top: 10px;
-  }
-
-  /* line 11, ../scss/_small.scss */
-  #portfolio {
-    margin: auto;
-    min-width: 240px;
-    width: 100%;
-  }
-
-  /* line 17, ../scss/_small.scss */
-  #galleryDiv {
-    align-items: flex-start;
-    border: 1px solid #c2c2c2;
-    flex-direction: column;
-    margin: auto;
-    min-height: 400px;
-    overflow: hidden;
-    width: 80%;
-    behavior: url(/PIE.php);
-    -webkit-align-content: center;
-    -webkit-flex-direction: column;
-    -webkit-justify-content: center;
-    -webkit-align-items: flex-start;
-  }
-  /* line 30, ../scss/_small.scss */
-  #galleryDiv img {
-    border: none;
-    margin: auto;
-    max-height: 100px;
-    max-width: 100%;
-    -webkit-align-self: flex-start;
-  }
-  /* line 37, ../scss/_small.scss */
-  #galleryDiv div {
-    align-content: center;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    -webkit-flex-direction: column;
-    -webkit-align-content: center;
-    -webkit-justify-content: center;
-  }
-  /* line 46, ../scss/_small.scss */
-  #galleryDiv div p {
-    align-self: center;
-    height: auto;
-    -webkit-align-self: center;
-  }
-  /* line 52, ../scss/_small.scss */
-  #galleryDiv a, #galleryDiv img.gallery, #galleryDiv img, #galleryDiv #temp, #galleryDiv #clickToClose {
-    align-self: center;
-    height: auto;
-    -webkit-align-self: center;
-  }
-
-  /* line 59, ../scss/_small.scss */
-  #preview {
-    margin: none;
-    overflow: hidden;
-    padding: 10%;
-    text-align: left;
-  }
-
-  /* line 66, ../scss/_small.scss */
-  #warning {
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    padding: 15% 10%;
-    text-align: center;
-  }
-
-  /* line 74, ../scss/_small.scss */
-  #hint {
-    margin-bottom: 0;
-    text-align: center;
-    top: 0;
-  }
-
-  /* line 80, ../scss/_small.scss */
-  #galleryDiv {
-    padding-top: 10px;
-  }
-
-  /* line 84, ../scss/_small.scss */
-  #clickToClose {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    clear: both;
-    cursor: pointer;
-    margin: 20px auto;
-    max-width: 300px;
-    min-width: 10%;
-    padding: 10px;
-    text-align: center;
-  }
-
-  /* line 97, ../scss/_small.scss */
-  .no-flexbox #centeringDiv, .no-flexbox #galleryDiv {
+  /* line 2, ../scss/_small.scss */
+  .no-flexbox #centeringDiv, .no-flexbox .gallery {
     min-width: 240px;
     width: 90%;
   }
-  /* line 101, ../scss/_small.scss */
-  .no-flexbox #galleryDiv {
-    display: table !important;
+  /* line 6, ../scss/_small.scss */
+  .no-flexbox .gallery {
+    display: table;
   }
-  /* line 103, ../scss/_small.scss */
-  .no-flexbox #galleryDiv a {
-    display: table !important;
+  /* line 8, ../scss/_small.scss */
+  .no-flexbox .gallery a {
+    display: table;
     margin: auto;
   }
-  /* line 106, ../scss/_small.scss */
-  .no-flexbox #galleryDiv a img {
+  /* line 11, ../scss/_small.scss */
+  .no-flexbox .gallery a img {
     clear: both;
     float: left;
   }
-  /* line 112, ../scss/_small.scss */
+  /* line 17, ../scss/_small.scss */
   .no-flexbox .portfolioContent {
     min-width: 260px;
     width: 90%;
   }
-  /* line 117, ../scss/_small.scss */
+  /* line 22, ../scss/_small.scss */
   .no-flexbox #centeringDiv > a {
     display: table;
     margin: 10px auto;
   }
-  /* line 120, ../scss/_small.scss */
+  /* line 25, ../scss/_small.scss */
   .no-flexbox #centeringDiv > a .workTypesSelected, .no-flexbox #centeringDiv > a .workTypes {
     background: #fff;
     border: 2px solid #7be5e5;
@@ -655,14 +364,14 @@ header h1 {
     min-width: 220px;
     width: 90%;
   }
-  /* line 131, ../scss/_small.scss */
-  .no-flexbox footer {
+  /* line 36, ../scss/_small.scss */
+  .no-flexbox .page_footer {
     min-width: 240px;
-    padding: 0 !important;
+    padding: 0;
     width: 80%;
   }
-  /* line 135, ../scss/_small.scss */
-  .no-flexbox footer > div a {
+  /* line 40, ../scss/_small.scss */
+  .no-flexbox .page_footer > div a {
     border-radius: 15px;
     display: table;
     height: 30px;
@@ -671,97 +380,89 @@ header h1 {
   }
 }
 /* transitions: */
-/* line 12, ../scss/_responsive.scss */
-#page {
-  transition-property: border, border-radius, box-shadow, -webkit-box-shadow;
-  transition-duration: 0.5s;
-  -webkit-transition-property: border, border-radius, box-shadow, -webkit-box-shadow;
-  -webkit-transition-duration: 0.5s;
-}
-
 /* line 2, ../scss/_lightbox.scss */
 #ui-lightbox-bottombar {
-  margin-top: 0px;
-  height: 0px;
+  height: 0;
+  margin-top: 0;
+  overflow: visible;
   position: relative;
   z-index: 200;
-  overflow: visible;
 }
 
 /* line 10, ../scss/_lightbox.scss */
 #ui-lightbox-bottombar > #ui-lightbox-title-wrapper {
-  margin: auto;
-  height: auto;
   font-size: 20px;
+  height: auto;
   line-height: 20px;
-  z-index: 999;
+  margin: auto;
   overflow: visible;
+  z-index: 999;
 }
 
 /* line 19, ../scss/_lightbox.scss */
 #ui-lightbox-title {
-  position: relative;
-  line-height: 40px;
-  padding: 3% 10%;
-  min-width: 300px;
-  margin-left: 1px;
-  margin-right: 1px;
   background-color: #e2e2e2;
   color: black;
+  line-height: 40px;
+  margin-left: 1px;
+  margin-right: 1px;
+  min-width: 300px;
+  padding: 3% 10%;
+  position: relative;
   text-align: center;
 }
 
 /* line 31, ../scss/_lightbox.scss */
 #ui-lightbox-button-prev, #ui-lightbox-button-next, #ui-lightbox-button-close, #ui-description {
-  position: absolute;
+  background-color: #e2e2e2;
+  border: 1px solid gray;
   border-radius: 10px;
-  text-align: center;
+  display: inline-block;
   font-size: 20px;
+  line-height: 20px;
+  overflow: visible;
+  padding: 5px 15px;
+  position: absolute;
+  text-align: center;
   vertical-align: middle;
   z-index: 300;
-  border: 1px solid gray;
-  display: inline-block;
-  background-color: #E2E2E2;
-  padding: 5px 15px;
-  line-height: 20px;
   behavior: url(/PIE.php);
-  overflow: visible;
 }
 
-/* line 46, ../scss/_lightbox.scss */
+/* line 47, ../scss/_lightbox.scss */
 #ui-lightbox-button-prev {
-  top: 50%;
   left: 5%;
+  top: 50%;
 }
 
-/* line 50, ../scss/_lightbox.scss */
+/* line 52, ../scss/_lightbox.scss */
 #ui-lightbox-button-next {
-  top: 50%;
   right: 5%;
-}
-
-/* line 54, ../scss/_lightbox.scss */
-#ui-description {
   top: 50%;
-  left: 40%;
 }
 
-/* line 58, ../scss/_lightbox.scss */
+/* line 57, ../scss/_lightbox.scss */
+#ui-description {
+  left: 40%;
+  top: 50%;
+}
+
+/* line 62, ../scss/_lightbox.scss */
 #ui-lightbox-button-close {
   padding: 5px 15px;
   right: 5%;
   top: 17px;
 }
 
-/* line 63, ../scss/_lightbox.scss */
+/* line 68, ../scss/_lightbox.scss */
 #sb-wrapper {
-  top: 0px !important;
+  top: 0;
 }
 
-/* line 6, ../scss/_buttons.scss */
+/* line 1, ../scss/_buttons.scss */
 #centeringDiv, #newCenteringDiv .ng-isolate-scope {
-  margin-bottom: 20px;
   margin: auto auto 2rem;
+  margin-bottom: 20px;
   overflow: visible;
   display: -webkit-box;
   display: box;
@@ -779,7 +480,7 @@ header h1 {
   -webkit-align-items: stretch;
   align-items: stretch;
 }
-/* line 15, ../scss/_buttons.scss */
+/* line 10, ../scss/_buttons.scss */
 #centeringDiv a, #newCenteringDiv .ng-isolate-scope a {
   display: -webkit-box;
   display: box;
@@ -795,12 +496,12 @@ header h1 {
   -webkit-justify-content: center;
   justify-content: center;
 }
-/* line 22, ../scss/_buttons.scss */
+/* line 16, ../scss/_buttons.scss */
 #centeringDiv a p, #newCenteringDiv .ng-isolate-scope a p {
   margin: auto;
 }
 
-/* line 34, ../scss/_buttons.scss */
+/* line 22, ../scss/_buttons.scss */
 a, .workTypes, .workTypesSelected, footer a, footer div {
   -moz-transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
   -o-transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
@@ -812,7 +513,7 @@ a, .workTypes, .workTypesSelected, footer a, footer div {
   transition-duration: 2s;
 }
 
-/* line 38, ../scss/_buttons.scss */
+/* line 27, ../scss/_buttons.scss */
 .workTypes {
   background-color: white;
   border: 3px solid #7be5e5;
@@ -825,31 +526,31 @@ a, .workTypes, .workTypesSelected, footer a, footer div {
   outline: thin;
   text-transform: capitalize;
 }
-/* line 50, ../scss/_buttons.scss */
+/* line 38, ../scss/_buttons.scss */
 .workTypes, .workTypes .workTypesSelected {
   -moz-transition: font-size 0.5s;
   -o-transition: font-size 0.5s;
   -webkit-transition: font-size 0.5s;
   transition: font-size 0.5s;
 }
-/* line 53, ../scss/_buttons.scss */
+/* line 41, ../scss/_buttons.scss */
 .workTypes p {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
 
-/* line 61, ../scss/_buttons.scss */
+/* line 48, ../scss/_buttons.scss */
 .workTypesSelected {
   background-color: #f6f6f6;
 }
 
-/* line 65, ../scss/_buttons.scss */
+/* line 52, ../scss/_buttons.scss */
 footer {
   margin: auto;
   padding: 2rem;
 }
-/* line 68, ../scss/_buttons.scss */
+/* line 55, ../scss/_buttons.scss */
 footer > div {
   align-items: stretch;
   align-self: stretch;
@@ -857,7 +558,7 @@ footer > div {
   flex-direction: row;
   justify-content: space-around;
 }
-/* line 75, ../scss/_buttons.scss */
+/* line 62, ../scss/_buttons.scss */
 footer a {
   align-items: center;
   border: 2px solid #7be5e5;
@@ -869,56 +570,56 @@ footer a {
 }
 
 @media all and (min-width: 1025px) {
-  /* line 88, ../scss/_buttons.scss */
+  /* line 75, ../scss/_buttons.scss */
   .workTypes {
     font-size: 2.3rem;
-    width: 22.5rem;
     height: 22.5rem;
+    width: 22.5rem;
   }
 
-  /* line 94, ../scss/_buttons.scss */
+  /* line 81, ../scss/_buttons.scss */
   footer > div {
     margin: 0;
   }
-  /* line 97, ../scss/_buttons.scss */
+  /* line 84, ../scss/_buttons.scss */
   footer a {
     font-size: 1.8rem;
-    text-decoration: none;
     height: 17.5rem;
+    text-decoration: none;
     width: 17.5rem;
     -webkit-flex: 1;
   }
-  /* line 104, ../scss/_buttons.scss */
+  /* line 90, ../scss/_buttons.scss */
   footer a p {
     margin: auto;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1024px) {
-  /* line 113, ../scss/_buttons.scss */
+  /* line 99, ../scss/_buttons.scss */
   .workTypes {
     font-size: 2.2rem;
     height: 19.5rem;
     min-width: 19.5rem;
   }
 
-  /* line 118, ../scss/_buttons.scss */
+  /* line 104, ../scss/_buttons.scss */
   footer {
     padding: 0 0 2rem 0;
   }
-  /* line 122, ../scss/_buttons.scss */
+  /* line 108, ../scss/_buttons.scss */
   footer a {
     flex: none;
     font-size: 1.5rem;
     height: 13.5rem;
     width: 13.5rem;
   }
-  /* line 127, ../scss/_buttons.scss */
+  /* line 113, ../scss/_buttons.scss */
   footer a p {
     margin: auto;
   }
 }
 @media all and (max-width: 767px) {
-  /* line 136, ../scss/_buttons.scss */
+  /* line 122, ../scss/_buttons.scss */
   .workTypes {
     border: 2px solid #7be5e5;
     border-radius: 1px;
@@ -927,27 +628,27 @@ footer a {
     margin: 1rem auto;
     width: 70%;
   }
-  /* line 143, ../scss/_buttons.scss */
+  /* line 129, ../scss/_buttons.scss */
   .workTypes:first-of-type {
     margin-top: 0;
   }
 
-  /* line 147, ../scss/_buttons.scss */
+  /* line 133, ../scss/_buttons.scss */
   #newCenteringDiv .ng-isolate-scope, #centeringDiv {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
 
-  /* line 150, ../scss/_buttons.scss */
+  /* line 136, ../scss/_buttons.scss */
   footer {
-    padding: 0  2rem 2rem;
+    padding: 0 2rem 2rem;
   }
-  /* line 152, ../scss/_buttons.scss */
+  /* line 138, ../scss/_buttons.scss */
   footer > div {
     flex-direction: column;
     margin: 0;
   }
-  /* line 156, ../scss/_buttons.scss */
+  /* line 142, ../scss/_buttons.scss */
   footer a {
     border: 1px solid #7be5e5;
     border-radius: 2px;
@@ -957,7 +658,7 @@ footer a {
     padding: 20px;
     text-decoration: none;
   }
-  /* line 164, ../scss/_buttons.scss */
+  /* line 150, ../scss/_buttons.scss */
   footer a p {
     margin: auto;
   }
@@ -967,52 +668,47 @@ footer a {
 	-webkit-margin-after: 0;
 	-webkit-margin-start: 0;
 */
-/* line 9, ../scss/style.scss */
-.no-flexbox #galleryDiv {
+/* line 12, ../scss/style.scss */
+.no-flexbox .gallery {
+  display: table;
   width: 100%;
+}
+/* line 15, ../scss/style.scss */
+.no-flexbox .gallery .flexy {
   display: table;
 }
 
-/* line 13, ../scss/style.scss */
-.no-flexbox #galleryDiv.flexy {
-  display: table !important;
-}
-
-/* line 16, ../scss/style.scss */
+/* line 20, ../scss/style.scss */
 .navHint {
+  background: transparent;
+  margin-left: -30px;
+  padding: 15px 0 15px 0;
   position: absolute;
   width: 200px;
   z-index: 999;
-  background: transparent;
-  padding: 15px 0px 15px 0px;
-  margin-left: -30px;
-  behavior: url(/PIE.php);
 }
-
-/* line 26, ../scss/style.scss */
+/* line 27, ../scss/style.scss */
 .navHint p {
-  text-align: center;
   margin: 0;
+  text-align: center;
 }
 
-/* line 31, ../scss/style.scss */
-#galleryDiv > div:last-of-type {
+/* line 33, ../scss/style.scss */
+.gallery > div:last-of-type {
   margin: auto;
   text-align: center;
 }
 
-/* line 36, ../scss/style.scss */
+/* line 38, ../scss/style.scss */
 .cf {
   overflow: hidden;
 }
-
 /* line 40, ../scss/style.scss */
 .cf:before, .cf:after {
   content: "";
   display: table;
 }
-
-/* line 45, ../scss/style.scss */
+/* line 44, ../scss/style.scss */
 .cf:after {
   clear: both;
 }
@@ -1029,17 +725,17 @@ footer a {
 
 /* line 57, ../scss/style.scss */
 .hide {
-  display: none !important;
-  overflow: hidden;
+  display: none;
   opacity: 0;
+  overflow: hidden;
   position: relative;
 }
 
 /* line 64, ../scss/style.scss */
 .no-js .hide {
   display: inherit;
-  overflow: visible;
   opacity: 1;
+  overflow: visible;
 }
 
 /* line 70, ../scss/style.scss */
@@ -1049,24 +745,26 @@ footer a {
 
 /* line 74, ../scss/style.scss */
 a {
-  color: #55D;
+  color: #55d;
 }
 
-/* line 77, ../scss/style.scss */
-#galleryDiv img:hover, #galleryDiv img {
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+/* line 2, ../scss/_experiments.scss */
+body.experiments, #playground {
+  margin: auto;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
 }
 
-/* line 80, ../scss/style.scss */
-#galleryDIv img:hover {
-  -moz-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  -o-transform: scale(1.5);
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
+/* line 10, ../scss/_experiments.scss */
+#overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */

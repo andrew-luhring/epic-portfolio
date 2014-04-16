@@ -1,85 +1,5 @@
-body {
-	font-size: 1em;
-	margin: 0.5em auto;
-}
-
-header h1 {
-	color: #333;
-	font-size: 80px;
-	margin-top: 10px;
-}
-
-#galleryDiv {
-	border: 1px solid #c2c2c2;
-	border-radius: 50px 50px 50px 50px;
-	height: 400px;
-	margin: auto;
-	width: 80%;
-	-webkit-align-content: space-around;
-	-webkit-flex-flow: row nowrap;
-	-webkit-justify-content: center;
-	behavior: url(/PIE.php);
-	img {
-		border: none;
-		height: auto;
-		margin: auto;
-		max-height: 300px;
-		max-height: auto;
-		max-width: 100%;
-	}
-	div {
-		display: -webkit-flex;
-		-webkit-flex-direction: column;
-		-webkit-align-content: center;
-		-webkit-justify-content: center;
-		p {
-			align-self: center;
-			height: auto;
-			-webkit-align-self: center;
-		}
-	}
-	a, img.gallery, img, #temp, #clickToClose {
-		align-self: center;
-		height: auto;
-		-webkit-align-self: center;
-	}
-}
-
-#preview {
-	margin: none;
-	overflow: hidden;
-	padding: 10%;
-	text-align: left;
-}
-
-#warning {
-	margin-left: auto;
-	margin-right: auto;
-	overflow: hidden;
-	padding: 15% 10%;
-	text-align: center;
-}
-
-#hint {
-	margin-bottom: 0;
-	text-align: center;
-	top: 0;
-}
-
-#clickToClose {
-	border: 1px solid #ccc;
-	border-radius: 10px;
-	clear: both;
-	cursor: pointer;
-	margin: 20px auto;
-	max-width: 300px;
-	min-width: 10%;
-	padding: 10px;
-	text-align: center;
-}
-
 .no-flexbox {
-	#centeringDiv, #galleryDiv {
+	#centeringDiv, .gallery {
 		transition-delay: 2s;
 		transition-duration: 0.25s;
 		transition-property: border, border-radius, box-shadow, -webkit-box-shadow, width, height, display, color, background-color;
@@ -91,7 +11,7 @@ header h1 {
 		min-width: 800px;
 		width: 90%;
 	}
-	#galleryDiv {
+	.gallery{
 		padding-top: 30px;
 	}
 	#centeringDiv {
@@ -113,7 +33,7 @@ header h1 {
 			}
 		}
 	}
-	footer {
+	.page_footer {
 		min-width: 620px;
 	}
 }

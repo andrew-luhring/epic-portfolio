@@ -2,18 +2,17 @@
 /* global jQuery: true, resizeImg: true*/
 
 
-define(['jquery', 'jqueryui'], function(jQuery){
+define(['jquery', 'jqueryui'], function($){
 
 "use strict";
-var galDiv = document.getElementById("galleryDiv")
-	,   height = galDiv.innerHeight
-	,   width = galDiv.innerWidth
+var galDiv = $('.gallery')
+	,   height = galDiv.height()
+	,   width = galDiv.width()
 	,   imgArray = []
 	,   imgs = document.getElementsByTagName("img")
 	,   section
 	,   timeoutIda
-	,   viewportWidth
-	,   $ = jQuery;
+	,   viewportWidth;
 	function scrollUp() {
 		viewportWidth = $(window).width();
 		if (viewportWidth < 767) {

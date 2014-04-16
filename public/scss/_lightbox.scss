@@ -1,65 +1,70 @@
 
 #ui-lightbox-bottombar {
-	margin-top: 0px;
-	height: 0px;
+	height: 0;
+	margin-top: 0;
+	overflow: visible;
 	position: relative;
 	z-index: 200;
-	overflow: visible;
 }
 
 #ui-lightbox-bottombar > #ui-lightbox-title-wrapper {
-	margin: auto;
-	height: auto;
 	font-size: 20px;
+	height: auto;
 	line-height: 20px;
-	z-index: 999;
+	margin: auto;
 	overflow: visible;
+	z-index: 999;
 }
 
 #ui-lightbox-title {
-	position: relative;
-	line-height: 40px;
-	padding: 3% 10%;
-	min-width: 300px;
-	margin-left: 1px;
-	margin-right: 1px;
 	background-color: #e2e2e2;
 	color: black;
+	line-height: 40px;
+	margin-left: 1px;
+	margin-right: 1px;
+	min-width: 300px;
+	padding: 3% 10%;
+	position: relative;
 	text-align: center;
 }
 
 #ui-lightbox-button-prev, #ui-lightbox-button-next, #ui-lightbox-button-close, #ui-description {
-	position: absolute;
+	background-color: #e2e2e2;
+	border: 1px solid gray;
 	border-radius: 10px;
-	text-align: center;
+	display: inline-block;
 	font-size: 20px;
+	line-height: 20px;
+	overflow: visible;
+	padding: 5px 15px;
+	position: absolute;
+	text-align: center;
 	vertical-align: middle;
 	z-index: 300;
-	border: 1px solid gray;
-	display: inline-block;
-	background-color: #E2E2E2;
-	padding: 5px 15px;
-	line-height: 20px;
 	behavior: url(/PIE.php);
-	overflow: visible;
 }
+
 #ui-lightbox-button-prev {
-	top: 50%;
 	left: 5%;
+	top: 50%;
 }
+
 #ui-lightbox-button-next {
-	top: 50%;
 	right: 5%;
-}
-#ui-description {
 	top: 50%;
-	left: 40%;
 }
+
+#ui-description {
+	left: 40%;
+	top: 50%;
+}
+
 #ui-lightbox-button-close {
 	padding: 5px 15px;
 	right: 5%;
 	top: 17px;
 }
-#sb-wrapper{
-	top: 0px !important;
+
+#sb-wrapper {
+	top: 0;
 }

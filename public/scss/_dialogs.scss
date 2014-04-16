@@ -1,0 +1,32 @@
+#hint, #clickToClose, #warning{
+	text-align:center;
+}
+#preview {
+	margin: none;
+	overflow: hidden;
+	padding: 10%;
+	text-align: left;
+}
+
+#warning {
+	overflow: hidden;
+	padding: 15% 10%;
+}
+
+#hint {
+	margin-bottom: 0;
+	top: 0;
+	//is this even positioned somewhere?
+}
+
+#clickToClose {
+	border: 1px solid #ccc;
+	border-radius: 1rem;
+	clear: both;
+	cursor: pointer;
+	margin: 2rem auto;
+	max-width: 30rem;
+	min-width: 10%;
+	padding: 1rem;
+}
+

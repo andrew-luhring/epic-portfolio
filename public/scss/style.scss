@@ -2,48 +2,48 @@
 @import "base";
 @import "failsafe";
 @import "defaults";
+
+@Include "gallery";
 @import "responsive";
 @import "lightbox";
 @import "buttons";
-//dont forget these:
-.no-flexbox #galleryDiv {
-	width: 100%;
-	display: table; }
 
-.no-flexbox #galleryDiv.flexy {
-	display: table !important; }
+//dont forget these:
+.no-flexbox .gallery {
+	display: table;
+	width: 100%;
+	.flexy {
+		display: table;
+	}
+}
 
 .navHint {
+	background: transparent;
+	margin-left: -30px;
+	padding: 15px 0 15px 0;
 	position: absolute;
 	width: 200px;
 	z-index: 999;
-	background: transparent;
-	padding: 15px 0px 15px 0px;
-	margin-left: -30px;
-	behavior: url(/PIE.php);
+	p {
+		margin: 0;
+		text-align: center;
+	}
 }
 
-.navHint p {
-	text-align: center;
-	margin: 0;
-}
-
-#galleryDiv > div:last-of-type {
+.gallery > div:last-of-type {
 	margin: auto;
 	text-align: center;
 }
 
 .cf {
 	overflow: hidden;
-}
-
-.cf:before, .cf:after {
-	content: "";
-	display: table;
-}
-
-.cf:after {
-	clear: both;
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
 }
 
 .unhide {
@@ -55,16 +55,16 @@
 }
 
 .hide {
-	display: none !important;
-	overflow: hidden;
+	display: none;
 	opacity: 0;
+	overflow: hidden;
 	position: relative;
 }
 
 .no-js .hide {
 	display: inherit;
-	overflow: visible;
 	opacity: 1;
+	overflow: visible;
 }
 
 .no-js .hidden {
@@ -72,11 +72,7 @@
 }
 
 a {
-	color: #55D;
+	color: #55d;
 }
-#galleryDiv img:hover, #galleryDiv img {
-	@include transition(all 1s);
-}
-#galleryDIv img:hover {
-	@include transform(scale(1.5));
-}
+
+@import "experiments";

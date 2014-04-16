@@ -71,13 +71,12 @@
 	app.get( '/' ,function (req, res) {
 		res.render(partialsD + 'index.hbs', indx);
 	});
+	app.get('/play/', function(req, res){
+		res.render(partialsD + 'play.hbs', indx);
+	});
 
 
 	stat.use(express.static('tests'));
-
-
-
-
 	stat.set('port', statPort)
 			.set('cache', false)
 

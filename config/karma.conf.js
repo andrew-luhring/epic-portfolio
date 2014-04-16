@@ -3,6 +3,7 @@ module.exports = function(config) {
     basePath: '../',
     frameworks: ['mocha', 'requirejs', 'chai'],
     files: [
+	    'public/css/style.css',
 	    {pattern: 'public/lib/*.js', included: false},
 	    {pattern: 'public/js/*.js', included: false},
 	    {pattern: 'tests/_*.js', included: false},
@@ -14,7 +15,7 @@ module.exports = function(config) {
 	    'public/main.js'
     ],
 	  htmlReporter: {
-		  outputDir: 'tests/karma',
+		  outputDir: 'tests/karma'
 	  },
 
     preprocessors: {
@@ -22,7 +23,8 @@ module.exports = function(config) {
     reporters: ['growl', 'mocha', 'html'],
     port: 9876,
     colors: true,
-    logLevel: config.LOG_INFO,
+//    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
     autoWatch: true,
     browsers: ['Chrome'],
 	captureTimeout: 60000,
