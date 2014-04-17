@@ -1,0 +1,29 @@
+
+export CLICOLOR=1
+export LSCOLORS=BxBxhxDxFxhxhxhxhxcxcx
+export SVN_EDITOR=emacs
+#export PS1=" ∞:\W: "
+export PS1="\[\e[00;32m\]∞ \[\e[0m\]| \[\e[00;35m\]\W\[\e[0m\] : "
+## a quick way to get out of current directory ##
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias ......='cd ../../../../../'
+
+## ls default to list all files in multicolumn output##
+alias ls='ls -AF'
+alias lsa="ls -ACFtr"
+#alias lsa='ls -AFtr'
+alias cdj='cd ~justbounce/'
+alias cdn='cd ~nerdlife/'
+alias cdm='cd ~nerdlife/Music'
+alias cds='cd ~worker_bee/Sites'
+alias gs='git status'
+alias cdw='cd ~worker_bee/'
+
+
+
+
+
+
