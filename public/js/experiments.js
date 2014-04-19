@@ -1,4 +1,4 @@
-/*jshint expr: true, undef: true */
+/*jshint expr: true, undef: true, forin: false, smarttabs:true */
 /*global THREE: true, requestAnimationFrame : true */
 
 
@@ -54,9 +54,6 @@ define (['create', 'angular', 'jquery', 'three'], function (create, angular, jqu
 	 * @returns {obj with properties: width, height, aspectRatio and all of the methods/properties of WEE / THREE}
 	 * @constructor
 	 */
-
-
-
 	function FactorWee(extend){
 
 		var obj;
@@ -70,7 +67,7 @@ define (['create', 'angular', 'jquery', 'three'], function (create, angular, jqu
 		obj.aspectRatio = window.innerWidth / window.innerHeight;
 		return obj;
 	}
-	var wee = FactorWee();
+	var wee = new FactorWee();
 	/**
 	 * Instantiates a new scene.
 	 * @param config
@@ -140,7 +137,7 @@ define (['create', 'angular', 'jquery', 'three'], function (create, angular, jqu
 	 */
 	function Animation(){
 		var animation = {
-			rotation: 	function(x, y, z, config){
+			rotation: function(x, y, z, config){
 				var rotation =  {
 					x : x
 					,   y : y
@@ -169,7 +166,7 @@ define (['create', 'angular', 'jquery', 'three'], function (create, angular, jqu
 				})(config, position);
 				return position;
 			}
-		,   animation:  	function (obj){
+		,   animation:  function (obj){
 
 				obj.rotation.x += 0.04;
 				obj.rotation.y += 0.01;
@@ -184,7 +181,7 @@ define (['create', 'angular', 'jquery', 'three'], function (create, angular, jqu
 				}
 				var check = Math.round(obj.position.z) % 10;
 				if(check === 0){
-
+// call move div...
 				}
 			}
 		};
@@ -203,7 +200,7 @@ define (['create', 'angular', 'jquery', 'three'], function (create, angular, jqu
 		$("#playground").append(env.renderer.domElement);
 	}
 	(function () {
-	var env = Environment(wee);
+	var env = new Environment(wee);
 		//env.scene.add(cube);
 		env.camera.position.z =5;
 		env.renderer.setSize(wee.width, wee.height);
@@ -217,7 +214,7 @@ define (['create', 'angular', 'jquery', 'three'], function (create, angular, jqu
 		api = {
 			env : env
 		,   wee : wee
-		}
+		};
 		return api;
 	}) ();
 	return api;

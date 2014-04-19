@@ -32,11 +32,11 @@ define([
 					return {
 						sel : id || "test"
 					,   string : str || "a string"
-					}
+					};
 				}
 		var obj = testObj();
 		it("method log which will log to a dom element if true", function(done){
-			var logToDom = testObj("logToDom", "logging to dom")
+			var logToDom = testObj("logToDom", "logging to dom");
 			var loggedToDom = log(logToDom.string, logToDom.sel, true);
 			expect(loggedToDom).to.be.true;
 			done();

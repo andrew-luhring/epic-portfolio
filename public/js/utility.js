@@ -124,7 +124,7 @@ define (['jquery'], function ($) {
 			 *
 			 */
 		,   testDiv : function newDiv(id){
-				return document.createElement('div').id = id;
+				return document.createElement('div').id;
 			}
 			/**
 			 *  will log to console by default. will log to object created from string if one is passed. will silently 'log' if silent is true.
@@ -144,14 +144,14 @@ define (['jquery'], function ($) {
 				} else {
 						utility.testDiv(logToDomObj);
 					if(!silent){
-						var logged = $(selector).text(thingToLog);
+						logged = $(selector).text(thingToLog);
 					}
 					return true;
 				}
 			}
-		}
+		};
 		return utility;
 	}
-	return Utility();
+	return new Utility();
 
 });
