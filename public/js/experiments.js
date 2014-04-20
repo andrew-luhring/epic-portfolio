@@ -122,12 +122,9 @@ define (['create', 'angular', 'jquery', 'three'], function (create, angular, jqu
 	 */
 	function Environment(obj){
 		var temp = {
-		   scene : obj.scene
+		   scene : new obj.scene()
 		,  renderer : new obj.WebGLRenderer ()
 		,  camera : obj.camera(75, obj.aspectRatio, 0.1, 1000)
-		,  geometry : new wee.CubeGeometry(1,1,1)
-		,  material : new wee.MeshBasicMaterial({color: 0xaaffaa})
-		//,  cube : new wee.Mesh(geometry, material)
 		};
 		return temp;
 	}
@@ -135,7 +132,7 @@ define (['create', 'angular', 'jquery', 'three'], function (create, angular, jqu
 	 * returns object with
 	 * @factory
 	 */
-	function Animation(){
+	function Transformation(){
 		var animation = {
 			rotation: function(x, y, z, config){
 				var rotation =  {
@@ -166,25 +163,26 @@ define (['create', 'angular', 'jquery', 'three'], function (create, angular, jqu
 				})(config, position);
 				return position;
 			}
-		,   animation:  function (obj){
-
-				obj.rotation.x += 0.04;
-				obj.rotation.y += 0.01;
-
+		};
+		animation.animate = function(obj){
+		//	ob.rotation =
 				obj.position.z -= 0.1;
 				obj.position.y += 0.05;
+				obj.position.x += 0.08;
 				if(obj.position.z < -50){
 					obj.position.z = 0;
 				}
 				if(obj.position.y > 50){
 					obj.position.y = -50;
 				}
-				var check = Math.round(obj.position.z) % 10;
-				if(check === 0){
-// call move div...
-				}
-			}
+
+
+				$('#overlay')
+						.css({"font-size" : "2rem"})
+						.text(obj.position.z + "\n" + obj.position.y + "\n" + obj.position.x);
+
 		};
+
 		return animation;
 	}
 	/**
@@ -199,18 +197,32 @@ define (['create', 'angular', 'jquery', 'three'], function (create, angular, jqu
 		}
 		$("#playground").append(env.renderer.domElement);
 	}
+	function Cube(){
+		var geo = new wee.CubeGeometry(1,1,1)
+			, mesh = new wee.MeshBasicMaterial({color: 0xaaffaa});
+		return new wee.Mesh(geo, mesh);
+	}
 	(function () {
-	var env = new Environment(wee);
-		//env.scene.add(cube);
+	var env = new Environment(wee)
+		, cube = new Cube()
+		, transform = new Transformation();
+
+		env.scene.add(cube);
 		env.camera.position.z =5;
 		env.renderer.setSize(wee.width, wee.height);
 		initializeBody(env);
+
+
 		function render() {
 			requestAnimationFrame(render);
-			//animation(cube);
-			//env.renderer.render(env.scene, env.camera);
+			transform.animate(cube);
+
+
+			env.renderer.render(env.scene, env.camera);
 		}
 		render();
+
+
 		api = {
 			env : env
 		,   wee : wee
