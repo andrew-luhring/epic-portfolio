@@ -17,15 +17,10 @@ module.exports = function (config) {
 		htmlReporter: {
 			outputDir: 'tests/karma'
 		},
-		preprocessors: {
-		},
 		reporters: ['growl', 'mocha', 'html'],
 		port: 9876,
 		colors: true,
-//    logLevel: config.LOG_INFO,
-		logLevel: config.LOG_DEBUG,
-		autoWatch: true,
-		browsers: ['Chrome'],
+		logLevel: config.LOG_INFO,
 		captureTimeout: 60000,
 		singleRun: false
 	});
