@@ -1,6 +1,7 @@
 html {
 	@extend .noise;
 }
+
 body {
 	font-family: "Quicksand";
 	font-size: 1rem;
@@ -8,23 +9,31 @@ body {
 	margin: 0.5rem auto;
 	width: 100%;
 }
+
 a {
 	text-decoration: none;
 }
-.page{
+
+.page {
 	transition-property: border, border-radius, box-shadow, -webkit-box-shadow;
-	transition-duration:0.5s;
+	transition-duration: 0.5s;
 	-webkit-transition-property: border, border-radius, box-shadow, -webkit-box-shadow;
-	-webkit-transition-duration:0.5s;
+	-webkit-transition-duration: 0.5s;
+	@include noise;
+
+
 }
-.page_title{
-		margin-top: 1rem;
-		font: normal normal 200 8rem "Comfortaa", "Helvetica-Neue", Arial, sans-serif;
-		text-align: center;
+
+.page_title {
+	margin-top: 1rem;
+	font: normal normal 200 8rem "Comfortaa", "Helvetica-Neue", Arial, sans-serif;
+	text-align: center;
 }
-.smile{
+
+.smile {
 	@include transform(rotate(90deg));
 }
+
 .page_header {
 	margin: auto;
 }
@@ -54,9 +63,7 @@ a {
 	}
 }
 
-
-
-@media all and (min-width: 1025px){
+@media all and (min-width: 1025px) {
 	.page {
 		background-color: #fff;
 		border: solid 5px #7be5e5;
@@ -74,13 +81,13 @@ a {
 	}
 }
 
-@media all and (min-width: 768px) and (max-width: 1024px){
+@media all and (min-width: 768px) and (max-width: 1024px) {
 	.page_title {
 		color: #333;
 	}
 }
 
-@media all and (max-width: 767px){
+@media all and (max-width: 767px) {
 	.page_title {
 		color: #222;
 		font-size: 3rem;

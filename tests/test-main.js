@@ -39,31 +39,37 @@ requirejs.config({
 		'sinon_chai': 'sinon-chai',
 		'sinon_timers': 'sinon-timers',
 		'mocha' : 'mocha',
-		'window' : '../js/mocha_window',
+		'window' : '../js/common/mocha_window',
 		'shadow': 'shadow',
 		'js_utility': 'js_utility',
 		'shadowbox': 'shadowbox',
 
 		//scripts
+
+		// experiments app
+		'experiments': '../js/exp-app/experiments',
+
+		// common
 		'ang': '../js/ang',
-		'button_populate': '../js/button_populate',
-		'button_init': '../js/button_init',
-		'button_methods': '../js/button_methods',
-		'category_actions': '../js/category_actions',
-		'experiments': '../js/experiments',
-		'gallery_init': '../js/gallery_init',
-		'gallery_methods': '../js/gallery_methods',
-		'image_resize' : '../js/image_resize',
-		'imagebox': '../js/imagebox',
-		'intro_animation' : '../js/intro_animation',
-		'intro_explanation': '../js/intro_explanation',
-		'utility': '../js/utility',
-		'viewport_actions': '../js/viewport_actions',
-		'dynamictxt': '../js/dynamictxt',
-		'initial': '../js/initial',
-		'portfolio': '../js/portfolio',
-		'resize': '../js/resize_image',
-		'temp': '../js/temp'
+		'image_resize' : '../js/common/image_resize',
+		'imagebox': '../js/common/imagebox',
+		'utility': '../js/common/utility',
+		'viewport_actions': '../js/common/viewport_actions',
+		'dynamictxt': '../js/common/dynamictxt',
+		'resize': '../js/common/resize_image',
+
+		// portfolio-app
+		'button_populate': '../js/port-app/button_populate',
+		'button_init': '../js/port-app/button_init',
+		'button_methods': '../js/port-app/button_methods',
+		'category_actions': '../js/port-app/category_actions',
+		'gallery_init': '../js/port-app/gallery_init',
+		'gallery_methods': '../js/port-app/gallery_methods',
+		'intro_animation' : '../js/port-app/intro_animation',
+		'intro_explanation': '../js/port-app/intro_explanation',
+		'initial': '../js/port-app/initial',
+		'portfolio': '../js/port-app/portfolio',
+		'temp': '../js/common/temp'
 
 	},
 

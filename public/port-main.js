@@ -21,22 +21,26 @@ require.config({
 		,   'three' : 'lib/three'
 		,   'mixitup': 'lib/mixitup'
 		//  js
-		,  'browserMocha' : 'js/_browserMocha'
-		,  'ang': 'js/ang'
-		,  'button_init': 'js/button_init'
-		,  'button_methods': 'js/button_methods'
-		,  'button_populate': 'js/button_populate'
-		,  'category_actions': 'js/category_actions'
-		,  'dynamictxt': 'js/dynamictxt'
-		,  'experiments': 'js/experiments'
-		,  'gallery_init': 'js/gallery_init'
-		,  'gallery_methods': 'js/gallery_methods'
-		,  'image_resize' : 'js/image_resize'
-		,  'intro_animation' : 'js/intro_animation'
-		,  'intro_explanation': 'js/intro_explanation'
-		,  'portfolio' : 'js/portfolio'
-		,  'utility': 'js/utility'
-		,  'viewport_actions': 'js/viewport_actions'
+		// common
+		,  'browserMocha' : 'js/common/_browserMocha'
+		,  'dynamictxt': 'js/common/dynamictxt'
+		,  'image_resize' : 'js/common/image_resize'
+		,  'imagebox' : 'js/common/imagebox'
+		,  'shift_color' : 'js/common/shift_color'
+		,  'utility': 'js/common/utility'
+		,  'viewport_actions': 'js/common/viewport_actions'
+
+		// portfolio app
+		,  'ang': 'js/port-app/ang'
+		,  'button_init': 'js/port-app/button_init'
+		,  'button_methods': 'js/port-app/button_methods'
+		,  'button_populate': 'js/port-app/button_populate'
+		,  'category_actions': 'js/port-app/category_actions'
+		,  'gallery_init': 'js/port-app/gallery_init'
+		,  'gallery_methods': 'js/port-app/gallery_methods'
+		,  'intro_animation' : 'js/port-app/intro_animation'
+		,  'intro_explanation': 'js/port-app/intro_explanation'
+		,  'portfolio' : 'js/port-app/portfolio'
 	},
 
 	shim : {
@@ -63,28 +67,6 @@ require([
 	,   'category_actions'
 	,   'gallery_methods'
 	,   'image_resize'
-	,   'experiments'
 
 		], function(init){
     });
-
-
-/*
-
-require([
-	  'jquery'
-	, 'portfolio'
-	, 'shadow'
-	], function(jquery, ang, shadow, portfolio){
-//	ang;
-			shadow;
-			portfolio;
-
-	}
-);
-//
-require([
-	'jquery'
-,   'ang'], function(ang){
-	ang;
-});*/

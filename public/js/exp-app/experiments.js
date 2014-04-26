@@ -8,6 +8,10 @@ define (['create', 'angular', 'jquery', 'three'], function (create, angular, jqu
 	var logToDom = false;
 	var $= jquery;
 	var api ;
+
+
+	console.log(window.location.href.slice(window.location.href));
+
 	/**
 	 * Checks for the existence of configuration object, if there is, executes function call with the configuration. else execute function normally.
 	 * @param obj   -   the object
