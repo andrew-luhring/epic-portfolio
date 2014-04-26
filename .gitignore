@@ -9,3 +9,4 @@ ignore_*
 node_modules/*
 node_modules
 *private*
+public/portfolio
