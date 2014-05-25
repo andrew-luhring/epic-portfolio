@@ -74,7 +74,9 @@
 	app.get('/play/', function(req, res){
 		res.render(partialsD + 'play.hbs', indx);
 	});
-
+	app.get('/jsdoc/', function(req, res){
+		res.render(partialsD + '_jsdoc.hbs', indx);
+	});
 
 	stat.use(express.static('tests'));
 	stat.set('port', statPort)

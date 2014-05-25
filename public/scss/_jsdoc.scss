@@ -1,0 +1,75 @@
+$flashcard_border_fallback: #eee;
+$flashcard_border: rgba(0,0,0,0.08);
+$main_bg:#26e3fc;
+
+
+.main.jsdoc{
+	@extend .noise;
+	background: $main_bg;
+	@include displayFlex();
+	@include flex-direction(column);
+
+}
+
+// A card (article) which contains a definition of a jsdoc item.
+//
+// :hover       -   animates a 3d transform flipping the card over revealing the term
+// .selected  -  adds indication that card is selected
+// .animating -  adds transition time.
+//
+// Styleguide 1.0
+.flashcard{
+	@include flex(1);
+	background: #fff;
+	background-clip: padding-box;
+	border: 1px solid $flashcard_border_fallback;
+	border: 1px solid $flashcard_border;
+	border-radius: 3px;
+	margin: auto;
+	max-width: 45rem;
+	min-height: 60rem;
+	overflow: hidden;
+	padding: 3rem;
+	position: relative;
+	>header{
+		h1{
+
+		}
+	}
+}
+.animating{
+	@include transition(all 2s);
+}
+.description{
+	>header{
+		h3{
+
+		}
+	}
+	>div{
+
+	}
+	pre{
+
+	}
+	code{
+
+	}
+}
+.group{
+	@include flex(1);
+	@include displayFlex();
+	@include flex-direction(row);
+	@include justify-content(space-around);
+}
+
+.mix{
+	display: none;
+}
+
+.action{
+	width:5rem;
+	height:5rem;
+	font-size:2rem;
+	margin: auto;
+}

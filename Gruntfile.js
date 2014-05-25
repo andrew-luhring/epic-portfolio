@@ -103,7 +103,7 @@ module.exports = function(grunt) {
 	,	jshint: {
 			files : {
 				src: [
-					JS_DIR + "*.js"
+					JS_DIR + "**/*.js"
 				,	ASSETS_DIR + 'main.js'
 				,	TEST_DIR + "_*.js"
 				,	TEST_DIR + "test-main.js"
@@ -161,12 +161,8 @@ module.exports = function(grunt) {
 				]
 			,	tasks: [ 'jshint' ]
 			}
-		,	guide : {
-				files: ['./README.md']
-			,	tasks: ['styleguide:docco']
-			}
 		,	style : {
-				tasks: ['sass:dist', 'styleguide:docco']
+				tasks: ['sass:dist']
 			,	files: [SCSS_DIR + "**/*.scss", SCSS_DIR + "**/**/.scss"]
 			}
 		,	livereload: {

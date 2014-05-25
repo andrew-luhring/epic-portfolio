@@ -1,0 +1,1331 @@
+{{!< jsdoc}}
+
+
+
+
+<main role="main" class="main jsdoc">
+<div class='controller' >
+    <button id="asc" class='action sort' data-sort="order:asc" name="asc">asc</button>
+    <button id="dsc" class='action sort' data-sort="order:des" name="des">des</button>
+</div>
+<article class="flashcard" >
+	<header ><h1 > abstract </h1 >
+		Synonyms
+		@virtual
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @abstract tag identifies members that must be implemented (or overridden) by objects that inherit the member.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+	<header ><h1 >
+		@access
+	</h1 >
+		Syntax
+		@access
+		{ private|protected|public }
+
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @access tag specifies the access level of a member. Note that "@access private" is the same as "@private", "@access protected" is the same as "@protected", and "@access public" is the same as "@public" which is the same as not including the tag at all. Private members will not show in the output documentation unless JSDoc is given the --private option.
+			Note that a doclet's access level is different from its scope. For example, if "Parent" has an inner variable "child" that is documented as @public, "child" will still be treated as an inner variable with the namepath "Parent~child". T
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >**
+
+	<header ><h1 > alias
+	</h1 >
+		Syntax
+		@alias {aliasNamepath }
+
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @alias tag causes JSDoc to treat all references to a member as if the member had a different name. This tag is especially useful if you define a class within an inner function; in this case, you can use the @alias tag to tell JSDoc how the class is exposed in your app.
+			While the @alias tag may sound similar to the @name tag, these tags behave very differently:
+			The @name tag tells JSDoc to ignore any code associated with the comment. For example, when JSDoc processes the following code, it ignores the fact that the comment for bar is attached to a function:
+			<pre><code   >/**
+			 * Bar function.
+			 * @name bar
+			 */
+			function foo() {}
+			</code></pre >
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > @augments
+	</h1 >
+		Synonyms
+		@extends
+		Syntax
+		@augments {namepath }
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @augments or @extends tag marks a symbol as augmenting another symbol.
+			While current versions of JavaScript don't allow classes or subclasses in the same way that class-based languages like Java do, many programmers choose to think of their code structure in these terms. For this purpose JSDoc provides the @class and @extends tags. If you wish to express a similar relationship between two symbols, but don't wish to promote the classical analogy, you can use the @contructor and @augments tags instead.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > author
+	</h1 >
+		Syntax
+		@author {name } [emailAddress ]
+
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @author tag identifies the author of an item. In JSDoc 3.2 and later, if the author's name is followed by an email address enclosed in angle brackets, the default template will convert the email address to a mailto: link.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >**
+
+	<header ><h1 > borrows
+	</h1 >
+		Syntax
+		@borrows
+		{that namepath } as
+		{this namepath }
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @borrows tag allows you to add documentation for another symbol to your documentation.
+			This tag would be useful if you had more than one way to reference a function, but you didn't want to duplicate the same documentation in two places.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >**
+
+	<header ><h1 > callback
+	</h1 >
+		Synonyms
+		@typedef {function}
+		{ namepath }
+		Syntax
+		@callback
+		{ namepath }
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @callback tag provides information about a callback function that can be passed to other functions, including the callback's parameters and return value. You can include any of the tags that you can provide for a @method.
+			Once you define a callback, you can use it in the same way as a custom type defined with the @typedef tag. In particular, you can use the callback's name as a type name. This allows you to indicate that a function parameter should contain a certain type of callback.
+			If you want a callback to be displayed with the type definitions for a specific class, you can give the callback a namepath indicating that it is an inner function of that class. You can also define a global callback type that is referenced from multiple classes.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >**
+	<header ><h1 > classdesc
+	</h1 >
+		Syntax
+		@class
+		{ someClassName >
+		@classdesc
+		{ some description >
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @classdesc tag is used to provide a description for a class, separate from the constructor function's description.
+			The functionality of the @classdesc tag in JSDoc 3 duplicates that of the @class in previous versions. As of version 3, the syntax and functionality of the @class tag now exactly matches the @constructor tag, and the @classdesc tag more explicitly communicates its purpose: to document a class's description
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > constant
+	</h1 >
+		Synonyms
+		@const
+		Syntax
+		@constant [
+		{ type }
+		{ name }]
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @constant tag is used to mark the documentation as belonging to a symbol that is a constant.
+			Examples
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > constructor
+	</h1 >
+		Synonyms
+		@class
+		Syntax
+		@constructor [
+		{ type }
+		{ name }]
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @constructor tag marks an function as being a constructor, meant to be called with the new keyword to return an instance.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >**
+
+	<header ><h1 > constructs
+	</h1 >
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			When using an object literal to define a class (for example with the @lends tag) the @constructs tag allows you to document that a particular function will be used to construct instances of that class.
+
+			Syntax
+			@constructs [
+			{ name }]
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >**
+
+	<header ><h1 > default
+	</h1 >
+		Synonyms
+		@defaultvalue
+		Syntax
+		@default [
+		{ some value >]
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @default tag allows you to document the assigned value of a symbol. You can supply this tag with a value yourself or you can allow JSDoc to automatically document the value from the source code -- only possible when the documented symbol is being assigned a single, simple value that is either: a string, a number, a boolean or null.
+			In this example a constant is documented. The value of the constant is 0xff0000. By adding the @default tag this value is automatically added to the documentation.
+			Document the number value of a constant
+			<pre><code  >
+				/**
+				 * @constant
+				 * @default
+				 */
+				const RED = 0xff0000;
+			</code></pre >
+		</div >
+	</section >
+</article >
+<article class="flashcard" >**
+
+	<header ><h1 > deprecated
+	</h1 >
+		Syntax
+		@deprecated [
+		{ some text >]
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @deprecated tag marks a symbol in your code as being deprecated.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >**
+
+	<header ><h1 > desc
+	</h1 >
+		Synonyms
+		@description
+		Syntax
+		@desc {some description}
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @desc tag allows you to provide a general description of the symbol you are documenting. The description may include HTML markup. It may also include Markdown formatting if the Markdown plugin is enabled.
+			Examples
+			If you describe a symbol at the very beginning of a JSDoc comment, before using any block tags, you may omit the @desc tag.
+			Describing a symbol without the @desc tag
+			<pre><code  >/**
+			 * Add two numbers.
+			 * @param {number} a
+			 * @param {number} b
+			 * @returns {number}
+			 */
+			function add( a, b ) {
+				return a + b;
+			}
+			</code></pre >
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >**
+
+	<header ><h1 > enum
+	</h1 >
+		Syntax
+		@enum [
+		{ type }]
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @enum tag documents a collection of static properties whose values are all of the same type.
+			An enum is similar a collection of properties, except that an enum is documented in its own doc comment, whereas properties are documented within the doc comment of their container. Often this tag is used with @readonly, as an enum typically represents a collection of constants.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >**
+
+	<header ><h1 > event
+	</h1 >
+		Syntax
+		@event
+		{ className } #[event:]
+		{ eventName }
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @event tag allows you to document an event that can be fired. A typical event is represented by an object with a defined set of properties.
+			Once you have used the @event tag to define a specific type of event, you can use the @fires tag to indicate that a method can fire that event.
+			JSDoc automatically prepends the namespace event: to each event's name. In general, you must include this namespace when you link to the event in another doclet. (The @fires tag is a notable exception; it allows you to omit the namespace.)
+			Note: JSDoc 3 uses @event doclets to document the content of an event. In contrast, JSDoc Toolkit 2 used @event doclets to identify a function that can be fired when an event of the same name occurs.
+			Examples
+			The following examples show how to document an event in the Hurl class called snowball. The event contains an object with a single property.
+			Documenting a function call as an event
+			<pre><code>
+				/**
+				 * Throw a snowball.
+				 *
+				 * @fires Hurl#snowball
+				 */
+				Hurl.prototype.snowball = function () {
+					/**
+					 * Snowball event.
+					 *
+					 * @event Hurl#snowball
+					 * @type {object}
+					 * @property {boolean} isPacked - Indicates whether the snowball is tightly packed.
+					 */
+					this.emit ( 'snowball', {
+						isPacked : this._snowball.isPacked
+					} );
+				};
+			</code></pre >
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >**
+
+	<header ><h1 > example
+	</h1 >
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			Provide an example of how to use a documented item. The text that follows this tag will be displayed as highlighted code.
+			Examples
+			Note that a doclet may have multiple examples.
+			Documenting examples
+			<pre><code  >/**
+			 * Solves equations of the form a * x = b
+			 * @example
+			 * // returns 2
+			 * globalNS.method1(5, 10);
+			 * @example
+			 * // returns 3
+			 * globalNS.method(5, 15);
+			 * @returns {Number} Returns the value of x for the equation.
+			 */
+			globalNS.method1 = function ( a, b ) {
+				return b / a;
+			};
+			</code></pre >
+		</div >
+	</section >
+</article >
+<article class="flashcard" >**
+
+	<header ><h1 > exports
+	</h1 >
+		Syntax
+		@exports
+		{ module name }
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			Use the @exports tag when documenting JavaScript modules that export anything other than the "exports" object or the "module.exports" property.
+			Examples
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >**
+
+	<header ><h1 > external
+	</h1 >
+		Synonyms
+		@host
+		Syntax
+		@external
+		{ NameOfExternal }
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @external tag is used for documenting a class or namespace or module that is external to the project. It is then known within JSDoc so you can @extend it, be a @memberof it and so on as you would any other class/namespace/module.
+			When you refer to an external object, prefix "external:" to it - for example, "{@link external:Foo}" or "@augments external:Foo".
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > file
+	</h1 >
+		Synonyms
+	</header >
+	@file
+
+
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @file tag provides a description for a file. Use the tag in a JSDoc comment at the beginning of the file.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > fires
+	</h1 >
+		Synonyms
+		@emits
+		Syntax
+		@fires
+		{ className }#[event:]
+		{ eventName }
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @fires tag indicates that a method can fire a specified type of event when it is called. Use the @event tag to document the event's content.
+			Examples
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > global
+	</h1 >
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @global tag specifies that a symbol should appear in the documentation as a global symbol. JSDoc ignores the symbol's actual scope within the source file. This tag is especially useful for symbols that are defined locally, then assigned to a global symbol.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+	<header ><h1 > inner
+	</h1 >
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			Using the @inner tag will mark a symbol as an inner member of its parent symbol. This means it can be referred to by "Parent~Child".
+			Using @inner will override a doclet's default scope (unless it is in the global scope, in which case it will remain global).
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > instance
+	</h1 >
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			Using the @instance tag will mark a symbol as an instance member of its parent symbol. This means it can be referred to by "Parent#Child".
+			Using @instance will override a doclet's default scope (unless it is in the global scope, in which case it will remain global).
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >*
+
+	<header ><h1 > kind
+	</h1 >
+		Syntax
+		@kind
+		{ kindName }
+		where
+		{ kindName } is one of:
+		class
+		constant
+		event
+		external
+		file
+		function
+		member
+		mixin
+		module
+		namespace
+		typedef
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @kind tag is used to document what kind of symbol is being documented (for example, a class or a module). The kind of symbol differs from a symbol's type (for example, string or boolean).
+			Usually you do not need the @kind tag, because the symbol's kind is determined by other tags in the doclet. For example, using the @class tag automatically implies "@kind class", and using the @namespace tag implies "@kind namespace".
+			Examples
+			Using @kind
+			// The following examples produce the same result:
+			/**
+			* A constant.
+			* @kind constant
+			*/
+			const asdf = 1;
+			/**
+			* A constant.
+			* @constant
+			*/
+			const asdf = 1;
+			In the case of tags with conflicting kinds (for example, using both @module, which sets the kind to "module", and "@kind constant" which sets the kind to "constant"), the last tag determines the kind.
+			Conflicting @kind statements
+			/**
+			* This will show up as a constant
+			* @module myModule
+			* @kind constant
+			*/
+			/**
+			* This will show up as a module.
+			* @kind constant
+			* @module myModule
+			*/
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+	<header >
+		<h1 > @lends </h1 >
+		Syntax
+		@lends
+		{ namepath }
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @lends tag allows you to document all the members of an object literal as if they were members of a symbol with the given name. You might want to do this if you are passing an object literal into a function that creates a named class from its members.
+			Examples
+			In this example, we want to use a helper function to make a class named "Person," along with instance methods named "initialize" and "say." This is similar to how some popular frameworks handle class creation.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+	<header >
+		<h1 >
+			@link
+		</h1 >
+		Syntax
+		{@link someSymbol}
+		{@link http://some.url.com}
+		[caption here]{@link someSymbol}
+		[caption here]{@link http://some.url.com}
+		{@link someSymbol|caption here}
+		{@link http://some.url.com|caption here}
+		{@link http://some.url.com Caption Here (after the first space)}
+		{@link someSymbol Caption Here (after the first space)}
+		The following work in the same way as @link but render in monospace or normal font respectively:
+		{@linkcode ...}
+		{@linkplain ...}
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @link, @linkcode and @linkplain tags allow links to other documented objects or external URLs to be created within doclets (i.e., within the content of other tags).
+			You need to use a symbol's full name to have it linked (e.g. {@link MyNamespace.MyClass#property} rather than MyClass#property). Also, remember that @modules, @externals and @events are prefixed by the tag name (e.g. "module:myModule").
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > member
+	</h1 >
+		Synonyms
+		@var
+		Syntax
+		@member [
+		{ type }] [
+		{ name }]
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @member tag identifies any member that does not have a more specialized kind, such as "class", "function", or "constant". A member can optionally have a type as well as a name.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >*
+
+	<header ><h1 > memberof
+	</h1 >
+		Syntax
+		@memberof
+		{ parentNamepath }
+		@memberof!
+		{ parentNamepath }
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @memberof tag identifies a member symbol that belongs to a parent symbol.
+			By default, the @memberof tag documents member symbols as static members. For inner and instance members, you can use scoping punctuation after the namepath, or you can add the @inner or @instance tag.
+			The "forced" @memberof tag, @memberof!, forces the object to be documented as belonging to a specific parent even if it appears to have a different parent.
+			Examples
+			In the following example, the hammer function would normally be documented as a global function. That's because, in fact, it is a global function, but it is also a member of the Tools namespace, and that's how you wish to document it. The solution is to add a @memberof tag:
+			Using @memberof
+			<pre><code >
+				/** @namespace */
+				var Tools = {};
+				/** @memberof Tools */
+				var hammer = function () {
+				};
+				Tools.hammer = hammer;
+			</code></pre >
+		</div >
+	</section >
+</article >
+<article class="flashcard" >*
+
+	<header ><h1 > method
+	</h1 >
+		Synonyms
+		@function
+		@func
+		Syntax
+		@method [
+		{ FunctionName }]
+		@func [
+		{ FunctionName }]
+		@function [
+		{ FunctionName }]
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			This marks an object as being a function, even though it may not appear to be one to the parser. It sets the doclet's @kind to 'function'.
+			Examples
+			Using @function to mark a function.
+			/** @function */
+			var paginate = paginateFactory(pages);
+			Without the @function tag, the paginate object would be documented as a generic object (a @member), because it isn't possible to tell from examining the line of code what type of value paginate will hold when it is run.
+			Using @function with a name.
+			/** @function myFunction */
+			// the above is the same as:
+			/** @function
+			* @name myFunction */
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > mixes
+	</h1 > Syntax
+		   @mixes
+		   { OtherObjectPath }
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @mixes tag indicates that the current object mixes in all the members from OtherObjectPath, which is a @mixin.
+			Examples
+			To start, we document a mixin with the @mixin tag:
+			Example of a @mixin
+			<pre><code >
+				/**
+				 * This provides methods used for event handling. It's not meant to
+				 * be used directly.
+				 *
+				 * @mixin
+				 */
+				var Eventful = {
+					/**
+					 * Register a handler function to be called whenever this event is fired.
+					 * @param {string} eventName - Name of the event.
+					 * @param {function(Object)} handler - The handler to call.
+					 */
+					on   : function ( eventName, handler ) {
+						// code...
+					},
+					/**
+					 * Fire an event, causing all handlers for that event name to run.
+					 * @param {string} eventName - Name of the event.
+					 * @param {Object} eventData - The data provided to each handler.
+					 */
+					fire : function ( eventName, eventData ) {
+						// code...
+					}
+				};
+				//Now we add a FormButton class and call a "mix" function that mixes all of the Eventful functions into FormButton, so that FormButton can also fire events and have listeners. We use the @mixes tag to indicate that FormButton mixes the Eventful functions.
+				// Using the @mixes tag
+				/**
+				 * @constructor FormButton
+				 * @mixes Eventful
+				 */
+				var FormButton = function () {
+					// code...
+				};
+				FormButton.prototype.press = function () {
+					this.fire ( 'press', {} );
+				};
+				mix ( Eventful ).into ( FormButton.prototype );
+
+			</code></pre >
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > mixin
+	</h1 >
+		Syntax
+		@mixin [
+		{ MixinName }]
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			A mixin provides functionality that is intended to be added to other objects. If desired, you can use the @mixin tag to indicate that an object is a mixin. You can then add the @mixes tag to objects that use the mixin.
+			Examples
+			Using @mixin
+			/**
+			* This provides methods used for event handling. It's not meant to
+			* be used directly.
+			*
+			* @mixin
+			*/
+			var Eventful = {
+			/**
+			* Register a handler function to be called whenever this event is fired.
+			* @param {string} eventName - Name of the event.
+			* @param {function(Object)} handler - The handler to call.
+			*/
+			on: function(eventName, handler) {
+			// code...
+			},
+			/**
+			* Fire an event, causing all handlers for that event name to run.
+			* @param {string} eventName - Name of the event.
+			* @param {Object} eventData - The data provided to each handler.
+			*/
+			fire: function(eventName, eventData) {
+			// code...
+			}
+			};
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >*
+
+	<header ><h1 > module
+	</h1 >
+		Syntax
+		@module [[{
+		{ type }}]
+		{ ModuleName }]
+		Note: If you provide a type, you must also provide a name.
+
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @module tag marks the current file as being its own module. All symbols in the file are assumed to be members of the module unless documented otherwise.
+			Link to a module (e.g. within a @link or @see tag) using "module:moduleName". For example, "@module foo/bar" can be linked to using "{@link module:foo/bar}".
+			If the module name is not provided, it is derived from the module's path and filename. For example, suppose I have a file test.js, located in the src directory, that contains the block comment /** @module */. Here are some scenarios for running JSDoc and the resulting module names for test.js:
+			Derived module names if none is provided.
+			# from src/
+			jsdoc ./test.js # module name 'test'
+			# from src's parent directory:
+			jsdoc src/test.js # module name 'src/test'
+			jsdoc -r src/ # module name 'test'
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > name
+	</h1 >
+		Syntax
+		@name
+		{ namepath }
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @name tag forces JSDoc to associate the remainder of the JSDoc comment with the given name, ignoring all surrounding code. This tag is best used in "virtual comments" for symbols that are not readily visible in the code, such as methods that are generated at runtime.
+			When you use the @name tag, you must provide additional tags that tell JSDoc what kind of symbol you are documenting; whether the symbol is a member of another symbol; and so on. If you do not provide this information, the symbol will not be documented correctly.
+			Warning: By using the @name tag, you are telling JSDoc to ignore the surrounding code and treat your documentation comment in isolation. In many cases, it is best to use the @alias tag instead, which changes a symbol's name in the documentation but preserves other information about the symbol.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >*
+
+	<header ><h1 > namespace
+	</h1 >
+		Syntax
+		@namespace [[{
+		{ type }}]
+		{ someName >]
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @namespace tag indicates that an object creates a namespace for its members. You can also write a virtual JSDoc comment that defines a namespace used by your code.
+			If a namespace is defined by a symbol other than an object literal, you can include a type expression along with the @namespace tag. If the @namespace tag includes a type, it must also include a name.
+			You may need to document a namespace whose name includes unusual characters, such as "#" or "!". In these cases, when you document or link to the namespace, you must add quotation marks around the portion of the namespace that includes unusual characters. See the examples below for details.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >*
+
+	<header ><h1 > param
+	</h1 >
+		Synonyms
+		@arg
+		@argument
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @param tag (or @arg or @argument) documents a function parameter.
+			The @param tag requires you to specify the name of the parameter you are documenting. You can also include the parameter's type, enclosed in curly brackets, and a description of the parameter.
+			The parameter type can be a built-in JavaScript type, such as string or Object, or a JSDoc namepath to another symbol in your code. If you have written documentation for the symbol at that namepath, JSDoc will automatically link to the documentation for that symbol. You can also use a type expression to indicate, for example, that a parameter is not nullable or can accept any type; see the @type documentation for details.
+			If you provide a description, you can make the JSDoc comment more readable by inserting a hyphen before the description. Be sure to include a space before and after the hyphen.
+			Examples
+			The following examples show how to include names, types, and descriptions in a @param tag.
+			Name only
+			/**
+			* @param somebody
+			*/
+			function sayHello(somebody) {
+			alert('Hello ' + somebody);
+			}
+			Name and type
+			/**
+			* @param {string} somebody
+			*/
+			function sayHello(somebody) {
+			alert('Hello ' + somebody);
+			}
+			Name, type, and description
+			/**
+			* @param {string} somebody Somebody's name.
+			*/
+			function sayHello(somebody) {
+			alert('Hello ' + somebody);
+			}
+			You can add a hyphen before the description to make it more readable. Be sure to include a space before and after the hyphen.
+			Name, type, and description, with a hyphen before the description
+			/**
+			* @param {string} somebody - Somebody's name.
+			*/
+			function sayHello(somebody) {
+			alert('Hello ' + somebody);
+			}
+			The following examples show how to indicate that a parameter is optional and has a default value.
+			An optional parameter (using JSDoc syntax)
+			/**
+			* @param {string} [somebody] - Somebody's name.
+			*/
+			function sayHello(somebody) {
+			if (!somebody) {
+			somebody = 'John Doe';
+			}
+			alert('Hello ' + somebody);
+			}
+			An optional parameter (using Google Closure Compiler syntax)
+			/**
+			* @param {string=} somebody - Somebody's name.
+			*/
+			function sayHello(somebody) {
+			if (!somebody) {
+			somebody = 'John Doe';
+			}
+			alert('Hello ' + somebody);
+			}
+			An optional parameter and default value
+			/**
+			* @param {string} [somebody=John Doe] - Somebody's name.
+			*/
+			function sayHello(somebody) {
+			if (!somebody) {
+			somebody = 'John Doe';
+			}
+			alert('Hello ' + somebody);
+			}
+			The following examples show how to use type expressions to indicate that a parameter can accept multiple types (or any type), and that a parameter can be provided more than once. See the @type documentation for details about the type expressions that JSDoc supports.
+			Allows one type OR another type (type union)
+			/**
+			* @param {(string|string[])} [somebody=John Doe] - Somebody's name, or an array of names.
+			*/
+			function sayHello(somebody) {
+			if (!somebody) {
+			somebody = 'John Doe';
+			} else if (Array.isArray(somebody)) {
+			somebody = somebody.join(', ');
+			}
+			alert('Hello ' + somebody);
+			}
+			Allows any type
+			/**
+			* @param {*} somebody - Whatever you want.
+			*/
+			function sayHello(somebody) {
+			console.log('Hello ' + JSON.stringify(somebody));
+			}
+			Allows a parameter to be repeated
+			/**
+			* Returns the sum of all numbers passed to the function.
+			* @param {...number} num - A positive or negative number.
+			*/
+			function sum(num) {
+			var i = 0, n = arguments.length, t = 0;
+			for (; i < n; i++) {
+			t += arguments[i];
+			}
+			return t;
+			}
+			If a parameter accepts a callback function, you can use the @callback tag to define a callback type, then include the callback type in the @param tag.
+			Parameters that accept a callback
+			/**
+			* This callback type is called `requestCallback` and is displayed as a global symbol.
+			*
+			* @callback requestCallback
+			* @param {number} responseCode
+			* @param {string} responseMessage
+			*/
+			/**
+			* Does something asynchronously and executes the callback on completion.
+			* @param {requestCallback} cb - The callback that handles the response.
+			*/
+			function doSomethingAsynchronously(cb) {
+			// code
+			};
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >*
+
+	<header ><h1 > private
+	</h1 >
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @private tag marks a symbol as private, or not meant for general use. Private members are not shown in the generated output unless JSDoc is run with the -p or --private switch.
+			The @private tag is not inherited by child members. For example, if the @private tag is added to a namespace, members of the namespace can still appear in the generated output; because the namespace is private, the members' namepath will not include the namespace.
+			The @private tag is equivalent to "@access private". See @access for details about the @access tag.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > property
+	</h1 >
+		Synonyms
+		@prop
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @property tag is a way to easily document a list of static properties of a class, namespace or other object.
+			Normally JSDoc templates would create an entire new page to display information about each level of a nested namespace hierarchy. Sometimes what you really want is to just list all the properties, including nested properties, all together on the same page.
+			Note that property tags must be used in doc comments for the thing that they are properties of, a namespace or a class for example. This tag is intended for simple collections of static properties, it does not allow you to provide @examples or similar complex information for each property, just the type, name and description.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > protected
+	</h1 >
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			This tag marks a doclet as protected.
+			Note that "@protected" is equivalent to "@access protected". See @access for details.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > public
+	</h1 >
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @public tag indicates that a symbol should be documented as if it were public.
+			By default, JSDoc treats all symbols as public, so using this tag does not normally affect the generated documentation. However, you may prefer to use the @public tag explicitly so it is clear to others that you intended to make the symbol public.
+			In contrast to previous version of JSDoc, the @public tag does not affect a symbol's scope. Use the @instance, @static, and @global to change a symbol's scope.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > readonly
+	</h1 >
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @readonly tag indicates that a symbol is intended to be read-only. Note this is for the purpose of documentation only - JSDoc won't check whether you've actually treated the symbol as read-only in your code.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > requires
+	</h1 >
+		Syntax
+		@requires
+		{ someModuleName >
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @requires tag allows you to document that a module is needed to use this code. A JSDoc comment can have multiple @require tags. The module name can be specified as "moduleName" or "module:moduleName"; both forms will be interpreted as modules.
+			JSDoc does not attempt to process the module that is being included. If you want the module to be included in the documentation, you must include the module in the list of JavaScript files to process.
+			Examples
+			Using the @requires tag
+			/**
+			* This class requires the modules {@link module:xyzcorp/helper} and
+			* {@link module:xyzcorp/helper.ShinyWidget#polish}.
+			* @class
+			* @requires module:xyzcorp/helper
+			* @requires xyzcorp/helper.ShinyWidget#polish
+			*/
+			function Widgetizer() {}
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >*
+
+	<header ><h1 > returns
+	</h1 >
+		Synonyms
+		@return
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @returns tag documents the value that a function returns.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > see
+	</h1 >
+		Syntax
+		@see
+		{ namepath }
+		@see
+		{ text }
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @see tag allows you to refer to another symbol or resource that may be related to the one being documented. You can provide either a symbol's namepath or free-form text. If you provide a namepath, JSDoc's default template automatically converts the namepath to a link.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > since
+	</h1 >
+		Syntax
+		@since versionDescription
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @since tag indicates that a class, method, or other symbol was added in a specific version.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > static
+	</h1 >
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @static tag indicates that a symbol is contained within a parent and can be accessed without instantiating the parent.
+			Using the @static tag will override a symbol's default scope, with one exception: Symbols in global scope will remain global.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > summary
+	</h1 >
+		Syntax
+		@summary Summary goes here.
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @summary tag is a shorter version of the full description. It can be added to any doclet.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > this
+	</h1 >
+		Syntax
+		@this
+		{ namepath }
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @this tag indicates what the this keyword refers to when used within another symbol.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > throws
+	</h1 >
+		Synonyms
+		@exception
+		Syntax
+		@throws free-form description
+		@throws {
+		{ type }}
+		@throws {
+		{ type }} free-form description
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @throws tag allows you to document an error that a function might throw. You can include the @throws tag more than once in a single JSDoc comment.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > todo
+	</h1 >
+		Syntax
+		@todo text describing thing to do.
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @todo tag allows you to document tasks to be completed for some part of your code. You can use the @todo tag more than once in a single JSDoc comment.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > tutorial
+	</h1 >
+		Syntax
+		As a block tag:
+		@tutorial
+		{ tutorialID }
+		As an inline tag:
+		{@tutorial
+		{ tutorialID }}
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @tutorial tag can be used both as a block and inline tag. It inserts a link to a tutorial file that is provided as part of the documentation. See the tutorials
+			for instructions on creating tutorials.
+			You can use the @tutorial tag more than once in a single JSDoc comment.
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >*
+
+	<header ><h1 > type
+	</h1 >
+		Syntax
+		@type {typeName}
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @type tag allows you to provide a type expression identifying the type of value that a symbol may contain, or the type of value returned by a function. You can also include type expressions with many other JSDoc tags, such as the @param tag.
+			A type expression can include the JSDoc namepath to a symbol (for example, myNamespace.MyClass); a built-in JavaScript type (for example, string); or a combination of these. You can use any Google Closure Compiler type expression, as well as several other formats that are specific to JSDoc.
+			If JSDoc determines that a type expression is invalid, it will display an error and stop running. You can turn this error into a warning by running JSDoc with the --lenient option.
+			Note: Full support for Google Closure Compiler-style type expressions is available in JSDoc 3.2 and later. Earlier versions of JSDoc included partial support for Closure Compiler type expressions.
+			Each type is specified by providing a type expression, using one of the formats described below. Where appropriate, JSDoc will automatically create links to the documentation for other symbols
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >*
+
+	<header ><h1 > typedef
+	</h1 >
+		Synonyms
+		@callback is equivalent to @typedef {function}
+		Syntax
+		@typedef [
+		{ type }]
+		{ namepath }
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			The @typedef tag is useful for documenting custom types, particularly if you wish to refer to them repeatedly. These types can then be used within other tags expecting a type, such as @type or @param.
+			Use the @callback tag to document the type of callback functions.
+			Examples
+			This example defines a union type for parameters that can contain either numbers or strings that represent numbers.
+			Using the @typedef tag
+			/**
+			* A number, or a string containing a number.
+			* @typedef {(number|string)} NumberLike
+			*/
+			/**
+			* Set the magic number.
+			* @param {NumberLike} x - The magic number.
+			*/
+			function setMagicNumber(x) {
+			}
+
+		</div >
+	</section >
+</article >
+<article class="flashcard" >
+
+	<header ><h1 > variation</h1 >
+		Syntax
+		@variation {variationNumber}
+	</header >
+	<section class = 'description' >
+		<header ><h3 >Overview</h3 ></header >
+		<div >
+
+			Sometimes your code may include multiple symbols with the same longname. For example, you might have both a global class and a top-level namespace called Widget. In cases such as these, what does "{@link Widget}" or "@memberof Widget" mean? The global namespace, or the global class?
+			Variations help JSDoc distinguish between different symbols with the same longname. For example, if "@variation 2" is added to the JSDoc comment for the Widget class, "{@link Widget(2)}" will refer to the class, and "{@link Widget}" will refer to the namespace. Alternatively, you can include the variation when you specify the symbol's with tags such as @alias or @name (for example, "@alias Widget(2)").
+			You can provide any value with the @variation tag, as long as the combination of the value and the longname results in a globally unique version of the longname. As a best practice, use a predictable pattern for choosing the values, which will make it easier for you to document your code.
+		</div >
+	</section >
+</article >
+</main>

@@ -66,12 +66,26 @@ body {
 	-ms-flex: $x;
 }
 
-@mixin flexAlign($y...) {
-	-webkit-flex-align: $y;
-	-moz-flex-align: $y;
-	-o-flex-align: $y;
-	-ms-flex-align: $y;
-	flex-align: $y;
+@mixin align-items($y) {
+	-webkit-align-items: $y;
+	-moz-align-items: $y;
+	align-items: $y;
+}
+
+@mixin align-content($y) {
+	-webkit-align-content: $y;
+	-moz-align-content: $y;
+	align-content: $y;
+}
+@mixin align-self($y) {
+	-webkit-align-self: $y;
+	-moz-align-self: $y;
+	align-self: $y;
+}
+@mixin justify-content($y) {
+	-webkit-justify-content: $y;
+	-moz-justify-content: $y;
+	justify-content: $y;
 }
 
 @mixin flexDir($z) {

@@ -10,3 +10,5 @@ node_modules/*
 node_modules
 *private*
 public/portfolio
+public/css
+public/css/*
